@@ -1,0 +1,54 @@
+# --- Büyük / indirilebilir içerik (GitHub Release'de tutuluyor, repo'da değil) ---
+servers/*/mods/
+servers/*/libraries/
+servers/*/mod-packs/
+servers/*/disabled_mods/
+shared/jre17/
+
+# --- Runtime / oluşturulan veri ---
+servers/*/world/
+servers/*/world_nether/
+servers/*/world_the_end/
+servers/*/logs/
+servers/*/crash-reports/
+servers/*/backup/
+servers/*/*.log
+servers/*/kubejs/
+servers/*/config/
+servers/*/defaultconfigs/
+servers/*/addonpacks/
+servers/*/cws_packs/
+servers/*/local/
+servers/*/ldlib/
+servers/*/tacz/
+servers/*/xaero/
+servers/*/easy_npc/
+servers/*/schematics/
+servers/*/resourcepacks/
+servers/*/shaderpacks/
+servers/*/server-resource-packs/
+servers/*/datapacks/
+servers/*/moonlight-global-datapacks/
+servers/*/patchouli_books/
+servers/*/saves/
+servers/*/essential/
+servers/*/modernfix/
+servers/*/first_boot.log
+servers/*/mod_urls.txt
+
+# --- Backups (proje geneli) ---
+backups/
+
+# --- Gizli / kişisel veri ---
+servers/*/eula.txt
+servers/*/ops.json
+servers/*/whitelist.json
+servers/*/banned-players.json
+servers/*/banned-ips.json
+servers/*/usercache.json
+servers/*/session.lock
+servers/*/*.env
+.env
+
+# --- Java/build artefaktları ---
+*.class
