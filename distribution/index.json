@@ -1,0 +1,10 @@
+{
+  "packs": [
+    {
+      "id": "medieval-fantasy",
+      "name": "Medieval Fantasy",
+      "description": "Fantezi/RPG odakli sunucu paketi.",
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/manifest.json"
+    }
+  ]
+}
