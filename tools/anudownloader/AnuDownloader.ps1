@@ -436,6 +436,13 @@ function Add-ButtonClick($btn, $disabledMsg, $action) {
     foreach ($c in @($btn.Controls)) { $c.Add_Click($guarded) }
 }
 
+if (-not ([System.Management.Automation.PSTypeName]"Anu.Native").Type) {
+    Add-Type -Namespace Anu -Name Native -MemberDefinition @'
+[DllImport("user32.dll")]
+public static extern bool HideCaret(IntPtr hWnd);
+'@ -ErrorAction SilentlyContinue
+}
+
 function Show-AnuPatchNotes([string]$title, [string]$text) {
     $w = [int]($form.ClientSize.Width * 0.9)
     $h = [int]($form.ClientSize.Height * 0.9)
@@ -452,17 +459,49 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
 
     # sag tarafta scrollbar/rahat kaydirma icin bosluk birak
     $rightPad = 24
-    $box = New-Object System.Windows.Forms.TextBox
-    $box.Multiline = $true
+    $box = New-Object System.Windows.Forms.RichTextBox
     $box.ReadOnly = $true
-    $box.ScrollBars = "Vertical"
     $box.BorderStyle = "None"
     $box.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
     $box.ForeColor = [System.Drawing.Color]::White
     $box.Font = New-Object System.Drawing.Font("Segoe UI", 10)
     $box.Location = New-Object System.Drawing.Point(15, 15)
     $box.Size = New-Object System.Drawing.Size(($w - 30 - $rightPad), ($h - 65))
-    $box.Text = $text -replace "`n", "`r`n"
+    $box.DetectUrls = $false
+    $box.ScrollBars = "None"
+
+    # cok basit markdown: "## " basliga, "- "/"* " madde isaretine cevrilir
+    $normalFont = $box.Font
+    $headingFont = New-Object System.Drawing.Font("Segoe UI", 13, [System.Drawing.FontStyle]::Bold)
+    $lines = ($text -replace "`r`n", "`n") -split "`n"
+    foreach ($line in $lines) {
+        $start = $box.TextLength
+        if ($line -match '^\s*##\s+(.*)$') {
+            $box.AppendText("$($matches[1])`n")
+            $box.Select($start, $box.TextLength - $start)
+            $box.SelectionFont = $headingFont
+        } elseif ($line -match '^\s*[-*]\s+(.*)$') {
+            $box.AppendText("•  $($matches[1])`n")
+            $box.Select($start, $box.TextLength - $start)
+            $box.SelectionFont = $normalFont
+        } else {
+            $box.AppendText("$line`n")
+            $box.Select($start, $box.TextLength - $start)
+            $box.SelectionFont = $normalFont
+        }
+    }
+    $box.Select(0, 0)
+
+    # tasma varsa scrollbar goster, yoksa gizli kalsin
+    if ($box.TextLength -gt 0) {
+        $lastPos = $box.GetPositionFromCharIndex($box.TextLength - 1)
+        if (($lastPos.Y + $box.Font.Height) -gt $box.ClientSize.Height) {
+            $box.ScrollBars = "Vertical"
+        }
+    }
+
+    $box.Add_Enter({ [Anu.Native]::HideCaret($box.Handle) | Out-Null }.GetNewClosure())
+    $box.Add_MouseDown({ [Anu.Native]::HideCaret($box.Handle) | Out-Null }.GetNewClosure())
     $dlg.Controls.Add($box)
 
     $btnClose = New-Object System.Windows.Forms.Button
