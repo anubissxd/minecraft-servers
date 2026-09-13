@@ -53,6 +53,30 @@ $AppIconB64 = "AAABAAYAEBAAAAEAIABbAgAAZgAAACAgAAABACAA7wUAAMECAAAwMAAAAQAgABoLA
 $AppIconStream = New-Object System.IO.MemoryStream(,[System.Convert]::FromBase64String($AppIconB64))
 $AppIcon = New-Object System.Drawing.Icon($AppIconStream)
 
+function Show-AnuToast([string]$text, [int]$ms = 900) {
+    $t = New-Object System.Windows.Forms.Form
+    $t.FormBorderStyle = "None"
+    $t.ClientSize = New-Object System.Drawing.Size(320, 70)
+    $t.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $t.StartPosition = "CenterScreen"
+    $t.TopMost = $true
+    $t.ShowInTaskbar = $false
+
+    $lbl = New-Object System.Windows.Forms.Label
+    $lbl.Text = $text
+    $lbl.ForeColor = [System.Drawing.Color]::White
+    $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 11, [System.Drawing.FontStyle]::Bold)
+    $lbl.TextAlign = "MiddleCenter"
+    $lbl.Dock = "Fill"
+    $t.Controls.Add($lbl)
+
+    $t.Show()
+    $t.Refresh()
+    [System.Windows.Forms.Application]::DoEvents()
+    Start-Sleep -Milliseconds $ms
+    $t.Close()
+}
+
 function Show-AnuDialog([string]$text, [bool]$askYesNo = $false) {
     $dlg = New-Object System.Windows.Forms.Form
     $dlg.Text = "AnuDownloader"
@@ -166,7 +190,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 406))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 434))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -189,7 +213,7 @@ $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 226))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 160))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
 $grpTarget.BorderStyle = "FixedSingle"
 $grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $form.Controls.Add($grpTarget)
@@ -257,6 +281,11 @@ $txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
 $txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
 $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
+
+$progress = New-Object System.Windows.Forms.ProgressBar
+$progress.Location = New-Object System.Drawing.Point((Sz 10),(Sz 158))
+$progress.Size = New-Object System.Drawing.Size((Sz 640),(Sz 20))
+$grpTarget.Controls.Add($progress)
 
 $script:packs = @()
 $script:selectedPack = $null
@@ -408,15 +437,21 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
 
 Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {
     $ProgressPreference = 'SilentlyContinue'
+    $progress.Style = "Marquee"
+    $progress.Value = 0
 
     $modsFolder = $script:selectedTarget
     if (-not (Test-Path $modsFolder)) {
         New-Item -ItemType Directory -Path $modsFolder -Force | Out-Null
     }
 
+    $isFreshInstall = @(Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue).Count -eq 0
+    if ($isFreshInstall) { Show-AnuToast "İndirme başlatıldı." } else { Show-AnuToast "Güncelleme başlatıldı." }
+
     try {
         $manifest = Invoke-RestMethod -Uri $script:selectedPack.manifest_url -Headers @{ "Cache-Control" = "no-cache" }
     } catch {
+        $progress.Style = "Blocks"
         Show-AnuDialog "Manifest indirilemedi:`n$($_.Exception.Message)" | Out-Null
         return
     }
@@ -434,13 +469,20 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     $localJars = Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
     $extra = $localJars | Where-Object { $manifestNames -notcontains $_ }
 
+    $progress.Style = "Blocks"
     $errorCount = 0
-    foreach ($f in $toDownload) {
-        $dest = Join-Path $modsFolder $f.filename
-        try {
-            Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
-        } catch {
-            $errorCount++
+    if ($toDownload.Count -gt 0) {
+        $progress.Maximum = $toDownload.Count
+        $i = 0
+        foreach ($f in $toDownload) {
+            $i++
+            $dest = Join-Path $modsFolder $f.filename
+            try {
+                Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
+                $progress.Value = $i
+            } catch {
+                $errorCount++
+            }
         }
     }
 
