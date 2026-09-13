@@ -1,4 +1,4 @@
-# AnuDownloader - incremental modpack installer/updater
+﻿# AnuDownloader - incremental modpack installer/updater
 # Shows available modpacks as banner tiles, lets the user pick which launcher
 # (Modrinth / CurseForge / TLauncher) to install into by clicking its logo,
 # auto-detecting that launcher's folder across any drive, and only downloads
@@ -134,28 +134,55 @@ $panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 12))
 $panelLaunchers.Size = New-Object System.Drawing.Size((Sz 450),(Sz 100))
 $grpTarget.Controls.Add($panelLaunchers)
 
-$btnPatchNotes = New-Object System.Windows.Forms.Button
-$btnPatchNotes.Text = "Yama Notlari"
-$btnPatchNotes.Location = New-Object System.Drawing.Point((Sz 480),(Sz 12))
-$btnPatchNotes.Size = New-Object System.Drawing.Size((Sz 170),(Sz 63))
-$btnPatchNotes.Enabled = $false
-$btnPatchNotes.BackColor = [System.Drawing.Color]::FromArgb(60,60,68)
-$btnPatchNotes.ForeColor = [System.Drawing.Color]::White
-$btnPatchNotes.FlatStyle = "Flat"
-$btnPatchNotes.FlatAppearance.BorderSize = 0
-$btnPatchNotes.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w, [int]$h, $enabledColor) {
+    $btn = New-Object System.Windows.Forms.Panel
+    $btn.Location = New-Object System.Drawing.Point((Sz $x),(Sz $y))
+    $btn.Size = New-Object System.Drawing.Size((Sz $w),(Sz $h))
+    $btn.Cursor = [System.Windows.Forms.Cursors]::Hand
+    $btn | Add-Member -NotePropertyName EnabledColor -NotePropertyValue $enabledColor -Force
+    $btn | Add-Member -NotePropertyName IsEnabled -NotePropertyValue $false -Force
+
+    $lblEmoji = New-Object System.Windows.Forms.Label
+    $lblEmoji.Text = $emoji
+    $lblEmoji.Font = New-Object System.Drawing.Font("Segoe UI Emoji", 12)
+    $lblEmoji.ForeColor = [System.Drawing.Color]::White
+    $lblEmoji.TextAlign = "MiddleCenter"
+    $lblEmoji.Location = New-Object System.Drawing.Point(0,0)
+    $lblEmoji.Size = New-Object System.Drawing.Size((Sz 40),(Sz $h))
+    $btn.Controls.Add($lblEmoji)
+
+    $lblText = New-Object System.Windows.Forms.Label
+    $lblText.Text = $text
+    $lblText.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
+    $lblText.ForeColor = [System.Drawing.Color]::White
+    $lblText.TextAlign = "MiddleLeft"
+    $lblText.Location = New-Object System.Drawing.Point((Sz 40),0)
+    $lblText.Size = New-Object System.Drawing.Size((Sz ($w-40)),(Sz $h))
+    $btn.Controls.Add($lblText)
+
+    Set-ButtonDisabledLook $btn
+    return $btn
+}
+
+function Set-ButtonEnabledState($btn, [bool]$enabled) {
+    $btn.IsEnabled = $enabled
+    if ($enabled) {
+        $btn.BackColor = $btn.EnabledColor
+        $btn.Enabled = $true
+    } else {
+        Set-ButtonDisabledLook $btn
+    }
+}
+
+function Set-ButtonDisabledLook($btn) {
+    $btn.BackColor = [System.Drawing.Color]::FromArgb(50,50,55)
+    $btn.Enabled = $false
+}
+
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 40 ([System.Drawing.Color]::FromArgb(60,60,68))
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-Object System.Windows.Forms.Button
-$btnUpdate.Text = "Kur / Guncelle"
-$btnUpdate.Location = New-Object System.Drawing.Point((Sz 480),(Sz 83))
-$btnUpdate.Size = New-Object System.Drawing.Size((Sz 170),(Sz 63))
-$btnUpdate.Enabled = $false
-$btnUpdate.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
-$btnUpdate.ForeColor = [System.Drawing.Color]::White
-$btnUpdate.FlatStyle = "Flat"
-$btnUpdate.FlatAppearance.BorderSize = 0
-$btnUpdate.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
+$btnUpdate = New-IconButton "⬇️" "Kur / Güncelle" 480 56 170 56 ([System.Drawing.Color]::FromArgb(46,125,50))
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
@@ -192,7 +219,7 @@ $script:launcherTiles = @()
 function Set-ChosenTarget([string]$path) {
     $script:selectedTarget = $path
     $txtChosen.Text = $path
-    $btnUpdate.Enabled = $true
+    Set-ButtonEnabledState $btnUpdate $true
 }
 
 function Make-LauncherTile($logoImg, $label, $finder) {
@@ -262,8 +289,8 @@ function Select-PackTile($tile, $pack) {
     $script:selectedPack = $pack
     $script:selectedTarget = $null
     $txtChosen.Text = ""
-    $btnUpdate.Enabled = $false
-    $btnPatchNotes.Enabled = $true
+    Set-ButtonEnabledState $btnUpdate $false
+    Set-ButtonEnabledState $btnPatchNotes $true
     foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
 }
 
@@ -312,7 +339,12 @@ foreach ($pack in $script:packs) {
     $panelPacks.Controls.Add($tile)
 }
 
-$btnPatchNotes.Add_Click({
+function Add-ButtonClick($btn, $action) {
+    $btn.Add_Click($action)
+    foreach ($c in @($btn.Controls)) { $c.Add_Click($action) }
+}
+
+Add-ButtonClick $btnPatchNotes {
     if (-not $script:selectedPack) { return }
     $url = $script:selectedPack.changelog_url
     if ([string]::IsNullOrWhiteSpace($url)) {
@@ -320,9 +352,9 @@ $btnPatchNotes.Add_Click({
         return
     }
     try { Start-Process $url } catch { [System.Windows.Forms.MessageBox]::Show("Link acilamadi: $($_.Exception.Message)", "AnuDownloader") | Out-Null }
-})
+}
 
-$btnUpdate.Add_Click({
+Add-ButtonClick $btnUpdate {
     $lstLog.Items.Clear()
     $progress.Value = 0
 
@@ -388,6 +420,6 @@ $btnUpdate.Add_Click({
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $modsFolder -Force
     Save-Config $cfg
     [System.Windows.Forms.MessageBox]::Show("Islem bitti.", "AnuDownloader") | Out-Null
-})
+}
 
 [void]$form.ShowDialog()
