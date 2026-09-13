@@ -101,24 +101,16 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.Size = New-Object System.Drawing.Size((Sz 760), (Sz 620))
+$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 762))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
 $form.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $form.Icon = [System.Drawing.Icon]::FromHandle(((New-Object System.Drawing.Bitmap $AppLogoImg, (Sz 32), (Sz 32)).GetHicon()))
 
-$picAppLogo = New-Object System.Windows.Forms.PictureBox
-$picAppLogo.Image = $AppLogoImg
-$picAppLogo.SizeMode = "Zoom"
-$picAppLogo.Location = New-Object System.Drawing.Point((Sz 20),(Sz 12))
-$picAppLogo.Size = New-Object System.Drawing.Size((Sz 40),(Sz 40))
-$picAppLogo.BackColor = [System.Drawing.Color]::Transparent
-$form.Controls.Add($picAppLogo)
-
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
-$panelPacks.Location = New-Object System.Drawing.Point((Sz 20),(Sz 64))
-$panelPacks.Size = New-Object System.Drawing.Size((Sz 710),(Sz 200))
+$panelPacks.Location = New-Object System.Drawing.Point((Sz 20),(Sz 15))
+$panelPacks.Size = New-Object System.Drawing.Size((Sz 660),(Sz 440))
 $panelPacks.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $panelPacks.AutoScroll = $true
 $form.Controls.Add($panelPacks)
@@ -126,47 +118,45 @@ $form.Controls.Add($panelPacks)
 $grpTarget = New-Object System.Windows.Forms.GroupBox
 $grpTarget.Text = "Kurulum Hedefi - launcher logosuna tikla"
 $grpTarget.ForeColor = [System.Drawing.Color]::White
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 278))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 710),(Sz 165))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 465))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 150))
 $form.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
-$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 24))
-$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 690),(Sz 100))
+$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 20))
+$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 410),(Sz 96))
 $grpTarget.Controls.Add($panelLaunchers)
 
-$btnOther = New-Object System.Windows.Forms.Button
-$btnOther.Text = "Diger (klasor sec)..."
-$btnOther.Location = New-Object System.Drawing.Point((Sz 10),(Sz 128))
-$btnOther.Size = New-Object System.Drawing.Size((Sz 180),(Sz 26))
-$grpTarget.Controls.Add($btnOther)
-
-$txtChosen = New-Object System.Windows.Forms.Label
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 200),(Sz 132))
-$txtChosen.Size = New-Object System.Drawing.Size((Sz 490),(Sz 20))
+$txtChosen = New-Object System.Windows.Forms.TextBox
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 118))
+$txtChosen.Size = New-Object System.Drawing.Size((Sz 410),(Sz 24))
+$txtChosen.ReadOnly = $true
+$txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
 $txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
+$txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
-
-$lstLog = New-Object System.Windows.Forms.ListBox
-$lstLog.Location = New-Object System.Drawing.Point((Sz 20),(Sz 452))
-$lstLog.Size = New-Object System.Drawing.Size((Sz 710),(Sz 90))
-$lstLog.Font = New-Object System.Drawing.Font("Consolas", 8)
-$form.Controls.Add($lstLog)
-
-$progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 550))
-$progress.Size = New-Object System.Drawing.Size((Sz 710),(Sz 18))
-$form.Controls.Add($progress)
 
 $btnUpdate = New-Object System.Windows.Forms.Button
 $btnUpdate.Text = "Kur / Guncelle"
-$btnUpdate.Location = New-Object System.Drawing.Point((Sz 20),(Sz 574))
-$btnUpdate.Size = New-Object System.Drawing.Size((Sz 710),(Sz 32))
+$btnUpdate.Location = New-Object System.Drawing.Point((Sz 430),(Sz 20))
+$btnUpdate.Size = New-Object System.Drawing.Size((Sz 220),(Sz 122))
 $btnUpdate.Enabled = $false
 $btnUpdate.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
 $btnUpdate.ForeColor = [System.Drawing.Color]::White
 $btnUpdate.FlatStyle = "Flat"
-$form.Controls.Add($btnUpdate)
+$btnUpdate.Font = New-Object System.Drawing.Font("Segoe UI", 11, [System.Drawing.FontStyle]::Bold)
+$grpTarget.Controls.Add($btnUpdate)
+
+$lstLog = New-Object System.Windows.Forms.ListBox
+$lstLog.Location = New-Object System.Drawing.Point((Sz 20),(Sz 625))
+$lstLog.Size = New-Object System.Drawing.Size((Sz 660),(Sz 90))
+$lstLog.Font = New-Object System.Drawing.Font("Consolas", 8)
+$form.Controls.Add($lstLog)
+
+$progress = New-Object System.Windows.Forms.ProgressBar
+$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 720))
+$progress.Size = New-Object System.Drawing.Size((Sz 660),(Sz 18))
+$form.Controls.Add($progress)
 
 function Log($msg) {
     $lstLog.Items.Add($msg) | Out-Null
@@ -181,7 +171,7 @@ $script:launcherTiles = @()
 
 function Set-ChosenTarget([string]$path) {
     $script:selectedTarget = $path
-    $txtChosen.Text = "Secili: $path"
+    $txtChosen.Text = $path
     $btnUpdate.Enabled = $true
 }
 
@@ -252,16 +242,6 @@ function Select-PackTile($tile, $pack) {
     foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
 }
 
-$btnOther.Add_Click({
-    if (-not $script:selectedPack) {
-        [System.Windows.Forms.MessageBox]::Show("Once bir paket sec.", "AnuDownloader") | Out-Null
-        return
-    }
-    $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-    $dlg.Description = "$($script:selectedPack.name) icin 'mods' klasorunu sec"
-    if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
-})
-
 Log "Paket listesi indiriliyor..."
 try {
     $index = Invoke-RestMethod -Uri $IndexUrl -Headers @{ "Cache-Control" = "no-cache" }
@@ -272,13 +252,13 @@ try {
 
 foreach ($pack in $script:packs) {
     $tile = New-Object System.Windows.Forms.Panel
-    $tile.Size = New-Object System.Drawing.Size((Sz 220),(Sz 190))
+    $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 210))
     $tile.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
 
     $pic = New-Object System.Windows.Forms.PictureBox
-    $pic.Size = New-Object System.Drawing.Size((Sz 200),(Sz 120))
+    $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 132))
     $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 10))
     $pic.SizeMode = "Zoom"
     $pic.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
@@ -289,17 +269,17 @@ foreach ($pack in $script:packs) {
     $lblName = New-Object System.Windows.Forms.Label
     $lblName.Text = $pack.name
     $lblName.ForeColor = [System.Drawing.Color]::White
-    $lblName.Font = New-Object System.Drawing.Font("Segoe UI", 11, [System.Drawing.FontStyle]::Bold)
-    $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 135))
-    $lblName.Size = New-Object System.Drawing.Size((Sz 200),(Sz 22))
+    $lblName.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
+    $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 146))
+    $lblName.Size = New-Object System.Drawing.Size((Sz 176),(Sz 20))
     $tile.Controls.Add($lblName)
 
     $lblDesc = New-Object System.Windows.Forms.Label
     $lblDesc.Text = $pack.description
     $lblDesc.ForeColor = [System.Drawing.Color]::FromArgb(170,170,170)
-    $lblDesc.Font = New-Object System.Drawing.Font("Segoe UI", 8)
-    $lblDesc.Location = New-Object System.Drawing.Point((Sz 10),(Sz 158))
-    $lblDesc.Size = New-Object System.Drawing.Size((Sz 200),(Sz 28))
+    $lblDesc.Font = New-Object System.Drawing.Font("Segoe UI", 7.5)
+    $lblDesc.Location = New-Object System.Drawing.Point((Sz 10),(Sz 168))
+    $lblDesc.Size = New-Object System.Drawing.Size((Sz 176),(Sz 32))
     $tile.Controls.Add($lblDesc)
 
     $clickHandler = { Select-PackTile $tile $pack }.GetNewClosure()
