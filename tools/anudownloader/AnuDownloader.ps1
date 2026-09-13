@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.9"
+$AppVersion = "2.1.10"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -460,13 +460,22 @@ function New-AnuProgressWindow([string]$text) {
     return @{ Form = $pf; Bar = $pb }
 }
 
+function Write-AnuDebugLog([string]$msg) {
+    try {
+        $logPath = Join-Path $ConfigDir "update_debug.log"
+        "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $msg" | Add-Content -Path $logPath
+    } catch { }
+}
+
 function Invoke-AnuSelfUpdate([string]$setupUrl) {
+    Write-AnuDebugLog "Invoke-AnuSelfUpdate called with url=$setupUrl"
     $win = New-AnuProgressWindow "Guncelleme indiriliyor..."
     try {
         $tempSetup = Join-Path $env:TEMP "AnuDownloader-Setup-Update.exe"
 
         $req = [System.Net.HttpWebRequest]::Create($setupUrl)
         $resp = $req.GetResponse()
+        Write-AnuDebugLog "Download response received, ContentLength=$($resp.ContentLength)"
         $total = $resp.ContentLength
         $stream = $resp.GetResponseStream()
         $fs = [System.IO.File]::Create($tempSetup)
@@ -493,11 +502,14 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
         # The updated app relaunches itself once the silent install finishes,
         # so nothing of ours should still be on screen at that point.
         $cmdArgs = "/c ping -n 3 127.0.0.1 >nul & `"$tempSetup`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+        Write-AnuDebugLog "Download complete, tempSetup=$tempSetup exists=$(Test-Path $tempSetup) size=$((Get-Item $tempSetup -ErrorAction SilentlyContinue).Length). Launching wrapper."
         Start-Process -FilePath "$env:WINDIR\System32\cmd.exe" -ArgumentList $cmdArgs -WindowStyle Hidden
+        Write-AnuDebugLog "Wrapper started, exiting now."
 
         $win.Form.Close()
         [System.Environment]::Exit(0)
     } catch {
+        Write-AnuDebugLog "EXCEPTION: $($_.Exception.ToString())"
         $win.Form.Close()
         Show-AnuDialog "Guncelleme indirilemedi:`n$($_.Exception.Message)" | Out-Null
     }
