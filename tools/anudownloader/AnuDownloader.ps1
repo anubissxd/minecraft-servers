@@ -207,31 +207,35 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $lbl.Size = New-Object System.Drawing.Size((Sz 130),(Sz 20))
     $tile.Controls.Add($lbl)
 
-    $clickHandler = {
-        if (-not $script:selectedPack) {
-            [System.Windows.Forms.MessageBox]::Show("Once bir mod paketi sec.", "AnuDownloader") | Out-Null
-            return
-        }
-        foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
-        $tile.BackColor = [System.Drawing.Color]::FromArgb(60,90,60)
-        $found = & $finder $script:selectedPack.folder_name
-        if ($found) {
-            Set-ChosenTarget $found
-        } else {
-            $r = [System.Windows.Forms.MessageBox]::Show("$label icin otomatik klasor bulunamadi.`nManuel secmek ister misin?", "AnuDownloader", "YesNo")
-            if ($r -eq "Yes") {
-                $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-                $dlg.Description = "$($script:selectedPack.name) icin $label mods klasorunu sec"
-                if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
-            }
-        }
-    }.GetNewClosure()
-    $tile.Add_Click($clickHandler)
-    $pic.Add_Click($clickHandler)
-    $lbl.Add_Click($clickHandler)
+    $tile.Tag = @{ Label = $label; Finder = $finder }
+    $tile.Add_Click({ Handle-LauncherClick $this })
+    $pic.Add_Click({ Handle-LauncherClick $this })
+    $lbl.Add_Click({ Handle-LauncherClick $this })
 
     $script:launcherTiles += $tile
     return $tile
+}
+
+function Handle-LauncherClick($sender) {
+    $tile = if ($sender -is [System.Windows.Forms.Panel]) { $sender } else { $sender.Parent }
+    $data = $tile.Tag
+    if (-not $script:selectedPack) {
+        [System.Windows.Forms.MessageBox]::Show("Once bir mod paketi sec.", "AnuDownloader") | Out-Null
+        return
+    }
+    foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
+    $tile.BackColor = [System.Drawing.Color]::FromArgb(60,90,60)
+    $found = & $data.Finder $script:selectedPack.folder_name
+    if ($found) {
+        Set-ChosenTarget $found
+    } else {
+        $r = [System.Windows.Forms.MessageBox]::Show("$($data.Label) icin otomatik klasor bulunamadi.`nManuel secmek ister misin?", "AnuDownloader", "YesNo")
+        if ($r -eq "Yes") {
+            $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+            $dlg.Description = "$($script:selectedPack.name) icin $($data.Label) mods klasorunu sec"
+            if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
+        }
+    }
 }
 
 $panelLaunchers.Controls.Add((Make-LauncherTile $MRLogoImg "Modrinth" ${function:Find-ModrinthTarget}))
@@ -248,6 +252,11 @@ function Select-PackTile($tile, $pack) {
     $txtChosen.Text = ""
     $btnUpdate.Enabled = $false
     foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
+}
+
+function Handle-PackClick($sender) {
+    $tile = if ($sender -is [System.Windows.Forms.Panel]) { $sender } else { $sender.Parent }
+    Select-PackTile $tile $tile.Tag
 }
 
 Log "Paket listesi indiriliyor..."
@@ -282,10 +291,10 @@ foreach ($pack in $script:packs) {
     $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 26))
     $tile.Controls.Add($lblName)
 
-    $clickHandler = { Select-PackTile $tile $pack }.GetNewClosure()
-    $tile.Add_Click($clickHandler)
-    $pic.Add_Click($clickHandler)
-    $lblName.Add_Click($clickHandler)
+    $tile.Tag = $pack
+    $tile.Add_Click({ Handle-PackClick $this })
+    $pic.Add_Click({ Handle-PackClick $this })
+    $lblName.Add_Click({ Handle-PackClick $this })
 
     $panelPacks.Controls.Add($tile)
 }
