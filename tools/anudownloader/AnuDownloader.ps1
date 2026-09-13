@@ -101,7 +101,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 590))
+$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 522))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -110,7 +110,7 @@ $form.Icon = [System.Drawing.Icon]::FromHandle(((New-Object System.Drawing.Bitma
 
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelPacks.Location = New-Object System.Drawing.Point((Sz 20),(Sz 15))
-$panelPacks.Size = New-Object System.Drawing.Size((Sz 660),(Sz 230))
+$panelPacks.Size = New-Object System.Drawing.Size((Sz 660),(Sz 160))
 $panelPacks.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $panelPacks.AutoScroll = $true
 $form.Controls.Add($panelPacks)
@@ -118,7 +118,7 @@ $form.Controls.Add($panelPacks)
 $grpTarget = New-Object System.Windows.Forms.GroupBox
 $grpTarget.Text = "Kurulum Hedefi - launcher logosuna tikla"
 $grpTarget.ForeColor = [System.Drawing.Color]::White
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 255))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 185))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 175))
 $form.Controls.Add($grpTarget)
 
@@ -127,19 +127,10 @@ $panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 22))
 $panelLaunchers.Size = New-Object System.Drawing.Size((Sz 450),(Sz 100))
 $grpTarget.Controls.Add($panelLaunchers)
 
-$txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 136))
-$txtChosen.Size = New-Object System.Drawing.Size((Sz 450),(Sz 24))
-$txtChosen.ReadOnly = $true
-$txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
-$txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
-$txtChosen.BorderStyle = "FixedSingle"
-$grpTarget.Controls.Add($txtChosen)
-
 $btnUpdate = New-Object System.Windows.Forms.Button
 $btnUpdate.Text = "Kur / Guncelle"
-$btnUpdate.Location = New-Object System.Drawing.Point((Sz 480),(Sz 60))
-$btnUpdate.Size = New-Object System.Drawing.Size((Sz 160),(Sz 48))
+$btnUpdate.Location = New-Object System.Drawing.Point((Sz 480),(Sz 22))
+$btnUpdate.Size = New-Object System.Drawing.Size((Sz 160),(Sz 100))
 $btnUpdate.Enabled = $false
 $btnUpdate.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
 $btnUpdate.ForeColor = [System.Drawing.Color]::White
@@ -148,14 +139,23 @@ $btnUpdate.FlatAppearance.BorderSize = 0
 $btnUpdate.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
 $grpTarget.Controls.Add($btnUpdate)
 
+$txtChosen = New-Object System.Windows.Forms.TextBox
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 132))
+$txtChosen.Size = New-Object System.Drawing.Size((Sz 630),(Sz 24))
+$txtChosen.ReadOnly = $true
+$txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
+$txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
+$txtChosen.BorderStyle = "FixedSingle"
+$grpTarget.Controls.Add($txtChosen)
+
 $lstLog = New-Object System.Windows.Forms.ListBox
-$lstLog.Location = New-Object System.Drawing.Point((Sz 20),(Sz 440))
+$lstLog.Location = New-Object System.Drawing.Point((Sz 20),(Sz 370))
 $lstLog.Size = New-Object System.Drawing.Size((Sz 660),(Sz 90))
 $lstLog.Font = New-Object System.Drawing.Font("Consolas", 8)
 $form.Controls.Add($lstLog)
 
 $progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 535))
+$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 465))
 $progress.Size = New-Object System.Drawing.Size((Sz 660),(Sz 18))
 $form.Controls.Add($progress)
 
