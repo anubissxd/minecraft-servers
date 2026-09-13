@@ -165,7 +165,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 442))
+$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 434))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -188,7 +188,7 @@ $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 226))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 156))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
 $grpTarget.BorderStyle = "FixedSingle"
 $grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $form.Controls.Add($grpTarget)
@@ -258,9 +258,9 @@ $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
 
 $progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 400))
-$progress.Size = New-Object System.Drawing.Size((Sz 660),(Sz 22))
-$form.Controls.Add($progress)
+$progress.Location = New-Object System.Drawing.Point((Sz 10),(Sz 158))
+$progress.Size = New-Object System.Drawing.Size((Sz 640),(Sz 20))
+$grpTarget.Controls.Add($progress)
 
 $script:packs = @()
 $script:selectedPack = $null
