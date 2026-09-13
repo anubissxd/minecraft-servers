@@ -500,6 +500,7 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
         }
     }
 
+    $box.TabStop = $false
     $box.Add_Enter({ [Anu.Native]::HideCaret($box.Handle) | Out-Null }.GetNewClosure())
     $box.Add_MouseDown({ [Anu.Native]::HideCaret($box.Handle) | Out-Null }.GetNewClosure())
     $dlg.Controls.Add($box)
@@ -514,6 +515,9 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
     $btnClose.Add_Click({ $dlg.Close() }.GetNewClosure())
     $dlg.Controls.Add($btnClose)
     $dlg.AcceptButton = $btnClose
+
+    $box.Add_GotFocus({ $btnClose.Focus() }.GetNewClosure())
+    $dlg.ActiveControl = $btnClose
 
     [void]$dlg.ShowDialog()
 }
