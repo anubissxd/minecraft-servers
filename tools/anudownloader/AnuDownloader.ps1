@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.3"
+$AppVersion = "2.1.4"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
@@ -422,13 +422,13 @@ try {
 
 foreach ($pack in $script:packs) {
     $tile = New-Object System.Windows.Forms.Panel
-    $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 156))
+    $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
     $tile.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
 
     $pic = New-Object System.Windows.Forms.PictureBox
-    $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 120))
+    $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 99))
     $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
     $pic.SizeMode = "Zoom"
     $pic.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
@@ -440,7 +440,7 @@ foreach ($pack in $script:packs) {
     $lblName.Text = $pack.name
     $lblName.ForeColor = [System.Drawing.Color]::White
     $lblName.Font = New-Object System.Drawing.Font("Segoe UI", 9.5, [System.Drawing.FontStyle]::Bold)
-    $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 132))
+    $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 112))
     $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 22))
     $tile.Controls.Add($lblName)
 
@@ -449,7 +449,7 @@ foreach ($pack in $script:packs) {
     $lblVersion.ForeColor = [System.Drawing.Color]::FromArgb(150,150,155)
     $lblVersion.Font = New-Object System.Drawing.Font("Segoe UI", 8)
     $lblVersion.TextAlign = "MiddleRight"
-    $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 132))
+    $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 112))
     $lblVersion.Size = New-Object System.Drawing.Size((Sz 48),(Sz 22))
     $tile.Controls.Add($lblVersion)
 

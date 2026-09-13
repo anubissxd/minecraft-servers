@@ -1,5 +1,5 @@
 #define MyAppName "AnuDownloader"
-#define MyAppVersion "2.1.3"
+#define MyAppVersion "2.1.4"
 #define MyAppPublisher "Anubis"
 #define MyAppExeName "AnuDownloader.exe"
 
