@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.6"
+$AppVersion = "2.1.7"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -392,10 +392,41 @@ function Handle-PackClick($sender) {
 
 function Invoke-AnuSelfUpdate([string]$setupUrl) {
     try {
-        Show-AnuToast "Guncelleme indiriliyor..." 900
         $tempSetup = Join-Path $env:TEMP "AnuDownloader-Setup-Update.exe"
-        Invoke-WebRequest -Uri $setupUrl -OutFile $tempSetup -UseBasicParsing
-        Start-Process -FilePath $tempSetup -ArgumentList "/VERYSILENT","/SUPPRESSMSGBOXES","/NORESTART"
+
+        $progress.Style = "Blocks"
+        $progress.Minimum = 0
+        $progress.Maximum = 100
+        $progress.Value = 0
+
+        $req = [System.Net.HttpWebRequest]::Create($setupUrl)
+        $resp = $req.GetResponse()
+        $total = $resp.ContentLength
+        $stream = $resp.GetResponseStream()
+        $fs = [System.IO.File]::Create($tempSetup)
+        $buffer = New-Object byte[] 16384
+        $readTotal = 0
+        try {
+            while (($read = $stream.Read($buffer, 0, $buffer.Length)) -gt 0) {
+                $fs.Write($buffer, 0, $read)
+                $readTotal += $read
+                if ($total -gt 0) { $progress.Value = [Math]::Min(100, [int](($readTotal / $total) * 100)) }
+                [System.Windows.Forms.Application]::DoEvents()
+            }
+        } finally {
+            $fs.Close()
+            $stream.Close()
+            $resp.Close()
+        }
+        $progress.Value = 100
+
+        # Our own exe is still running (this process), so its file is locked.
+        # Launch the installer through a detached cmd wrapper that waits for us
+        # to fully exit first, otherwise the installer's file copy silently
+        # fails to overwrite AnuDownloader.exe while we're still shutting down.
+        $cmdArgs = "/c timeout /t 2 /nobreak >nul & `"$tempSetup`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+        Start-Process -FilePath "$env:WINDIR\System32\cmd.exe" -ArgumentList $cmdArgs -WindowStyle Hidden
+
         [System.Environment]::Exit(0)
     } catch {
         Show-AnuDialog "Guncelleme indirilemedi:`n$($_.Exception.Message)" | Out-Null
