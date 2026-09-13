@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.0"
+$AppVersion = "2.1.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
@@ -268,10 +268,10 @@ function Set-ButtonDisabledLook($btn) {
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 40 ([System.Drawing.Color]::FromArgb(60,60,68))
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 18 170 40 ([System.Drawing.Color]::FromArgb(60,60,68))
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 58 170 54 ([System.Drawing.Color]::FromArgb(46,125,50))
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 64 170 54 ([System.Drawing.Color]::FromArgb(46,125,50))
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
