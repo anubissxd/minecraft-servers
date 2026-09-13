@@ -8,6 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
+$AppVersion = "2.1.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
@@ -77,7 +78,7 @@ function Show-AnuToast([string]$text, [int]$ms = 900) {
     $t.Close()
 }
 
-function Show-AnuDialog([string]$text, [bool]$askYesNo = $false) {
+function Show-AnuDialog([string]$text, [bool]$askYesNo = $false, [string]$yesText = "Evet", [string]$noText = "Hayir") {
     $dlg = New-Object System.Windows.Forms.Form
     $dlg.Text = "AnuDownloader"
     $dlg.ClientSize = New-Object System.Drawing.Size(380, 160)
@@ -100,9 +101,9 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false) {
     $result = "OK"
     if ($askYesNo) {
         $btnYes = New-Object System.Windows.Forms.Button
-        $btnYes.Text = "Evet"
-        $btnYes.Location = New-Object System.Drawing.Point(110, 115)
-        $btnYes.Size = New-Object System.Drawing.Size(75, 30)
+        $btnYes.Text = $yesText
+        $btnYes.Location = New-Object System.Drawing.Point(95, 115)
+        $btnYes.Size = New-Object System.Drawing.Size(105, 30)
         $btnYes.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
         $btnYes.ForeColor = [System.Drawing.Color]::White
         $btnYes.FlatStyle = "Flat"
@@ -110,9 +111,9 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false) {
         $dlg.Controls.Add($btnYes)
 
         $btnNo = New-Object System.Windows.Forms.Button
-        $btnNo.Text = "Hayir"
-        $btnNo.Location = New-Object System.Drawing.Point(195, 115)
-        $btnNo.Size = New-Object System.Drawing.Size(75, 30)
+        $btnNo.Text = $noText
+        $btnNo.Location = New-Object System.Drawing.Point(210, 115)
+        $btnNo.Size = New-Object System.Drawing.Size(105, 30)
         $btnNo.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
         $btnNo.ForeColor = [System.Drawing.Color]::White
         $btnNo.FlatStyle = "Flat"
@@ -373,9 +374,32 @@ function Handle-PackClick($sender) {
     Select-PackTile $tile $tile.Tag
 }
 
+function Invoke-AnuSelfUpdate([string]$setupUrl) {
+    try {
+        Show-AnuToast "Guncelleme indiriliyor..." 900
+        $tempSetup = Join-Path $env:TEMP "AnuDownloader-Setup-Update.exe"
+        Invoke-WebRequest -Uri $setupUrl -OutFile $tempSetup -UseBasicParsing
+        Start-Process -FilePath $tempSetup -ArgumentList "/VERYSILENT","/SUPPRESSMSGBOXES","/NORESTART"
+        [System.Environment]::Exit(0)
+    } catch {
+        Show-AnuDialog "Guncelleme indirilemedi:`n$($_.Exception.Message)" | Out-Null
+    }
+}
+
 try {
     $index = Invoke-RestMethod -Uri $IndexUrl -Headers @{ "Cache-Control" = "no-cache" }
     $script:packs = $index.packs
+
+    if ($index.app -and $index.app.version -and $index.app.setup_url) {
+        try {
+            if ([version]$index.app.version -gt [version]$AppVersion) {
+                $choice = Show-AnuDialog "AnuDownloader guncellendi!`nSurum: $($index.app.version)" $true "Guncelle" "Daha Sonra"
+                if ($choice -eq "Yes") {
+                    Invoke-AnuSelfUpdate $index.app.setup_url
+                }
+            }
+        } catch { }
+    }
 } catch {
     Show-AnuDialog "Paket listesi indirilemedi:`n$($_.Exception.Message)" | Out-Null
 }

@@ -1,4 +1,8 @@
 {
+  "app": {
+    "version": "2.1.0",
+    "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
+  },
   "packs": [
     {
       "id": "medieval-fantasy",
