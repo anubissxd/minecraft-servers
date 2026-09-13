@@ -165,7 +165,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 434))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 434))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
