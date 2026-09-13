@@ -962,4 +962,64 @@ Sunucuyu Kapat
 Başka Bir Sunucu Seç
 ```
 
+---
+
+# VDS İş Akışı (Multiverse Superheroes ve VDS'e taşınan diğer sunucular)
+
+Bu sunucular için hedef, yerel makinelerde değil bir VDS üzerinde çalışmaktır. VDS alındıktan sonra iş bölümü şöyledir:
+
+- **Claude'un rolü:** Sunucuyu VDS üzerinde kurmak, mod güncellemelerini ve bakımını doğrudan VDS'te (SSH/RDP erişimiyle) yapmak.
+- **Kullanıcı ve arkadaşların rolü:** Sadece client tarafı — Modrinth (MR), CurseForge (CF) veya TLauncher (TL) mod paketlerinden birini indirip kendi bilgisayarlarına kurmak. Sunucu kurulumu/bakımıyla uğraşmazlar.
+
+VDS erişim bilgileri verildiğinde, mod paketleri (`mod-packs/` altındaki .mrpack, CurseForge .zip, TLauncher .zip) GitHub Release'e yüklenmeye devam eder (link sabit, `--clobber` ile içerik güncellenir) — buna ek olarak VDS'teki çalışan sunucu klasörü de aynı anda güncel tutulmalıdır. Mod eklendiğinde/kaldırıldığında hem GitHub Release hem VDS güncellenmeli.
+
+Kullanıcıyı artık yerel makinede sunucu kurulumu/test detaylarıyla (Java sürümü, JVM argümanları, launcher JVM ayarları vb.) uğraştırma — bunlar VDS'e taşınınca Claude'un sorumluluğu, kullanıcıya sadece hangi client paketini indireceği ve indirme linki söylenir.
+
 Bütün geliştirmeler mümkün olduğunca bu yapıyı daha **güvenli, modüler, kolay kullanılabilir ve sürdürülebilir** hale getirmeye hizmet etmelidir.
+
+---
+
+# AnuDownloader ve Yama Notları Sistemi
+
+`tools/anudownloader/` altında, arkadaşların kuracağı `AnuDownloader.exe` (Inno Setup installer: `AnuDownloader-Setup.exe`) bulunur. Bu uygulama `distribution/index.json`'da listelenen her mod paketini (şu an Medieval Fantasy ve Multiverse Superheroes) gösterir, kişinin Modrinth/CurseForge/TLauncher kurulumunu otomatik bulur ve sadece değişen/yeni mod dosyalarını indirir (tam pakette yeniden indirme yok).
+
+## Paket Sürümü
+
+Her paketin `distribution/index.json`'da bir `"version"` alanı vardır (örn. `"1.0.0"`). Bu sürüm **sadece biz (Claude) bir pakette gerçek bir değişiklik yaptığımızda** elle artırılır — mod ekleme/kaldırma, mod güncelleme, config değişikliği gibi. Sürüm paket kartında (`vX.Y.Z` şeklinde) kullanıcıya gösterilir.
+
+## Yama Notları
+
+Her paketin kendi `distribution/<paket>/patchnotes.md` dosyası vardır (örn. `distribution/medieval-fantasy/patchnotes.md`), `index.json`'daki `"patchnotes_url"` ile referans alınır. Uygulamadaki **"Yama Notları"** düğmesi bu dosyanın içeriğini GitHub'a yönlendirmeden, **uygulama içi bir popup'ta** (ana pencerenin %90'ı boyutunda, kaydırılabilir metin kutusu) doğrudan gösterir.
+
+### Ne zaman yazılır, ne zaman dokunulmaz
+
+- Bir pakette gerçek bir değişiklik yaptığımızda (mod paketten kaldırıldı/eklendi, mod sürümü güncellendi, bir config/ayar değiştirildi) **patchnotes.md'nin eski içeriğini tamamen sil, yeni içerikle değiştir** (üstüne ekleme yapma, sıfırdan yaz) ve `index.json`'daki o paketin `"version"` alanını artır.
+- Değişiklik yoksa (örn. sadece AnuDownloader'ın kendi kodunu güncelledik, pakete dokunmadık) **patchnotes.md'ye ve version'a dokunma.**
+
+### Format
+
+Yama notu üç başlıktan istediği kadarını içerebilir (hiçbiri zorunlu değil, sadece o kategoride değişiklik varsa yazılır). Başlıklar bu sırayla, `##` ile:
+
+```markdown
+## Mod Güncellemesi
+
+* X Modu: 2.0.1 → 2.2.0
+* Y Modu: 3.2 → 3.5
+
+## Config Güncellemesi
+
+* X Modu: Superman suitleri kaldırıldı.
+* Y Modu: Creeper doğma oranı sıfırlandı.
+
+## Paket Güncellemesi
+
+* X Modu paketten kaldırıldı.
+* Z Modu pakete eklendi.
+```
+
+Kurallar:
+- **Mod Güncellemesi**: bir modun sürümü değiştiyse, `Mod Adı: eski_sürüm → yeni_sürüm` (ok karakteri gerçek unicode ok `→`, yazıyla "ok" değil).
+- **Config Güncellemesi**: bir modun config/ayarında (Item Obliterator, `disabledAbilities`, Palladium ayarı, JVM/server.properties vb.) yapılan davranış değişikliği, kısa ve net cümleyle (`X Modu: ne değişti`).
+- **Paket Güncellemesi**: bir modun pakete eklenmesi veya paketten tamamen kaldırılması — bu ikisinde `Modu` ile "eklendi/kaldırıldı" arasında iki nokta **yok** (`X Modu paketten kaldırıldı.`, `Z Modu pakete eklendi.`), diğer iki başlıktaki `Modu: ...` formatından farklı.
+- Bir güncellemede birden fazla kategori etkilenmişse hepsi aynı dosyada, sırayla yer alır.
+- İlk yayın gibi kategorilere oturmayan notlar için tek başlık altında serbest metin kullanılabilir (örn. mevcut `patchnotes.md` dosyalarındaki "İlk sürüm yayınlandı" notu).

@@ -401,13 +401,23 @@ foreach ($pack in $script:packs) {
     $lblName.ForeColor = [System.Drawing.Color]::White
     $lblName.Font = New-Object System.Drawing.Font("Segoe UI", 9.5, [System.Drawing.FontStyle]::Bold)
     $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 132))
-    $lblName.Size = New-Object System.Drawing.Size((Sz 176),(Sz 22))
+    $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 22))
     $tile.Controls.Add($lblName)
+
+    $lblVersion = New-Object System.Windows.Forms.Label
+    $lblVersion.Text = "v$($pack.version)"
+    $lblVersion.ForeColor = [System.Drawing.Color]::FromArgb(150,150,155)
+    $lblVersion.Font = New-Object System.Drawing.Font("Segoe UI", 8)
+    $lblVersion.TextAlign = "MiddleRight"
+    $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 132))
+    $lblVersion.Size = New-Object System.Drawing.Size((Sz 48),(Sz 22))
+    $tile.Controls.Add($lblVersion)
 
     $tile.Tag = $pack
     $tile.Add_Click({ Handle-PackClick $this })
     $pic.Add_Click({ Handle-PackClick $this })
     $lblName.Add_Click({ Handle-PackClick $this })
+    $lblVersion.Add_Click({ Handle-PackClick $this })
 
     $panelPacks.Controls.Add($tile)
 }
@@ -426,13 +436,62 @@ function Add-ButtonClick($btn, $disabledMsg, $action) {
     foreach ($c in @($btn.Controls)) { $c.Add_Click($guarded) }
 }
 
+function Show-AnuPatchNotes([string]$title, [string]$text) {
+    $w = [int]($form.ClientSize.Width * 0.9)
+    $h = [int]($form.ClientSize.Height * 0.9)
+
+    $dlg = New-Object System.Windows.Forms.Form
+    $dlg.Text = "$title - Yama Notları"
+    $dlg.ClientSize = New-Object System.Drawing.Size($w, $h)
+    $dlg.FormBorderStyle = "FixedDialog"
+    $dlg.StartPosition = "CenterScreen"
+    $dlg.MaximizeBox = $false
+    $dlg.MinimizeBox = $false
+    $dlg.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $dlg.Icon = $AppIcon
+
+    # sag tarafta scrollbar/rahat kaydirma icin bosluk birak
+    $rightPad = 24
+    $box = New-Object System.Windows.Forms.TextBox
+    $box.Multiline = $true
+    $box.ReadOnly = $true
+    $box.ScrollBars = "Vertical"
+    $box.BorderStyle = "None"
+    $box.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $box.ForeColor = [System.Drawing.Color]::White
+    $box.Font = New-Object System.Drawing.Font("Segoe UI", 10)
+    $box.Location = New-Object System.Drawing.Point(15, 15)
+    $box.Size = New-Object System.Drawing.Size(($w - 30 - $rightPad), ($h - 65))
+    $box.Text = $text -replace "`n", "`r`n"
+    $dlg.Controls.Add($box)
+
+    $btnClose = New-Object System.Windows.Forms.Button
+    $btnClose.Text = "Kapat"
+    $btnClose.Location = New-Object System.Drawing.Point(($w - 110), ($h - 42))
+    $btnClose.Size = New-Object System.Drawing.Size(95, 30)
+    $btnClose.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
+    $btnClose.ForeColor = [System.Drawing.Color]::White
+    $btnClose.FlatStyle = "Flat"
+    $btnClose.Add_Click({ $dlg.Close() }.GetNewClosure())
+    $dlg.Controls.Add($btnClose)
+    $dlg.AcceptButton = $btnClose
+
+    [void]$dlg.ShowDialog()
+}
+
 Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
-    $url = $script:selectedPack.changelog_url
+    $url = $script:selectedPack.patchnotes_url
     if ([string]::IsNullOrWhiteSpace($url)) {
-        Show-AnuDialog "Bu paket için yama notu linki henüz eklenmemiş." | Out-Null
+        Show-AnuDialog "Bu paket için yama notu henüz eklenmemiş." | Out-Null
         return
     }
-    try { Start-Process $url } catch { Show-AnuDialog "Link açılamadı: $($_.Exception.Message)" | Out-Null }
+    try {
+        $ProgressPreference = 'SilentlyContinue'
+        $text = (Invoke-WebRequest -Uri $url -UseBasicParsing -Headers @{ "Cache-Control" = "no-cache" }).Content
+        Show-AnuPatchNotes $script:selectedPack.name $text
+    } catch {
+        Show-AnuDialog "Yama notları indirilemedi:`n$($_.Exception.Message)" | Out-Null
+    }
 }
 
 Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {

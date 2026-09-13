@@ -5,18 +5,20 @@
       "name": "Medieval Fantasy",
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
+      "version": "1.0.0",
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
       "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/manifest.json",
-      "changelog_url": "https://github.com/anubissxd/minecraft-servers/releases/tag/medieval-fantasy-pack"
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/patchnotes.md"
     },
     {
       "id": "mvsh",
       "name": "Multiverse Superheroes",
       "folder_name": "Multiverse Superheros",
       "description": "Superhero mod paketi (bakimda).",
+      "version": "1.0.0",
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/banner.png",
       "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/manifest.json",
-      "changelog_url": "https://github.com/anubissxd/minecraft-servers/releases/tag/mvsh-pack"
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/patchnotes.md"
     }
   ]
 }
