@@ -172,7 +172,6 @@ function Set-ButtonEnabledState($btn, [bool]$enabled) {
     $btn.IsEnabled = $enabled
     if ($enabled) {
         $btn.BackColor = $btn.EnabledColor
-        $btn.Enabled = $true
     } else {
         Set-ButtonDisabledLook $btn
     }
@@ -180,7 +179,7 @@ function Set-ButtonEnabledState($btn, [bool]$enabled) {
 
 function Set-ButtonDisabledLook($btn) {
     $btn.BackColor = [System.Drawing.Color]::FromArgb(50,50,55)
-    $btn.Enabled = $false
+    $btn.IsEnabled = $false
 }
 
 $btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 44 ([System.Drawing.Color]::FromArgb(60,60,68))
@@ -343,13 +342,21 @@ foreach ($pack in $script:packs) {
     $panelPacks.Controls.Add($tile)
 }
 
-function Add-ButtonClick($btn, $action) {
-    $btn.Add_Click($action)
-    foreach ($c in @($btn.Controls)) { $c.Add_Click($action) }
+function Add-ButtonClick($btn, $disabledMsg, $action) {
+    $guarded = {
+        if (-not $btn.IsEnabled) {
+            if (-not [string]::IsNullOrWhiteSpace($disabledMsg)) {
+                [System.Windows.Forms.MessageBox]::Show($disabledMsg, "AnuDownloader") | Out-Null
+            }
+            return
+        }
+        & $action
+    }.GetNewClosure()
+    $btn.Add_Click($guarded)
+    foreach ($c in @($btn.Controls)) { $c.Add_Click($guarded) }
 }
 
-Add-ButtonClick $btnPatchNotes {
-    if (-not $script:selectedPack) { return }
+Add-ButtonClick $btnPatchNotes "Once bir mod paketi sec." {
     $url = $script:selectedPack.changelog_url
     if ([string]::IsNullOrWhiteSpace($url)) {
         [System.Windows.Forms.MessageBox]::Show("Bu paket icin yama notu linki henuz eklenmemis.", "AnuDownloader") | Out-Null
@@ -358,18 +365,10 @@ Add-ButtonClick $btnPatchNotes {
     try { Start-Process $url } catch { [System.Windows.Forms.MessageBox]::Show("Link acilamadi: $($_.Exception.Message)", "AnuDownloader") | Out-Null }
 }
 
-Add-ButtonClick $btnUpdate {
+Add-ButtonClick $btnUpdate "Once bir mod paketi sec ve bir launcher logosuna tiklayarak kurulum hedefi belirle." {
     $lstLog.Items.Clear()
     $progress.Value = 0
 
-    if (-not $script:selectedPack) {
-        [System.Windows.Forms.MessageBox]::Show("Once bir mod paketi sec.", "AnuDownloader") | Out-Null
-        return
-    }
-    if (-not $script:selectedTarget) {
-        [System.Windows.Forms.MessageBox]::Show("Once bir launcher logosuna tikla (kurulum hedefi sec).", "AnuDownloader") | Out-Null
-        return
-    }
     $modsFolder = $script:selectedTarget
     if (-not (Test-Path $modsFolder)) {
         New-Item -ItemType Directory -Path $modsFolder -Force | Out-Null
