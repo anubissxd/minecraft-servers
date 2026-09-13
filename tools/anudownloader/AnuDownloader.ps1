@@ -429,6 +429,7 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
 
         [System.Environment]::Exit(0)
     } catch {
+        $_.Exception.ToString() | Set-Content -Path (Join-Path $env:TEMP "anu_update_debug.log")
         Show-AnuDialog "Guncelleme indirilemedi:`n$($_.Exception.Message)" | Out-Null
     }
 }
