@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.5"
+$AppVersion = "2.1.6"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -216,14 +216,14 @@ $form.Icon = $AppIcon
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 15))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 196))
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 178))
 $pnlPacksFrame.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $pnlPacksFrame.BorderStyle = "FixedSingle"
 $form.Controls.Add($pnlPacksFrame)
 
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelPacks.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
-$panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 178))
+$panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 162))
 $panelPacks.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
