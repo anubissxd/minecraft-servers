@@ -1,0 +1,217 @@
+{
+  "files": [
+    {
+      "filename": "a_new_corps.jar",
+      "size": 3197693,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/a_new_corps.jar",
+      "sha256": "995681f80e9809be83057e10af001c86375b85d6e2848e8994b7278875afcc82"
+    },
+    {
+      "filename": "AlienEvo-1.1.3-forge.jar",
+      "size": 6264830,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/AlienEvo-1.1.3-forge.jar",
+      "sha256": "115a9b6526c8ea93ed22dda90e171a3a0bb88b1a3af69667224aea75df22dae0"
+    },
+    {
+      "filename": "architectury-9.2.14-forge.jar",
+      "size": 580602,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/architectury-9.2.14-forge.jar",
+      "sha256": "218b471d0b8a1f6cda14cfc1beb9eeb0df54304500acc6c5613d9b88ec65d9af"
+    },
+    {
+      "filename": "arrzenhanced-2.0.2.jar",
+      "size": 14052975,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/arrzenhanced-2.0.2.jar",
+      "sha256": "05c7d40130ad2da9359d5373c8d2e376b6b1d7aed4e0586adcf70267aaae0df9"
+    },
+    {
+      "filename": "caelus-forge-3.2.0+1.20.1.jar",
+      "size": 40125,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/caelus-forge-3.2.0+1.20.1.jar",
+      "sha256": "43cabe35f0618c0bd01af02e7568ca6f15fd32bb6a90d04c9898bb01e8dc1e81"
+    },
+    {
+      "filename": "Connector-1.0.0-beta.49+1.20.1.jar",
+      "size": 5046109,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Connector-1.0.0-beta.49+1.20.1.jar",
+      "sha256": "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431"
+    },
+    {
+      "filename": "ConnectorExtras-1.11.2+1.20.1.jar",
+      "size": 182464,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/ConnectorExtras-1.11.2+1.20.1.jar",
+      "sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8"
+    },
+    {
+      "filename": "corewithstuff-v1.6.jar",
+      "size": 4581834,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/corewithstuff-v1.6.jar",
+      "sha256": "495e06edb20704a65ef7535d0ac20ca743bb8d8095a62c674463341ff6b25a98"
+    },
+    {
+      "filename": "curios-forge-5.14.1+1.20.1.jar",
+      "size": 398066,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/curios-forge-5.14.1+1.20.1.jar",
+      "sha256": "1e817919a35b37cf30524aaec73f0ca5130452f23f168f844854df282eb8e51f"
+    },
+    {
+      "filename": "dampened-v1.2.0.jar",
+      "size": 123545,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/dampened-v1.2.0.jar",
+      "sha256": "68dfea60529252f0505ae7d37174078ad3f826220fa356665957a298040222c3"
+    },
+    {
+      "filename": "fabric-api-0.92.6+1.11.15+1.20.1.jar",
+      "size": 3065833,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/fabric-api-0.92.6+1.11.15+1.20.1.jar",
+      "sha256": "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d"
+    },
+    {
+      "filename": "FSang18's Heroes v12.4.1.jar",
+      "size": 15475444,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/FSang18's Heroes v12.4.1.jar",
+      "sha256": "74b6e2cecc8fe22dbc2f1a5dd21ce2364acf6cf3f026daed2c7eaec5287ef28c"
+    },
+    {
+      "filename": "FSang18's Mighty Morphin' v1.6.1.jar",
+      "size": 861892,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/FSang18's Mighty Morphin' v1.6.1.jar",
+      "sha256": "306215e309c044870dd9a6caa47a592de139e7385f387bfd484286f510eafa99"
+    },
+    {
+      "filename": "geckolib-forge-1.20.1-4.8.4.jar",
+      "size": 1038209,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/geckolib-forge-1.20.1-4.8.4.jar",
+      "sha256": "4518779a31b6c2abb92c98b5ad17ef3d60177df68626bfc86c44de2764913c2b"
+    },
+    {
+      "filename": "Gods-And-Heroes-PE-1.4.jar",
+      "size": 227138,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Gods-And-Heroes-PE-1.4.jar",
+      "sha256": "c5182ae227ead83dddbb346bfb821337e1e138900d32adfcaddb7999cbd35544"
+    },
+    {
+      "filename": "gravecore-1.2.6-forge.jar",
+      "size": 1576752,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/gravecore-1.2.6-forge.jar",
+      "sha256": "18484e9cb9363b9a90acf4d8f1c0dbd60797f289ec2601fbce13286caf441174"
+    },
+    {
+      "filename": "graveht-0.5.1.jar",
+      "size": 9164686,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/graveht-0.5.1.jar",
+      "sha256": "76663ad896632379e67cfd733b195d2e76a8a06560495f9d8e43881a974a34f8"
+    },
+    {
+      "filename": "Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "size": 22930,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "sha256": "a0de109d3405fbf4290e10df4f812eadd5125debb16ea7e9d908acbbabcb516b"
+    },
+    {
+      "filename": "infinity-7.2.jar",
+      "size": 6940756,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/infinity-7.2.jar",
+      "sha256": "1ad6c1b8d29237592f61cc1f178c4812e903e4846e5e1a28833bd30832411276"
+    },
+    {
+      "filename": "jei-1.20.1-forge-15.58.0.209.jar",
+      "size": 1821883,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/jei-1.20.1-forge-15.58.0.209.jar",
+      "sha256": "e39f3794233d16455217984592744fa8eb350a5f898f1002ed721659b77fdd97"
+    },
+    {
+      "filename": "kubejs-forge-2001.6.5-build.26.jar",
+      "size": 1658792,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/kubejs-forge-2001.6.5-build.26.jar",
+      "sha256": "1769312192fbf9d72f45054ba61130523bfb471b5f480a4bff8c210ec09400bb"
+    },
+    {
+      "filename": "lodestone-1.20.1-1.6.4.1.jar",
+      "size": 670934,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/lodestone-1.20.1-1.6.4.1.jar",
+      "sha256": "e9f8b7bc70ba99d97005f2acee2061b149785fbae3c1e37db08c79197bcc7c2d"
+    },
+    {
+      "filename": "Mutants and More v1.5.3.jar",
+      "size": 118587,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Mutants and More v1.5.3.jar",
+      "sha256": "cf04246949f67efa19bf56c2a3e7ce858561f57aad820b7505ce68d188aafc7d"
+    },
+    {
+      "filename": "Necronomicon-Forge-1.6.0+1.20.1.jar",
+      "size": 33251,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Necronomicon-Forge-1.6.0+1.20.1.jar",
+      "sha256": "403b23457288c624a55feb90d5e813c88c23a611bc42cda397c4bfac94b4c3a3"
+    },
+    {
+      "filename": "packetfixer-3.3.2-1.18-1.20.4-merged.jar",
+      "size": 188661,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/packetfixer-3.3.2-1.18-1.20.4-merged.jar",
+      "sha256": "12f96ecb8e61e0b3d3f0ca5701f479904904501dd251aa7bb60205afdf6bc2ce"
+    },
+    {
+      "filename": "palladium-4.5.9+1.20.1-forge.jar",
+      "size": 2869419,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/palladium-4.5.9+1.20.1-forge.jar",
+      "sha256": "af99a7ba746404c9774cd737dcc1db2d1f6fb7963fdbfa1bbee6b5b9832e29c9"
+    },
+    {
+      "filename": "palladiumextras-1.0.0.jar",
+      "size": 25172,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/palladiumextras-1.0.0.jar",
+      "sha256": "ec6a553c9dbdb4ae91a7988210077e4cce7ab936661b370853c6315e9bc481d1"
+    },
+    {
+      "filename": "pantheonsent-1.1.1+1.20.1-forge.jar",
+      "size": 1970793,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/pantheonsent-1.1.1+1.20.1-forge.jar",
+      "sha256": "3a323241a3bfe91afc0151c98779bef818d127f4816d71e9c15e630ff1639a02"
+    },
+    {
+      "filename": "Pehkui-3.8.2+1.20.1-forge.jar",
+      "size": 671605,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Pehkui-3.8.2+1.20.1-forge.jar",
+      "sha256": "54210f454c166f65a1bcbbfe4ea52e6f73e07844a793c7132f1af4076a0f42fc"
+    },
+    {
+      "filename": "powerborne-heroes-1.20.1-0.5.1.jar",
+      "size": 3131011,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/powerborne-heroes-1.20.1-0.5.1.jar",
+      "sha256": "f5bdec3d506bb2fadf76bb59f7c1babe28f9f817b1384716733ae2220883a957"
+    },
+    {
+      "filename": "rhino-forge-2001.2.3-build.10.jar",
+      "size": 1798244,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/rhino-forge-2001.2.3-build.10.jar",
+      "sha256": "fed2211429301bf043864183cab9ab8e92d4cc4dbb9e488ce6c75217c54584a6"
+    },
+    {
+      "filename": "Satsu_iron_man_addon-3.5.2.jar",
+      "size": 11670635,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Satsu_iron_man_addon-3.5.2.jar",
+      "sha256": "dc3f586e57ee7c8000ac32ceec541b9b2e241d9fef617a3f965ea5b67c1ec02f"
+    },
+    {
+      "filename": "Simply Powers v1.1.0.jar",
+      "size": 85113,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Simply Powers v1.1.0.jar",
+      "sha256": "4647d562597c3645ee530838b70463fb282fbf448473c28b47916b6156f5cc96"
+    },
+    {
+      "filename": "Throgy's Addon 1.5.81.jar",
+      "size": 2222673,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/Throgy's Addon 1.5.81.jar",
+      "sha256": "e8e5bb4f5e600eb50acdf97ed09577d7fafbce73a2908b8822796817e11fe068"
+    },
+    {
+      "filename": "visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
+      "size": 273145,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
+      "sha256": "2b721091d8aa0d4c0d9c1f655a6abacff44f262fc78dfa3d10affc7ed24645f5"
+    }
+  ],
+  "version": "1.0.0",
+  "pack_name": "Multiverse Superheroes",
+  "generated": "2026-09-13 06:17:26"
+}
