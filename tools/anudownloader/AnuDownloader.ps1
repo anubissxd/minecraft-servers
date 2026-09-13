@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.7"
+$AppVersion = "2.1.8"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -424,7 +424,7 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
         # Launch the installer through a detached cmd wrapper that waits for us
         # to fully exit first, otherwise the installer's file copy silently
         # fails to overwrite AnuDownloader.exe while we're still shutting down.
-        $cmdArgs = "/c timeout /t 2 /nobreak >nul & `"$tempSetup`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+        $cmdArgs = "/c ping -n 3 127.0.0.1 >nul & `"$tempSetup`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
         Start-Process -FilePath "$env:WINDIR\System32\cmd.exe" -ArgumentList $cmdArgs -WindowStyle Hidden
 
         [System.Environment]::Exit(0)
