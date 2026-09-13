@@ -122,22 +122,34 @@ $panelPacks.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
-$grpTarget = New-Object System.Windows.Forms.GroupBox
-$grpTarget.Text = "Kurulum Hedefi - launcher logosuna tikla"
-$grpTarget.ForeColor = [System.Drawing.Color]::White
+$grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 205))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 175))
+$grpTarget.BorderStyle = "FixedSingle"
+$grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $form.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
-$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 22))
+$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 12))
 $panelLaunchers.Size = New-Object System.Drawing.Size((Sz 450),(Sz 100))
 $grpTarget.Controls.Add($panelLaunchers)
 
+$btnPatchNotes = New-Object System.Windows.Forms.Button
+$btnPatchNotes.Text = "Yama Notlari"
+$btnPatchNotes.Location = New-Object System.Drawing.Point((Sz 480),(Sz 12))
+$btnPatchNotes.Size = New-Object System.Drawing.Size((Sz 170),(Sz 63))
+$btnPatchNotes.Enabled = $false
+$btnPatchNotes.BackColor = [System.Drawing.Color]::FromArgb(60,60,68)
+$btnPatchNotes.ForeColor = [System.Drawing.Color]::White
+$btnPatchNotes.FlatStyle = "Flat"
+$btnPatchNotes.FlatAppearance.BorderSize = 0
+$btnPatchNotes.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+$grpTarget.Controls.Add($btnPatchNotes)
+
 $btnUpdate = New-Object System.Windows.Forms.Button
 $btnUpdate.Text = "Kur / Guncelle"
-$btnUpdate.Location = New-Object System.Drawing.Point((Sz 480),(Sz 22))
-$btnUpdate.Size = New-Object System.Drawing.Size((Sz 160),(Sz 44))
+$btnUpdate.Location = New-Object System.Drawing.Point((Sz 480),(Sz 83))
+$btnUpdate.Size = New-Object System.Drawing.Size((Sz 170),(Sz 63))
 $btnUpdate.Enabled = $false
 $btnUpdate.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
 $btnUpdate.ForeColor = [System.Drawing.Color]::White
@@ -147,8 +159,8 @@ $btnUpdate.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 132))
-$txtChosen.Size = New-Object System.Drawing.Size((Sz 630),(Sz 24))
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 122))
+$txtChosen.Size = New-Object System.Drawing.Size((Sz 640),(Sz 24))
 $txtChosen.ReadOnly = $true
 $txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
 $txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
@@ -251,6 +263,7 @@ function Select-PackTile($tile, $pack) {
     $script:selectedTarget = $null
     $txtChosen.Text = ""
     $btnUpdate.Enabled = $false
+    $btnPatchNotes.Enabled = $true
     foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
 }
 
@@ -298,6 +311,16 @@ foreach ($pack in $script:packs) {
 
     $panelPacks.Controls.Add($tile)
 }
+
+$btnPatchNotes.Add_Click({
+    if (-not $script:selectedPack) { return }
+    $url = $script:selectedPack.changelog_url
+    if ([string]::IsNullOrWhiteSpace($url)) {
+        [System.Windows.Forms.MessageBox]::Show("Bu paket icin yama notu linki henuz eklenmemis.", "AnuDownloader") | Out-Null
+        return
+    }
+    try { Start-Process $url } catch { [System.Windows.Forms.MessageBox]::Show("Link acilamadi: $($_.Exception.Message)", "AnuDownloader") | Out-Null }
+})
 
 $btnUpdate.Add_Click({
     $lstLog.Items.Clear()
