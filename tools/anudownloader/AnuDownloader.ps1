@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.2"
+$AppVersion = "2.1.3"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
@@ -179,8 +179,24 @@ function Get-CachedImage([string]$url) {
     $name = [System.IO.Path]::GetFileName(([uri]$url).AbsolutePath)
     $hash = [System.BitConverter]::ToString([System.Security.Cryptography.MD5]::Create().ComputeHash([Text.Encoding]::UTF8.GetBytes($url))).Replace("-","")
     $local = Join-Path $CacheDir "$hash-$name"
-    if (-not (Test-Path $local)) {
-        try { Invoke-WebRequest -Uri $url -OutFile $local -UseBasicParsing } catch { return $null }
+    $etagFile = "$local.etag"
+
+    $remoteEtag = $null
+    try {
+        $resp = Invoke-WebRequest -Uri $url -Method Head -UseBasicParsing -Headers @{ "Cache-Control" = "no-cache" }
+        $remoteEtag = $resp.Headers['ETag']
+    } catch { }
+
+    $cachedEtag = if (Test-Path $etagFile) { Get-Content $etagFile -Raw } else { $null }
+    $needsDownload = (-not (Test-Path $local)) -or ($remoteEtag -and $remoteEtag -ne $cachedEtag)
+
+    if ($needsDownload) {
+        try {
+            Invoke-WebRequest -Uri $url -OutFile $local -UseBasicParsing
+            if ($remoteEtag) { Set-Content -Path $etagFile -Value $remoteEtag -NoNewline }
+        } catch {
+            if (-not (Test-Path $local)) { return $null }
+        }
     }
     try { return [System.Drawing.Image]::FromFile($local) } catch { return $null }
 }
