@@ -165,7 +165,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 525))
+$form.Size = New-Object System.Drawing.Size((Sz 700), (Sz 442))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -257,22 +257,10 @@ $txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
 $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
 
-$lstLog = New-Object System.Windows.Forms.ListBox
-$lstLog.Location = New-Object System.Drawing.Point((Sz 20),(Sz 392))
-$lstLog.Size = New-Object System.Drawing.Size((Sz 660),(Sz 90))
-$lstLog.Font = New-Object System.Drawing.Font("Consolas", 8)
-$form.Controls.Add($lstLog)
-
 $progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 487))
-$progress.Size = New-Object System.Drawing.Size((Sz 660),(Sz 18))
+$progress.Location = New-Object System.Drawing.Point((Sz 20),(Sz 400))
+$progress.Size = New-Object System.Drawing.Size((Sz 660),(Sz 22))
 $form.Controls.Add($progress)
-
-function Log($msg) {
-    $lstLog.Items.Add($msg) | Out-Null
-    $lstLog.TopIndex = $lstLog.Items.Count - 1
-    [System.Windows.Forms.Application]::DoEvents()
-}
 
 $script:packs = @()
 $script:selectedPack = $null
@@ -360,7 +348,6 @@ function Handle-PackClick($sender) {
     Select-PackTile $tile $tile.Tag
 }
 
-Log "Paket listesi indiriliyor..."
 try {
     $index = Invoke-RestMethod -Uri $IndexUrl -Headers @{ "Cache-Control" = "no-cache" }
     $script:packs = $index.packs
@@ -424,7 +411,7 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
 }
 
 Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {
-    $lstLog.Items.Clear()
+    $progress.Style = "Marquee"
     $progress.Value = 0
 
     $modsFolder = $script:selectedTarget
@@ -432,14 +419,13 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
         New-Item -ItemType Directory -Path $modsFolder -Force | Out-Null
     }
 
-    Log "Manifest indiriliyor: $($script:selectedPack.name)"
     try {
         $manifest = Invoke-RestMethod -Uri $script:selectedPack.manifest_url -Headers @{ "Cache-Control" = "no-cache" }
     } catch {
-        Log "HATA: Manifest indirilemedi - $($_.Exception.Message)"
+        $progress.Style = "Blocks"
+        Show-AnuDialog "Manifest indirilemedi:`n$($_.Exception.Message)" | Out-Null
         return
     }
-    Log "Dosya sayisi: $($manifest.files.Count)"
 
     $toDownload = @()
     foreach ($f in $manifest.files) {
@@ -454,33 +440,34 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     $localJars = Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
     $extra = $localJars | Where-Object { $manifestNames -notcontains $_ }
 
-    if ($toDownload.Count -eq 0) {
-        Log "Her şey güncel."
-    } else {
-        Log "$($toDownload.Count) dosya indirilecek."
+    $progress.Style = "Blocks"
+    $errorCount = 0
+    if ($toDownload.Count -gt 0) {
         $progress.Maximum = $toDownload.Count
         $i = 0
         foreach ($f in $toDownload) {
             $i++
             $dest = Join-Path $modsFolder $f.filename
-            Log "[$i/$($toDownload.Count)] $($f.filename)"
             try {
                 Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
                 $progress.Value = $i
             } catch {
-                Log "  HATA: $($_.Exception.Message)"
+                $errorCount++
             }
         }
-        Log "Güncelleme tamamlandı."
-    }
-
-    if ($extra.Count -gt 0) {
-        Log "Not: pakette olmayan $($extra.Count) ekstra dosya var (dokunulmadi)."
     }
 
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $modsFolder -Force
     Save-Config $cfg
-    Show-AnuDialog "İşlem bitti." | Out-Null
+
+    $summary = if ($toDownload.Count -eq 0) {
+        "Her şey güncel, indirilecek dosya yok."
+    } else {
+        "$($toDownload.Count) dosyadan $($toDownload.Count - $errorCount) tanesi indirildi."
+    }
+    if ($errorCount -gt 0) { $summary += "`n$errorCount dosya indirilemedi." }
+    if ($extra.Count -gt 0) { $summary += "`nPakette olmayan $($extra.Count) ekstra dosya var (dokunulmadı)." }
+    Show-AnuDialog $summary | Out-Null
 }
 
 [void]$form.ShowDialog()
