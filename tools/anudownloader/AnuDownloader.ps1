@@ -135,7 +135,7 @@ $form.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 12))
-$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 450),(Sz 110))
+$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 350),(Sz 114))
 $grpTarget.Controls.Add($panelLaunchers)
 
 function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w, [int]$h, $enabledColor) {
@@ -148,7 +148,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
 
     $lblEmoji = New-Object System.Windows.Forms.Label
     $lblEmoji.Text = $emoji
-    $lblEmoji.Font = New-Object System.Drawing.Font("Segoe UI Emoji", 15)
+    $lblEmoji.Font = New-Object System.Drawing.Font("Segoe UI Emoji", 13)
     $lblEmoji.ForeColor = [System.Drawing.Color]::White
     $lblEmoji.TextAlign = "MiddleCenter"
     $lblEmoji.Location = New-Object System.Drawing.Point(0,0)
@@ -157,7 +157,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
 
     $lblText = New-Object System.Windows.Forms.Label
     $lblText.Text = $text
-    $lblText.Font = New-Object System.Drawing.Font("Segoe UI", 11, [System.Drawing.FontStyle]::Bold)
+    $lblText.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
     $lblText.ForeColor = [System.Drawing.Color]::White
     $lblText.TextAlign = "MiddleLeft"
     $lblText.Location = New-Object System.Drawing.Point((Sz 40),0)
@@ -183,14 +183,14 @@ function Set-ButtonDisabledLook($btn) {
     $btn.Enabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 56 ([System.Drawing.Color]::FromArgb(60,60,68))
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 44 ([System.Drawing.Color]::FromArgb(60,60,68))
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 74 170 80 ([System.Drawing.Color]::FromArgb(46,125,50))
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 62 170 60 ([System.Drawing.Color]::FromArgb(46,125,50))
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 130))
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 128))
 $txtChosen.Size = New-Object System.Drawing.Size((Sz 640),(Sz 24))
 $txtChosen.ReadOnly = $true
 $txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
@@ -228,7 +228,7 @@ function Set-ChosenTarget([string]$path) {
 
 function Make-LauncherTile($logoImg, $label, $finder) {
     $tile = New-Object System.Windows.Forms.Panel
-    $tile.Size = New-Object System.Drawing.Size((Sz 130),(Sz 96))
+    $tile.Size = New-Object System.Drawing.Size((Sz 100),(Sz 100))
     $tile.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
@@ -236,8 +236,8 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
     $pic.SizeMode = "Zoom"
-    $pic.Location = New-Object System.Drawing.Point((Sz 37),(Sz 5))
-    $pic.Size = New-Object System.Drawing.Size((Sz 56),(Sz 56))
+    $pic.Location = New-Object System.Drawing.Point((Sz 16),(Sz 6))
+    $pic.Size = New-Object System.Drawing.Size((Sz 68),(Sz 68))
     $pic.BackColor = [System.Drawing.Color]::Transparent
     $tile.Controls.Add($pic)
 
@@ -246,8 +246,8 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $lbl.ForeColor = [System.Drawing.Color]::White
     $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 8, [System.Drawing.FontStyle]::Bold)
     $lbl.TextAlign = "MiddleCenter"
-    $lbl.Location = New-Object System.Drawing.Point(0,(Sz 64))
-    $lbl.Size = New-Object System.Drawing.Size((Sz 130),(Sz 22))
+    $lbl.Location = New-Object System.Drawing.Point(0,(Sz 76))
+    $lbl.Size = New-Object System.Drawing.Size((Sz 100),(Sz 22))
     $tile.Controls.Add($lbl)
 
     $tile.Tag = @{ Label = $label; Finder = $finder }
