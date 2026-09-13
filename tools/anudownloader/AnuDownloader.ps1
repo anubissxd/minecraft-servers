@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.8"
+$AppVersion = "2.1.9"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -207,7 +207,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 434))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 416))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -229,7 +229,7 @@ $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 226))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 208))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
 $grpTarget.BorderStyle = "FixedSingle"
 $grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
@@ -390,14 +390,80 @@ function Handle-PackClick($sender) {
     Select-PackTile $tile $tile.Tag
 }
 
+function Show-AnuUpdateAvailableDialog([string]$text) {
+    $dlg = New-Object System.Windows.Forms.Form
+    $dlg.Text = "AnuDownloader"
+    $dlg.ClientSize = New-Object System.Drawing.Size(380, 160)
+    $dlg.FormBorderStyle = "FixedDialog"
+    $dlg.StartPosition = "CenterScreen"
+    $dlg.MaximizeBox = $false
+    $dlg.MinimizeBox = $false
+    $dlg.ControlBox = $false
+    $dlg.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $dlg.Icon = $AppIcon
+
+    $lbl = New-Object System.Windows.Forms.Label
+    $lbl.Text = $text
+    $lbl.ForeColor = [System.Drawing.Color]::White
+    $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 10)
+    $lbl.TextAlign = "MiddleCenter"
+    $lbl.Location = New-Object System.Drawing.Point(15, 15)
+    $lbl.Size = New-Object System.Drawing.Size(350, 90)
+    $dlg.Controls.Add($lbl)
+
+    $btnUpdateNow = New-Object System.Windows.Forms.Button
+    $btnUpdateNow.Text = "Guncelle"
+    $btnUpdateNow.Location = New-Object System.Drawing.Point(137, 115)
+    $btnUpdateNow.Size = New-Object System.Drawing.Size(105, 30)
+    $btnUpdateNow.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
+    $btnUpdateNow.ForeColor = [System.Drawing.Color]::White
+    $btnUpdateNow.FlatStyle = "Flat"
+    $btnUpdateNow.Add_Click({ $dlg.Close() }.GetNewClosure())
+    $dlg.Controls.Add($btnUpdateNow)
+    $dlg.AcceptButton = $btnUpdateNow
+
+    [void]$dlg.ShowDialog()
+}
+
+function New-AnuProgressWindow([string]$text) {
+    $pf = New-Object System.Windows.Forms.Form
+    $pf.Text = "AnuDownloader"
+    $pf.ClientSize = New-Object System.Drawing.Size(380, 110)
+    $pf.FormBorderStyle = "FixedDialog"
+    $pf.StartPosition = "CenterScreen"
+    $pf.MaximizeBox = $false
+    $pf.MinimizeBox = $false
+    $pf.ControlBox = $false
+    $pf.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $pf.Icon = $AppIcon
+    $pf.TopMost = $true
+
+    $lbl = New-Object System.Windows.Forms.Label
+    $lbl.Text = $text
+    $lbl.ForeColor = [System.Drawing.Color]::White
+    $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 10)
+    $lbl.TextAlign = "MiddleCenter"
+    $lbl.Location = New-Object System.Drawing.Point(15, 15)
+    $lbl.Size = New-Object System.Drawing.Size(350, 30)
+    $pf.Controls.Add($lbl)
+
+    $pb = New-Object System.Windows.Forms.ProgressBar
+    $pb.Location = New-Object System.Drawing.Point(15, 55)
+    $pb.Size = New-Object System.Drawing.Size(350, 24)
+    $pb.Minimum = 0
+    $pb.Maximum = 100
+    $pf.Controls.Add($pb)
+
+    $pf.Show()
+    $pf.Refresh()
+    [System.Windows.Forms.Application]::DoEvents()
+    return @{ Form = $pf; Bar = $pb }
+}
+
 function Invoke-AnuSelfUpdate([string]$setupUrl) {
+    $win = New-AnuProgressWindow "Guncelleme indiriliyor..."
     try {
         $tempSetup = Join-Path $env:TEMP "AnuDownloader-Setup-Update.exe"
-
-        $progress.Style = "Blocks"
-        $progress.Minimum = 0
-        $progress.Maximum = 100
-        $progress.Value = 0
 
         $req = [System.Net.HttpWebRequest]::Create($setupUrl)
         $resp = $req.GetResponse()
@@ -410,7 +476,7 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
             while (($read = $stream.Read($buffer, 0, $buffer.Length)) -gt 0) {
                 $fs.Write($buffer, 0, $read)
                 $readTotal += $read
-                if ($total -gt 0) { $progress.Value = [Math]::Min(100, [int](($readTotal / $total) * 100)) }
+                if ($total -gt 0) { $win.Bar.Value = [Math]::Min(100, [int](($readTotal / $total) * 100)) }
                 [System.Windows.Forms.Application]::DoEvents()
             }
         } finally {
@@ -418,18 +484,21 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
             $stream.Close()
             $resp.Close()
         }
-        $progress.Value = 100
+        $win.Bar.Value = 100
 
         # Our own exe is still running (this process), so its file is locked.
         # Launch the installer through a detached cmd wrapper that waits for us
         # to fully exit first, otherwise the installer's file copy silently
         # fails to overwrite AnuDownloader.exe while we're still shutting down.
+        # The updated app relaunches itself once the silent install finishes,
+        # so nothing of ours should still be on screen at that point.
         $cmdArgs = "/c ping -n 3 127.0.0.1 >nul & `"$tempSetup`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
         Start-Process -FilePath "$env:WINDIR\System32\cmd.exe" -ArgumentList $cmdArgs -WindowStyle Hidden
 
+        $win.Form.Close()
         [System.Environment]::Exit(0)
     } catch {
-        $_.Exception.ToString() | Set-Content -Path (Join-Path $env:TEMP "anu_update_debug.log")
+        $win.Form.Close()
         Show-AnuDialog "Guncelleme indirilemedi:`n$($_.Exception.Message)" | Out-Null
     }
 }
@@ -441,10 +510,8 @@ try {
     if ($index.app -and $index.app.version -and $index.app.setup_url) {
         try {
             if ([version]$index.app.version -gt [version]$AppVersion) {
-                $choice = Show-AnuDialog "AnuDownloader guncellendi!`nSurum: $($index.app.version)" $true "Guncelle" "Daha Sonra"
-                if ($choice -eq "Yes") {
-                    Invoke-AnuSelfUpdate $index.app.setup_url
-                }
+                Show-AnuUpdateAvailableDialog "AnuDownloader guncellendi!`nSurum: $($index.app.version)"
+                Invoke-AnuSelfUpdate $index.app.setup_url
             }
         } catch { }
     }
