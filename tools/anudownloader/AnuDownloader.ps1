@@ -4,6 +4,7 @@
 # auto-detecting that launcher's folder across any drive, and only downloads
 # files that are new or changed vs what's already on disk.
 
+$ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
@@ -165,7 +166,7 @@ function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 434))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 406))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -188,7 +189,7 @@ $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 226))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 160))
 $grpTarget.BorderStyle = "FixedSingle"
 $grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
 $form.Controls.Add($grpTarget)
@@ -256,11 +257,6 @@ $txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
 $txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
 $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
-
-$progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 10),(Sz 158))
-$progress.Size = New-Object System.Drawing.Size((Sz 640),(Sz 20))
-$grpTarget.Controls.Add($progress)
 
 $script:packs = @()
 $script:selectedPack = $null
@@ -411,8 +407,7 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
 }
 
 Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {
-    $progress.Style = "Marquee"
-    $progress.Value = 0
+    $ProgressPreference = 'SilentlyContinue'
 
     $modsFolder = $script:selectedTarget
     if (-not (Test-Path $modsFolder)) {
@@ -422,7 +417,6 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     try {
         $manifest = Invoke-RestMethod -Uri $script:selectedPack.manifest_url -Headers @{ "Cache-Control" = "no-cache" }
     } catch {
-        $progress.Style = "Blocks"
         Show-AnuDialog "Manifest indirilemedi:`n$($_.Exception.Message)" | Out-Null
         return
     }
@@ -440,20 +434,13 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     $localJars = Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
     $extra = $localJars | Where-Object { $manifestNames -notcontains $_ }
 
-    $progress.Style = "Blocks"
     $errorCount = 0
-    if ($toDownload.Count -gt 0) {
-        $progress.Maximum = $toDownload.Count
-        $i = 0
-        foreach ($f in $toDownload) {
-            $i++
-            $dest = Join-Path $modsFolder $f.filename
-            try {
-                Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
-                $progress.Value = $i
-            } catch {
-                $errorCount++
-            }
+    foreach ($f in $toDownload) {
+        $dest = Join-Path $modsFolder $f.filename
+        try {
+            Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
+        } catch {
+            $errorCount++
         }
     }
 
