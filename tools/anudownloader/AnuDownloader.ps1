@@ -267,10 +267,10 @@ function Set-ButtonDisabledLook($btn) {
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 44 ([System.Drawing.Color]::FromArgb(60,60,68))
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 12 170 40 ([System.Drawing.Color]::FromArgb(60,60,68))
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 62 170 60 ([System.Drawing.Color]::FromArgb(46,125,50))
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 58 170 54 ([System.Drawing.Color]::FromArgb(46,125,50))
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
