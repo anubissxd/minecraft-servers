@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.9"
+$AppVersion = "2.4.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -798,12 +798,12 @@ foreach ($pack in $script:packs) {
         $dx = ($sw - $dw) / 2.0; $dy = ($sh - $dh) / 2.0
         $tg.DrawImage($s.SourceImage, $dx, $dy, $dw, $dh)
 
-        $stripH = 32 * $scale
+        $stripH = 34 * $scale
         $stripY = $sh - $stripH
         $gradBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
             (New-Object System.Drawing.Rectangle(0, $stripY, $sw, $stripH)),
-            [System.Drawing.Color]::FromArgb(0, 6, 6, 9),
-            [System.Drawing.Color]::FromArgb(200, 6, 6, 9),
+            [System.Drawing.Color]::FromArgb(90, 4, 4, 6),
+            [System.Drawing.Color]::FromArgb(240, 4, 4, 6),
             90.0)
         $tg.FillRectangle($gradBrush, 0, $stripY, $sw, $stripH)
         $gradBrush.Dispose()
