@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.2"
+$AppVersion = "2.3.3"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -280,7 +280,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 490))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 414))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -373,7 +373,7 @@ $btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 408))
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 332))
 Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
@@ -393,13 +393,13 @@ $pnlPacksFrame.Controls.Add($pnlDivider)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 8),(Sz 198))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 186))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 110))
 $grpTarget.BackColor = $ColBgElev
 $pnlPacksFrame.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
-$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
-$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 350),(Sz 114))
+$panelLaunchers.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
+$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 195),(Sz 54))
 $grpTarget.Controls.Add($panelLaunchers)
 
 function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w, [int]$h, $enabledColor) {
@@ -451,25 +451,20 @@ function Set-ButtonDisabledLook($btn) {
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 14 170 40 $ColPanel2
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 312 8 140 54 $ColPanel2
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 60 170 54 $ColAccent
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 462 8 170 54 $ColAccent
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 128))
-$txtChosen.Size = New-Object System.Drawing.Size((Sz 640),(Sz 24))
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 8),(Sz 72))
+$txtChosen.Size = New-Object System.Drawing.Size((Sz 626),(Sz 24))
 $txtChosen.ReadOnly = $true
 $txtChosen.BackColor = $ColPanel
 $txtChosen.ForeColor = $ColMuted
 $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
-
-$progress = New-Object System.Windows.Forms.ProgressBar
-$progress.Location = New-Object System.Drawing.Point((Sz 10),(Sz 158))
-$progress.Size = New-Object System.Drawing.Size((Sz 640),(Sz 20))
-$grpTarget.Controls.Add($progress)
 
 $script:packs = @()
 $script:selectedPack = $null
@@ -484,36 +479,25 @@ function Set-ChosenTarget([string]$path) {
 
 function Make-LauncherTile($logoImg, $label, $finder) {
     $tile = New-Object System.Windows.Forms.Panel
-    $tile.Size = New-Object System.Drawing.Size((Sz 100),(Sz 100))
-    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
+    $tile.Size = New-Object System.Drawing.Size((Sz 54),(Sz 54))
+    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 4))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
-    Set-RoundedFill $tile 14 $ColPanel $ColBgElev
+    Set-RoundedFill $tile 10 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
-    Add-RoundedBorderPaint $tile 13 $ColBorderSoft
-    Add-SelectionBorderPaint $tile $ColBlue 13
+    Add-RoundedBorderPaint $tile 9 $ColBorderSoft
+    Add-SelectionBorderPaint $tile $ColBlue 9
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
     $pic.SizeMode = "Zoom"
-    $pic.Location = New-Object System.Drawing.Point((Sz 16),(Sz 6))
-    $pic.Size = New-Object System.Drawing.Size((Sz 68),(Sz 68))
+    $pic.Location = New-Object System.Drawing.Point((Sz 5),(Sz 5))
+    $pic.Size = New-Object System.Drawing.Size((Sz 44),(Sz 44))
     $pic.BackColor = [System.Drawing.Color]::Transparent
     $tile.Controls.Add($pic)
-
-    $lbl = New-Object System.Windows.Forms.Label
-    $lbl.Text = $label
-    $lbl.ForeColor = $ColText
-    $lbl.BackColor = [System.Drawing.Color]::Transparent
-    $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 8, [System.Drawing.FontStyle]::Bold)
-    $lbl.TextAlign = "MiddleCenter"
-    $lbl.Location = New-Object System.Drawing.Point(0,(Sz 76))
-    $lbl.Size = New-Object System.Drawing.Size((Sz 100),(Sz 22))
-    $tile.Controls.Add($lbl)
 
     $tile.Tag = @{ Label = $label; Finder = $finder }
     $tile.Add_Click({ Handle-LauncherClick $this })
     $pic.Add_Click({ Handle-LauncherClick $this })
-    $lbl.Add_Click({ Handle-LauncherClick $this })
 
     $script:launcherTiles += $tile
     return $tile
@@ -868,8 +852,6 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
 
 Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {
     $ProgressPreference = 'SilentlyContinue'
-    $progress.Style = "Marquee"
-    $progress.Value = 0
 
     $modsFolder = $script:selectedTarget
     if (-not (Test-Path $modsFolder)) {
@@ -877,12 +859,13 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     }
 
     $isFreshInstall = @(Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue).Count -eq 0
-    if ($isFreshInstall) { Show-AnuToast "İndirme başlatıldı." } else { Show-AnuToast "Güncelleme başlatıldı." }
+    $win = New-AnuProgressWindow $(if ($isFreshInstall) { "İndiriliyor..." } else { "Güncelleniyor..." })
+    $win.Bar.Style = "Marquee"
 
     try {
         $manifest = Invoke-RestMethod -Uri $script:selectedPack.manifest_url -Headers @{ "Cache-Control" = "no-cache" }
     } catch {
-        $progress.Style = "Blocks"
+        $win.Form.Close()
         Show-AnuDialog "Manifest indirilemedi:`n$($_.Exception.Message)" | Out-Null
         return
     }
@@ -900,25 +883,28 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     $localJars = Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
     $extra = $localJars | Where-Object { $manifestNames -notcontains $_ }
 
-    $progress.Style = "Blocks"
+    $win.Bar.Style = "Blocks"
     $errorCount = 0
     if ($toDownload.Count -gt 0) {
-        $progress.Maximum = $toDownload.Count
+        $win.Bar.Maximum = $toDownload.Count
         $i = 0
         foreach ($f in $toDownload) {
             $i++
             $dest = Join-Path $modsFolder $f.filename
             try {
                 Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
-                $progress.Value = $i
+                $win.Bar.Value = $i
             } catch {
                 $errorCount++
             }
+            [System.Windows.Forms.Application]::DoEvents()
         }
     }
 
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $modsFolder -Force
     Save-Config $cfg
+
+    $win.Form.Close()
 
     $summary = if ($toDownload.Count -eq 0) {
         "Her şey güncel, indirilecek dosya yok."
