@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.5"
+$AppVersion = "2.3.6"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -484,16 +484,29 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
     Set-RoundedFill $tile 10 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
-    Add-RoundedBorderPaint $tile 9 $ColBorderSoft
-    Add-SelectionBorderPaint $tile $ColBlue 9
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
     $pic.SizeMode = "Zoom"
-    $pic.Location = New-Object System.Drawing.Point((Sz 2),(Sz 2))
-    $pic.Size = New-Object System.Drawing.Size((Sz 50),(Sz 50))
-    $pic.BackColor = [System.Drawing.Color]::Transparent
+    $pic.Location = New-Object System.Drawing.Point(0,0)
+    $pic.Size = New-Object System.Drawing.Size((Sz 54),(Sz 54))
+    $picPath = Get-RoundedPath $pic.Width $pic.Height 10
+    $pic.Region = New-Object System.Drawing.Region($picPath)
+    $picPath.Dispose()
     $tile.Controls.Add($pic)
+
+    $pic.Add_Paint({
+        param($s, $e)
+        if ($s.Parent.Selected) {
+            $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+            $path = Get-RoundedPath ($s.Width - 2) ($s.Height - 2) 9
+            $e.Graphics.TranslateTransform(1, 1)
+            $pen = New-Object System.Drawing.Pen($ColBlue, 2.2)
+            $e.Graphics.DrawPath($pen, $path)
+            $e.Graphics.ResetTransform()
+            $pen.Dispose(); $path.Dispose()
+        }
+    }.GetNewClosure())
 
     $tile.Tag = @{ Label = $label; Finder = $finder }
     $tile.Add_Click({ Handle-LauncherClick $this })
@@ -510,9 +523,9 @@ function Handle-LauncherClick($sender) {
         Show-AnuDialog "Önce bir mod paketi seç." | Out-Null
         return
     }
-    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate() }
+    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate($true) }
     $tile.Selected = $true
-    $tile.Invalidate()
+    $tile.Invalidate($true)
     $found = & $data.Finder $script:selectedPack.folder_name
     if ($found) {
         Set-ChosenTarget $found
@@ -539,7 +552,7 @@ function Select-PackTile($tile, $pack) {
     $txtChosen.Text = ""
     Set-ButtonEnabledState $btnUpdate $false
     Set-ButtonEnabledState $btnPatchNotes $true
-    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate() }
+    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate($true) }
 }
 
 function Handle-PackClick($sender) {
