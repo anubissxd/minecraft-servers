@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.4.0"
+$AppVersion = "2.4.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -282,7 +282,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 406))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 390))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -290,8 +290,8 @@ $form.BackColor = $ColBg
 $form.Icon = $AppIcon
 
 $pnlMark = New-Object System.Windows.Forms.Panel
-$pnlMark.Location = New-Object System.Drawing.Point((Sz 20),(Sz 14))
-$pnlMark.Size = New-Object System.Drawing.Size((Sz 40),(Sz 40))
+$pnlMark.Location = New-Object System.Drawing.Point((Sz 20),(Sz 12))
+$pnlMark.Size = New-Object System.Drawing.Size((Sz 26),(Sz 26))
 $pnlMark.Add_Paint({
     param($s, $e)
     $g = $e.Graphics
@@ -326,28 +326,21 @@ $pnlMark.Add_Paint({
 $form.Controls.Add($pnlMark)
 
 $lblWordmark = New-Object System.Windows.Forms.Label
-$lblWordmark.Text = "AnuDownloader"
-$lblWordmark.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 13, [System.Drawing.FontStyle]::Bold)
+$lblWordmark.Text = "AnuDownloader・MODPACK SETUP/UPDATE"
+$lblWordmark.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 9.5, [System.Drawing.FontStyle]::Bold)
 $lblWordmark.ForeColor = $ColText
-$lblWordmark.Location = New-Object System.Drawing.Point((Sz 68),(Sz 12))
-$lblWordmark.Size = New-Object System.Drawing.Size((Sz 260),(Sz 22))
+$lblWordmark.TextAlign = "MiddleLeft"
+$lblWordmark.Location = New-Object System.Drawing.Point((Sz 54),(Sz 12))
+$lblWordmark.Size = New-Object System.Drawing.Size((Sz 400),(Sz 24))
 $form.Controls.Add($lblWordmark)
 
-$lblTagline = New-Object System.Windows.Forms.Label
-$lblTagline.Text = "MODPACK GÜNCELLEYİCİ"
-$lblTagline.Font = New-Object System.Drawing.Font("Segoe UI", 7.5, [System.Drawing.FontStyle]::Bold)
-$lblTagline.ForeColor = $ColMuted2
-$lblTagline.Location = New-Object System.Drawing.Point((Sz 69),(Sz 33))
-$lblTagline.Size = New-Object System.Drawing.Size((Sz 260),(Sz 14))
-$form.Controls.Add($lblTagline)
-
 $lblVersionPill = New-Object System.Windows.Forms.Panel
-$lblVersionPill.Size = New-Object System.Drawing.Size((Sz 62),(Sz 24))
-$lblVersionPill.Location = New-Object System.Drawing.Point(((Sz 700) - (Sz 20) - (Sz 62)),(Sz 16))
-Set-RoundedFill $lblVersionPill 12 $ColPanel $ColBg
+$lblVersionPill.Size = New-Object System.Drawing.Size((Sz 52),(Sz 20))
+$lblVersionPill.Location = New-Object System.Drawing.Point(((Sz 700) - (Sz 20) - (Sz 52)),(Sz 14))
+Set-RoundedFill $lblVersionPill 10 $ColPanel $ColBg
 $lblVersionPillText = New-Object System.Windows.Forms.Label
 $lblVersionPillText.Text = "v$AppVersion"
-$lblVersionPillText.Font = New-Object System.Drawing.Font("Segoe UI", 8.5)
+$lblVersionPillText.Font = New-Object System.Drawing.Font("Segoe UI", 7.5)
 $lblVersionPillText.ForeColor = $ColMuted
 $lblVersionPillText.BackColor = [System.Drawing.Color]::Transparent
 $lblVersionPillText.TextAlign = "MiddleCenter"
@@ -356,14 +349,14 @@ $lblVersionPill.Controls.Add($lblVersionPillText)
 $form.Controls.Add($lblVersionPill)
 
 $btnLiveUpdate = New-Object System.Windows.Forms.Panel
-$btnLiveUpdate.Size = New-Object System.Drawing.Size((Sz 96),(Sz 24))
-$btnLiveUpdate.Location = New-Object System.Drawing.Point(($lblVersionPill.Location.X - (Sz 104)),(Sz 16))
+$btnLiveUpdate.Size = New-Object System.Drawing.Size((Sz 84),(Sz 20))
+$btnLiveUpdate.Location = New-Object System.Drawing.Point(($lblVersionPill.Location.X - (Sz 92)),(Sz 14))
 $btnLiveUpdate.Cursor = [System.Windows.Forms.Cursors]::Hand
 $btnLiveUpdate.Visible = $false
 Set-RoundedFill $btnLiveUpdate 12 $ColAccent $ColBg
 $lblLiveUpdateText = New-Object System.Windows.Forms.Label
 $lblLiveUpdateText.Text = "⟳ Güncelle"
-$lblLiveUpdateText.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 8.5, [System.Drawing.FontStyle]::Bold)
+$lblLiveUpdateText.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 7.5, [System.Drawing.FontStyle]::Bold)
 $lblLiveUpdateText.ForeColor = $ColText
 $lblLiveUpdateText.BackColor = [System.Drawing.Color]::Transparent
 $lblLiveUpdateText.TextAlign = "MiddleCenter"
@@ -374,7 +367,7 @@ $form.Controls.Add($btnLiveUpdate)
 $btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
-$pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
+$pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 46))
 $pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 324))
 Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
