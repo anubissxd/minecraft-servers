@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.6"
+$AppVersion = "2.3.7"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -486,14 +486,37 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
 
     $pic = New-Object System.Windows.Forms.PictureBox
-    $pic.Image = $logoImg
+    $pic.Image = $null
     $pic.SizeMode = "Zoom"
     $pic.Location = New-Object System.Drawing.Point(0,0)
     $pic.Size = New-Object System.Drawing.Size((Sz 54),(Sz 54))
-    $picPath = Get-RoundedPath $pic.Width $pic.Height 10
-    $pic.Region = New-Object System.Drawing.Region($picPath)
-    $picPath.Dispose()
+    $pic | Add-Member -NotePropertyName SourceImage -NotePropertyValue $logoImg -Force
     $tile.Controls.Add($pic)
+
+    # Region-clipping a PictureBox gives hard, pixelated corners (Region has no
+    # anti-aliasing). Instead render the logo at 4x into an offscreen bitmap,
+    # clip it there, then draw that back down at target size - the downscale
+    # blends the hard clip edge into a smooth one.
+    $pic.Add_Paint({
+        param($s, $e)
+        $scale = 4
+        $sw = [Math]::Max(1, $s.Width * $scale)
+        $sh = [Math]::Max(1, $s.Height * $scale)
+        $temp = New-Object System.Drawing.Bitmap $sw, $sh, ([System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+        $tg = [System.Drawing.Graphics]::FromImage($temp)
+        $tg.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $tg.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+        $path = Get-RoundedPath $sw $sh (10 * $scale)
+        $tg.SetClip($path)
+        $tg.DrawImage($s.SourceImage, 0, 0, $sw, $sh)
+        $tg.Dispose(); $path.Dispose()
+
+        $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $e.Graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBilinear
+        $e.Graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+        $e.Graphics.DrawImage($temp, 0, 0, $s.Width, $s.Height)
+        $temp.Dispose()
+    }.GetNewClosure())
 
     $pic.Add_Paint({
         param($s, $e)
