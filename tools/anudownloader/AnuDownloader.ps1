@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.8"
+$AppVersion = "2.3.9"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -219,6 +219,7 @@ $ColDisabled  = [System.Drawing.Color]::FromArgb(46,46,56)
 $ColBgElev    = [System.Drawing.Color]::FromArgb(22,22,29)
 $ColBorderSoft= [System.Drawing.Color]::FromArgb(26,255,255,255)
 $ColTeal      = [System.Drawing.Color]::FromArgb(45,168,196)
+$ColSelect    = [System.Drawing.Color]::FromArgb(255,176,32)
 
 function Get-RoundedPath([int]$w, [int]$h, [int]$r) {
     $rr = [Math]::Min($r, [Math]::Min([int]($w / 2), [int]($h / 2)))
@@ -540,7 +541,7 @@ function Make-LauncherTile($logoImg, $label, $finder) {
             $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
             $path = Get-RoundedPath ($s.Width - 2) ($s.Height - 2) 9
             $e.Graphics.TranslateTransform(1, 1)
-            $pen = New-Object System.Drawing.Pen($ColBlue, 2.2)
+            $pen = New-Object System.Drawing.Pen($ColSelect, 2.6)
             $e.Graphics.DrawPath($pen, $path)
             $e.Graphics.ResetTransform()
             $pen.Dispose(); $path.Dispose()
@@ -580,10 +581,10 @@ $panelLaunchers.Controls.Add((Make-LauncherTile $TLLogoImg "TLauncher" ${functio
 
 function Select-PackTile($tile, $pack) {
     foreach ($t in $panelPacks.Controls) {
-        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate() }
+        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate($true) }
     }
     $tile.Selected = $true
-    $tile.Invalidate()
+    $tile.Invalidate($true)
     $script:selectedPack = $pack
     $script:selectedTarget = $null
     $txtChosen.Text = ""
@@ -594,7 +595,7 @@ function Select-PackTile($tile, $pack) {
 
 function Deselect-PackTile {
     foreach ($t in $panelPacks.Controls) {
-        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate() }
+        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate($true) }
     }
     $script:selectedPack = $null
     $script:selectedTarget = $null
@@ -760,42 +761,84 @@ foreach ($pack in $script:packs) {
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
     Set-RoundedFill $tile 14 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
-    Add-RoundedBorderPaint $tile 13 $ColBorderSoft
-    Add-SelectionBorderPaint $tile $ColAccent 13
 
     $pic = New-Object System.Windows.Forms.PictureBox
-    $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 99))
-    $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
-    $pic.SizeMode = "Zoom"
-    $pic.BackColor = $ColPanel2
+    $pic.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
+    $pic.Location = New-Object System.Drawing.Point(0,0)
+    $pic.BackColor = [System.Drawing.Color]::Transparent
     $img = Get-CachedImage $pack.banner_url
-    if ($img) { $pic.Image = $img }
+    $pic | Add-Member -NotePropertyName SourceImage -NotePropertyValue $img -Force
     $tile.Controls.Add($pic)
 
-    $lblName = New-Object System.Windows.Forms.Label
-    $lblName.Text = $pack.name
-    $lblName.ForeColor = $ColText
-    $lblName.BackColor = [System.Drawing.Color]::Transparent
-    $lblName.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 9.5, [System.Drawing.FontStyle]::Bold)
-    $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 112))
-    $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 22))
-    $tile.Controls.Add($lblName)
+    # Same supersample-then-downscale trick as the launcher logos: gives an
+    # anti-aliased rounded clip and a "cover" crop instead of a letterboxed one.
+    # The name/version strip is drawn here too (not as separate Label/Panel
+    # controls) because a transparent-backed control's "see-through" only
+    # composites against its own parent, not a sibling like this PictureBox -
+    # drawing it as part of this same Paint call is the only way it reliably
+    # ends up on top of the banner image.
+    $packName = $pack.name
+    $packVersion = "v$($pack.version)"
+    $pic.Add_Paint({
+        param($s, $e)
+        if (-not $s.SourceImage) { return }
+        $scale = 3
+        $sw = [Math]::Max(1, $s.Width * $scale)
+        $sh = [Math]::Max(1, $s.Height * $scale)
+        $temp = New-Object System.Drawing.Bitmap $sw, $sh, ([System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+        $tg = [System.Drawing.Graphics]::FromImage($temp)
+        $tg.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $tg.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+        $path = Get-RoundedPath $sw $sh (14 * $scale)
+        $tg.SetClip($path)
 
-    $lblVersion = New-Object System.Windows.Forms.Label
-    $lblVersion.Text = "v$($pack.version)"
-    $lblVersion.ForeColor = $ColMuted2
-    $lblVersion.BackColor = [System.Drawing.Color]::Transparent
-    $lblVersion.Font = New-Object System.Drawing.Font("Segoe UI", 8)
-    $lblVersion.TextAlign = "MiddleRight"
-    $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 112))
-    $lblVersion.Size = New-Object System.Drawing.Size((Sz 48),(Sz 22))
-    $tile.Controls.Add($lblVersion)
+        $srcW = $s.SourceImage.Width; $srcH = $s.SourceImage.Height
+        $coverScale = [Math]::Max($sw / $srcW, $sh / $srcH)
+        $dw = $srcW * $coverScale; $dh = $srcH * $coverScale
+        $dx = ($sw - $dw) / 2.0; $dy = ($sh - $dh) / 2.0
+        $tg.DrawImage($s.SourceImage, $dx, $dy, $dw, $dh)
+
+        $stripH = 32 * $scale
+        $stripY = $sh - $stripH
+        $gradBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+            (New-Object System.Drawing.Rectangle(0, $stripY, $sw, $stripH)),
+            [System.Drawing.Color]::FromArgb(0, 6, 6, 9),
+            [System.Drawing.Color]::FromArgb(200, 6, 6, 9),
+            90.0)
+        $tg.FillRectangle($gradBrush, 0, $stripY, $sw, $stripH)
+        $gradBrush.Dispose()
+
+        $nameFont = New-Object System.Drawing.Font("Segoe UI Semibold", (9.5 * $scale), [System.Drawing.FontStyle]::Bold)
+        $verFont = New-Object System.Drawing.Font("Segoe UI", (8 * $scale))
+        $nameBrush = New-Object System.Drawing.SolidBrush($ColText)
+        $verBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(215,215,220))
+        $tg.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAlias
+        $textY = $sh - $stripH + (4 * $scale)
+        $tg.DrawString($packName, $nameFont, $nameBrush, (10 * $scale), $textY)
+        $verSize = $tg.MeasureString($packVersion, $verFont)
+        $tg.DrawString($packVersion, $verFont, $verBrush, ($sw - 10 * $scale - $verSize.Width), $textY)
+        $nameFont.Dispose(); $verFont.Dispose(); $nameBrush.Dispose(); $verBrush.Dispose()
+
+        $tg.Dispose(); $path.Dispose()
+
+        $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $e.Graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBilinear
+        $e.Graphics.DrawImage($temp, 0, 0, $s.Width, $s.Height)
+        $temp.Dispose()
+
+        if ($s.Parent.Selected) {
+            $ringPath = Get-RoundedPath ($s.Width - 2) ($s.Height - 2) 13
+            $e.Graphics.TranslateTransform(1, 1)
+            $ringPen = New-Object System.Drawing.Pen($ColAccent, 2.6)
+            $e.Graphics.DrawPath($ringPen, $ringPath)
+            $e.Graphics.ResetTransform()
+            $ringPen.Dispose(); $ringPath.Dispose()
+        }
+    }.GetNewClosure())
 
     $tile.Tag = $pack
     $tile.Add_Click({ Handle-PackClick $this })
     $pic.Add_Click({ Handle-PackClick $this })
-    $lblName.Add_Click({ Handle-PackClick $this })
-    $lblVersion.Add_Click({ Handle-PackClick $this })
 
     $panelPacks.Controls.Add($tile)
 }
@@ -906,11 +949,15 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
         Show-AnuDialog "Bu paket için yama notu henüz eklenmemiş." | Out-Null
         return
     }
+    $win = New-AnuProgressWindow "Yama notları getiriliyor..."
+    $win.Bar.Style = "Marquee"
     try {
         $ProgressPreference = 'SilentlyContinue'
         $text = (Invoke-WebRequest -Uri $url -UseBasicParsing -Headers @{ "Cache-Control" = "no-cache" }).Content
+        $win.Form.Close()
         Show-AnuPatchNotes $script:selectedPack.name $text
     } catch {
+        $win.Form.Close()
         Show-AnuDialog "Yama notları indirilemedi:`n$($_.Exception.Message)" | Out-Null
     }
 }
