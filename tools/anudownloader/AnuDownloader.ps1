@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.1.10"
+$AppVersion = "2.2.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -58,7 +58,7 @@ function Show-AnuToast([string]$text, [int]$ms = 900) {
     $t = New-Object System.Windows.Forms.Form
     $t.FormBorderStyle = "None"
     $t.ClientSize = New-Object System.Drawing.Size(320, 70)
-    $t.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $t.BackColor = $ColBg
     $t.StartPosition = "CenterScreen"
     $t.TopMost = $true
     $t.ShowInTaskbar = $false
@@ -86,7 +86,7 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false, [string]$yesTex
     $dlg.StartPosition = "CenterScreen"
     $dlg.MaximizeBox = $false
     $dlg.MinimizeBox = $false
-    $dlg.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $dlg.BackColor = $ColBg
     $dlg.Icon = $AppIcon
 
     $lbl = New-Object System.Windows.Forms.Label
@@ -104,7 +104,7 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false, [string]$yesTex
         $btnYes.Text = $yesText
         $btnYes.Location = New-Object System.Drawing.Point(95, 115)
         $btnYes.Size = New-Object System.Drawing.Size(105, 30)
-        $btnYes.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
+        $btnYes.BackColor = $ColAccent
         $btnYes.ForeColor = [System.Drawing.Color]::White
         $btnYes.FlatStyle = "Flat"
         $btnYes.Add_Click({ $script:AnuDialogResult = "Yes"; $dlg.Close() }.GetNewClosure())
@@ -114,7 +114,7 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false, [string]$yesTex
         $btnNo.Text = $noText
         $btnNo.Location = New-Object System.Drawing.Point(210, 115)
         $btnNo.Size = New-Object System.Drawing.Size(105, 30)
-        $btnNo.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
+        $btnNo.BackColor = $ColPanel2
         $btnNo.ForeColor = [System.Drawing.Color]::White
         $btnNo.FlatStyle = "Flat"
         $btnNo.Add_Click({ $script:AnuDialogResult = "No"; $dlg.Close() }.GetNewClosure())
@@ -125,7 +125,7 @@ function Show-AnuDialog([string]$text, [bool]$askYesNo = $false, [string]$yesTex
         $btnOk.Text = "Tamam"
         $btnOk.Location = New-Object System.Drawing.Point(150, 115)
         $btnOk.Size = New-Object System.Drawing.Size(80, 30)
-        $btnOk.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
+        $btnOk.BackColor = $ColPanel2
         $btnOk.ForeColor = [System.Drawing.Color]::White
         $btnOk.FlatStyle = "Flat"
         $btnOk.Add_Click({ $dlg.Close() }.GetNewClosure())
@@ -205,34 +205,120 @@ function Get-CachedImage([string]$url) {
 $SCALE = 1.2
 function Sz($v) { [int]([Math]::Round($v * $SCALE)) }
 
+# ---------- Palette ----------
+$ColBg        = [System.Drawing.Color]::FromArgb(17,17,23)
+$ColPanel     = [System.Drawing.Color]::FromArgb(28,28,37)
+$ColPanel2    = [System.Drawing.Color]::FromArgb(33,33,43)
+$ColAccent    = [System.Drawing.Color]::FromArgb(39,174,96)
+$ColAccentDark= [System.Drawing.Color]::FromArgb(27,138,75)
+$ColBlue      = [System.Drawing.Color]::FromArgb(91,140,255)
+$ColText      = [System.Drawing.Color]::FromArgb(242,242,246)
+$ColMuted     = [System.Drawing.Color]::FromArgb(160,160,176)
+$ColMuted2    = [System.Drawing.Color]::FromArgb(112,112,130)
+$ColDisabled  = [System.Drawing.Color]::FromArgb(46,46,56)
+
+function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor) {
+    $ctrl.Add_Paint({
+        param($s, $e)
+        if ($s.Selected) {
+            $pen = New-Object System.Drawing.Pen($accentColor, 2)
+            $rect = New-Object System.Drawing.Rectangle(1, 1, ($s.Width - 3), ($s.Height - 3))
+            $e.Graphics.DrawRectangle($pen, $rect)
+            $pen.Dispose()
+        }
+    }.GetNewClosure())
+}
+
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 416))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 463))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
-$form.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
+$form.BackColor = $ColBg
 $form.Icon = $AppIcon
 
+$pnlMark = New-Object System.Windows.Forms.Panel
+$pnlMark.Location = New-Object System.Drawing.Point((Sz 20),(Sz 14))
+$pnlMark.Size = New-Object System.Drawing.Size((Sz 40),(Sz 40))
+$pnlMark.Add_Paint({
+    param($s, $e)
+    $g = $e.Graphics
+    $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+    $w = [int]$s.Width
+    $h = [int]$s.Height
+    $rect = New-Object System.Drawing.Rectangle(0, 0, $w, $h)
+    $brush = New-Object System.Drawing.Drawing2D.LinearGradientBrush($rect, $ColBlue, $ColAccent, 45.0)
+    $r = [int]($w * 0.28)
+    $path = New-Object System.Drawing.Drawing2D.GraphicsPath
+    [void]$path.AddArc(0, 0, $r, $r, 180, 90)
+    [void]$path.AddArc(($w - $r), 0, $r, $r, 270, 90)
+    [void]$path.AddArc(($w - $r), ($h - $r), $r, $r, 0, 90)
+    [void]$path.AddArc(0, ($h - $r), $r, $r, 90, 90)
+    $path.CloseFigure()
+    $g.FillPath($brush, $path)
+
+    $glyphColor = [System.Drawing.Color]::FromArgb(200, 12, 28, 20)
+    $glyphBrush = New-Object System.Drawing.SolidBrush($glyphColor)
+    $cx = $w / 2.0
+    $triangle = [System.Drawing.PointF[]]@(
+        (New-Object System.Drawing.PointF($cx, ($h * 0.66))),
+        (New-Object System.Drawing.PointF(($cx - 7.0), ($h * 0.42))),
+        (New-Object System.Drawing.PointF(($cx + 7.0), ($h * 0.42)))
+    )
+    $g.FillPolygon($glyphBrush, $triangle)
+    $stemPen = New-Object System.Drawing.Pen($glyphColor, 2.4)
+    $g.DrawLine($stemPen, $cx, ($h * 0.24), $cx, ($h * 0.46))
+
+    $stemPen.Dispose(); $glyphBrush.Dispose(); $brush.Dispose(); $path.Dispose()
+})
+$form.Controls.Add($pnlMark)
+
+$lblWordmark = New-Object System.Windows.Forms.Label
+$lblWordmark.Text = "AnuDownloader"
+$lblWordmark.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 13, [System.Drawing.FontStyle]::Bold)
+$lblWordmark.ForeColor = $ColText
+$lblWordmark.Location = New-Object System.Drawing.Point((Sz 68),(Sz 12))
+$lblWordmark.Size = New-Object System.Drawing.Size((Sz 260),(Sz 22))
+$form.Controls.Add($lblWordmark)
+
+$lblTagline = New-Object System.Windows.Forms.Label
+$lblTagline.Text = "MODPACK GÜNCELLEYİCİ"
+$lblTagline.Font = New-Object System.Drawing.Font("Segoe UI", 7.5, [System.Drawing.FontStyle]::Bold)
+$lblTagline.ForeColor = $ColMuted2
+$lblTagline.Location = New-Object System.Drawing.Point((Sz 69),(Sz 33))
+$lblTagline.Size = New-Object System.Drawing.Size((Sz 260),(Sz 14))
+$form.Controls.Add($lblTagline)
+
+$lblVersionPill = New-Object System.Windows.Forms.Label
+$lblVersionPill.Text = "v$AppVersion"
+$lblVersionPill.Font = New-Object System.Drawing.Font("Segoe UI", 8.5)
+$lblVersionPill.ForeColor = $ColMuted
+$lblVersionPill.BackColor = $ColPanel
+$lblVersionPill.TextAlign = "MiddleCenter"
+$lblVersionPill.Size = New-Object System.Drawing.Size((Sz 62),(Sz 24))
+$lblVersionPill.Location = New-Object System.Drawing.Point(((Sz 700) - (Sz 20) - (Sz 62)),(Sz 16))
+$form.Controls.Add($lblVersionPill)
+
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
-$pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 15))
+$pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
 $pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 178))
-$pnlPacksFrame.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
+$pnlPacksFrame.BackColor = $ColBg
 $pnlPacksFrame.BorderStyle = "FixedSingle"
 $form.Controls.Add($pnlPacksFrame)
 
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelPacks.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
 $panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 162))
-$panelPacks.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
+$panelPacks.BackColor = $ColBg
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 208))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 255))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
 $grpTarget.BorderStyle = "FixedSingle"
-$grpTarget.BackColor = [System.Drawing.Color]::FromArgb(24,24,27)
+$grpTarget.BackColor = $ColBg
 $form.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
@@ -259,8 +345,8 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
 
     $lblText = New-Object System.Windows.Forms.Label
     $lblText.Text = $text
-    $lblText.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
-    $lblText.ForeColor = [System.Drawing.Color]::White
+    $lblText.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 10, [System.Drawing.FontStyle]::Bold)
+    $lblText.ForeColor = $ColText
     $lblText.TextAlign = "MiddleLeft"
     $lblText.Location = New-Object System.Drawing.Point((Sz 40),0)
     $lblText.Size = New-Object System.Drawing.Size((Sz ($w-40)),(Sz $h))
@@ -280,22 +366,22 @@ function Set-ButtonEnabledState($btn, [bool]$enabled) {
 }
 
 function Set-ButtonDisabledLook($btn) {
-    $btn.BackColor = [System.Drawing.Color]::FromArgb(50,50,55)
+    $btn.BackColor = $ColDisabled
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 14 170 40 ([System.Drawing.Color]::FromArgb(60,60,68))
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 480 14 170 40 $ColPanel2
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 60 170 54 ([System.Drawing.Color]::FromArgb(46,125,50))
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 480 60 170 54 $ColAccent
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
 $txtChosen.Location = New-Object System.Drawing.Point((Sz 10),(Sz 128))
 $txtChosen.Size = New-Object System.Drawing.Size((Sz 640),(Sz 24))
 $txtChosen.ReadOnly = $true
-$txtChosen.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
-$txtChosen.ForeColor = [System.Drawing.Color]::FromArgb(150,220,150)
+$txtChosen.BackColor = $ColPanel
+$txtChosen.ForeColor = $ColMuted
 $txtChosen.BorderStyle = "FixedSingle"
 $grpTarget.Controls.Add($txtChosen)
 
@@ -318,9 +404,11 @@ function Set-ChosenTarget([string]$path) {
 function Make-LauncherTile($logoImg, $label, $finder) {
     $tile = New-Object System.Windows.Forms.Panel
     $tile.Size = New-Object System.Drawing.Size((Sz 100),(Sz 100))
-    $tile.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
+    $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
+    $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
+    Add-SelectionBorderPaint $tile $ColBlue
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
@@ -332,7 +420,7 @@ function Make-LauncherTile($logoImg, $label, $finder) {
 
     $lbl = New-Object System.Windows.Forms.Label
     $lbl.Text = $label
-    $lbl.ForeColor = [System.Drawing.Color]::White
+    $lbl.ForeColor = $ColText
     $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 8, [System.Drawing.FontStyle]::Bold)
     $lbl.TextAlign = "MiddleCenter"
     $lbl.Location = New-Object System.Drawing.Point(0,(Sz 76))
@@ -355,8 +443,9 @@ function Handle-LauncherClick($sender) {
         Show-AnuDialog "Önce bir mod paketi seç." | Out-Null
         return
     }
-    foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
-    $tile.BackColor = [System.Drawing.Color]::FromArgb(60,90,60)
+    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate() }
+    $tile.Selected = $true
+    $tile.Invalidate()
     $found = & $data.Finder $script:selectedPack.folder_name
     if ($found) {
         Set-ChosenTarget $found
@@ -374,15 +463,16 @@ $panelLaunchers.Controls.Add((Make-LauncherTile $TLLogoImg "TLauncher" ${functio
 
 function Select-PackTile($tile, $pack) {
     foreach ($t in $panelPacks.Controls) {
-        if ($t -is [System.Windows.Forms.Panel]) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
+        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate() }
     }
-    $tile.BackColor = [System.Drawing.Color]::FromArgb(60,90,60)
+    $tile.Selected = $true
+    $tile.Invalidate()
     $script:selectedPack = $pack
     $script:selectedTarget = $null
     $txtChosen.Text = ""
     Set-ButtonEnabledState $btnUpdate $false
     Set-ButtonEnabledState $btnPatchNotes $true
-    foreach ($t in $script:launcherTiles) { $t.BackColor = [System.Drawing.Color]::FromArgb(40,40,45) }
+    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate() }
 }
 
 function Handle-PackClick($sender) {
@@ -399,7 +489,7 @@ function Show-AnuUpdateAvailableDialog([string]$text) {
     $dlg.MaximizeBox = $false
     $dlg.MinimizeBox = $false
     $dlg.ControlBox = $false
-    $dlg.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $dlg.BackColor = $ColBg
     $dlg.Icon = $AppIcon
 
     $lbl = New-Object System.Windows.Forms.Label
@@ -415,7 +505,7 @@ function Show-AnuUpdateAvailableDialog([string]$text) {
     $btnUpdateNow.Text = "Guncelle"
     $btnUpdateNow.Location = New-Object System.Drawing.Point(137, 115)
     $btnUpdateNow.Size = New-Object System.Drawing.Size(105, 30)
-    $btnUpdateNow.BackColor = [System.Drawing.Color]::FromArgb(46,125,50)
+    $btnUpdateNow.BackColor = $ColAccent
     $btnUpdateNow.ForeColor = [System.Drawing.Color]::White
     $btnUpdateNow.FlatStyle = "Flat"
     $btnUpdateNow.Add_Click({ $dlg.Close() }.GetNewClosure())
@@ -434,7 +524,7 @@ function New-AnuProgressWindow([string]$text) {
     $pf.MaximizeBox = $false
     $pf.MinimizeBox = $false
     $pf.ControlBox = $false
-    $pf.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $pf.BackColor = $ColBg
     $pf.Icon = $AppIcon
     $pf.TopMost = $true
 
@@ -534,30 +624,32 @@ try {
 foreach ($pack in $script:packs) {
     $tile = New-Object System.Windows.Forms.Panel
     $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
-    $tile.BackColor = [System.Drawing.Color]::FromArgb(40,40,45)
+    $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
+    $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
+    Add-SelectionBorderPaint $tile $ColAccent
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 99))
     $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
     $pic.SizeMode = "Zoom"
-    $pic.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
+    $pic.BackColor = $ColPanel2
     $img = Get-CachedImage $pack.banner_url
     if ($img) { $pic.Image = $img }
     $tile.Controls.Add($pic)
 
     $lblName = New-Object System.Windows.Forms.Label
     $lblName.Text = $pack.name
-    $lblName.ForeColor = [System.Drawing.Color]::White
-    $lblName.Font = New-Object System.Drawing.Font("Segoe UI", 9.5, [System.Drawing.FontStyle]::Bold)
+    $lblName.ForeColor = $ColText
+    $lblName.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 9.5, [System.Drawing.FontStyle]::Bold)
     $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 112))
     $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 22))
     $tile.Controls.Add($lblName)
 
     $lblVersion = New-Object System.Windows.Forms.Label
     $lblVersion.Text = "v$($pack.version)"
-    $lblVersion.ForeColor = [System.Drawing.Color]::FromArgb(150,150,155)
+    $lblVersion.ForeColor = $ColMuted2
     $lblVersion.Font = New-Object System.Drawing.Font("Segoe UI", 8)
     $lblVersion.TextAlign = "MiddleRight"
     $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 112))
@@ -605,7 +697,7 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
     $dlg.StartPosition = "CenterScreen"
     $dlg.MaximizeBox = $false
     $dlg.MinimizeBox = $false
-    $dlg.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $dlg.BackColor = $ColBg
     $dlg.Icon = $AppIcon
 
     # sag tarafta scrollbar/rahat kaydirma icin bosluk birak
@@ -613,7 +705,7 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
     $box = New-Object System.Windows.Forms.RichTextBox
     $box.ReadOnly = $true
     $box.BorderStyle = "None"
-    $box.BackColor = [System.Drawing.Color]::FromArgb(30,30,34)
+    $box.BackColor = $ColBg
     $box.ForeColor = [System.Drawing.Color]::White
     $box.Font = New-Object System.Drawing.Font("Segoe UI", 10)
     $box.Location = New-Object System.Drawing.Point(15, 15)
@@ -660,7 +752,7 @@ function Show-AnuPatchNotes([string]$title, [string]$text) {
     $btnClose.Text = "Kapat"
     $btnClose.Location = New-Object System.Drawing.Point(($w - 110), ($h - 42))
     $btnClose.Size = New-Object System.Drawing.Size(95, 30)
-    $btnClose.BackColor = [System.Drawing.Color]::FromArgb(60,60,65)
+    $btnClose.BackColor = $ColPanel2
     $btnClose.ForeColor = [System.Drawing.Color]::White
     $btnClose.FlatStyle = "Flat"
     $btnClose.Add_Click({ $dlg.Close() }.GetNewClosure())
