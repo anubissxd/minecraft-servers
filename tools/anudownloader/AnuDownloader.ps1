@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.0"
+$AppVersion = "2.3.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -280,7 +280,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 466))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 490))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -373,7 +373,7 @@ $btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 384))
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 408))
 Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
@@ -407,7 +407,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
     $btn.Location = New-Object System.Drawing.Point((Sz $x),(Sz $y))
     $btn.Size = New-Object System.Drawing.Size((Sz $w),(Sz $h))
     $btn.Cursor = [System.Windows.Forms.Cursors]::Hand
-    Set-RoundedFill $btn 12 $ColDisabled $ColBgElev
+    Set-RoundedFill $btn 12 $ColPanel $ColBgElev
     $btn | Add-Member -NotePropertyName EnabledColor -NotePropertyValue $enabledColor -Force
     $btn | Add-Member -NotePropertyName IsEnabled -NotePropertyValue $false -Force
 
@@ -415,6 +415,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
     $lblEmoji.Text = $emoji
     $lblEmoji.Font = New-Object System.Drawing.Font("Segoe UI Emoji", 13)
     $lblEmoji.ForeColor = [System.Drawing.Color]::White
+    $lblEmoji.BackColor = [System.Drawing.Color]::Transparent
     $lblEmoji.TextAlign = "MiddleCenter"
     $lblEmoji.Location = New-Object System.Drawing.Point(0,0)
     $lblEmoji.Size = New-Object System.Drawing.Size((Sz 40),(Sz $h))
@@ -424,6 +425,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
     $lblText.Text = $text
     $lblText.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 10, [System.Drawing.FontStyle]::Bold)
     $lblText.ForeColor = $ColText
+    $lblText.BackColor = [System.Drawing.Color]::Transparent
     $lblText.TextAlign = "MiddleLeft"
     $lblText.Location = New-Object System.Drawing.Point((Sz 40),0)
     $lblText.Size = New-Object System.Drawing.Size((Sz ($w-40)),(Sz $h))
@@ -444,7 +446,7 @@ function Set-ButtonEnabledState($btn, [bool]$enabled) {
 }
 
 function Set-ButtonDisabledLook($btn) {
-    $btn.FillColor = $ColDisabled
+    $btn.FillColor = $ColPanel
     $btn.Invalidate()
     $btn.IsEnabled = $false
 }
@@ -501,6 +503,7 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $lbl = New-Object System.Windows.Forms.Label
     $lbl.Text = $label
     $lbl.ForeColor = $ColText
+    $lbl.BackColor = [System.Drawing.Color]::Transparent
     $lbl.Font = New-Object System.Drawing.Font("Segoe UI", 8, [System.Drawing.FontStyle]::Bold)
     $lbl.TextAlign = "MiddleCenter"
     $lbl.Location = New-Object System.Drawing.Point(0,(Sz 76))
@@ -723,6 +726,7 @@ foreach ($pack in $script:packs) {
     $lblName = New-Object System.Windows.Forms.Label
     $lblName.Text = $pack.name
     $lblName.ForeColor = $ColText
+    $lblName.BackColor = [System.Drawing.Color]::Transparent
     $lblName.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 9.5, [System.Drawing.FontStyle]::Bold)
     $lblName.Location = New-Object System.Drawing.Point((Sz 10),(Sz 112))
     $lblName.Size = New-Object System.Drawing.Size((Sz 128),(Sz 22))
@@ -731,6 +735,7 @@ foreach ($pack in $script:packs) {
     $lblVersion = New-Object System.Windows.Forms.Label
     $lblVersion.Text = "v$($pack.version)"
     $lblVersion.ForeColor = $ColMuted2
+    $lblVersion.BackColor = [System.Drawing.Color]::Transparent
     $lblVersion.Font = New-Object System.Drawing.Font("Segoe UI", 8)
     $lblVersion.TextAlign = "MiddleRight"
     $lblVersion.Location = New-Object System.Drawing.Point((Sz 138),(Sz 112))
