@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.5.0"
+$AppVersion = "2.6.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -147,33 +147,38 @@ function Get-FixedDrives {
 }
 
 function Find-ModrinthTarget([string]$folderName) {
-    $mr = Join-Path $env:APPDATA "ModrinthApp\profiles\$folderName\mods"
-    if (Test-Path $mr) { return $mr }
+    # Returns the PROFILE ROOT, not mods\ - the pack now also syncs
+    # config\, resourcepacks\ and datapacks\ alongside mods\.
+    $root = Join-Path $env:APPDATA "ModrinthApp\profiles\$folderName"
+    if (Test-Path (Join-Path $root "mods")) { return $root }
     return $null
 }
 
 function Find-TLauncherTarget([string]$folderName) {
     # TLauncher profiles for custom (Forge/Fabric/etc.) versions get their own
-    # game directory under versions\<profile name>\ - mods live inside that,
-    # not the shared .minecraft\mods. The profile name is whatever the user
-    # typed, so an exact match only works if they happened to name it like
-    # the pack; otherwise Try-ResolveTarget falls back to manual selection.
-    $byName = Join-Path $env:APPDATA ".minecraft\versions\$folderName\mods"
-    if (Test-Path $byName) { return $byName }
+    # game directory under versions\<profile name>\ - that IS the profile
+    # root (mods\, config\, etc. live directly inside it), not the shared
+    # .minecraft\. The profile name is whatever the user typed, so an exact
+    # match only works if they happened to name it like the pack; otherwise
+    # Try-ResolveTarget falls back to manual selection.
+    $root = Join-Path $env:APPDATA ".minecraft\versions\$folderName"
+    if (Test-Path (Join-Path $root "mods")) { return $root }
     return $null
 }
 
 function Find-CurseForgeTarget([string]$folderName) {
+    # Returns the INSTANCE ROOT (parent of mods\), since config\,
+    # resourcepacks\ and datapacks\ live alongside it there too.
     $cfCandidates = @()
-    $cfCandidates += (Join-Path $env:USERPROFILE "curseforge\minecraft\Instances\$folderName\mods")
+    $cfCandidates += (Join-Path $env:USERPROFILE "curseforge\minecraft\Instances\$folderName")
     foreach ($drive in (Get-FixedDrives)) {
-        $cfCandidates += (Join-Path $drive "curseforge\minecraft\Instances\$folderName\mods")
-        $cfCandidates += (Join-Path $drive "CurseForge\minecraft\Instances\$folderName\mods")
-        $cfCandidates += (Join-Path $drive "Games\curseforge\minecraft\Instances\$folderName\mods")
-        $cfCandidates += (Join-Path $drive "Users\$env:USERNAME\curseforge\minecraft\Instances\$folderName\mods")
+        $cfCandidates += (Join-Path $drive "curseforge\minecraft\Instances\$folderName")
+        $cfCandidates += (Join-Path $drive "CurseForge\minecraft\Instances\$folderName")
+        $cfCandidates += (Join-Path $drive "Games\curseforge\minecraft\Instances\$folderName")
+        $cfCandidates += (Join-Path $drive "Users\$env:USERNAME\curseforge\minecraft\Instances\$folderName")
     }
     foreach ($c in ($cfCandidates | Select-Object -Unique)) {
-        if (Test-Path $c) { return $c }
+        if (Test-Path (Join-Path $c "mods")) { return $c }
     }
     return $null
 }
@@ -505,16 +510,16 @@ function Try-ResolveTarget {
     } elseif ($data.Label -eq "CurseForge") {
         Show-AnuDialog "CurseForge için önce `"$($pack.name)`" adlı bir profil oluştur.`n`nSürüm: $(Get-PackVersionText $pack)" | Out-Null
     } elseif ($data.Label -eq "TLauncher") {
-        Show-AnuDialog "TLauncher'da önce `"$($pack.name)`" adlı bir profil oluştur.`n`nSürüm: $(Get-PackVersionText $pack)`n`nProfil versions klasöründe oluşur - şimdi o profilin mods klasörünü seç." | Out-Null
+        Show-AnuDialog "TLauncher'da önce `"$($pack.name)`" adlı bir profil oluştur.`n`nSürüm: $(Get-PackVersionText $pack)`n`nProfil versions klasöründe oluşur - şimdi o profilin klasörünü seç." | Out-Null
         $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-        $dlg.Description = "$($pack.name) için TLauncher profilinin mods klasörünü seç"
+        $dlg.Description = "$($pack.name) için TLauncher profilinin klasörünü seç"
         $versionsDir = Join-Path $env:APPDATA ".minecraft\versions"
         if (Test-Path $versionsDir) { $dlg.SelectedPath = $versionsDir }
         if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
     } else {
         Show-AnuDialog "$($data.Label) için otomatik klasör bulunamadı.`nLütfen klasörü kendin seç." | Out-Null
         $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-        $dlg.Description = "$($pack.name) için $($data.Label) mods klasörünü seç"
+        $dlg.Description = "$($pack.name) için $($data.Label) profil klasörünü seç"
         if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
     }
 }
@@ -1000,15 +1005,25 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
     }
 }
 
+function Get-ManifestRelPath($f) {
+    # New manifests carry a "path" (e.g. "config/foo.toml"); legacy manifests
+    # only had a bare filename, which always meant mods\<filename>.
+    if ($f.path) { return ($f.path -replace '/', [IO.Path]::DirectorySeparatorChar) }
+    return (Join-Path "mods" $f.filename)
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
 
-    $modsFolder = $script:selectedTarget
-    if (-not (Test-Path $modsFolder)) {
-        New-Item -ItemType Directory -Path $modsFolder -Force | Out-Null
+    # selectedTarget is the PROFILE ROOT - the pack syncs mods\, config\,
+    # resourcepacks\ and datapacks\ underneath it, not just mods\.
+    $profileRoot = $script:selectedTarget
+    if (-not (Test-Path $profileRoot)) {
+        New-Item -ItemType Directory -Path $profileRoot -Force | Out-Null
     }
 
-    $isFreshInstall = @(Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue).Count -eq 0
+    $modsSubfolder = Join-Path $profileRoot "mods"
+    $isFreshInstall = -not (Test-Path $modsSubfolder) -or @(Get-ChildItem -Path $modsSubfolder -Filter *.jar -File -ErrorAction SilentlyContinue).Count -eq 0
     $win = New-AnuProgressWindow $(if ($isFreshInstall) { "İndiriliyor..." } else { "Güncelleniyor..." })
     $win.Bar.Style = "Marquee"
 
@@ -1022,27 +1037,42 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
 
     $toDownload = @()
     foreach ($f in $manifest.files) {
-        $localPath = Join-Path $modsFolder $f.filename
+        $relPath = Get-ManifestRelPath $f
+        $localPath = Join-Path $profileRoot $relPath
         if (-not (Test-Path -LiteralPath $localPath)) {
-            $toDownload += $f; continue
+            $toDownload += @{ file = $f; rel = $relPath }; continue
         }
-        if ((Get-FileSha256 $localPath) -ne $f.sha256) { $toDownload += $f }
+        if ((Get-FileSha256 $localPath) -ne $f.sha256) { $toDownload += @{ file = $f; rel = $relPath } }
     }
 
-    $manifestNames = $manifest.files | ForEach-Object { $_.filename }
-    $localJars = Get-ChildItem -Path $modsFolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
-    $extra = $localJars | Where-Object { $manifestNames -notcontains $_ }
+    # Only flag "extra" files inside subfolders the manifest actually manages
+    # (mods\, and config\/resourcepacks\/datapacks\ when the pack ships any) -
+    # anything the player put in an unmanaged folder (their own shaderpacks,
+    # screenshots, saves) is never touched or reported on.
+    $manifestRelPaths = @($manifest.files | ForEach-Object { Get-ManifestRelPath $_ })
+    $managedSubfolders = $manifestRelPaths | ForEach-Object { ($_ -split '[\\/]')[0] } | Select-Object -Unique
+    $extra = @()
+    foreach ($sub in $managedSubfolders) {
+        $subPath = Join-Path $profileRoot $sub
+        if (-not (Test-Path $subPath)) { continue }
+        Get-ChildItem -Path $subPath -Recurse -File -ErrorAction SilentlyContinue | ForEach-Object {
+            $rel = $_.FullName.Substring($profileRoot.Length).TrimStart('\', '/')
+            if ($manifestRelPaths -notcontains $rel) { $extra += $rel }
+        }
+    }
 
     $win.Bar.Style = "Blocks"
     $errorCount = 0
     if ($toDownload.Count -gt 0) {
         $win.Bar.Maximum = $toDownload.Count
         $i = 0
-        foreach ($f in $toDownload) {
+        foreach ($item in $toDownload) {
             $i++
-            $dest = Join-Path $modsFolder $f.filename
+            $dest = Join-Path $profileRoot $item.rel
+            $destDir = Split-Path $dest -Parent
+            if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null }
             try {
-                Invoke-WebRequest -Uri $f.url -OutFile $dest -UseBasicParsing
+                Invoke-WebRequest -Uri $item.file.url -OutFile $dest -UseBasicParsing
                 $win.Bar.Value = $i
             } catch {
                 $errorCount++
@@ -1051,7 +1081,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
         }
     }
 
-    $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $modsFolder -Force
+    $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $profileRoot -Force
     Save-Config $cfg
 
     $win.Form.Close()

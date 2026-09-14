@@ -1,18 +1,24 @@
 # Build-Manifest.ps1 - maintainer-side tool.
-# Scans a mods folder, uploads new/changed .jar files as GitHub Release assets,
+# Scans a pack ROOT folder (mods\, config\, resourcepacks\, datapacks\ -
+# whichever exist), uploads new/changed files as GitHub Release assets,
 # and writes manifest.json that AnuDownloader.ps1 consumes.
 #
 # Usage:
-#   .\Build-Manifest.ps1 -ModsFolder "C:\...\Medieval Fantasy\mods" -Repo "anubissxd/minecraft-servers" -Tag "medieval-fantasy-pack" -PackName "Medieval Fantasy" -Version "1.0.0"
+#   .\Build-Manifest.ps1 -PackRoot "C:\...\Medieval Fantasy" -Repo "anubissxd/minecraft-servers" -Tag "medieval-fantasy-pack" -PackName "Medieval Fantasy" -Version "1.0.0"
 
 param(
-    [Parameter(Mandatory=$true)][string]$ModsFolder,
+    [Parameter(Mandatory=$true)][string]$PackRoot,
     [string]$Repo = "anubissxd/minecraft-servers",
     [string]$Tag = "medieval-fantasy-pack",
     [string]$PackName = "Medieval Fantasy",
     [string]$Version = (Get-Date -Format "yyyy.MM.dd-HHmm"),
     [string]$ManifestOut = (Join-Path $PSScriptRoot "..\..\distribution\medieval-fantasy\manifest.json")
 )
+
+# Subfolders under PackRoot that get synced to players. mods\ is flat
+# (jar filenames are already unique); config\/resourcepacks\/datapacks\ are
+# scanned recursively since mods commonly nest their own config subfolders.
+$SyncedFolders = @("mods", "config", "resourcepacks", "datapacks")
 
 function Get-FileSha256($path) {
     (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLower()
@@ -24,48 +30,73 @@ gh release view $Tag --repo $Repo *> $null
 if ($LASTEXITCODE -ne 0) {
     $releaseExists = $false
     Write-Host "Release yok, oluşturuluyor..."
-    gh release create $Tag --repo $Repo --title "$PackName Pack Files" --notes "AnuDownloader tarafından kullanılan mod dosyaları. Elle indirmeyin." | Out-Null
+    gh release create $Tag --repo $Repo --title "$PackName Pack Files" --notes "AnuDownloader tarafından kullanılan paket dosyaları. Elle indirmeyin." | Out-Null
 }
 
 $oldManifest = $null
 if (Test-Path $ManifestOut) {
     try { $oldManifest = Get-Content $ManifestOut -Raw | ConvertFrom-Json } catch { $oldManifest = $null }
 }
-$oldByName = @{}
+$oldByPath = @{}
 if ($oldManifest) {
-    foreach ($f in $oldManifest.files) { $oldByName[$f.filename] = $f }
+    foreach ($f in $oldManifest.files) {
+        # Legacy manifests (mods-only) had no "path" field - a bare filename
+        # always meant mods\<filename>.
+        $p = if ($f.path) { $f.path } else { "mods/$($f.filename)" }
+        $oldByPath[$p] = $f
+    }
 }
 
-$jars = Get-ChildItem -Path $ModsFolder -Filter *.jar -File
-Write-Host "Toplam $($jars.Count) jar bulundu."
+$scanned = @()
+foreach ($sub in $SyncedFolders) {
+    $subPath = Join-Path $PackRoot $sub
+    if (-not (Test-Path $subPath)) { continue }
+    Get-ChildItem -Path $subPath -Recurse -File | ForEach-Object {
+        $relPath = $_.FullName.Substring($PackRoot.Length).TrimStart('\', '/') -replace '\\', '/'
+        $scanned += [pscustomobject]@{ File = $_; RelPath = $relPath }
+    }
+}
+Write-Host "Toplam $($scanned.Count) dosya bulundu ($($SyncedFolders -join ', ') altında)."
 
 $newFiles = @()
 $toUpload = @()
 
-foreach ($jar in $jars) {
-    $hash = Get-FileSha256 $jar.FullName
-    $existing = $oldByName[$jar.Name]
+foreach ($item in $scanned) {
+    $hash = Get-FileSha256 $item.File.FullName
+    $existing = $oldByPath[$item.RelPath]
     if ($existing -and $existing.sha256 -eq $hash) {
         # değişmemiş, tekrar yükleme
         $newFiles += $existing
     } else {
-        $toUpload += @{ jar = $jar; hash = $hash }
+        $toUpload += @{ item = $item; hash = $hash }
     }
 }
 
 Write-Host "$($toUpload.Count) dosya yeni/değişmiş, GitHub Release'e yüklenecek."
 
+# GitHub release assets must have unique filenames across the WHOLE release,
+# but config\ especially can have same-named files in different subfolders
+# (e.g. two mods each with their own "common.toml"). Flatten the relative
+# path into the asset name so collisions can't happen, while "filename" in
+# the manifest stays the real leaf name AnuDownloader writes to disk.
 $i = 0
-foreach ($item in $toUpload) {
+foreach ($entry in $toUpload) {
     $i++
-    $jar = $item.jar
-    Write-Host "[$i/$($toUpload.Count)] Yükleniyor: $($jar.Name)"
-    gh release upload $Tag $jar.FullName --repo $Repo --clobber | Out-Null
-    $url = "https://github.com/$Repo/releases/download/$Tag/$($jar.Name)"
+    $item = $entry.item
+    $assetName = $item.RelPath -replace '/', '__'
+    Write-Host "[$i/$($toUpload.Count)] Yükleniyor: $($item.RelPath)"
+    # gh always uses the LOCAL filename as the remote asset name, so a
+    # collision-free upload means uploading a temp copy named $assetName.
+    $tmp = Join-Path ([IO.Path]::GetTempPath()) $assetName
+    Copy-Item -LiteralPath $item.File.FullName -Destination $tmp -Force
+    gh release upload $Tag $tmp --repo $Repo --clobber | Out-Null
+    Remove-Item $tmp -Force
+    $url = "https://github.com/$Repo/releases/download/$Tag/$assetName"
     $newFiles += @{
-        filename = $jar.Name
-        sha256   = $item.hash
-        size     = $jar.Length
+        path     = $item.RelPath
+        filename = $item.File.Name
+        sha256   = $entry.hash
+        size     = $item.File.Length
         url      = $url
     }
 }
