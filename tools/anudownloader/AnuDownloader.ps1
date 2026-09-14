@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.6.0"
+$AppVersion = "2.7.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -17,6 +17,25 @@ $CacheDir   = Join-Path $ConfigDir "cache"
 foreach ($d in @($ConfigDir, $CacheDir)) {
     if (-not (Test-Path $d)) { New-Item -ItemType Directory -Path $d -Force | Out-Null }
 }
+
+# Turkish (and some other) Windows locales make Java's own default
+# String.toUpperCase()/toLowerCase() mangle plain ASCII (the classic "Turkish
+# I" bug: i/I don't round-trip), which corrupts mod registry name lookups
+# and can even corrupt files a launcher writes about itself - crashes that
+# no mods/config file we ship can fix, only forcing the JVM's own locale can.
+# JAVA_TOOL_OPTIONS is picked up by every JVM that starts afterwards
+# (TLauncher's own process included, not just the game it launches), so this
+# needs to be a persistent user env var, not just a per-run process one.
+# Merge rather than overwrite in case the player already has JAVA_TOOL_OPTIONS
+# set for something else (extra heap flags etc).
+try {
+    $existingJavaOpts = [Environment]::GetEnvironmentVariable("JAVA_TOOL_OPTIONS", "User")
+    if (-not $existingJavaOpts) { $existingJavaOpts = "" }
+    if ($existingJavaOpts -notmatch "user\.language") {
+        $mergedJavaOpts = ($existingJavaOpts + " -Duser.language=en -Duser.country=US").Trim()
+        [Environment]::SetEnvironmentVariable("JAVA_TOOL_OPTIONS", $mergedJavaOpts, "User")
+    }
+} catch { }
 
 function Load-Config {
     if (Test-Path $ConfigFile) {

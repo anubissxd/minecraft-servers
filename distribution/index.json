@@ -1,6 +1,6 @@
 {
   "app": {
-    "version": "2.6.0",
+    "version": "2.7.0",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
   "packs": [
@@ -9,7 +9,7 @@
       "name": "Medieval Fantasy",
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "mc_version": "1.20.1",
       "loader": "Forge",
       "loader_version": "",
@@ -22,7 +22,7 @@
       "name": "Multiverse Superheroes",
       "folder_name": "Multiverse Superheros",
       "description": "Superhero mod paketi (bakimda).",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "mc_version": "1.20.1",
       "loader": "Forge",
       "loader_version": "47.4.10",
