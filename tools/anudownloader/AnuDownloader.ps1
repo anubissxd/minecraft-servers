@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.4.1"
+$AppVersion = "2.5.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -153,8 +153,13 @@ function Find-ModrinthTarget([string]$folderName) {
 }
 
 function Find-TLauncherTarget([string]$folderName) {
-    $tl = Join-Path $env:APPDATA ".minecraft\mods"
-    if (Test-Path $tl) { return $tl }
+    # TLauncher profiles for custom (Forge/Fabric/etc.) versions get their own
+    # game directory under versions\<profile name>\ - mods live inside that,
+    # not the shared .minecraft\mods. The profile name is whatever the user
+    # typed, so an exact match only works if they happened to name it like
+    # the pack; otherwise Try-ResolveTarget falls back to manual selection.
+    $byName = Join-Path $env:APPDATA ".minecraft\versions\$folderName\mods"
+    if (Test-Path $byName) { return $byName }
     return $null
 }
 
@@ -282,7 +287,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 390))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 422))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -368,26 +373,26 @@ $btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 46))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 324))
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 356))
 Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
 
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelPacks.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
-$panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 162))
+$panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 224))
 $panelPacks.BackColor = $ColBgElev
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
 $pnlDivider = New-Object System.Windows.Forms.Panel
-$pnlDivider.Location = New-Object System.Drawing.Point((Sz 20),(Sz 184))
+$pnlDivider.Location = New-Object System.Drawing.Point((Sz 20),(Sz 238))
 $pnlDivider.Size = New-Object System.Drawing.Size((Sz 620),1)
 $pnlDivider.BackColor = [System.Drawing.Color]::FromArgb(36,255,255,255)
 $pnlPacksFrame.Controls.Add($pnlDivider)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 8),(Sz 198))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 8),(Sz 244))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 108))
 $grpTarget.BackColor = $ColBgElev
 $pnlPacksFrame.Controls.Add($grpTarget)
@@ -452,14 +457,24 @@ $grpTarget.Controls.Add($btnPatchNotes)
 $btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 482 8 150 54 $ColAccent
 $grpTarget.Controls.Add($btnUpdate)
 
-$txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 8),(Sz 76))
-$txtChosen.Size = New-Object System.Drawing.Size((Sz 626),(Sz 24))
-$txtChosen.ReadOnly = $true
-$txtChosen.BackColor = $ColPanel
+$pnlChosen = New-Object System.Windows.Forms.Panel
+$pnlChosen.Location = New-Object System.Drawing.Point((Sz 8),(Sz 76))
+$pnlChosen.Size = New-Object System.Drawing.Size((Sz 626),(Sz 28))
+Set-RoundedFill $pnlChosen 14 $ColPanel $ColBgElev
+Add-RoundedBorderPaint $pnlChosen 14 $ColBorderSoft
+$grpTarget.Controls.Add($pnlChosen)
+
+# Read-only display field, not real input, so a Label gives proper vertical
+# centering via TextAlign instead of fighting TextBox's fixed line height/caret.
+$txtChosen = New-Object System.Windows.Forms.Label
+$txtChosen.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 12), 0)
+$txtChosen.Size = New-Object System.Drawing.Size((Sz 602), $pnlChosen.Height)
+$txtChosen.TextAlign = "MiddleLeft"
+$txtChosen.BackColor = [System.Drawing.Color]::Transparent
 $txtChosen.ForeColor = $ColMuted
-$txtChosen.BorderStyle = "FixedSingle"
-$grpTarget.Controls.Add($txtChosen)
+$txtChosen.AutoEllipsis = $true
+$pnlChosen.Controls.Add($txtChosen)
 
 $script:packs = @()
 $script:selectedPack = $null
@@ -473,16 +488,33 @@ function Set-ChosenTarget([string]$path) {
     Set-ButtonEnabledState $btnUpdate $true
 }
 
+function Get-PackVersionText($pack) {
+    $verBits = @($pack.mc_version, $pack.loader) | Where-Object { $_ }
+    $verText = $verBits -join " 一 "
+    if ($pack.loader_version) { $verText += " $($pack.loader_version)" }
+    return $verText
+}
+
 function Try-ResolveTarget {
     if (-not $script:selectedPack -or -not $script:selectedLauncherData) { return }
     $data = $script:selectedLauncherData
-    $found = & $data.Finder $script:selectedPack.folder_name
+    $pack = $script:selectedPack
+    $found = & $data.Finder $pack.folder_name
     if ($found) {
         Set-ChosenTarget $found
+    } elseif ($data.Label -eq "CurseForge") {
+        Show-AnuDialog "CurseForge için önce `"$($pack.name)`" adlı bir profil oluştur.`n`nSürüm: $(Get-PackVersionText $pack)" | Out-Null
+    } elseif ($data.Label -eq "TLauncher") {
+        Show-AnuDialog "TLauncher'da önce `"$($pack.name)`" adlı bir profil oluştur.`n`nSürüm: $(Get-PackVersionText $pack)`n`nProfil versions klasöründe oluşur - şimdi o profilin mods klasörünü seç." | Out-Null
+        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+        $dlg.Description = "$($pack.name) için TLauncher profilinin mods klasörünü seç"
+        $versionsDir = Join-Path $env:APPDATA ".minecraft\versions"
+        if (Test-Path $versionsDir) { $dlg.SelectedPath = $versionsDir }
+        if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
     } else {
         Show-AnuDialog "$($data.Label) için otomatik klasör bulunamadı.`nLütfen klasörü kendin seç." | Out-Null
         $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-        $dlg.Description = "$($script:selectedPack.name) için $($data.Label) mods klasörünü seç"
+        $dlg.Description = "$($pack.name) için $($data.Label) mods klasörünü seç"
         if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
     }
 }
@@ -749,14 +781,14 @@ try {
 
 foreach ($pack in $script:packs) {
     $tile = New-Object System.Windows.Forms.Panel
-    $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
-    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
+    $tile.Size = New-Object System.Drawing.Size((Sz 140),(Sz 100))
+    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
     Set-RoundedFill $tile 14 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
 
     $pic = New-Object System.Windows.Forms.PictureBox
-    $pic.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
+    $pic.Size = New-Object System.Drawing.Size((Sz 140),(Sz 100))
     $pic.Location = New-Object System.Drawing.Point(0,0)
     $pic.BackColor = [System.Drawing.Color]::Transparent
     $img = Get-CachedImage $pack.banner_url
@@ -791,7 +823,7 @@ foreach ($pack in $script:packs) {
         $dx = ($sw - $dw) / 2.0; $dy = ($sh - $dh) / 2.0
         $tg.DrawImage($s.SourceImage, $dx, $dy, $dw, $dh)
 
-        $stripH = 34 * $scale
+        $stripH = 26 * $scale
         $stripY = $sh - $stripH
         $gradBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
             (New-Object System.Drawing.Rectangle(0, $stripY, $sw, $stripH)),
@@ -801,8 +833,8 @@ foreach ($pack in $script:packs) {
         $tg.FillRectangle($gradBrush, 0, $stripY, $sw, $stripH)
         $gradBrush.Dispose()
 
-        $nameFont = New-Object System.Drawing.Font("Segoe UI Semibold", (9.5 * $scale), [System.Drawing.FontStyle]::Bold)
-        $verFont = New-Object System.Drawing.Font("Segoe UI", (8 * $scale))
+        $nameFont = New-Object System.Drawing.Font("Segoe UI Semibold", (8 * $scale), [System.Drawing.FontStyle]::Bold)
+        $verFont = New-Object System.Drawing.Font("Segoe UI", (6.5 * $scale))
         $nameBrush = New-Object System.Drawing.SolidBrush($ColText)
         $verBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(215,215,220))
         $tg.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAlias
@@ -854,8 +886,21 @@ if (-not ([System.Management.Automation.PSTypeName]"Anu.Native").Type) {
     Add-Type -Namespace Anu -Name Native -MemberDefinition @'
 [DllImport("user32.dll")]
 public static extern bool HideCaret(IntPtr hWnd);
+[DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
+public static extern int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
+[DllImport("user32.dll")]
+public static extern bool ShowScrollBar(IntPtr hWnd, int wBar, bool bShow);
 '@ -ErrorAction SilentlyContinue
 }
+
+# Native scrollbar (classic square/white, arrows) clashes with the rest of the
+# UI's flat rounded look. Mouse-wheel scrolling still works without it, so we
+# just keep it permanently hidden instead of styling it - WinForms re-shows it
+# on every layout pass, hence re-hiding on each Layout event.
+[void]$panelPacks.Handle
+$SB_VERT = 1
+[Anu.Native]::ShowScrollBar($panelPacks.Handle, $SB_VERT, $false) | Out-Null
+$panelPacks.Add_Layout({ [Anu.Native]::ShowScrollBar($panelPacks.Handle, 1, $false) | Out-Null }.GetNewClosure())
 
 function Show-AnuPatchNotes([string]$title, [string]$text) {
     $w = [int]($form.ClientSize.Width * 0.9)
