@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.7"
+$AppVersion = "2.3.8"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -218,6 +218,7 @@ $ColMuted2    = [System.Drawing.Color]::FromArgb(112,112,130)
 $ColDisabled  = [System.Drawing.Color]::FromArgb(46,46,56)
 $ColBgElev    = [System.Drawing.Color]::FromArgb(22,22,29)
 $ColBorderSoft= [System.Drawing.Color]::FromArgb(26,255,255,255)
+$ColTeal      = [System.Drawing.Color]::FromArgb(45,168,196)
 
 function Get-RoundedPath([int]$w, [int]$h, [int]$r) {
     $rr = [Math]::Min($r, [Math]::Min([int]($w / 2), [int]($h / 2)))
@@ -451,7 +452,7 @@ function Set-ButtonDisabledLook($btn) {
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 332 8 140 54 $ColPanel2
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 332 8 140 54 $ColTeal
 $grpTarget.Controls.Add($btnPatchNotes)
 
 $btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 482 8 150 54 $ColAccent
@@ -469,12 +470,27 @@ $grpTarget.Controls.Add($txtChosen)
 $script:packs = @()
 $script:selectedPack = $null
 $script:selectedTarget = $null
+$script:selectedLauncherData = $null
 $script:launcherTiles = @()
 
 function Set-ChosenTarget([string]$path) {
     $script:selectedTarget = $path
     $txtChosen.Text = $path
     Set-ButtonEnabledState $btnUpdate $true
+}
+
+function Try-ResolveTarget {
+    if (-not $script:selectedPack -or -not $script:selectedLauncherData) { return }
+    $data = $script:selectedLauncherData
+    $found = & $data.Finder $script:selectedPack.folder_name
+    if ($found) {
+        Set-ChosenTarget $found
+    } else {
+        Show-AnuDialog "$($data.Label) için otomatik klasör bulunamadı.`nLütfen klasörü kendin seç." | Out-Null
+        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+        $dlg.Description = "$($script:selectedPack.name) için $($data.Label) mods klasörünü seç"
+        if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
+    }
 }
 
 function Make-LauncherTile($logoImg, $label, $finder) {
@@ -542,22 +558,20 @@ function Make-LauncherTile($logoImg, $label, $finder) {
 function Handle-LauncherClick($sender) {
     $tile = if ($sender -is [System.Windows.Forms.Panel]) { $sender } else { $sender.Parent }
     $data = $tile.Tag
-    if (-not $script:selectedPack) {
-        Show-AnuDialog "Önce bir mod paketi seç." | Out-Null
+    if ($tile.Selected) {
+        $tile.Selected = $false
+        $tile.Invalidate($true)
+        $script:selectedLauncherData = $null
+        $script:selectedTarget = $null
+        $txtChosen.Text = ""
+        Set-ButtonEnabledState $btnUpdate $false
         return
     }
     foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate($true) }
     $tile.Selected = $true
     $tile.Invalidate($true)
-    $found = & $data.Finder $script:selectedPack.folder_name
-    if ($found) {
-        Set-ChosenTarget $found
-    } else {
-        Show-AnuDialog "$($data.Label) için otomatik klasör bulunamadı.`nLütfen klasörü kendin seç." | Out-Null
-        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
-        $dlg.Description = "$($script:selectedPack.name) için $($data.Label) mods klasörünü seç"
-        if ($dlg.ShowDialog() -eq "OK") { Set-ChosenTarget $dlg.SelectedPath }
-    }
+    $script:selectedLauncherData = $data
+    Try-ResolveTarget
 }
 
 $panelLaunchers.Controls.Add((Make-LauncherTile $MRLogoImg "Modrinth" ${function:Find-ModrinthTarget}))
@@ -575,12 +589,27 @@ function Select-PackTile($tile, $pack) {
     $txtChosen.Text = ""
     Set-ButtonEnabledState $btnUpdate $false
     Set-ButtonEnabledState $btnPatchNotes $true
-    foreach ($t in $script:launcherTiles) { $t.Selected = $false; $t.Invalidate($true) }
+    Try-ResolveTarget
+}
+
+function Deselect-PackTile {
+    foreach ($t in $panelPacks.Controls) {
+        if ($t -is [System.Windows.Forms.Panel]) { $t.Selected = $false; $t.Invalidate() }
+    }
+    $script:selectedPack = $null
+    $script:selectedTarget = $null
+    $txtChosen.Text = ""
+    Set-ButtonEnabledState $btnUpdate $false
+    Set-ButtonEnabledState $btnPatchNotes $false
 }
 
 function Handle-PackClick($sender) {
     $tile = if ($sender -is [System.Windows.Forms.Panel]) { $sender } else { $sender.Parent }
-    Select-PackTile $tile $tile.Tag
+    if ($tile.Selected) {
+        Deselect-PackTile
+    } else {
+        Select-PackTile $tile $tile.Tag
+    }
 }
 
 function Show-AnuUpdateAvailableDialog([string]$text) {
@@ -886,7 +915,7 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
     }
 }
 
-Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna tıklayarak kurulum hedefi belirle." {
+Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
 
     $modsFolder = $script:selectedTarget
