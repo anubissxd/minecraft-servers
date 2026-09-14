@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.7.0"
+$AppVersion = "2.9.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -48,6 +48,42 @@ function Save-Config($cfg) {
 }
 function Get-FileSha256($path) {
     (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLower()
+}
+
+# Invoke-WebRequest/Invoke-RestMethod throw inside this -noConsole compiled
+# exe (they try to write to a progress stream that doesn't exist without a
+# console host, even with $ProgressPreference silenced), so every network
+# call in the app goes through raw HttpWebRequest instead.
+function Get-AnuUrlHeaders([string]$url, [string]$method = "GET", [hashtable]$extraHeaders = @{}) {
+    $req = [System.Net.HttpWebRequest]::Create($url)
+    $req.Method = $method
+    foreach ($k in $extraHeaders.Keys) { $req.Headers.Add($k, $extraHeaders[$k]) }
+    $resp = $req.GetResponse()
+    try { return $resp.Headers } finally { $resp.Close() }
+}
+
+function Save-AnuUrlToFile([string]$url, [string]$destPath) {
+    $req = [System.Net.HttpWebRequest]::Create($url)
+    $resp = $req.GetResponse()
+    $stream = $resp.GetResponseStream()
+    $fs = [System.IO.File]::Create($destPath)
+    try {
+        $buffer = New-Object byte[] 65536
+        while (($read = $stream.Read($buffer, 0, $buffer.Length)) -gt 0) {
+            $fs.Write($buffer, 0, $read)
+        }
+    } finally {
+        $fs.Close(); $stream.Close(); $resp.Close()
+    }
+}
+
+function Get-AnuUrlText([string]$url, [hashtable]$extraHeaders = @{}) {
+    $req = [System.Net.HttpWebRequest]::Create($url)
+    foreach ($k in $extraHeaders.Keys) { $req.Headers.Add($k, $extraHeaders[$k]) }
+    $resp = $req.GetResponse()
+    $stream = $resp.GetResponseStream()
+    $reader = New-Object System.IO.StreamReader($stream)
+    try { return $reader.ReadToEnd() } finally { $reader.Close(); $stream.Close(); $resp.Close() }
 }
 function Image-FromBase64([string]$b64) {
     $bytes = [System.Convert]::FromBase64String($b64)
@@ -212,8 +248,8 @@ function Get-CachedImage([string]$url) {
 
     $remoteEtag = $null
     try {
-        $resp = Invoke-WebRequest -Uri $url -Method Head -UseBasicParsing -Headers @{ "Cache-Control" = "no-cache" }
-        $remoteEtag = $resp.Headers['ETag']
+        $headers = Get-AnuUrlHeaders $url "HEAD" @{ "Cache-Control" = "no-cache" }
+        $remoteEtag = $headers['ETag']
     } catch { }
 
     $cachedEtag = if (Test-Path $etagFile) { Get-Content $etagFile -Raw } else { $null }
@@ -221,7 +257,7 @@ function Get-CachedImage([string]$url) {
 
     if ($needsDownload) {
         try {
-            Invoke-WebRequest -Uri $url -OutFile $local -UseBasicParsing
+            Save-AnuUrlToFile $url $local
             if ($remoteEtag) { Set-Content -Path $etagFile -Value $remoteEtag -NoNewline }
         } catch {
             if (-not (Test-Path $local)) { return $null }
@@ -1014,8 +1050,7 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
     $win = New-AnuProgressWindow "Yama notları getiriliyor..."
     $win.Bar.Style = "Marquee"
     try {
-        $ProgressPreference = 'SilentlyContinue'
-        $text = (Invoke-WebRequest -Uri $url -UseBasicParsing -Headers @{ "Cache-Control" = "no-cache" }).Content
+        $text = Get-AnuUrlText $url @{ "Cache-Control" = "no-cache" }
         $win.Form.Close()
         Show-AnuPatchNotes $script:selectedPack.name $text
     } catch {
@@ -1091,10 +1126,11 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
             $destDir = Split-Path $dest -Parent
             if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null }
             try {
-                Invoke-WebRequest -Uri $item.file.url -OutFile $dest -UseBasicParsing
+                Save-AnuUrlToFile $item.file.url $dest
                 $win.Bar.Value = $i
             } catch {
                 $errorCount++
+                Write-AnuDebugLog "Download failed rel=$($item.rel) url=$($item.file.url): $($_.Exception.Message)"
             }
             [System.Windows.Forms.Application]::DoEvents()
         }
