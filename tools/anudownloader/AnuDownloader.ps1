@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.2.1"
+$AppVersion = "2.3.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -235,10 +235,17 @@ function Get-RoundedPath([int]$w, [int]$h, [int]$r) {
     return $path
 }
 
-function Set-RoundedRegion($ctrl, [int]$radius) {
-    $path = Get-RoundedPath $ctrl.Width $ctrl.Height $radius
-    $ctrl.Region = New-Object System.Drawing.Region($path)
-    $path.Dispose()
+function Set-RoundedFill($ctrl, [int]$radius, [System.Drawing.Color]$fillColor, [System.Drawing.Color]$parentColor) {
+    $ctrl.BackColor = $parentColor
+    $ctrl | Add-Member -NotePropertyName FillColor -NotePropertyValue $fillColor -Force
+    $ctrl.Add_Paint({
+        param($s, $e)
+        $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $path = Get-RoundedPath $s.Width $s.Height $radius
+        $brush = New-Object System.Drawing.SolidBrush($s.FillColor)
+        $e.Graphics.FillPath($brush, $path)
+        $brush.Dispose(); $path.Dispose()
+    }.GetNewClosure())
 }
 
 function Add-RoundedBorderPaint($ctrl, [int]$radius, [System.Drawing.Color]$borderColor, [single]$penWidth = 1.4) {
@@ -273,7 +280,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 463))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 466))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -332,23 +339,42 @@ $lblTagline.Location = New-Object System.Drawing.Point((Sz 69),(Sz 33))
 $lblTagline.Size = New-Object System.Drawing.Size((Sz 260),(Sz 14))
 $form.Controls.Add($lblTagline)
 
-$lblVersionPill = New-Object System.Windows.Forms.Label
-$lblVersionPill.Text = "v$AppVersion"
-$lblVersionPill.Font = New-Object System.Drawing.Font("Segoe UI", 8.5)
-$lblVersionPill.ForeColor = $ColMuted
-$lblVersionPill.BackColor = $ColPanel
-$lblVersionPill.TextAlign = "MiddleCenter"
+$lblVersionPill = New-Object System.Windows.Forms.Panel
 $lblVersionPill.Size = New-Object System.Drawing.Size((Sz 62),(Sz 24))
 $lblVersionPill.Location = New-Object System.Drawing.Point(((Sz 700) - (Sz 20) - (Sz 62)),(Sz 16))
-Set-RoundedRegion $lblVersionPill 12
+Set-RoundedFill $lblVersionPill 12 $ColPanel $ColBg
+$lblVersionPillText = New-Object System.Windows.Forms.Label
+$lblVersionPillText.Text = "v$AppVersion"
+$lblVersionPillText.Font = New-Object System.Drawing.Font("Segoe UI", 8.5)
+$lblVersionPillText.ForeColor = $ColMuted
+$lblVersionPillText.BackColor = [System.Drawing.Color]::Transparent
+$lblVersionPillText.TextAlign = "MiddleCenter"
+$lblVersionPillText.Dock = "Fill"
+$lblVersionPill.Controls.Add($lblVersionPillText)
 $form.Controls.Add($lblVersionPill)
+
+$btnLiveUpdate = New-Object System.Windows.Forms.Panel
+$btnLiveUpdate.Size = New-Object System.Drawing.Size((Sz 96),(Sz 24))
+$btnLiveUpdate.Location = New-Object System.Drawing.Point(($lblVersionPill.Location.X - (Sz 104)),(Sz 16))
+$btnLiveUpdate.Cursor = [System.Windows.Forms.Cursors]::Hand
+$btnLiveUpdate.Visible = $false
+Set-RoundedFill $btnLiveUpdate 12 $ColAccent $ColBg
+$lblLiveUpdateText = New-Object System.Windows.Forms.Label
+$lblLiveUpdateText.Text = "⟳ Güncelle"
+$lblLiveUpdateText.Font = New-Object System.Drawing.Font("Segoe UI Semibold", 8.5, [System.Drawing.FontStyle]::Bold)
+$lblLiveUpdateText.ForeColor = $ColText
+$lblLiveUpdateText.BackColor = [System.Drawing.Color]::Transparent
+$lblLiveUpdateText.TextAlign = "MiddleCenter"
+$lblLiveUpdateText.Dock = "Fill"
+$lblLiveUpdateText.Cursor = [System.Windows.Forms.Cursors]::Hand
+$btnLiveUpdate.Controls.Add($lblLiveUpdateText)
+$form.Controls.Add($btnLiveUpdate)
+$btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 178))
-$pnlPacksFrame.BackColor = $ColBgElev
-$pnlPacksFrame.BorderStyle = "None"
-Set-RoundedRegion $pnlPacksFrame 18
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 384))
+Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
 
@@ -359,14 +385,17 @@ $panelPacks.BackColor = $ColBgElev
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
+$pnlDivider = New-Object System.Windows.Forms.Panel
+$pnlDivider.Location = New-Object System.Drawing.Point((Sz 20),(Sz 184))
+$pnlDivider.Size = New-Object System.Drawing.Size((Sz 620),1)
+$pnlDivider.BackColor = [System.Drawing.Color]::FromArgb(36,255,255,255)
+$pnlPacksFrame.Controls.Add($pnlDivider)
+
 $grpTarget = New-Object System.Windows.Forms.Panel
-$grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 255))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
-$grpTarget.BorderStyle = "None"
+$grpTarget.Location = New-Object System.Drawing.Point(0,(Sz 198))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 186))
 $grpTarget.BackColor = $ColBgElev
-Set-RoundedRegion $grpTarget 18
-Add-RoundedBorderPaint $grpTarget 18 $ColBorderSoft
-$form.Controls.Add($grpTarget)
+$pnlPacksFrame.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelLaunchers.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
@@ -378,7 +407,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
     $btn.Location = New-Object System.Drawing.Point((Sz $x),(Sz $y))
     $btn.Size = New-Object System.Drawing.Size((Sz $w),(Sz $h))
     $btn.Cursor = [System.Windows.Forms.Cursors]::Hand
-    Set-RoundedRegion $btn 12
+    Set-RoundedFill $btn 12 $ColDisabled $ColBgElev
     $btn | Add-Member -NotePropertyName EnabledColor -NotePropertyValue $enabledColor -Force
     $btn | Add-Member -NotePropertyName IsEnabled -NotePropertyValue $false -Force
 
@@ -407,14 +436,16 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
 function Set-ButtonEnabledState($btn, [bool]$enabled) {
     $btn.IsEnabled = $enabled
     if ($enabled) {
-        $btn.BackColor = $btn.EnabledColor
+        $btn.FillColor = $btn.EnabledColor
+        $btn.Invalidate()
     } else {
         Set-ButtonDisabledLook $btn
     }
 }
 
 function Set-ButtonDisabledLook($btn) {
-    $btn.BackColor = $ColDisabled
+    $btn.FillColor = $ColDisabled
+    $btn.Invalidate()
     $btn.IsEnabled = $false
 }
 
@@ -452,10 +483,9 @@ function Set-ChosenTarget([string]$path) {
 function Make-LauncherTile($logoImg, $label, $finder) {
     $tile = New-Object System.Windows.Forms.Panel
     $tile.Size = New-Object System.Drawing.Size((Sz 100),(Sz 100))
-    $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
-    Set-RoundedRegion $tile 14
+    Set-RoundedFill $tile 14 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
     Add-RoundedBorderPaint $tile 13 $ColBorderSoft
     Add-SelectionBorderPaint $tile $ColBlue 13
@@ -466,7 +496,6 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $pic.Location = New-Object System.Drawing.Point((Sz 16),(Sz 6))
     $pic.Size = New-Object System.Drawing.Size((Sz 68),(Sz 68))
     $pic.BackColor = [System.Drawing.Color]::Transparent
-    Set-RoundedRegion $pic 10
     $tile.Controls.Add($pic)
 
     $lbl = New-Object System.Windows.Forms.Label
@@ -675,10 +704,9 @@ try {
 foreach ($pack in $script:packs) {
     $tile = New-Object System.Windows.Forms.Panel
     $tile.Size = New-Object System.Drawing.Size((Sz 196),(Sz 140))
-    $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
-    Set-RoundedRegion $tile 14
+    Set-RoundedFill $tile 14 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
     Add-RoundedBorderPaint $tile 13 $ColBorderSoft
     Add-SelectionBorderPaint $tile $ColAccent 13
@@ -688,7 +716,6 @@ foreach ($pack in $script:packs) {
     $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
     $pic.SizeMode = "Zoom"
     $pic.BackColor = $ColPanel2
-    Set-RoundedRegion $pic 10
     $img = Get-CachedImage $pack.banner_url
     if ($img) { $pic.Image = $img }
     $tile.Controls.Add($pic)
@@ -897,5 +924,37 @@ Add-ButtonClick $btnUpdate "Önce bir mod paketi seç ve bir launcher logosuna t
     if ($extra.Count -gt 0) { $summary += "`nPakette olmayan $($extra.Count) ekstra dosya var (dokunulmadı)." }
     Show-AnuDialog $summary | Out-Null
 }
+
+$script:pendingUpdateUrl = $null
+
+function Check-ForLiveUpdate {
+    try {
+        $idx = Invoke-RestMethod -Uri $IndexUrl -Headers @{ "Cache-Control" = "no-cache" }
+        if ($idx.app -and $idx.app.version -and $idx.app.setup_url) {
+            if ([version]$idx.app.version -gt [version]$AppVersion) {
+                $script:pendingUpdateUrl = $idx.app.setup_url
+                $lblLiveUpdateText.Text = "⟳ v$($idx.app.version)"
+                $btnLiveUpdate.Visible = $true
+            }
+        }
+    } catch { }
+}
+
+# Uygulama açıkken de güncelleme çıkarsa, aç-kapa gerektirmeden
+# versiyon rozetinin yanında küçük bir "Güncelle" düğmesi belirir.
+$updateCheckTimer = New-Object System.Windows.Forms.Timer
+$updateCheckTimer.Interval = 5 * 60 * 1000
+$updateCheckTimer.Add_Tick({ Check-ForLiveUpdate })
+$updateCheckTimer.Start()
+
+$liveUpdateClickHandler = {
+    if ($script:pendingUpdateUrl) {
+        $updateCheckTimer.Stop()
+        $btnLiveUpdate.Visible = $false
+        Invoke-AnuSelfUpdate $script:pendingUpdateUrl
+    }
+}
+$btnLiveUpdate.Add_Click($liveUpdateClickHandler)
+$lblLiveUpdateText.Add_Click($liveUpdateClickHandler)
 
 [void]$form.ShowDialog()
