@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.1"
+$AppVersion = "2.3.2"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -392,8 +392,8 @@ $pnlDivider.BackColor = [System.Drawing.Color]::FromArgb(36,255,255,255)
 $pnlPacksFrame.Controls.Add($pnlDivider)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
-$grpTarget.Location = New-Object System.Drawing.Point(0,(Sz 198))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 186))
+$grpTarget.Location = New-Object System.Drawing.Point((Sz 8),(Sz 198))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 186))
 $grpTarget.BackColor = $ColBgElev
 $pnlPacksFrame.Controls.Add($grpTarget)
 
