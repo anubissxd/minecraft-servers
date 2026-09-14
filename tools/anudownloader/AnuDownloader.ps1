@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.3"
+$AppVersion = "2.3.4"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -280,7 +280,7 @@ function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [in
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "AnuDownloader"
-$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 414))
+$form.ClientSize = New-Object System.Drawing.Size((Sz 700), (Sz 406))
 $form.StartPosition = "CenterScreen"
 $form.FormBorderStyle = "FixedSingle"
 $form.MaximizeBox = $false
@@ -373,7 +373,7 @@ $btnLiveUpdate.BringToFront()
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
-$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 332))
+$pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 324))
 Set-RoundedFill $pnlPacksFrame 18 $ColBgElev $ColBg
 Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
@@ -393,7 +393,7 @@ $pnlPacksFrame.Controls.Add($pnlDivider)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 8),(Sz 198))
-$grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 110))
+$grpTarget.Size = New-Object System.Drawing.Size((Sz 642),(Sz 108))
 $grpTarget.BackColor = $ColBgElev
 $pnlPacksFrame.Controls.Add($grpTarget)
 
@@ -451,14 +451,14 @@ function Set-ButtonDisabledLook($btn) {
     $btn.IsEnabled = $false
 }
 
-$btnPatchNotes = New-IconButton "📝" "Yama Notları" 312 8 140 54 $ColPanel2
+$btnPatchNotes = New-IconButton "📝" "Yama Notları" 332 8 140 54 $ColPanel2
 $grpTarget.Controls.Add($btnPatchNotes)
 
-$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 462 8 170 54 $ColAccent
+$btnUpdate = New-IconButton "⬇" "Kur / Güncelle" 482 8 150 54 $ColAccent
 $grpTarget.Controls.Add($btnUpdate)
 
 $txtChosen = New-Object System.Windows.Forms.TextBox
-$txtChosen.Location = New-Object System.Drawing.Point((Sz 8),(Sz 72))
+$txtChosen.Location = New-Object System.Drawing.Point((Sz 8),(Sz 76))
 $txtChosen.Size = New-Object System.Drawing.Size((Sz 626),(Sz 24))
 $txtChosen.ReadOnly = $true
 $txtChosen.BackColor = $ColPanel
