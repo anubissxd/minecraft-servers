@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.2.0"
+$AppVersion = "2.2.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -216,15 +216,57 @@ $ColText      = [System.Drawing.Color]::FromArgb(242,242,246)
 $ColMuted     = [System.Drawing.Color]::FromArgb(160,160,176)
 $ColMuted2    = [System.Drawing.Color]::FromArgb(112,112,130)
 $ColDisabled  = [System.Drawing.Color]::FromArgb(46,46,56)
+$ColBgElev    = [System.Drawing.Color]::FromArgb(22,22,29)
+$ColBorderSoft= [System.Drawing.Color]::FromArgb(26,255,255,255)
 
-function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor) {
+function Get-RoundedPath([int]$w, [int]$h, [int]$r) {
+    $rr = [Math]::Min($r, [Math]::Min([int]($w / 2), [int]($h / 2)))
+    $path = New-Object System.Drawing.Drawing2D.GraphicsPath
+    if ($rr -le 0) {
+        $path.AddRectangle((New-Object System.Drawing.Rectangle(0, 0, $w, $h)))
+        return $path
+    }
+    $d = $rr * 2
+    [void]$path.AddArc(0, 0, $d, $d, 180, 90)
+    [void]$path.AddArc(($w - $d), 0, $d, $d, 270, 90)
+    [void]$path.AddArc(($w - $d), ($h - $d), $d, $d, 0, 90)
+    [void]$path.AddArc(0, ($h - $d), $d, $d, 90, 90)
+    $path.CloseFigure()
+    return $path
+}
+
+function Set-RoundedRegion($ctrl, [int]$radius) {
+    $path = Get-RoundedPath $ctrl.Width $ctrl.Height $radius
+    $ctrl.Region = New-Object System.Drawing.Region($path)
+    $path.Dispose()
+}
+
+function Add-RoundedBorderPaint($ctrl, [int]$radius, [System.Drawing.Color]$borderColor, [single]$penWidth = 1.4) {
+    $ctrl.Add_Paint({
+        param($s, $e)
+        $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $w = [Math]::Max(1, $s.Width - 1)
+        $h = [Math]::Max(1, $s.Height - 1)
+        $path = Get-RoundedPath $w $h $radius
+        $pen = New-Object System.Drawing.Pen($borderColor, $penWidth)
+        $e.Graphics.DrawPath($pen, $path)
+        $pen.Dispose(); $path.Dispose()
+    }.GetNewClosure())
+}
+
+function Add-SelectionBorderPaint($ctrl, [System.Drawing.Color]$accentColor, [int]$radius = 12) {
     $ctrl.Add_Paint({
         param($s, $e)
         if ($s.Selected) {
-            $pen = New-Object System.Drawing.Pen($accentColor, 2)
-            $rect = New-Object System.Drawing.Rectangle(1, 1, ($s.Width - 3), ($s.Height - 3))
-            $e.Graphics.DrawRectangle($pen, $rect)
-            $pen.Dispose()
+            $e.Graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+            $w = [Math]::Max(1, $s.Width - 2)
+            $h = [Math]::Max(1, $s.Height - 2)
+            $path = Get-RoundedPath $w $h $radius
+            $e.Graphics.TranslateTransform(1, 1)
+            $pen = New-Object System.Drawing.Pen($accentColor, 2.2)
+            $e.Graphics.DrawPath($pen, $path)
+            $e.Graphics.ResetTransform()
+            $pen.Dispose(); $path.Dispose()
         }
     }.GetNewClosure())
 }
@@ -298,27 +340,32 @@ $lblVersionPill.BackColor = $ColPanel
 $lblVersionPill.TextAlign = "MiddleCenter"
 $lblVersionPill.Size = New-Object System.Drawing.Size((Sz 62),(Sz 24))
 $lblVersionPill.Location = New-Object System.Drawing.Point(((Sz 700) - (Sz 20) - (Sz 62)),(Sz 16))
+Set-RoundedRegion $lblVersionPill 12
 $form.Controls.Add($lblVersionPill)
 
 $pnlPacksFrame = New-Object System.Windows.Forms.Panel
 $pnlPacksFrame.Location = New-Object System.Drawing.Point((Sz 20),(Sz 62))
 $pnlPacksFrame.Size = New-Object System.Drawing.Size((Sz 660),(Sz 178))
-$pnlPacksFrame.BackColor = $ColBg
-$pnlPacksFrame.BorderStyle = "FixedSingle"
+$pnlPacksFrame.BackColor = $ColBgElev
+$pnlPacksFrame.BorderStyle = "None"
+Set-RoundedRegion $pnlPacksFrame 18
+Add-RoundedBorderPaint $pnlPacksFrame 18 $ColBorderSoft
 $form.Controls.Add($pnlPacksFrame)
 
 $panelPacks = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelPacks.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
 $panelPacks.Size = New-Object System.Drawing.Size((Sz 642),(Sz 162))
-$panelPacks.BackColor = $ColBg
+$panelPacks.BackColor = $ColBgElev
 $panelPacks.AutoScroll = $true
 $pnlPacksFrame.Controls.Add($panelPacks)
 
 $grpTarget = New-Object System.Windows.Forms.Panel
 $grpTarget.Location = New-Object System.Drawing.Point((Sz 20),(Sz 255))
 $grpTarget.Size = New-Object System.Drawing.Size((Sz 660),(Sz 188))
-$grpTarget.BorderStyle = "FixedSingle"
-$grpTarget.BackColor = $ColBg
+$grpTarget.BorderStyle = "None"
+$grpTarget.BackColor = $ColBgElev
+Set-RoundedRegion $grpTarget 18
+Add-RoundedBorderPaint $grpTarget 18 $ColBorderSoft
 $form.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
@@ -331,6 +378,7 @@ function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w
     $btn.Location = New-Object System.Drawing.Point((Sz $x),(Sz $y))
     $btn.Size = New-Object System.Drawing.Size((Sz $w),(Sz $h))
     $btn.Cursor = [System.Windows.Forms.Cursors]::Hand
+    Set-RoundedRegion $btn 12
     $btn | Add-Member -NotePropertyName EnabledColor -NotePropertyValue $enabledColor -Force
     $btn | Add-Member -NotePropertyName IsEnabled -NotePropertyValue $false -Force
 
@@ -407,8 +455,10 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 6))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
+    Set-RoundedRegion $tile 14
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
-    Add-SelectionBorderPaint $tile $ColBlue
+    Add-RoundedBorderPaint $tile 13 $ColBorderSoft
+    Add-SelectionBorderPaint $tile $ColBlue 13
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
@@ -416,6 +466,7 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $pic.Location = New-Object System.Drawing.Point((Sz 16),(Sz 6))
     $pic.Size = New-Object System.Drawing.Size((Sz 68),(Sz 68))
     $pic.BackColor = [System.Drawing.Color]::Transparent
+    Set-RoundedRegion $pic 10
     $tile.Controls.Add($pic)
 
     $lbl = New-Object System.Windows.Forms.Label
@@ -627,14 +678,17 @@ foreach ($pack in $script:packs) {
     $tile.BackColor = $ColPanel
     $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 8))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
+    Set-RoundedRegion $tile 14
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
-    Add-SelectionBorderPaint $tile $ColAccent
+    Add-RoundedBorderPaint $tile 13 $ColBorderSoft
+    Add-SelectionBorderPaint $tile $ColAccent 13
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Size = New-Object System.Drawing.Size((Sz 176),(Sz 99))
     $pic.Location = New-Object System.Drawing.Point((Sz 10),(Sz 8))
     $pic.SizeMode = "Zoom"
     $pic.BackColor = $ColPanel2
+    Set-RoundedRegion $pic 10
     $img = Get-CachedImage $pack.banner_url
     if ($img) { $pic.Image = $img }
     $tile.Controls.Add($pic)
