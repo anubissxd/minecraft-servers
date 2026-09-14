@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.3.4"
+$AppVersion = "2.3.5"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -399,7 +399,7 @@ $pnlPacksFrame.Controls.Add($grpTarget)
 
 $panelLaunchers = New-Object System.Windows.Forms.FlowLayoutPanel
 $panelLaunchers.Location = New-Object System.Drawing.Point((Sz 8),(Sz 8))
-$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 195),(Sz 54))
+$panelLaunchers.Size = New-Object System.Drawing.Size((Sz 195),(Sz 64))
 $grpTarget.Controls.Add($panelLaunchers)
 
 function New-IconButton([string]$emoji, [string]$text, [int]$x, [int]$y, [int]$w, [int]$h, $enabledColor) {
@@ -480,7 +480,7 @@ function Set-ChosenTarget([string]$path) {
 function Make-LauncherTile($logoImg, $label, $finder) {
     $tile = New-Object System.Windows.Forms.Panel
     $tile.Size = New-Object System.Drawing.Size((Sz 54),(Sz 54))
-    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 4))
+    $tile.Margin = New-Object System.Windows.Forms.Padding((Sz 3))
     $tile.Cursor = [System.Windows.Forms.Cursors]::Hand
     Set-RoundedFill $tile 10 $ColPanel $ColBgElev
     $tile | Add-Member -NotePropertyName Selected -NotePropertyValue $false -Force
@@ -490,8 +490,8 @@ function Make-LauncherTile($logoImg, $label, $finder) {
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = $logoImg
     $pic.SizeMode = "Zoom"
-    $pic.Location = New-Object System.Drawing.Point((Sz 5),(Sz 5))
-    $pic.Size = New-Object System.Drawing.Size((Sz 44),(Sz 44))
+    $pic.Location = New-Object System.Drawing.Point((Sz 2),(Sz 2))
+    $pic.Size = New-Object System.Drawing.Size((Sz 50),(Sz 50))
     $pic.BackColor = [System.Drawing.Color]::Transparent
     $tile.Controls.Add($pic)
 
