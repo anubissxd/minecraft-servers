@@ -10,6 +10,9 @@
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
       "version": "1.0.0",
+      "mc_version": "1.20.1",
+      "loader": "Forge",
+      "loader_version": "",
       "banner_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/medieval-fantasy/banner.png",
       "manifest_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/medieval-fantasy/manifest.json",
       "patchnotes_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/medieval-fantasy/patchnotes.md"
@@ -20,6 +23,9 @@
       "folder_name": "Multiverse Superheros",
       "description": "Superhero mod paketi (bakimda).",
       "version": "1.0.0",
+      "mc_version": "1.20.1",
+      "loader": "Forge",
+      "loader_version": "47.4.10",
       "banner_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/mvsh/banner.png",
       "manifest_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/mvsh/manifest.json",
       "patchnotes_url": "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/mvsh/patchnotes.md"
