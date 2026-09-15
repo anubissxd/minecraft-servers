@@ -75,6 +75,8 @@ $lines = Invoke-Ssh ($findParts -join "; ")
 # tmp/ in particular holds profiler dumps, some of them zero bytes - and the
 # GitHub asset API rejects an empty file outright, which aborts the whole build.
 $ExcludedPrefixes = @("config/spark/tmp/")
+# Config backups a mod rewrites on its own; shipping them just confuses players.
+$ExcludedSuffixes = @(".bak", ".tmp", ".log")
 
 $scanned = @()
 $skipped = 0
@@ -85,6 +87,7 @@ foreach ($line in $lines) {
     $rel = $parts[1].Trim() -replace '\\', '/'
     $excluded = $false
     foreach ($p in $ExcludedPrefixes) { if ($rel.StartsWith($p)) { $excluded = $true } }
+    foreach ($s in $ExcludedSuffixes) { if ($rel.EndsWith($s)) { $excluded = $true } }
     # e3b0c442... is the sha256 of empty input: an empty file, which GitHub
     # refuses to host as a release asset.
     if ($parts[0].Trim().ToLower() -eq "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855") { $excluded = $true }

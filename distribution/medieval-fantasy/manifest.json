@@ -1,0 +1,57 @@
+{
+  "pack_name": "Medieval Fantasy",
+  "version": "1.0.0",
+  "generated": "2026-09-15 19:36:30",
+  "source": "vds:/root/servers/medieval-fantasy",
+  "files": [
+    {
+      "path": "mods/SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+      "filename": "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+      "sha256": "2736ac2dd52a7b3a188df454e61a4154cd36e273fa770f3ab89dcf6e732e88ad",
+      "size": 2834011,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__SpartanWeaponry-1.20.1-forge-3.2.1-all.jar"
+    },
+    {
+      "path": "mods/SpartanShields-1.20.1-forge-3.1.1.jar",
+      "filename": "SpartanShields-1.20.1-forge-3.1.1.jar",
+      "sha256": "920368908e26e1a75186e06affd03274d0fe93770d5c5d12c177f53d7aa1deac",
+      "size": 540665,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__SpartanShields-1.20.1-forge-3.1.1.jar"
+    },
+    {
+      "path": "config/spartanweaponry-common.toml",
+      "filename": "spartanweaponry-common.toml",
+      "sha256": "cc4caa087d84a1f8462227554456619a991f0fecf737d926ff23fd4dfe1acdde",
+      "size": 19878,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spartanweaponry-common.toml"
+    },
+    {
+      "path": "config/spartanshields-common.toml",
+      "filename": "spartanshields-common.toml",
+      "sha256": "7c951d4959fc1830e0be9f91d157307ed63266b3535a25f9e1845c446b1d945f",
+      "size": 4608,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spartanshields-common.toml"
+    },
+    {
+      "path": "config/fml.toml",
+      "filename": "fml.toml",
+      "sha256": "05f17e0700fdaf30b09f732d3a4e2bbe7011a319930b4ca86b4c630885cff7ab",
+      "size": 1117,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fml.toml"
+    },
+    {
+      "path": "mods/xaeroworldmap-forge-1.20.1-1.46.0.jar",
+      "filename": "xaeroworldmap-forge-1.20.1-1.46.0.jar",
+      "sha256": "e00bd87a949cfa8c31d571f4d9646db038e3b98f8cdbb7bd217f3fb9c3780c9e",
+      "size": 1425022,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__xaeroworldmap-forge-1.20.1-1.46.0.jar"
+    },
+    {
+      "path": "mods/xaerominimap-forge-1.20.1-26.5.0.jar",
+      "filename": "xaerominimap-forge-1.20.1-26.5.0.jar",
+      "sha256": "b21e1b4a13de533d0cf57d55969d5c83b3da78e8be44b93e76cddea9f6503d19",
+      "size": 2195399,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__xaerominimap-forge-1.20.1-26.5.0.jar"
+    }
+  ]
+}
