@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.11.0"
+$AppVersion = "2.12.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1110,6 +1110,49 @@ function Close-AnuGameProcess([string]$profileRoot) {
     } catch { }
 }
 
+function Set-AnuLauncherJvmArgs([string]$profileRoot, [string]$launcherLabel) {
+    # A JAVA_TOOL_OPTIONS env var does NOT reach the game's JVM on this
+    # machine's launchers - they build a clean argument list themselves
+    # rather than inheriting the parent environment, so the Turkish-locale
+    # fix has to be written into each launcher's own per-profile JVM args
+    # instead. Best-effort: never blocks the update if a launcher's config
+    # format doesn't match what's expected here.
+    $localeArgs = "-Duser.language=en -Duser.country=US"
+    try {
+        if ($launcherLabel -eq "TLauncher") {
+            # The version json shares the profile folder's own name
+            # (e.g. versions\asd\asd.json), alongside TLauncherAdditional.json.
+            $folderName = Split-Path $profileRoot -Leaf
+            $versionJsonPath = Join-Path $profileRoot "$folderName.json"
+            if (Test-Path $versionJsonPath) {
+                $json = Get-Content $versionJsonPath -Raw | ConvertFrom-Json
+                $alreadySet = $false
+                foreach ($entry in $json.arguments.jvm) {
+                    if ($entry.values -and ($entry.values -join " ") -match "user\.language") { $alreadySet = $true }
+                }
+                if (-not $alreadySet) {
+                    $newEntry = [pscustomobject]@{ values = @("-Duser.language=en", "-Duser.country=US"); rules = @() }
+                    $json.arguments.jvm += $newEntry
+                    $json | ConvertTo-Json -Depth 20 | Set-Content -Path $versionJsonPath -Encoding UTF8
+                }
+            }
+        } elseif ($launcherLabel -eq "CurseForge") {
+            $instancePath = Join-Path $profileRoot "minecraftinstance.json"
+            if (Test-Path $instancePath) {
+                $json = Get-Content $instancePath -Raw | ConvertFrom-Json
+                $current = $json.javaArgsOverride
+                if (-not $current -or $current -notmatch "user\.language") {
+                    $combined = if ($current) { "$current $localeArgs" } else { $localeArgs }
+                    $json.javaArgsOverride = $combined
+                    $json | ConvertTo-Json -Depth 20 | Set-Content -Path $instancePath -Encoding UTF8
+                }
+            }
+        }
+        # Modrinth App stores its config in an internal SQLite database, not
+        # an editable file - no safe way to patch it from here yet.
+    } catch { }
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
     Close-AnuLauncherApps
@@ -1118,6 +1161,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     # resourcepacks\ and datapacks\ underneath it, not just mods\.
     $profileRoot = $script:selectedTarget
     Close-AnuGameProcess $profileRoot
+    if ($script:selectedLauncherData) { Set-AnuLauncherJvmArgs $profileRoot $script:selectedLauncherData.Label }
     if (-not (Test-Path $profileRoot)) {
         New-Item -ItemType Directory -Path $profileRoot -Force | Out-Null
     }
