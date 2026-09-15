@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.14.1"
+$AppVersion = "2.15.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1248,6 +1248,32 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
         if ((Get-FileSha256 $localPath) -ne $f.sha256) { $toDownload += @{ file = $f; rel = $relPath } }
     }
 
+    # A jar the pack dropped has to go, or the player keeps a mod the server
+    # doesn't run: they still pass Forge's mod-list check, then get kicked
+    # mid-join with a ResourceLocationException when a packet no longer decodes.
+    # Only loose .jar files directly in mods\ are removed - subfolders hold
+    # things the game generates for itself (Palladium's documentation dump,
+    # Connector's remapped-jar cache), and config\ and resourcepacks\ are the
+    # player's own to keep.
+    $packModFiles = @{}
+    foreach ($f in $manifest.files) {
+        $p = ($f.path -replace '\\', '/')
+        $parts = $p -split '/'
+        if ($parts.Count -eq 2 -and $parts[0] -eq 'mods') { $packModFiles[$parts[1]] = $true }
+    }
+    $removedMods = @()
+    if ($packModFiles.Count -gt 0 -and (Test-Path $modsSubfolder)) {
+        Get-ChildItem -LiteralPath $modsSubfolder -Filter *.jar -File -ErrorAction SilentlyContinue | ForEach-Object {
+            if (-not $packModFiles.ContainsKey($_.Name)) {
+                try {
+                    [System.IO.File]::SetAttributes($_.FullName, [System.IO.FileAttributes]::Normal)
+                    Remove-Item -LiteralPath $_.FullName -Force -ErrorAction Stop
+                    $removedMods += $_.Name
+                } catch { }
+            }
+        }
+    }
+
     # Only flag "extra" files inside subfolders the manifest actually manages
     # (mods\, and config\/resourcepacks\/datapacks\ when the pack ships any) -
     # anything the player put in an unmanaged folder (their own shaderpacks,
@@ -1296,6 +1322,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
         "$($toDownload.Count) dosyadan $($toDownload.Count - $errorCount) tanesi indirildi."
     }
     if ($errorCount -gt 0) { $summary += "`n$errorCount dosya indirilemedi." }
+    if ($removedMods.Count -gt 0) { $summary += "`nPaketten çıkarılan $($removedMods.Count) mod silindi." }
     if ($extra.Count -gt 0) { $summary += "`nPakette olmayan $($extra.Count) ekstra dosya var (dokunulmadı)." }
     Show-AnuDialog $summary | Out-Null
 }
