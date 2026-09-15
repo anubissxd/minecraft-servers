@@ -1,152 +1,14 @@
 {
-  "generated": "2026-09-15 01:48:21",
+  "version": "1.5.0",
+  "generated": "2026-09-15 16:26:00",
+  "pack_name": "Multiverse Superheroes",
   "files": [
     {
-      "path": "mods/palladium-4.5.9+1.20.1-forge.jar",
-      "sha256": "af99a7ba746404c9774cd737dcc1db2d1f6fb7963fdbfa1bbee6b5b9832e29c9",
-      "filename": "palladium-4.5.9+1.20.1-forge.jar",
-      "size": 2869419,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/af99a7ba7464-mods_palladium-4.5.9_1.20.1-forge.jar"
-    },
-    {
-      "path": "mods/powerborne-heroes-1.20.1-0.5.1.jar",
-      "sha256": "531d88e5e915ab0055027477df995d4c29a0f89775ac0a2b60b63e6be5d20fc2",
-      "filename": "powerborne-heroes-1.20.1-0.5.1.jar",
-      "size": 3072125,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/531d88e5e915-mods_powerborne-heroes-1.20.1-0.5.1.jar"
-    },
-    {
-      "path": "mods/pantheonsent-1.1.1+1.20.1-forge.jar",
-      "sha256": "3a323241a3bfe91afc0151c98779bef818d127f4816d71e9c15e630ff1639a02",
-      "filename": "pantheonsent-1.1.1+1.20.1-forge.jar",
-      "size": 1970793,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/3a323241a3bf-mods_pantheonsent-1.1.1_1.20.1-forge.jar"
-    },
-    {
-      "path": "mods/FastFurnace-1.20.1-8.0.2.jar",
-      "sha256": "970c11c090e7a364e2e006aabb5e573f79901e710e97195334ee5802317776e8",
-      "filename": "FastFurnace-1.20.1-8.0.2.jar",
-      "size": 6170,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/970c11c090e7-mods_FastFurnace-1.20.1-8.0.2.jar"
-    },
-    {
-      "path": "mods/Chunky-1.3.146.jar",
-      "sha256": "996a3c9b53e6c0e0850fb9e78d3546d2c37a1b789ddaf529b17e4fe62ab23141",
-      "filename": "Chunky-1.3.146.jar",
-      "size": 341451,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/996a3c9b53e6-mods_Chunky-1.3.146.jar"
-    },
-    {
-      "path": "mods/lodestone-1.20.1-1.6.4.1.jar",
-      "sha256": "e9f8b7bc70ba99d97005f2acee2061b149785fbae3c1e37db08c79197bcc7c2d",
-      "filename": "lodestone-1.20.1-1.6.4.1.jar",
-      "size": 670934,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e9f8b7bc70ba-mods_lodestone-1.20.1-1.6.4.1.jar"
-    },
-    {
-      "path": "mods/caelus-forge-3.2.0+1.20.1.jar",
-      "sha256": "43cabe35f0618c0bd01af02e7568ca6f15fd32bb6a90d04c9898bb01e8dc1e81",
-      "filename": "caelus-forge-3.2.0+1.20.1.jar",
-      "size": 40125,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/43cabe35f061-mods_caelus-forge-3.2.0_1.20.1.jar"
-    },
-    {
-      "path": "mods/starlight-1.1.2+forge.1cda73c.jar",
-      "sha256": "e90763c86d362c7cb427dbb70e89985c11a882fdd69ae7d04ac2e23a106eb500",
-      "filename": "starlight-1.1.2+forge.1cda73c.jar",
-      "size": 110583,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e90763c86d36-mods_starlight-1.1.2_forge.1cda73c.jar"
-    },
-    {
-      "path": "mods/graveht-0.5.1.jar",
-      "sha256": "76663ad896632379e67cfd733b195d2e76a8a06560495f9d8e43881a974a34f8",
-      "filename": "graveht-0.5.1.jar",
-      "size": 9164686,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/76663ad89663-mods_graveht-0.5.1.jar"
-    },
-    {
-      "path": "mods/geckolib-forge-1.20.1-4.8.4.jar",
-      "sha256": "4518779a31b6c2abb92c98b5ad17ef3d60177df68626bfc86c44de2764913c2b",
-      "filename": "geckolib-forge-1.20.1-4.8.4.jar",
-      "size": 1038209,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/4518779a31b6-mods_geckolib-forge-1.20.1-4.8.4.jar"
-    },
-    {
-      "path": "mods/Simply Powers v1.1.0.jar",
-      "sha256": "4647d562597c3645ee530838b70463fb282fbf448473c28b47916b6156f5cc96",
-      "filename": "Simply Powers v1.1.0.jar",
-      "size": 85113,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/4647d562597c-mods_Simply_Powers_v1.1.0.jar"
-    },
-    {
-      "path": "mods/ConnectorExtras-1.11.2+1.20.1.jar",
-      "sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
-      "filename": "ConnectorExtras-1.11.2+1.20.1.jar",
-      "size": 182464,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/10d149fc9348-mods_ConnectorExtras-1.11.2_1.20.1.jar"
-    },
-    {
-      "path": "mods/Pehkui-3.8.2+1.20.1-forge.jar",
-      "sha256": "54210f454c166f65a1bcbbfe4ea52e6f73e07844a793c7132f1af4076a0f42fc",
-      "filename": "Pehkui-3.8.2+1.20.1-forge.jar",
-      "size": 671605,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/54210f454c16-mods_Pehkui-3.8.2_1.20.1-forge.jar"
-    },
-    {
-      "path": "mods/curios-forge-5.14.1+1.20.1.jar",
-      "sha256": "1e817919a35b37cf30524aaec73f0ca5130452f23f168f844854df282eb8e51f",
-      "filename": "curios-forge-5.14.1+1.20.1.jar",
-      "size": 398066,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1e817919a35b-mods_curios-forge-5.14.1_1.20.1.jar"
-    },
-    {
-      "path": "mods/modernfix-forge-5.27.83+mc1.20.1.jar",
-      "sha256": "954ff22f601be8de3978a0d7636a138dc93801c6ac55cfd71ef1cd2895de8e5f",
-      "filename": "modernfix-forge-5.27.83+mc1.20.1.jar",
-      "size": 1003230,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/954ff22f601b-mods_modernfix-forge-5.27.83_mc1.20.1.jar"
-    },
-    {
-      "path": "mods/rhino-forge-2001.2.3-build.10.jar",
-      "sha256": "fed2211429301bf043864183cab9ab8e92d4cc4dbb9e488ce6c75217c54584a6",
-      "filename": "rhino-forge-2001.2.3-build.10.jar",
-      "size": 1798244,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/fed221142930-mods_rhino-forge-2001.2.3-build.10.jar"
-    },
-    {
-      "path": "mods/corewithstuff-v1.6.jar",
-      "sha256": "495e06edb20704a65ef7535d0ac20ca743bb8d8095a62c674463341ff6b25a98",
-      "filename": "corewithstuff-v1.6.jar",
-      "size": 4581834,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/495e06edb207-mods_corewithstuff-v1.6.jar"
-    },
-    {
-      "path": "mods/FSang18's Heroes v12.4.1.jar",
-      "sha256": "5264ad418f646f681e8facf6edd798bd054099e3152ab633c8e837a37d0d2de2",
-      "filename": "FSang18's Heroes v12.4.1.jar",
-      "size": 15467746,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/5264ad418f64-mods_FSang18_s_Heroes_v12.4.1.jar"
-    },
-    {
-      "path": "mods/dampened-v1.2.0.jar",
-      "sha256": "68dfea60529252f0505ae7d37174078ad3f826220fa356665957a298040222c3",
-      "filename": "dampened-v1.2.0.jar",
-      "size": 123545,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/68dfea605292-mods_dampened-v1.2.0.jar"
-    },
-    {
-      "path": "mods/palladiumextras-1.0.0.jar",
-      "sha256": "ec6a553c9dbdb4ae91a7988210077e4cce7ab936661b370853c6315e9bc481d1",
-      "filename": "palladiumextras-1.0.0.jar",
-      "size": 25172,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/ec6a553c9dbd-mods_palladiumextras-1.0.0.jar"
-    },
-    {
-      "path": "mods/AlienEvo-1.1.3-forge.jar",
-      "sha256": "115a9b6526c8ea93ed22dda90e171a3a0bb88b1a3af69667224aea75df22dae0",
-      "filename": "AlienEvo-1.1.3-forge.jar",
-      "size": 6264830,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/115a9b6526c8-mods_AlienEvo-1.1.3-forge.jar"
+      "path": "mods/a_new_corps.jar",
+      "sha256": "995681f80e9809be83057e10af001c86375b85d6e2848e8994b7278875afcc82",
+      "filename": "a_new_corps.jar",
+      "size": 3197693,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/995681f80e98-mods_a_new_corps.jar"
     },
     {
       "path": "mods/AI-Improvements-1.20-0.5.2.jar",
@@ -156,158 +18,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/575a4a8e00f9-mods_AI-Improvements-1.20-0.5.2.jar"
     },
     {
-      "path": "mods/Mutants and More v1.5.3.jar",
-      "sha256": "cf04246949f67efa19bf56c2a3e7ce858561f57aad820b7505ce68d188aafc7d",
-      "filename": "Mutants and More v1.5.3.jar",
-      "size": 118587,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/cf04246949f6-mods_Mutants_and_More_v1.5.3.jar"
-    },
-    {
-      "path": "mods/smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
-      "sha256": "5a0d2682493ffa7b140a7b81f0d1e70c7536c97969397cf9e718e31391b5b9d5",
-      "filename": "smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
-      "size": 41044,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/5a0d2682493f-mods_smoothboot_reloaded_-mc1.20.1-0.0.4.jar"
-    },
-    {
-      "path": "mods/infinity-7.2.jar",
-      "sha256": "1ad6c1b8d29237592f61cc1f178c4812e903e4846e5e1a28833bd30832411276",
-      "filename": "infinity-7.2.jar",
-      "size": 6940756,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1ad6c1b8d292-mods_infinity-7.2.jar"
-    },
-    {
-      "path": "mods/FSang18's Mighty Morphin' v1.6.1.jar",
-      "sha256": "306215e309c044870dd9a6caa47a592de139e7385f387bfd484286f510eafa99",
-      "filename": "FSang18's Mighty Morphin' v1.6.1.jar",
-      "size": 861892,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/306215e309c0-mods_FSang18_s_Mighty_Morphin__v1.6.1.jar"
-    },
-    {
-      "path": "mods/arrzenhanced-2.0.2.jar",
-      "sha256": "8f31cbb205d37d5856d17cfff00bae444f56d3a3618c2a00a9a0576e052f227a",
-      "filename": "arrzenhanced-2.0.2.jar",
-      "size": 14052385,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8f31cbb205d3-mods_arrzenhanced-2.0.2.jar"
-    },
-    {
-      "path": "mods/servercore-forge-1.5.2+1.20.1.jar",
-      "sha256": "d9ad4f456b6c36bac17a71cd12935fdccae69ca1e1fcd33857210758cb58e586",
-      "filename": "servercore-forge-1.5.2+1.20.1.jar",
-      "size": 1508496,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d9ad4f456b6c-mods_servercore-forge-1.5.2_1.20.1.jar"
-    },
-    {
-      "path": "mods/Throgy's Addon 1.5.81.jar",
-      "sha256": "aae7accfe2cb3e5d745b93952ad461734aa7e5a18cde6aa067a46846879c7a3d",
-      "filename": "Throgy's Addon 1.5.81.jar",
-      "size": 2298874,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/aae7accfe2cb-mods_Throgy_s_Addon_1.5.81.jar"
-    },
-    {
-      "path": "mods/fabric-api-0.92.6+1.11.15+1.20.1.jar",
-      "sha256": "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d",
-      "filename": "fabric-api-0.92.6+1.11.15+1.20.1.jar",
-      "size": 3065833,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/3dd3f93c3112-mods_fabric-api-0.92.6_1.11.15_1.20.1.jar"
-    },
-    {
-      "path": "mods/Connector-1.0.0-beta.49+1.20.1.jar",
-      "sha256": "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431",
-      "filename": "Connector-1.0.0-beta.49+1.20.1.jar",
-      "size": 5046109,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e39acd37e162-mods_Connector-1.0.0-beta.49_1.20.1.jar"
-    },
-    {
-      "path": "mods/memoryleakfix-forge-1.17+-1.1.5.jar",
-      "sha256": "925c3db4e1d085a43c4d2beaa4eec18367c22abc90c2ce8594b8a129fd3f28dd",
-      "filename": "memoryleakfix-forge-1.17+-1.1.5.jar",
-      "size": 227925,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/925c3db4e1d0-mods_memoryleakfix-forge-1.17_-1.1.5.jar"
-    },
-    {
-      "path": "mods/FastWorkbench-1.20.1-8.0.4.jar",
-      "sha256": "86d20c6879bf86ef76b3fd94998d3e5c3327acb5d5324b6eb0b5348354766620",
-      "filename": "FastWorkbench-1.20.1-8.0.4.jar",
-      "size": 28188,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/86d20c6879bf-mods_FastWorkbench-1.20.1-8.0.4.jar"
-    },
-    {
-      "path": "mods/Fastload-Reforged-mc1.20.1-3.4.0.jar",
-      "sha256": "038a5fa1c044d5afae22502ca1444eeb1a700d34a224996c25f233524ae35a7a",
-      "filename": "Fastload-Reforged-mc1.20.1-3.4.0.jar",
-      "size": 66989,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/038a5fa1c044-mods_Fastload-Reforged-mc1.20.1-3.4.0.jar"
-    },
-    {
-      "path": "mods/jei-1.20.1-forge-15.59.0.211.jar",
-      "sha256": "2e2b9ccc6c0f78df44eb9301ef3b75be0e0e26538679246a3accb8dfb8f10e10",
-      "filename": "jei-1.20.1-forge-15.59.0.211.jar",
-      "size": 1825582,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/2e2b9ccc6c0f-mods_jei-1.20.1-forge-15.59.0.211.jar"
-    },
-    {
-      "path": "mods/Gods-And-Heroes-PE-1.4.jar",
-      "sha256": "c5182ae227ead83dddbb346bfb821337e1e138900d32adfcaddb7999cbd35544",
-      "filename": "Gods-And-Heroes-PE-1.4.jar",
-      "size": 227138,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/c5182ae227ea-mods_Gods-And-Heroes-PE-1.4.jar"
-    },
-    {
-      "path": "mods/Clumps-forge-1.20.1-12.0.0.4.jar",
-      "sha256": "8af01712c0dc32cebaff31795ca6d223fddff2ea9b1f5efbd9c3a586a0dacbc0",
-      "filename": "Clumps-forge-1.20.1-12.0.0.4.jar",
-      "size": 20300,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8af01712c0dc-mods_Clumps-forge-1.20.1-12.0.0.4.jar"
-    },
-    {
-      "path": "mods/Satsu_iron_man_addon-3.5.3.jar",
-      "sha256": "fea4ae8d9fba8527f6b96099fd222dc35236e7f2afcc99cfca033f9ea1788df5",
-      "filename": "Satsu_iron_man_addon-3.5.3.jar",
-      "size": 11671052,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/fea4ae8d9fba-mods_Satsu_iron_man_addon-3.5.3.jar"
-    },
-    {
-      "path": "mods/Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
-      "sha256": "a0de109d3405fbf4290e10df4f812eadd5125debb16ea7e9d908acbbabcb516b",
-      "filename": "Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
-      "size": 22930,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/a0de109d3405-mods_Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar"
-    },
-    {
-      "path": "mods/a_new_corps.jar",
-      "sha256": "995681f80e9809be83057e10af001c86375b85d6e2848e8994b7278875afcc82",
-      "filename": "a_new_corps.jar",
-      "size": 3197693,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/995681f80e98-mods_a_new_corps.jar"
-    },
-    {
-      "path": "mods/spark-1.10.53-forge.jar",
-      "sha256": "eba275ba9bb0cb5b542913c3138c6eeff6a752898266d63d125d185f26ac99ed",
-      "filename": "spark-1.10.53-forge.jar",
-      "size": 3114590,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/eba275ba9bb0-mods_spark-1.10.53-forge.jar"
-    },
-    {
-      "path": "mods/kubejs-forge-2001.6.5-build.26.jar",
-      "sha256": "1769312192fbf9d72f45054ba61130523bfb471b5f480a4bff8c210ec09400bb",
-      "filename": "kubejs-forge-2001.6.5-build.26.jar",
-      "size": 1658792,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1769312192fb-mods_kubejs-forge-2001.6.5-build.26.jar"
-    },
-    {
-      "path": "mods/Placebo-1.20.1-8.6.3.jar",
-      "sha256": "1cdf906cfbcbb5e5be2ef1bb721f79a24b01bd2ac559c8cdbfb7693f62421571",
-      "filename": "Placebo-1.20.1-8.6.3.jar",
-      "size": 282474,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1cdf906cfbcb-mods_Placebo-1.20.1-8.6.3.jar"
-    },
-    {
-      "path": "mods/visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
-      "sha256": "2b721091d8aa0d4c0d9c1f655a6abacff44f262fc78dfa3d10affc7ed24645f5",
-      "filename": "visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
-      "size": 273145,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/2b721091d8aa-mods_visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar"
+      "path": "mods/AlienEvo-1.1.3-forge.jar",
+      "sha256": "115a9b6526c8ea93ed22dda90e171a3a0bb88b1a3af69667224aea75df22dae0",
+      "filename": "AlienEvo-1.1.3-forge.jar",
+      "size": 6264830,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/115a9b6526c8-mods_AlienEvo-1.1.3-forge.jar"
     },
     {
       "path": "mods/architectury-9.2.14-forge.jar",
@@ -317,11 +32,95 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/218b471d0b8a-mods_architectury-9.2.14-forge.jar"
     },
     {
-      "path": "mods/gravecore-1.2.6-forge.jar",
-      "sha256": "18484e9cb9363b9a90acf4d8f1c0dbd60797f289ec2601fbce13286caf441174",
-      "filename": "gravecore-1.2.6-forge.jar",
-      "size": 1576752,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/18484e9cb936-mods_gravecore-1.2.6-forge.jar"
+      "path": "mods/arrzenhanced-2.0.2.jar",
+      "sha256": "8f31cbb205d37d5856d17cfff00bae444f56d3a3618c2a00a9a0576e052f227a",
+      "filename": "arrzenhanced-2.0.2.jar",
+      "size": 14052385,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8f31cbb205d3-mods_arrzenhanced-2.0.2.jar"
+    },
+    {
+      "path": "mods/caelus-forge-3.2.0+1.20.1.jar",
+      "sha256": "43cabe35f0618c0bd01af02e7568ca6f15fd32bb6a90d04c9898bb01e8dc1e81",
+      "filename": "caelus-forge-3.2.0+1.20.1.jar",
+      "size": 40125,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/43cabe35f061-mods_caelus-forge-3.2.0_1.20.1.jar"
+    },
+    {
+      "path": "mods/Chunky-1.3.146.jar",
+      "sha256": "996a3c9b53e6c0e0850fb9e78d3546d2c37a1b789ddaf529b17e4fe62ab23141",
+      "filename": "Chunky-1.3.146.jar",
+      "size": 341451,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/996a3c9b53e6-mods_Chunky-1.3.146.jar"
+    },
+    {
+      "path": "mods/Clumps-forge-1.20.1-12.0.0.4.jar",
+      "sha256": "8af01712c0dc32cebaff31795ca6d223fddff2ea9b1f5efbd9c3a586a0dacbc0",
+      "filename": "Clumps-forge-1.20.1-12.0.0.4.jar",
+      "size": 20300,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8af01712c0dc-mods_Clumps-forge-1.20.1-12.0.0.4.jar"
+    },
+    {
+      "path": "mods/Connector-1.0.0-beta.49+1.20.1.jar",
+      "sha256": "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431",
+      "filename": "Connector-1.0.0-beta.49+1.20.1.jar",
+      "size": 5046109,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e39acd37e162-mods_Connector-1.0.0-beta.49_1.20.1.jar"
+    },
+    {
+      "path": "mods/ConnectorExtras-1.11.2+1.20.1.jar",
+      "sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
+      "filename": "ConnectorExtras-1.11.2+1.20.1.jar",
+      "size": 182464,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/10d149fc9348-mods_ConnectorExtras-1.11.2_1.20.1.jar"
+    },
+    {
+      "path": "mods/corewithstuff-v1.6.jar",
+      "sha256": "495e06edb20704a65ef7535d0ac20ca743bb8d8095a62c674463341ff6b25a98",
+      "filename": "corewithstuff-v1.6.jar",
+      "size": 4581834,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/495e06edb207-mods_corewithstuff-v1.6.jar"
+    },
+    {
+      "path": "mods/curios-forge-5.14.1+1.20.1.jar",
+      "sha256": "1e817919a35b37cf30524aaec73f0ca5130452f23f168f844854df282eb8e51f",
+      "filename": "curios-forge-5.14.1+1.20.1.jar",
+      "size": 398066,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1e817919a35b-mods_curios-forge-5.14.1_1.20.1.jar"
+    },
+    {
+      "path": "mods/dampened-v1.2.0.jar",
+      "sha256": "68dfea60529252f0505ae7d37174078ad3f826220fa356665957a298040222c3",
+      "filename": "dampened-v1.2.0.jar",
+      "size": 123545,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/68dfea605292-mods_dampened-v1.2.0.jar"
+    },
+    {
+      "path": "mods/fabric-api-0.92.6+1.11.15+1.20.1.jar",
+      "sha256": "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d",
+      "filename": "fabric-api-0.92.6+1.11.15+1.20.1.jar",
+      "size": 3065833,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/3dd3f93c3112-mods_fabric-api-0.92.6_1.11.15_1.20.1.jar"
+    },
+    {
+      "path": "mods/FastFurnace-1.20.1-8.0.2.jar",
+      "sha256": "970c11c090e7a364e2e006aabb5e573f79901e710e97195334ee5802317776e8",
+      "filename": "FastFurnace-1.20.1-8.0.2.jar",
+      "size": 6170,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/970c11c090e7-mods_FastFurnace-1.20.1-8.0.2.jar"
+    },
+    {
+      "path": "mods/Fastload-Reforged-mc1.20.1-3.4.0.jar",
+      "sha256": "038a5fa1c044d5afae22502ca1444eeb1a700d34a224996c25f233524ae35a7a",
+      "filename": "Fastload-Reforged-mc1.20.1-3.4.0.jar",
+      "size": 66989,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/038a5fa1c044-mods_Fastload-Reforged-mc1.20.1-3.4.0.jar"
+    },
+    {
+      "path": "mods/FastWorkbench-1.20.1-8.0.4.jar",
+      "sha256": "86d20c6879bf86ef76b3fd94998d3e5c3327acb5d5324b6eb0b5348354766620",
+      "filename": "FastWorkbench-1.20.1-8.0.4.jar",
+      "size": 28188,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/86d20c6879bf-mods_FastWorkbench-1.20.1-8.0.4.jar"
     },
     {
       "path": "mods/ferritecore-6.0.1-forge.jar",
@@ -329,6 +128,104 @@
       "filename": "ferritecore-6.0.1-forge.jar",
       "size": 123034,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/9c2c9396a49e-mods_ferritecore-6.0.1-forge.jar"
+    },
+    {
+      "path": "mods/FSang18's Heroes v12.4.1.jar",
+      "sha256": "5264ad418f646f681e8facf6edd798bd054099e3152ab633c8e837a37d0d2de2",
+      "filename": "FSang18's Heroes v12.4.1.jar",
+      "size": 15467746,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/5264ad418f64-mods_FSang18_s_Heroes_v12.4.1.jar"
+    },
+    {
+      "path": "mods/FSang18's Mighty Morphin' v1.6.1.jar",
+      "sha256": "306215e309c044870dd9a6caa47a592de139e7385f387bfd484286f510eafa99",
+      "filename": "FSang18's Mighty Morphin' v1.6.1.jar",
+      "size": 861892,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/306215e309c0-mods_FSang18_s_Mighty_Morphin__v1.6.1.jar"
+    },
+    {
+      "path": "mods/geckolib-forge-1.20.1-4.8.4.jar",
+      "sha256": "4518779a31b6c2abb92c98b5ad17ef3d60177df68626bfc86c44de2764913c2b",
+      "filename": "geckolib-forge-1.20.1-4.8.4.jar",
+      "size": 1038209,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/4518779a31b6-mods_geckolib-forge-1.20.1-4.8.4.jar"
+    },
+    {
+      "path": "mods/Gods-And-Heroes-PE-1.4.jar",
+      "sha256": "c5182ae227ead83dddbb346bfb821337e1e138900d32adfcaddb7999cbd35544",
+      "filename": "Gods-And-Heroes-PE-1.4.jar",
+      "size": 227138,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/c5182ae227ea-mods_Gods-And-Heroes-PE-1.4.jar"
+    },
+    {
+      "path": "mods/gravecore-1.2.6-forge.jar",
+      "sha256": "18484e9cb9363b9a90acf4d8f1c0dbd60797f289ec2601fbce13286caf441174",
+      "filename": "gravecore-1.2.6-forge.jar",
+      "size": 1576752,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/18484e9cb936-mods_gravecore-1.2.6-forge.jar"
+    },
+    {
+      "path": "mods/graveht-0.5.1.jar",
+      "sha256": "76663ad896632379e67cfd733b195d2e76a8a06560495f9d8e43881a974a34f8",
+      "filename": "graveht-0.5.1.jar",
+      "size": 9164686,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/76663ad89663-mods_graveht-0.5.1.jar"
+    },
+    {
+      "path": "mods/Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "sha256": "a0de109d3405fbf4290e10df4f812eadd5125debb16ea7e9d908acbbabcb516b",
+      "filename": "Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "size": 22930,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/a0de109d3405-mods_Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar"
+    },
+    {
+      "path": "mods/infinity-7.2.jar",
+      "sha256": "1ad6c1b8d29237592f61cc1f178c4812e903e4846e5e1a28833bd30832411276",
+      "filename": "infinity-7.2.jar",
+      "size": 6940756,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1ad6c1b8d292-mods_infinity-7.2.jar"
+    },
+    {
+      "path": "mods/jei-1.20.1-forge-15.59.0.211.jar",
+      "sha256": "2e2b9ccc6c0f78df44eb9301ef3b75be0e0e26538679246a3accb8dfb8f10e10",
+      "filename": "jei-1.20.1-forge-15.59.0.211.jar",
+      "size": 1825582,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/2e2b9ccc6c0f-mods_jei-1.20.1-forge-15.59.0.211.jar"
+    },
+    {
+      "path": "mods/kubejs-forge-2001.6.5-build.26.jar",
+      "sha256": "1769312192fbf9d72f45054ba61130523bfb471b5f480a4bff8c210ec09400bb",
+      "filename": "kubejs-forge-2001.6.5-build.26.jar",
+      "size": 1658792,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1769312192fb-mods_kubejs-forge-2001.6.5-build.26.jar"
+    },
+    {
+      "path": "mods/lodestone-1.20.1-1.6.4.1.jar",
+      "sha256": "e9f8b7bc70ba99d97005f2acee2061b149785fbae3c1e37db08c79197bcc7c2d",
+      "filename": "lodestone-1.20.1-1.6.4.1.jar",
+      "size": 670934,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e9f8b7bc70ba-mods_lodestone-1.20.1-1.6.4.1.jar"
+    },
+    {
+      "path": "mods/memoryleakfix-forge-1.17+-1.1.5.jar",
+      "sha256": "925c3db4e1d085a43c4d2beaa4eec18367c22abc90c2ce8594b8a129fd3f28dd",
+      "filename": "memoryleakfix-forge-1.17+-1.1.5.jar",
+      "size": 227925,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/925c3db4e1d0-mods_memoryleakfix-forge-1.17_-1.1.5.jar"
+    },
+    {
+      "path": "mods/modernfix-forge-5.27.83+mc1.20.1.jar",
+      "sha256": "954ff22f601be8de3978a0d7636a138dc93801c6ac55cfd71ef1cd2895de8e5f",
+      "filename": "modernfix-forge-5.27.83+mc1.20.1.jar",
+      "size": 1003230,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/954ff22f601b-mods_modernfix-forge-5.27.83_mc1.20.1.jar"
+    },
+    {
+      "path": "mods/Mutants and More v1.5.3.jar",
+      "sha256": "cf04246949f67efa19bf56c2a3e7ce858561f57aad820b7505ce68d188aafc7d",
+      "filename": "Mutants and More v1.5.3.jar",
+      "size": 118587,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/cf04246949f6-mods_Mutants_and_More_v1.5.3.jar"
     },
     {
       "path": "mods/Necronomicon-Forge-1.6.0+1.20.1.jar",
@@ -345,188 +242,1376 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/12f96ecb8e61-mods_packetfixer-3.3.2-1.18-1.20.4-merged.jar"
     },
     {
-      "path": "config/modernfix-common.toml",
-      "sha256": "d40a0510a5eaf56e3c48e881348d7d826c5a1f61aa29b69cf0fc33dd96d6fdcd",
-      "filename": "modernfix-common.toml",
-      "size": 104,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d40a0510a5ea-config_modernfix-common.toml"
+      "path": "mods/palladium-4.5.9+1.20.1-forge.jar",
+      "sha256": "af99a7ba746404c9774cd737dcc1db2d1f6fb7963fdbfa1bbee6b5b9832e29c9",
+      "filename": "palladium-4.5.9+1.20.1-forge.jar",
+      "size": 2869419,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/af99a7ba7464-mods_palladium-4.5.9_1.20.1-forge.jar"
     },
     {
-      "path": "config/connectorextras_energy_bridge-common.toml",
-      "sha256": "a4d9eeb8806752eadbaf17d3072d1be28c508943814c5c14e2b85f936406758d",
-      "filename": "connectorextras_energy_bridge-common.toml",
-      "size": 336,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/a4d9eeb88067-config_connectorextras_energy_bridge-common.toml"
+      "path": "mods/palladiumextras-1.0.0.jar",
+      "sha256": "ec6a553c9dbdb4ae91a7988210077e4cce7ab936661b370853c6315e9bc481d1",
+      "filename": "palladiumextras-1.0.0.jar",
+      "size": 25172,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/ec6a553c9dbd-mods_palladiumextras-1.0.0.jar"
     },
     {
-      "path": "config/apoli-common.toml",
-      "sha256": "94e633e170b101317b10447b0015fac4425c1f704ca0450baf429711c9127d2e",
-      "filename": "apoli-common.toml",
-      "size": 87,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/94e633e170b1-config_apoli-common.toml"
+      "path": "mods/pantheonsent-1.1.1+1.20.1-forge.jar",
+      "sha256": "3a323241a3bfe91afc0151c98779bef818d127f4816d71e9c15e630ff1639a02",
+      "filename": "pantheonsent-1.1.1+1.20.1-forge.jar",
+      "size": 1970793,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/3a323241a3bf-mods_pantheonsent-1.1.1_1.20.1-forge.jar"
     },
     {
-      "path": "config/necronomicon.json5",
-      "sha256": "f97fc5ae7dd7d312e86ecddf2e4491fee3e3a16b7a26cbb3aa078fdd3255c4df",
-      "filename": "necronomicon.json5",
-      "size": 266,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/f97fc5ae7dd7-config_necronomicon.json5"
+      "path": "mods/Pehkui-3.8.2+1.20.1-forge.jar",
+      "sha256": "54210f454c166f65a1bcbbfe4ea52e6f73e07844a793c7132f1af4076a0f42fc",
+      "filename": "Pehkui-3.8.2+1.20.1-forge.jar",
+      "size": 671605,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/54210f454c16-mods_Pehkui-3.8.2_1.20.1-forge.jar"
     },
     {
-      "path": "config/ferritecore-mixin.toml",
-      "sha256": "e3ca99e0f233e3bcf8b6762a85b1139f716bf96644318fe9cb022c270461b287",
-      "filename": "ferritecore-mixin.toml",
-      "size": 1493,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e3ca99e0f233-config_ferritecore-mixin.toml"
+      "path": "mods/Placebo-1.20.1-8.6.3.jar",
+      "sha256": "1cdf906cfbcbb5e5be2ef1bb721f79a24b01bd2ac559c8cdbfb7693f62421571",
+      "filename": "Placebo-1.20.1-8.6.3.jar",
+      "size": 282474,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1cdf906cfbcb-mods_Placebo-1.20.1-8.6.3.jar"
     },
     {
-      "path": "config/fml.toml",
-      "sha256": "05f17e0700fdaf30b09f732d3a4e2bbe7011a319930b4ca86b4c630885cff7ab",
-      "filename": "fml.toml",
-      "size": 1117,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/05f17e0700fd-config_fml.toml"
+      "path": "mods/powerborne-heroes-1.20.1-0.5.1.jar",
+      "sha256": "531d88e5e915ab0055027477df995d4c29a0f89775ac0a2b60b63e6be5d20fc2",
+      "filename": "powerborne-heroes-1.20.1-0.5.1.jar",
+      "size": 3072125,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/531d88e5e915-mods_powerborne-heroes-1.20.1-0.5.1.jar"
     },
     {
-      "path": "config/aiimprovements-common.toml",
-      "sha256": "d65113ea15e814463b1f477b0cebcc98dfe06a5d3f7100e3bacd414c7cb391ec",
-      "filename": "aiimprovements-common.toml",
-      "size": 6088,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d65113ea15e8-config_aiimprovements-common.toml"
+      "path": "mods/rhino-forge-2001.2.3-build.10.jar",
+      "sha256": "fed2211429301bf043864183cab9ab8e92d4cc4dbb9e488ce6c75217c54584a6",
+      "filename": "rhino-forge-2001.2.3-build.10.jar",
+      "size": 1798244,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/fed221142930-mods_rhino-forge-2001.2.3-build.10.jar"
     },
     {
-      "path": "config/chunky/config.json",
-      "sha256": "c7384a22595488f79f3125b22cc175eb729267267807a084479419349797abc8",
-      "filename": "config.json",
-      "size": 146,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/c7384a225954-config_chunky_config.json"
+      "path": "mods/Satsu_iron_man_addon-3.5.3.jar",
+      "sha256": "fea4ae8d9fba8527f6b96099fd222dc35236e7f2afcc99cfca033f9ea1788df5",
+      "filename": "Satsu_iron_man_addon-3.5.3.jar",
+      "size": 11671052,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/fea4ae8d9fba-mods_Satsu_iron_man_addon-3.5.3.jar"
     },
     {
-      "path": "config/origins-common.toml",
-      "sha256": "ad03f81729001932c23cb479ed4f22df4182b8d2db5564ef92d2111b7f2eb30c",
-      "filename": "origins-common.toml",
-      "size": 3361,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/ad03f8172900-config_origins-common.toml"
+      "path": "mods/servercore-forge-1.5.2+1.20.1.jar",
+      "sha256": "d9ad4f456b6c36bac17a71cd12935fdccae69ca1e1fcd33857210758cb58e586",
+      "filename": "servercore-forge-1.5.2+1.20.1.jar",
+      "size": 1508496,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d9ad4f456b6c-mods_servercore-forge-1.5.2_1.20.1.jar"
     },
     {
-      "path": "config/graveht-common.toml",
-      "sha256": "aa454aca30c793e8009b2195fae8f2fe0039f02ba0c29d82a553a4758c465b60",
-      "filename": "graveht-common.toml",
-      "size": 46,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/aa454aca30c7-config_graveht-common.toml"
+      "path": "mods/Simply Powers v1.1.0.jar",
+      "sha256": "4647d562597c3645ee530838b70463fb282fbf448473c28b47916b6156f5cc96",
+      "filename": "Simply Powers v1.1.0.jar",
+      "size": 85113,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/4647d562597c-mods_Simply_Powers_v1.1.0.jar"
     },
     {
-      "path": "config/item_obliterator.json5",
-      "sha256": "d99380933582b0cc13a360453ff41641bd9e7e1ca27f128a32ebe0f0f6b14bac",
-      "filename": "item_obliterator.json5",
-      "size": 31768,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d99380933582-config_item_obliterator.json5"
+      "path": "mods/smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
+      "sha256": "5a0d2682493ffa7b140a7b81f0d1e70c7536c97969397cf9e718e31391b5b9d5",
+      "filename": "smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
+      "size": 41044,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/5a0d2682493f-mods_smoothboot_reloaded_-mc1.20.1-0.0.4.jar"
     },
     {
-      "path": "config/calio-common.toml",
-      "sha256": "67f01683358b22dae1b77567f31a399227c379288b5069ab4fb9ca0f513cd3ce",
-      "filename": "calio-common.toml",
-      "size": 167,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/67f01683358b-config_calio-common.toml"
+      "path": "mods/spark-1.10.53-forge.jar",
+      "sha256": "eba275ba9bb0cb5b542913c3138c6eeff6a752898266d63d125d185f26ac99ed",
+      "filename": "spark-1.10.53-forge.jar",
+      "size": 3114590,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/eba275ba9bb0-mods_spark-1.10.53-forge.jar"
     },
     {
-      "path": "config/fastbench.cfg",
-      "sha256": "8133f67a8d39f7a9cc0737636ffde75326b602201354de5dd3bd716491713219",
-      "filename": "fastbench.cfg",
-      "size": 522,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8133f67a8d39-config_fastbench.cfg"
+      "path": "mods/starlight-1.1.2+forge.1cda73c.jar",
+      "sha256": "e90763c86d362c7cb427dbb70e89985c11a882fdd69ae7d04ac2e23a106eb500",
+      "filename": "starlight-1.1.2+forge.1cda73c.jar",
+      "size": 110583,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e90763c86d36-mods_starlight-1.1.2_forge.1cda73c.jar"
     },
     {
-      "path": "config/packetfixer.properties",
-      "sha256": "0c05e87fbe010798648f6f26cfcdfd94fe31baf60442271c49db82baf30bb207",
-      "filename": "packetfixer.properties",
-      "size": 473,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/0c05e87fbe01-config_packetfixer.properties"
+      "path": "mods/Throgy's Addon 1.5.81.jar",
+      "sha256": "aae7accfe2cb3e5d745b93952ad461734aa7e5a18cde6aa067a46846879c7a3d",
+      "filename": "Throgy's Addon 1.5.81.jar",
+      "size": 2298874,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/aae7accfe2cb-mods_Throgy_s_Addon_1.5.81.jar"
     },
     {
-      "path": "config/corewithstuff-common.toml",
-      "sha256": "14eb98100a9300e4bd879f060591b7ec0550a6fc0c8ee0cab9477664aa36a59e",
-      "filename": "corewithstuff-common.toml",
-      "size": 63,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/14eb98100a93-config_corewithstuff-common.toml"
+      "path": "mods/visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
+      "sha256": "2b721091d8aa0d4c0d9c1f655a6abacff44f262fc78dfa3d10affc7ed24645f5",
+      "filename": "visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar",
+      "size": 273145,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/2b721091d8aa-mods_visual_creative_tab_editor-forge-1.20.1-2.0.1-hotfix1.jar"
     },
     {
-      "path": "config/curios-common.toml",
-      "sha256": "541ee90994c1cf3d4e132df2ac3ff74004bc3952d3914ae843b5089a4dda8a95",
-      "filename": "curios-common.toml",
-      "size": 156,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/541ee90994c1-config_curios-common.toml"
+      "size": 1023766,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
+      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
+      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
+      "sha256": "8d16659fd68e6ef1ceb0bfd1f5ec857bcabaa8d306fb34a133db6f9c03d03b34"
     },
     {
-      "path": "config/pehkui-common.toml",
-      "sha256": "e9a129d0a2dbf13d36d4f3e47ae3b2b01d32a9e872a771633bf356d9cdebc895",
-      "filename": "pehkui-common.toml",
-      "size": 389,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/e9a129d0a2db-config_pehkui-common.toml"
+      "size": 92,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
+      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
+      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
+      "sha256": "3457bba78f57a7d7bde0fcb7a522634d333a8ed185d4e12f4f4b46a328170dc6"
     },
     {
-      "path": "config/smoothboot.json",
-      "sha256": "8fb262662f6ee6d6f88256a2b628f7519f3eede1104d6e20a80523ce4a21cad1",
-      "filename": "smoothboot.json",
-      "size": 197,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/8fb262662f6e-config_smoothboot.json"
+      "size": 1945187,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__abilities.html",
+      "path": "mods/documentation/palladium/abilities.html",
+      "filename": "abilities.html",
+      "sha256": "c9722816550da7675effcd75545cb8d7b8c96a113af38d3e5c10f133304aadd5"
     },
     {
-      "path": "config/modernfix-mixins.properties",
-      "sha256": "720ad313a5d0bd55cdf40dc870383cb66081ffe687d9107d1622c7868d023a8f",
-      "filename": "modernfix-mixins.properties",
-      "size": 6662,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/720ad313a5d0-config_modernfix-mixins.properties"
+      "size": 17662,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__accessories.html",
+      "path": "mods/documentation/palladium/accessories.html",
+      "filename": "accessories.html",
+      "sha256": "7f43330c3a7cf43b8e4f057110561967bf679788e14f65db6cf6cca67e7fd46b"
     },
     {
-      "path": "config/connector.json",
-      "sha256": "060e296a5fddce603e50034e3cdb6059c3a0e122d0aae3d85a0523341c82ea22",
-      "filename": "connector.json",
-      "size": 144,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/060e296a5fdd-config_connector.json"
+      "size": 3157,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__accessory_slots.html",
+      "path": "mods/documentation/palladium/accessory_slots.html",
+      "filename": "accessory_slots.html",
+      "sha256": "3b241425a8a10ae810c80656ab4f36d8ea3169bcc8380faef062356551364d5b"
     },
     {
-      "path": "config/galaxy_radio/music/README.txt",
-      "sha256": "1d613535390e57de9b5dda115cf2f5fa24fa18a734a3fadb5a897e7f0dae9349",
-      "filename": "README.txt",
-      "size": 351,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/1d613535390e-config_galaxy_radio_music_README.txt"
+      "size": 4398,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__armor_materials.html",
+      "path": "mods/documentation/palladium/armor_materials.html",
+      "filename": "armor_materials.html",
+      "sha256": "29830af609c6fc009fe0714e02c45c9af6c8e760d384b86627a207440d49fdcf"
     },
     {
-      "path": "config/galaxy_radio/radio_songs.txt",
-      "sha256": "d7e5da51de67146671da5b22e227579af748a8e302e92d17fa23b8cef1180ac7",
-      "filename": "radio_songs.txt",
-      "size": 3502,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d7e5da51de67-config_galaxy_radio_radio_songs.txt"
+      "size": 9159,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__blocks.html",
+      "path": "mods/documentation/palladium/blocks.html",
+      "filename": "blocks.html",
+      "sha256": "f6ee6d59e0f020e684d1673cdafa08d13082f7856dab23209f4f9d3481a4b79b"
     },
     {
-      "path": "config/corewithstuff-features.json",
-      "sha256": "d653330ca745816eac7c3500e51877b1f1acb33b3a5f347d709de9da1ca9c14e",
-      "filename": "corewithstuff-features.json",
-      "size": 227,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/d653330ca745-config_corewithstuff-features.json"
+      "size": 206122,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__conditions.html",
+      "path": "mods/documentation/palladium/conditions.html",
+      "filename": "conditions.html",
+      "sha256": "62d80604e0ed96e9c2c5dae8b417f127bb4e9d6ebd7891c3421777e094ab2afa"
     },
     {
-      "path": "config/servercore/optimizations.yml",
-      "sha256": "299965ce464b4c0bb4a79dfd2dba2cdfd63f3360628b0d5b0d3b3988003f4f0d",
-      "filename": "optimizations.yml",
-      "size": 1204,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/299965ce464b-config_servercore_optimizations.yml"
+      "size": 3116,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__creative_mode_tabs.html",
+      "path": "mods/documentation/palladium/creative_mode_tabs.html",
+      "filename": "creative_mode_tabs.html",
+      "sha256": "0eb7f79c755f7e7713008fb4eeb5c6e238f4abbc62db2b242c394f9a0a731344"
     },
     {
-      "path": "config/servercore/config.yml",
-      "sha256": "52fe845721d4ee151721b01c920020ab60b2de220f1c79fb67c413021fcc1e47",
-      "filename": "config.yml",
-      "size": 10569,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/52fe845721d4-config_servercore_config.yml"
+      "size": 8124,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__energy_beam_renderers.html",
+      "path": "mods/documentation/palladium/energy_beam_renderers.html",
+      "filename": "energy_beam_renderers.html",
+      "sha256": "d4ed61db42c5f9403232844491cb8140570654549e2dc2808a3268282f2978f0"
     },
     {
-      "path": "config/spark/config.json",
-      "sha256": "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42",
-      "filename": "config.json",
-      "size": 117,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/992ba9f3a4a7-config_spark_config.json"
+      "size": 6482,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__icons.html",
+      "path": "mods/documentation/palladium/icons.html",
+      "filename": "icons.html",
+      "sha256": "1f5b59a519164f9735dcf99e8ed45268dea0699381e422a47be283281c9416d2"
+    },
+    {
+      "size": 36106,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__items.html",
+      "path": "mods/documentation/palladium/items.html",
+      "filename": "items.html",
+      "sha256": "9505af4dde4d08493399c5fb4a32f97a002efeedd6f96d46df169f728691b594"
+    },
+    {
+      "size": 3987,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__tool_tiers.html",
+      "path": "mods/documentation/palladium/tool_tiers.html",
+      "filename": "tool_tiers.html",
+      "sha256": "00589a0a1c0f2084d9fa66798333cd823aa9432a97a95dcfc1540bd17751b21c"
+    },
+    {
+      "size": 10089,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__trails.html",
+      "path": "mods/documentation/palladium/trails.html",
+      "filename": "trails.html",
+      "sha256": "9a0d6219de2a50c7b3c0902c55051acb9623087cc4cf212fa7d1e67a87cc53e5"
+    },
+    {
+      "size": 45037,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__dynamic_textures__variables.html",
+      "path": "mods/documentation/palladium/dynamic_textures/variables.html",
+      "filename": "variables.html",
+      "sha256": "51268fef85899b5556da45508349062ac8f32f5fbe563fbd1baa106f4b196aea"
+    },
+    {
+      "size": 4882,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__allay.json",
+      "path": "mods/documentation/palladium/vanilla_models/allay.json",
+      "filename": "allay.json",
+      "sha256": "68140deee59f1c14cd19162b9f42c2f0bec10dfedfbd04a2a57be275ceb9b9cd"
+    },
+    {
+      "size": 7252,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__armor_stand.json",
+      "path": "mods/documentation/palladium/vanilla_models/armor_stand.json",
+      "filename": "armor_stand.json",
+      "sha256": "af239aca6d0ce929284250639a888252f24ddbaa00611ee6ff96e846148206e8"
+    },
+    {
+      "size": 7370,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__axolotl.json",
+      "path": "mods/documentation/palladium/vanilla_models/axolotl.json",
+      "filename": "axolotl.json",
+      "sha256": "5d82e4b937754d570ef31bff5767cf57070accabd3c784916b051a9b4c038c37"
+    },
+    {
+      "size": 2137,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__banner.json",
+      "path": "mods/documentation/palladium/vanilla_models/banner.json",
+      "filename": "banner.json",
+      "sha256": "a0f8e39691b0ca11391785ed1d8d324b4bd4396db48310495599ebba74bfbb66"
+    },
+    {
+      "size": 5888,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__bat.json",
+      "path": "mods/documentation/palladium/vanilla_models/bat.json",
+      "filename": "bat.json",
+      "sha256": "899e1b813c05ee47a89a1df0c5878861e9eb9c2fb297592124b344a4b2a80fdc"
+    },
+    {
+      "size": 2188,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__bed_foot.json",
+      "path": "mods/documentation/palladium/vanilla_models/bed_foot.json",
+      "filename": "bed_foot.json",
+      "sha256": "e6d5ada924b77f12ed9ec8db6ecd710e5a785181d699abdb0e829de0c87f399c"
+    },
+    {
+      "size": 2197,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__bed_head.json",
+      "path": "mods/documentation/palladium/vanilla_models/bed_head.json",
+      "filename": "bed_head.json",
+      "sha256": "188e78864a1aff02e0dcd0cd5ebd4446b19660d8f0b9c9cce988e15320160a8e"
+    },
+    {
+      "size": 6510,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__bee.json",
+      "path": "mods/documentation/palladium/vanilla_models/bee.json",
+      "filename": "bee.json",
+      "sha256": "6be7dc140fc60719cc2069e382ae8e217731334be0580d5b70bca1b14663e5ca"
+    },
+    {
+      "size": 1536,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__bell.json",
+      "path": "mods/documentation/palladium/vanilla_models/bell.json",
+      "filename": "bell.json",
+      "sha256": "79cf8ba6b36d4db12296c6d3553d9e10be583cfd65398b9f3d0026c278774c0f"
+    },
+    {
+      "size": 8775,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__blaze.json",
+      "path": "mods/documentation/palladium/vanilla_models/blaze.json",
+      "filename": "blaze.json",
+      "sha256": "d0326eec2c9ccce23b1a260a62c76521c1083b8b1bb48a89acc8fd648c580887"
+    },
+    {
+      "size": 4719,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__book.json",
+      "path": "mods/documentation/palladium/vanilla_models/book.json",
+      "filename": "book.json",
+      "sha256": "8d7b4cffc87bea605b5763707de444705cb392644af1741ddd5103d45d3cb7ab"
+    },
+    {
+      "size": 12701,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__camel.json",
+      "path": "mods/documentation/palladium/vanilla_models/camel.json",
+      "filename": "camel.json",
+      "sha256": "49a65a26482104851c7047f7802738d6312817161d093d34b6082f8514e9644f"
+    },
+    {
+      "size": 6548,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__cat.json",
+      "path": "mods/documentation/palladium/vanilla_models/cat.json",
+      "filename": "cat.json",
+      "sha256": "35c0808146239b88c8f161f2c25a6bd737838dd5074e09e45bcabe159844d64b"
+    },
+    {
+      "size": 7289,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__cave_spider.json",
+      "path": "mods/documentation/palladium/vanilla_models/cave_spider.json",
+      "filename": "cave_spider.json",
+      "sha256": "b09d0df12169690104dd7265f72d123921d0393d27fff5332d713f633bc5e94f"
+    },
+    {
+      "size": 3470,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_minecart.json",
+      "filename": "chest_minecart.json",
+      "sha256": "0c74e61b19b668241c75c6c0909e34f9e80eda31212092ed291f4c380bc374e7"
+    },
+    {
+      "size": 2130,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest.json",
+      "filename": "chest.json",
+      "sha256": "552500382918abc5a1d225e40283f44ba10bcfe1b09c9d23c35c2c3199421a32"
+    },
+    {
+      "size": 5324,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chicken.json",
+      "path": "mods/documentation/palladium/vanilla_models/chicken.json",
+      "filename": "chicken.json",
+      "sha256": "c3c4efa7f82ca55a7f35a88b98bb9dfbede258ac463a27b37750ca20739e2488"
+    },
+    {
+      "size": 4687,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__cod.json",
+      "path": "mods/documentation/palladium/vanilla_models/cod.json",
+      "filename": "cod.json",
+      "sha256": "5045e899ae2f77fecda9f6149517df499f8ad5f41e15392df6d99025cc1e7f04"
+    },
+    {
+      "size": 3478,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__command_block_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/command_block_minecart.json",
+      "filename": "command_block_minecart.json",
+      "sha256": "2a0d7a586a0e0b4d7265e559f47c2817a3891f9f2132c773421da13474b430af"
+    },
+    {
+      "size": 5231,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__cow.json",
+      "path": "mods/documentation/palladium/vanilla_models/cow.json",
+      "filename": "cow.json",
+      "sha256": "ca01d048a01b688dfc88a951c95b31f982e1791c3cdc202bba16c47565a9147d"
+    },
+    {
+      "size": 873,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__creeper_head.json",
+      "path": "mods/documentation/palladium/vanilla_models/creeper_head.json",
+      "filename": "creeper_head.json",
+      "sha256": "31a2354981b8cb22fb7d18c47f1c6df1fee9545011e420acc3eee4aa128fbf0a"
+    },
+    {
+      "size": 4065,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__creeper.json",
+      "path": "mods/documentation/palladium/vanilla_models/creeper.json",
+      "filename": "creeper.json",
+      "sha256": "be418668d474b132c75aecec869dffcf2f2ce2976cc3f6c5876d70b4bc8ba4d6"
+    },
+    {
+      "size": 2576,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__decorated_pot_base.json",
+      "path": "mods/documentation/palladium/vanilla_models/decorated_pot_base.json",
+      "filename": "decorated_pot_base.json",
+      "sha256": "3717a4b9f0a2d2b16c181202d1482e8749bb47f3171a8ee854d14c05d55d27b1"
+    },
+    {
+      "size": 2868,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__decorated_pot_sides.json",
+      "path": "mods/documentation/palladium/vanilla_models/decorated_pot_sides.json",
+      "filename": "decorated_pot_sides.json",
+      "sha256": "4eb3035e5f83884b7fd4e10f94ac401cb7dec44741a88a6d4b0eefd13ea83952"
+    },
+    {
+      "size": 5593,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__dolphin.json",
+      "path": "mods/documentation/palladium/vanilla_models/dolphin.json",
+      "filename": "dolphin.json",
+      "sha256": "3b1ea98cd292eba18227280413456c7556062eecfb5db3c5186595a2f517d19c"
+    },
+    {
+      "size": 17101,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__donkey.json",
+      "path": "mods/documentation/palladium/vanilla_models/donkey.json",
+      "filename": "donkey.json",
+      "sha256": "93308bd652aa5a7f775501db59deb2bf8459de50102f6778f3ad7afe3ba508d7"
+    },
+    {
+      "size": 2142,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__double_chest_left.json",
+      "path": "mods/documentation/palladium/vanilla_models/double_chest_left.json",
+      "filename": "double_chest_left.json",
+      "sha256": "9e62103dc93cc28ee26af092c575dcc5c7aa7a713cd0e863aa6ecff883bc6179"
+    },
+    {
+      "size": 2144,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__double_chest_right.json",
+      "path": "mods/documentation/palladium/vanilla_models/double_chest_right.json",
+      "filename": "double_chest_right.json",
+      "sha256": "11067938739284860ca5180ec053d3bf59e5cf7088c0db2d68bd02ef9b13049e"
+    },
+    {
+      "size": 3455,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__dragon_skull.json",
+      "path": "mods/documentation/palladium/vanilla_models/dragon_skull.json",
+      "filename": "dragon_skull.json",
+      "sha256": "b35891aba3632c78fc4011df6a51ce2813dbd34d37e59f91accd8dcc15682d6a"
+    },
+    {
+      "size": 4695,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__drowned.json",
+      "path": "mods/documentation/palladium/vanilla_models/drowned.json",
+      "filename": "drowned.json",
+      "sha256": "56610fa20786bb7d889c1e96c9a60819ce3e36a1d2a3c38776d83cb5fa06d8f7"
+    },
+    {
+      "size": 13824,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__elder_guardian.json",
+      "path": "mods/documentation/palladium/vanilla_models/elder_guardian.json",
+      "filename": "elder_guardian.json",
+      "sha256": "d2cf3e1bd52198b268cc5c634659b16e27b53b041e1641071a3f7dd4061eefc2"
+    },
+    {
+      "size": 1572,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__elytra.json",
+      "path": "mods/documentation/palladium/vanilla_models/elytra.json",
+      "filename": "elytra.json",
+      "sha256": "27f8e85f2f72a2a2d53a72bea72bed75874fc3799bdf185fea15316b9a9fa505"
+    },
+    {
+      "size": 2139,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__end_crystal.json",
+      "path": "mods/documentation/palladium/vanilla_models/end_crystal.json",
+      "filename": "end_crystal.json",
+      "sha256": "074bbcf942cd8ea807fda6b7e06402880163ea2eaf5e2f1e16d2631398942ec7"
+    },
+    {
+      "size": 18571,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__ender_dragon.json",
+      "path": "mods/documentation/palladium/vanilla_models/ender_dragon.json",
+      "filename": "ender_dragon.json",
+      "sha256": "da5cd2d32fdd1da8f057a4b07b58851293f6afd7f263c603cf80575be74d3ca5"
+    },
+    {
+      "size": 4681,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__enderman.json",
+      "path": "mods/documentation/palladium/vanilla_models/enderman.json",
+      "filename": "enderman.json",
+      "sha256": "ca5af29bfa95113d4a43b803159e99d0d580f0e3a6485c587f3515f8df9653a2"
+    },
+    {
+      "size": 2776,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__endermite.json",
+      "path": "mods/documentation/palladium/vanilla_models/endermite.json",
+      "filename": "endermite.json",
+      "sha256": "a2de8bf341085e67a5ae68736294094808c3946c35add2fc007355aee05606b8"
+    },
+    {
+      "size": 2172,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__evoker_fangs.json",
+      "path": "mods/documentation/palladium/vanilla_models/evoker_fangs.json",
+      "filename": "evoker_fangs.json",
+      "sha256": "d7417d0e7f6d331cdfcdb3a9f927ec84fb480c6f3d39d995ec376e67eba48f24"
+    },
+    {
+      "size": 7469,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__evoker.json",
+      "path": "mods/documentation/palladium/vanilla_models/evoker.json",
+      "filename": "evoker.json",
+      "sha256": "b2891ff07f7cefca5dbb835f24e2495412f3c2d0346fc367d2f2919244c72dbe"
+    },
+    {
+      "size": 6825,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__fox.json",
+      "path": "mods/documentation/palladium/vanilla_models/fox.json",
+      "filename": "fox.json",
+      "sha256": "04161551dcfed3f0ab7e2f0f11e70cf300f67f010c9d5785936b24a14511eb4b"
+    },
+    {
+      "size": 10845,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__frog.json",
+      "path": "mods/documentation/palladium/vanilla_models/frog.json",
+      "filename": "frog.json",
+      "sha256": "5a8e901bf21f166145b5e9cdadb58315170e5e58cf80f56c89f5b3a91aad8d95"
+    },
+    {
+      "size": 3472,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__furnace_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/furnace_minecart.json",
+      "filename": "furnace_minecart.json",
+      "sha256": "f62ca3e37c9a0f0403fb520ca64e0a53f062cf39867ecde276ea54b78320e344"
+    },
+    {
+      "size": 6687,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__ghast.json",
+      "path": "mods/documentation/palladium/vanilla_models/ghast.json",
+      "filename": "ghast.json",
+      "sha256": "c38ec4fac4879689cbf0194cee1bc8fea1c2fca1649a1ad5d82713d143cb4870"
+    },
+    {
+      "size": 4690,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__giant.json",
+      "path": "mods/documentation/palladium/vanilla_models/giant.json",
+      "filename": "giant.json",
+      "sha256": "6af4e79c9d0473e13f910bcc41edcc5b2c7c6a65963435073d2bd519bca3d593"
+    },
+    {
+      "size": 6199,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__glow_squid.json",
+      "path": "mods/documentation/palladium/vanilla_models/glow_squid.json",
+      "filename": "glow_squid.json",
+      "sha256": "97b7a54f30604255168542330484d9399969fcbbd1b861d5d4712c1174a8f5df"
+    },
+    {
+      "size": 7228,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__goat.json",
+      "path": "mods/documentation/palladium/vanilla_models/goat.json",
+      "filename": "goat.json",
+      "sha256": "0edac7eac65a32e183cf3e4a6aa722e6fd6565fe27e1fa975f5f074eadf13aa6"
+    },
+    {
+      "size": 13818,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__guardian.json",
+      "path": "mods/documentation/palladium/vanilla_models/guardian.json",
+      "filename": "guardian.json",
+      "sha256": "cf8459bd3915a3e13e859af22b9ac51b147f73bf5865186e9ebf964de5e80e21"
+    },
+    {
+      "size": 7485,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hoglin.json",
+      "path": "mods/documentation/palladium/vanilla_models/hoglin.json",
+      "filename": "hoglin.json",
+      "sha256": "b84b6fe030adf6f7148f30ef8aee4e1a82b8a0c67e5f2e8b721bdfacb34319eb"
+    },
+    {
+      "size": 3471,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hopper_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/hopper_minecart.json",
+      "filename": "hopper_minecart.json",
+      "sha256": "9c999be8a28b7b00f6ba85ff5b850f866f8f27a2b89a3cf1d6fd2da775e23ab2"
+    },
+    {
+      "size": 15879,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__horse_armor.json",
+      "path": "mods/documentation/palladium/vanilla_models/horse_armor.json",
+      "filename": "horse_armor.json",
+      "sha256": "8848a567a12d5d138ada46856a31ecb01b2526765241cc6780204def01d55666"
+    },
+    {
+      "size": 15713,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__horse.json",
+      "path": "mods/documentation/palladium/vanilla_models/horse.json",
+      "filename": "horse.json",
+      "sha256": "16e95e8f5c7aa63744c4a9a9673c76ec1715e5d861ace2c3357abf42708ff63f"
+    },
+    {
+      "size": 4689,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__husk.json",
+      "path": "mods/documentation/palladium/vanilla_models/husk.json",
+      "filename": "husk.json",
+      "sha256": "b3b161d9ab527d2bd7f2c0ce54023aa75e2f23983089f99f2368a02b04271fd4"
+    },
+    {
+      "size": 7473,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__illusioner.json",
+      "path": "mods/documentation/palladium/vanilla_models/illusioner.json",
+      "filename": "illusioner.json",
+      "sha256": "bb1d3e860f3daab610b388df7a714a60fac07de8f94ea86c862b6047983a494c"
+    },
+    {
+      "size": 4821,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__iron_golem.json",
+      "path": "mods/documentation/palladium/vanilla_models/iron_golem.json",
+      "filename": "iron_golem.json",
+      "sha256": "70fd9720b45aa2f4ff860e1363bccb2eed078baf2f6b9c09df4eb37bf41f3ee4"
+    },
+    {
+      "size": 871,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__leash_knot.json",
+      "path": "mods/documentation/palladium/vanilla_models/leash_knot.json",
+      "filename": "leash_knot.json",
+      "sha256": "416aede266b6eba3ec3ece514cf51b5cc42b406d2fcfad09b0fdcb8c0bac736b"
+    },
+    {
+      "size": 3139,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__llama_spit.json",
+      "path": "mods/documentation/palladium/vanilla_models/llama_spit.json",
+      "filename": "llama_spit.json",
+      "sha256": "6bf0660bbaa7e181962418000e2c2592d735636933bea3e1517cbb0b656377b5"
+    },
+    {
+      "size": 6546,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__llama.json",
+      "path": "mods/documentation/palladium/vanilla_models/llama.json",
+      "filename": "llama.json",
+      "sha256": "b64dcd353bb642f29372acdbd4c64eb11e64653fa7e3137d68d545268035bdfb"
+    },
+    {
+      "size": 5931,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__magma_cube.json",
+      "path": "mods/documentation/palladium/vanilla_models/magma_cube.json",
+      "filename": "magma_cube.json",
+      "sha256": "eaa0caf41a1c5b9d87c848234e3b50985db4ff0ce18d31359736d35ec6eb2251"
+    },
+    {
+      "size": 3464,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/minecart.json",
+      "filename": "minecart.json",
+      "sha256": "ac15b260d075b18fcf027c3c2e354173759931b9a3f38acfa2aa98ee15d449ed"
+    },
+    {
+      "size": 5237,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__mooshroom.json",
+      "path": "mods/documentation/palladium/vanilla_models/mooshroom.json",
+      "filename": "mooshroom.json",
+      "sha256": "daf24dc3ae35894ba97b4cc18e6b95a508373dc53f73afe951e44a5cf69d9a75"
+    },
+    {
+      "size": 17099,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__mule.json",
+      "path": "mods/documentation/palladium/vanilla_models/mule.json",
+      "filename": "mule.json",
+      "sha256": "2bd44996da539a72332d17594852e3e2eb9d29e3b71d93b696f751538fe5a8b9"
+    },
+    {
+      "size": 6551,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__ocelot.json",
+      "path": "mods/documentation/palladium/vanilla_models/ocelot.json",
+      "filename": "ocelot.json",
+      "sha256": "e453377bc4b0094c36de4968645234878ad5470611a31395cac28ee47ffb778f"
+    },
+    {
+      "size": 5231,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__panda.json",
+      "path": "mods/documentation/palladium/vanilla_models/panda.json",
+      "filename": "panda.json",
+      "sha256": "1d2b07878be8aa018288815bf05f8d3aa57e35d4fea6f3728f9c874ae33952f9"
+    },
+    {
+      "size": 7415,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__parrot.json",
+      "path": "mods/documentation/palladium/vanilla_models/parrot.json",
+      "filename": "parrot.json",
+      "sha256": "e2a46294a46363ffffadb4d4d9ad78823f3c7d3f5a862d9914facce4e82313a5"
+    },
+    {
+      "size": 5659,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__phantom.json",
+      "path": "mods/documentation/palladium/vanilla_models/phantom.json",
+      "filename": "phantom.json",
+      "sha256": "5a7a47818671cb943fd28a4da007216b7f9f1bcd4375532b90bb1466a8d0437b"
+    },
+    {
+      "size": 4458,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__pig.json",
+      "path": "mods/documentation/palladium/vanilla_models/pig.json",
+      "filename": "pig.json",
+      "sha256": "695beb3342dd407e58b225caa04756df4621c041475cff53aa8c43a51ff268ba"
+    },
+    {
+      "size": 11286,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__piglin_brute.json",
+      "path": "mods/documentation/palladium/vanilla_models/piglin_brute.json",
+      "filename": "piglin_brute.json",
+      "sha256": "855795500b0ad025c5c232cd90494fb6dc3e49863019e84c74be08a1b178ff92"
+    },
+    {
+      "size": 3373,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__piglin_head.json",
+      "path": "mods/documentation/palladium/vanilla_models/piglin_head.json",
+      "filename": "piglin_head.json",
+      "sha256": "f2570f522fb255032ab8de4f47fef3b40b744469b5e94f80aff2ca58c814292e"
+    },
+    {
+      "size": 11280,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__piglin.json",
+      "path": "mods/documentation/palladium/vanilla_models/piglin.json",
+      "filename": "piglin.json",
+      "sha256": "f7472c1a626b393d6288c3cdf9f333a2bcd4236d0650a279d596612512e3b933"
+    },
+    {
+      "size": 7471,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__pillager.json",
+      "path": "mods/documentation/palladium/vanilla_models/pillager.json",
+      "filename": "pillager.json",
+      "sha256": "1386c2bdd4af57c53420ee88747d465508dd1bae8dd79f6f36a3f8df446d35bc"
+    },
+    {
+      "size": 1532,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__player_head.json",
+      "path": "mods/documentation/palladium/vanilla_models/player_head.json",
+      "filename": "player_head.json",
+      "sha256": "a5db76c04aeb9d592520e3c5214592931b99ea2720a11269a781972c9d044f95"
+    },
+    {
+      "size": 9175,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__player_slim.json",
+      "path": "mods/documentation/palladium/vanilla_models/player_slim.json",
+      "filename": "player_slim.json",
+      "sha256": "5a304614c193e678cb8b78a0b7024c65185a15e3894cb1768046ee5f4b29e7d2"
+    },
+    {
+      "size": 9170,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__player.json",
+      "path": "mods/documentation/palladium/vanilla_models/player.json",
+      "filename": "player.json",
+      "sha256": "d1a39372e2fccf1fca3d9ef2704547878dfef86c07a1e96fa7fb55f766bcce1d"
+    },
+    {
+      "size": 5630,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__polar_bear.json",
+      "path": "mods/documentation/palladium/vanilla_models/polar_bear.json",
+      "filename": "polar_bear.json",
+      "sha256": "29678253c68d80e505cdb397a7ecedc9e2e91912a8e0fac079db7232dcebf454"
+    },
+    {
+      "size": 8683,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__pufferfish_big.json",
+      "path": "mods/documentation/palladium/vanilla_models/pufferfish_big.json",
+      "filename": "pufferfish_big.json",
+      "sha256": "577bb7ee916ee3891391e10e3aadf5fbd4f8f3f7afe456274c1dc227a9ad4ced"
+    },
+    {
+      "size": 7397,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__pufferfish_medium.json",
+      "path": "mods/documentation/palladium/vanilla_models/pufferfish_medium.json",
+      "filename": "pufferfish_medium.json",
+      "sha256": "b9b4fc8406dd8695f7ffa5171957ee45282f782ba8d825bfdd590be1767ea055"
+    },
+    {
+      "size": 4048,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__pufferfish_small.json",
+      "path": "mods/documentation/palladium/vanilla_models/pufferfish_small.json",
+      "filename": "pufferfish_small.json",
+      "sha256": "cfdcb489fa24b9ab7abe04529c45f17fd74395e053e55210292da1646e05412c"
+    },
+    {
+      "size": 7991,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__rabbit.json",
+      "path": "mods/documentation/palladium/vanilla_models/rabbit.json",
+      "filename": "rabbit.json",
+      "sha256": "0773515880564bf4e5959c8b04a80b7dbe810ae41273075bcd0d7b364adc108c"
+    },
+    {
+      "size": 7565,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__ravager.json",
+      "path": "mods/documentation/palladium/vanilla_models/ravager.json",
+      "filename": "ravager.json",
+      "sha256": "e7e5b6a99d94af34f67e4f43bb77215aa2001c2c76f550bbb4ae71434a522124"
+    },
+    {
+      "size": 5435,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__salmon.json",
+      "path": "mods/documentation/palladium/vanilla_models/salmon.json",
+      "filename": "salmon.json",
+      "sha256": "c33e60e64f8d56aea663648f3a95cb56a9cd459b75ea2aca61a187f5782bf81f"
+    },
+    {
+      "size": 4087,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sheep.json",
+      "path": "mods/documentation/palladium/vanilla_models/sheep.json",
+      "filename": "sheep.json",
+      "sha256": "f31859d874e939effc7f2d8c4736f6f4ada3c65f4032084659950046e7966db4"
+    },
+    {
+      "size": 1504,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__shield.json",
+      "path": "mods/documentation/palladium/vanilla_models/shield.json",
+      "filename": "shield.json",
+      "sha256": "dc005e5128019187d57f62b53480170edce78fbb58bad7340067a127bfdc660a"
+    },
+    {
+      "size": 1637,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__shulker_bullet.json",
+      "path": "mods/documentation/palladium/vanilla_models/shulker_bullet.json",
+      "filename": "shulker_bullet.json",
+      "sha256": "906a124ed536134fb8fa7ba4e152f47e68b9897a4b52d931001c48a73855b998"
+    },
+    {
+      "size": 2134,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__shulker.json",
+      "path": "mods/documentation/palladium/vanilla_models/shulker.json",
+      "filename": "shulker.json",
+      "sha256": "d394c5a63efd18b6dc970731bcc112dc764989f991af168b51b4f6aadd02040f"
+    },
+    {
+      "size": 6584,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__silverfish.json",
+      "path": "mods/documentation/palladium/vanilla_models/silverfish.json",
+      "filename": "silverfish.json",
+      "sha256": "bff33eb0346fbd3f9c1cfce10a83e35e69ae11bab91e2226789dad4a047c5dec"
+    },
+    {
+      "size": 15722,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__skeleton_horse.json",
+      "path": "mods/documentation/palladium/vanilla_models/skeleton_horse.json",
+      "filename": "skeleton_horse.json",
+      "sha256": "0def14eca3cdad7146025de4c0debe457607c880b920f8d1101d430849580b4e"
+    },
+    {
+      "size": 875,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__skeleton_skull.json",
+      "path": "mods/documentation/palladium/vanilla_models/skeleton_skull.json",
+      "filename": "skeleton_skull.json",
+      "sha256": "39f9932dbc57b9c824d27b38aeda04e3941d0a34673e26b9e8add1afa3eb4c2c"
+    },
+    {
+      "size": 4684,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__skeleton.json",
+      "path": "mods/documentation/palladium/vanilla_models/skeleton.json",
+      "filename": "skeleton.json",
+      "sha256": "38ccc8be1ec77f2528dfd315e90073b8c892cfa697bd92440a4aa4380891242b"
+    },
+    {
+      "size": 2769,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__slime.json",
+      "path": "mods/documentation/palladium/vanilla_models/slime.json",
+      "filename": "slime.json",
+      "sha256": "ca302844e0eaf35a64b155da043c171020a4e12c91fa34aadef855c750b188a2"
+    },
+    {
+      "size": 9951,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sniffer.json",
+      "path": "mods/documentation/palladium/vanilla_models/sniffer.json",
+      "filename": "sniffer.json",
+      "sha256": "6ecdd6ba1a9f698d948de0f3f41bc83e14be90bfecd0ee56426dd7d4b9b72fb3"
+    },
+    {
+      "size": 3477,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__snow_golem.json",
+      "path": "mods/documentation/palladium/vanilla_models/snow_golem.json",
+      "filename": "snow_golem.json",
+      "sha256": "32952919ffcd0ae981ba940ae08b3f0be9977a5f227b51ccdad9fbb6bb5aacbf"
+    },
+    {
+      "size": 3472,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__spawner_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/spawner_minecart.json",
+      "filename": "spawner_minecart.json",
+      "sha256": "542e12c120799e857439c452fc5bacb0bf4ddf77778f8c038496f3698b04e47a"
+    },
+    {
+      "size": 7284,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__spider.json",
+      "path": "mods/documentation/palladium/vanilla_models/spider.json",
+      "filename": "spider.json",
+      "sha256": "92b2056d70b4909db3171ba0e3766f190d9dde084e16133883fa4de51975e3cd"
+    },
+    {
+      "size": 873,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__spin_attack.json",
+      "path": "mods/documentation/palladium/vanilla_models/spin_attack.json",
+      "filename": "spin_attack.json",
+      "sha256": "4d5df8a67696eef88de0586d316fe7683c15f1f134b48bec45b6efc9d649622b"
+    },
+    {
+      "size": 6194,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__squid.json",
+      "path": "mods/documentation/palladium/vanilla_models/squid.json",
+      "filename": "squid.json",
+      "sha256": "a2900b8e4fca0664ce2fae6c0524d9ddce85610f6081bbca527ff9966a6d671b"
+    },
+    {
+      "size": 4681,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__stray.json",
+      "path": "mods/documentation/palladium/vanilla_models/stray.json",
+      "filename": "stray.json",
+      "sha256": "af70140f740194c23e7fb86d82f1baa7e0c6f19dc0d351d00eb02841cb3e2f2c"
+    },
+    {
+      "size": 6303,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__strider.json",
+      "path": "mods/documentation/palladium/vanilla_models/strider.json",
+      "filename": "strider.json",
+      "sha256": "e7d2d0c75d6990f48cb3c85bb1bb72f7bf432689ddf12a9af0b76aaac5aeec91"
+    },
+    {
+      "size": 1494,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__tadpole.json",
+      "path": "mods/documentation/palladium/vanilla_models/tadpole.json",
+      "filename": "tadpole.json",
+      "sha256": "aed969844d89de5c2a40e1cf29b4bcd289e1216d89d311eb16bfa79fbd19df3a"
+    },
+    {
+      "size": 3468,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__tnt_minecart.json",
+      "path": "mods/documentation/palladium/vanilla_models/tnt_minecart.json",
+      "filename": "tnt_minecart.json",
+      "sha256": "9874b66fc607ec14d5c20ba4f349f0c9fc46aaba9e61a85976065712c6e6b4c4"
+    },
+    {
+      "size": 6553,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__trader_llama.json",
+      "path": "mods/documentation/palladium/vanilla_models/trader_llama.json",
+      "filename": "trader_llama.json",
+      "sha256": "59ddcf6fb572a736b47f110ce0fa1179709d58b0680f89f295d4385a0e85824e"
+    },
+    {
+      "size": 3524,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__trident.json",
+      "path": "mods/documentation/palladium/vanilla_models/trident.json",
+      "filename": "trident.json",
+      "sha256": "3a4afccdd749f9ce778b3997a43ae1cf459d0888c6996304876548641ff75728"
+    },
+    {
+      "size": 4076,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__tropical_fish_large.json",
+      "path": "mods/documentation/palladium/vanilla_models/tropical_fish_large.json",
+      "filename": "tropical_fish_large.json",
+      "sha256": "232e3c6c2ee2fd413b486ba4435a810537cfdd86d7b99ca13a7d0f8171fdfcc1"
+    },
+    {
+      "size": 3437,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__tropical_fish_small.json",
+      "path": "mods/documentation/palladium/vanilla_models/tropical_fish_small.json",
+      "filename": "tropical_fish_small.json",
+      "sha256": "eaecbf51463bf2253d22277729c797e972d5f8e8c7b169f45968e34fb9dbd2a5"
+    },
+    {
+      "size": 5132,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__turtle.json",
+      "path": "mods/documentation/palladium/vanilla_models/turtle.json",
+      "filename": "turtle.json",
+      "sha256": "370b704655bc52966cfcacf593e53e5da469efdc439e6433b5418d948714b833"
+    },
+    {
+      "size": 4877,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__vex.json",
+      "path": "mods/documentation/palladium/vanilla_models/vex.json",
+      "filename": "vex.json",
+      "sha256": "1035eb319400a2ed860a89fc1007c95c9700a489cd84299eb21b782f48b575ec"
+    },
+    {
+      "size": 6866,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__villager.json",
+      "path": "mods/documentation/palladium/vanilla_models/villager.json",
+      "filename": "villager.json",
+      "sha256": "22c02ceff2f4f3ce7d7adfc7abb62872d435b40e039982b634959d0648cc12c9"
+    },
+    {
+      "size": 7473,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__vindicator.json",
+      "path": "mods/documentation/palladium/vanilla_models/vindicator.json",
+      "filename": "vindicator.json",
+      "sha256": "652adb353edf0acf372d941a5536ea7bec57b8478d1c7301e1202956c92f511b"
+    },
+    {
+      "size": 6874,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wandering_trader.json",
+      "path": "mods/documentation/palladium/vanilla_models/wandering_trader.json",
+      "filename": "wandering_trader.json",
+      "sha256": "903d1b6e00ad0aecdaaf6a1522de6b586f6b288c6895ba9583d51bb3318b4da8"
+    },
+    {
+      "size": 7153,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__warden.json",
+      "path": "mods/documentation/palladium/vanilla_models/warden.json",
+      "filename": "warden.json",
+      "sha256": "377d1c0e91f16f50f604683c870d45e40fe18d6c0acc98162267b81faa70e4ea"
+    },
+    {
+      "size": 9634,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__witch.json",
+      "path": "mods/documentation/palladium/vanilla_models/witch.json",
+      "filename": "witch.json",
+      "sha256": "32de50048d66808c681d3857264c9eba7f57057cb9b42b3b09ba3dfe566141b7"
+    },
+    {
+      "size": 882,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wither_skeleton_skull.json",
+      "path": "mods/documentation/palladium/vanilla_models/wither_skeleton_skull.json",
+      "filename": "wither_skeleton_skull.json",
+      "sha256": "f5ffa57815366062974d57617c394feca4e11b959b7d303d44eb79e83935a812"
+    },
+    {
+      "size": 4691,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wither_skeleton.json",
+      "path": "mods/documentation/palladium/vanilla_models/wither_skeleton.json",
+      "filename": "wither_skeleton.json",
+      "sha256": "3478c642bbfadf968855ef23ff6b8b9fe430619c7f7aa2f9b7cae103e5a91f87"
+    },
+    {
+      "size": 874,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wither_skull.json",
+      "path": "mods/documentation/palladium/vanilla_models/wither_skull.json",
+      "filename": "wither_skull.json",
+      "sha256": "630644d6a3a1491e043ba462ca9878eca296dd215d735b227ae99a2030cdcf36"
+    },
+    {
+      "size": 5262,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wither.json",
+      "path": "mods/documentation/palladium/vanilla_models/wither.json",
+      "filename": "wither.json",
+      "sha256": "275eab8a98039d9ca7ff1c3bdd74a5d2c13eb9768052878721540b63c681e551"
+    },
+    {
+      "size": 7071,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__wolf.json",
+      "path": "mods/documentation/palladium/vanilla_models/wolf.json",
+      "filename": "wolf.json",
+      "sha256": "587330d9e6a15bec832f0dea339a1ff1ee17e347adf1ea0ca146538f211c9cbf"
+    },
+    {
+      "size": 7485,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zoglin.json",
+      "path": "mods/documentation/palladium/vanilla_models/zoglin.json",
+      "filename": "zoglin.json",
+      "sha256": "337e765fce486e9cd3da9ebbb38e5b9cd1e683215fa2f271a5cb2ade0ad01a62"
+    },
+    {
+      "size": 1532,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zombie_head.json",
+      "path": "mods/documentation/palladium/vanilla_models/zombie_head.json",
+      "filename": "zombie_head.json",
+      "sha256": "bc3c5ba73f18b0cf7cab65712e0f6ac38b0716d6cda6b22b38b2cf1295cd79f3"
+    },
+    {
+      "size": 15720,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zombie_horse.json",
+      "path": "mods/documentation/palladium/vanilla_models/zombie_horse.json",
+      "filename": "zombie_horse.json",
+      "sha256": "330fe6b6a67577244062e1348eb18160d2c941fe563399982fc260499fe48a66"
+    },
+    {
+      "size": 6152,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zombie_villager.json",
+      "path": "mods/documentation/palladium/vanilla_models/zombie_villager.json",
+      "filename": "zombie_villager.json",
+      "sha256": "c7970b0983ff734c974b941f1ccd6d65089754f6cf445c7b0f16ecc03ab55368"
+    },
+    {
+      "size": 4691,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zombie.json",
+      "path": "mods/documentation/palladium/vanilla_models/zombie.json",
+      "filename": "zombie.json",
+      "sha256": "7a7be370ebc5c38da21d589eff4381844a5750ba81aff358e4d87adcd78275a8"
+    },
+    {
+      "size": 11290,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__zombified_piglin.json",
+      "path": "mods/documentation/palladium/vanilla_models/zombified_piglin.json",
+      "filename": "zombified_piglin.json",
+      "sha256": "47015099a397c2064d9b384ddd8db1cc16dcf25e2f40d85432ca498987812b4e"
+    },
+    {
+      "size": 6219,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__acacia.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/acacia.json",
+      "filename": "acacia.json",
+      "sha256": "92c349da8c54126689db5276574d61f3c2d47967bff5b20eb7b2b28f664fc8fb"
+    },
+    {
+      "size": 3364,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__bamboo.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/bamboo.json",
+      "filename": "bamboo.json",
+      "sha256": "549021eeb7708ffe223946db6dc586c26e706c2a6e21b82ea9f063e66e9de149"
+    },
+    {
+      "size": 6218,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__birch.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/birch.json",
+      "filename": "birch.json",
+      "sha256": "02a28daeb9de9ff9e22e7610dc13141df74619ac0f7500f73048a75bb0c33f0e"
+    },
+    {
+      "size": 6219,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__cherry.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/cherry.json",
+      "filename": "cherry.json",
+      "sha256": "43c9fc411e3e0b48e90b9e1df9ed07f41c0e517b47ba7bd2d14bbc0a2679f95d"
+    },
+    {
+      "size": 6221,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__dark_oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/dark_oak.json",
+      "filename": "dark_oak.json",
+      "sha256": "5f62045130c4b374d832d6767dd7e2547ae4548934074776a5fd872eb989b44f"
+    },
+    {
+      "size": 6219,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__jungle.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/jungle.json",
+      "filename": "jungle.json",
+      "sha256": "842ead8f4e907f0e286c72f1aff5009ec7925f9ede4a5b6787918300b75bc1e9"
+    },
+    {
+      "size": 6221,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__mangrove.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/mangrove.json",
+      "filename": "mangrove.json",
+      "sha256": "c77508e16da2e2002c38891d73e7a2cc2c9be2f7805bf636648f6379ef7fcd9a"
+    },
+    {
+      "size": 6216,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/oak.json",
+      "filename": "oak.json",
+      "sha256": "c70ca4df644eca8cb50d8c3e037f5d09d1a12f0322b6ef47938af650d68c451d"
+    },
+    {
+      "size": 6219,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__boat__spruce.json",
+      "path": "mods/documentation/palladium/vanilla_models/boat/spruce.json",
+      "filename": "spruce.json",
+      "sha256": "633db3f2f1922692310b0beb423d702cce31dbea8b2013618576f990b70ad67a"
+    },
+    {
+      "size": 8196,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__acacia.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/acacia.json",
+      "filename": "acacia.json",
+      "sha256": "8b42f59136a24d52542dad024804d6837ab2c47781e05c26463eac7352702d6e"
+    },
+    {
+      "size": 5341,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__bamboo.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/bamboo.json",
+      "filename": "bamboo.json",
+      "sha256": "632d34415640075706230950e207b136621a3db77c8214ab8ab94b7176ce0b50"
+    },
+    {
+      "size": 8195,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__birch.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/birch.json",
+      "filename": "birch.json",
+      "sha256": "57ba661ce26a6527772ba6b624dafbb162e765222bd644c8489d7942253bc501"
+    },
+    {
+      "size": 8196,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__cherry.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/cherry.json",
+      "filename": "cherry.json",
+      "sha256": "1ca2a7a36bd83b0566f1f55f6954d73f772816a478e1f857e79d88f0587210d1"
+    },
+    {
+      "size": 8198,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__dark_oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/dark_oak.json",
+      "filename": "dark_oak.json",
+      "sha256": "e8f69fd8b1346bb02ab2b10c3053745878a203fe6a25b56ce5e55df854d161b4"
+    },
+    {
+      "size": 8196,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__jungle.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/jungle.json",
+      "filename": "jungle.json",
+      "sha256": "a5d409fa905cc6d210de7ba5b6480ffb6a6c8b5f2aac56e6e78f862fba5a4009"
+    },
+    {
+      "size": 8198,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__mangrove.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/mangrove.json",
+      "filename": "mangrove.json",
+      "sha256": "0327d8698a8d9e25317fdf9cca3102358472da29902150db95ecf7045bea7225"
+    },
+    {
+      "size": 8193,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/oak.json",
+      "filename": "oak.json",
+      "sha256": "1d252e7047408f1a90369aa5b063668aa4d6846bdb5f79eae0d0f3a075515998"
+    },
+    {
+      "size": 8196,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__chest_boat__spruce.json",
+      "path": "mods/documentation/palladium/vanilla_models/chest_boat/spruce.json",
+      "filename": "spruce.json",
+      "sha256": "41a8a13749d95e0af20f571d588b41f5c2f537b2109ccf4a60e0cb42dd147519"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__acacia.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/acacia.json",
+      "filename": "acacia.json",
+      "sha256": "fc1cf9102b121fdfba3e03f0f3535d8dfa488d7e908c0a54c1013da3dd5c2fcc"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__bamboo.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/bamboo.json",
+      "filename": "bamboo.json",
+      "sha256": "5e14212ef69b283ca3d67598e00a15c1da06faf1c9897a5dc5e8a0831b38c8b1"
+    },
+    {
+      "size": 5134,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__birch.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/birch.json",
+      "filename": "birch.json",
+      "sha256": "45113da1f7e38a6f67899f2c8d48c70eff3e6d37f5b1afe25b22251fb18e50cb"
+    },
+    {
+      "size": 5134,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__bloom.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/bloom.json",
+      "filename": "bloom.json",
+      "sha256": "2336d65515de01de3d852955d306b2879c2d3144c9bd30e5b37c77d3f4258614"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__cherry.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/cherry.json",
+      "filename": "cherry.json",
+      "sha256": "9be0fd472faab7ecb05c66543167cc2f7618cdc36ff0a0f2b8501f34433d801d"
+    },
+    {
+      "size": 5136,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__crimson.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/crimson.json",
+      "filename": "crimson.json",
+      "sha256": "e293cc6381e94bc5ad1a4494b2c5610b163a9009bba5735e54a0fef92161b5f9"
+    },
+    {
+      "size": 5137,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__dark_oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/dark_oak.json",
+      "filename": "dark_oak.json",
+      "sha256": "fff7ae8d056e2444fe744928134b5ec57931356275a16e12dc7451cb742fdb8e"
+    },
+    {
+      "size": 5133,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__echo.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/echo.json",
+      "filename": "echo.json",
+      "sha256": "1372b2d14ad55c0ac57b1c2aa7036bf78e8ce1d1bc33ea05e38e6334c2df14c9"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__jungle.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/jungle.json",
+      "filename": "jungle.json",
+      "sha256": "5c0ea0f1fc03ad3a3b0f8d02c19717bf5a7daa3fb484ddcbfb7975ec65c805a6"
+    },
+    {
+      "size": 5137,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__mangrove.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/mangrove.json",
+      "filename": "mangrove.json",
+      "sha256": "47ef28744429099c4b123f895bbdf0cc064e03176142883bf677368b5b06355c"
+    },
+    {
+      "size": 5132,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/oak.json",
+      "filename": "oak.json",
+      "sha256": "7be77670b25ce682ffc77f0c3e5c299d1e9ef0fa85a8eb9f0de654bde5b5c386"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__spruce.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/spruce.json",
+      "filename": "spruce.json",
+      "sha256": "d358a51ba99ae20b64fadef61271095f0699c590aa0276f42bdf10ec4c5e9c54"
+    },
+    {
+      "size": 5136,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__tainted.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/tainted.json",
+      "filename": "tainted.json",
+      "sha256": "f42e6efc155d13b516e9110d45f79d0340c517dfc4ce6bed49692a14d096c06e"
+    },
+    {
+      "size": 5135,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__hanging_sign__warped.json",
+      "path": "mods/documentation/palladium/vanilla_models/hanging_sign/warped.json",
+      "filename": "warped.json",
+      "sha256": "d6930a0a0e9d997d72c1ecfa70808e003db1a0f3f95dc9442fd0a67a8d3c5510"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__acacia.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/acacia.json",
+      "filename": "acacia.json",
+      "sha256": "d6039588798eb4c4122e6601318ba7f121bcd6e6f13dd5289054a9fe39164eb8"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__bamboo.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/bamboo.json",
+      "filename": "bamboo.json",
+      "sha256": "564bbc11eef173d86a557ccd2c5984ae05b3c03cc08b03f4a5e67c2d6cb9da38"
+    },
+    {
+      "size": 1508,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__birch.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/birch.json",
+      "filename": "birch.json",
+      "sha256": "9e1a400af60f8bb137c074f49ae6e7811032ac636fa05b70097a12bc5b2444f6"
+    },
+    {
+      "size": 1508,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__bloom.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/bloom.json",
+      "filename": "bloom.json",
+      "sha256": "d787a4ae2a021c8060e1f0cb9752ed4b85da4f3287013ec16cae194920c6e754"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__cherry.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/cherry.json",
+      "filename": "cherry.json",
+      "sha256": "aead4c28dd11f4723027ce9880ee9404c9274d40177fcf193dca2b485818d15d"
+    },
+    {
+      "size": 1510,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__crimson.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/crimson.json",
+      "filename": "crimson.json",
+      "sha256": "5300de0b762f79e4799bfdb5969afb4ee6b485db4b46561bd68a95d3449dd850"
+    },
+    {
+      "size": 1511,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__dark_oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/dark_oak.json",
+      "filename": "dark_oak.json",
+      "sha256": "ff4b8f658fedb78b58d45d7d9800355617df02e1177717cce6ab48ef8ef0eba6"
+    },
+    {
+      "size": 1507,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__echo.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/echo.json",
+      "filename": "echo.json",
+      "sha256": "fae7b09266ec057017ee38cc4bf6024a10cfa919387472ab88a006289c70f784"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__jungle.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/jungle.json",
+      "filename": "jungle.json",
+      "sha256": "cd9c50cfb6cd1ba0d17e965da3ee45265f04a801eb2e7a6bcbaa7d9b5841e2d5"
+    },
+    {
+      "size": 1511,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__mangrove.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/mangrove.json",
+      "filename": "mangrove.json",
+      "sha256": "29cf8e63e84969ea066570f221c21c1fbbd804c669fddf1e748b9a71c479c239"
+    },
+    {
+      "size": 1506,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__oak.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/oak.json",
+      "filename": "oak.json",
+      "sha256": "ffa80621300c404dba279dd18a4537195d82330952d2a68e494d2adeb8eb510e"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__spruce.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/spruce.json",
+      "filename": "spruce.json",
+      "sha256": "cbb245638248bc8c33c1a96cc4f8ea798d01fceb1d3c9866e179c0c6ecbb74e2"
+    },
+    {
+      "size": 1510,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__tainted.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/tainted.json",
+      "filename": "tainted.json",
+      "sha256": "c9644db04edd0bb19ca8c4f6492701ef62e02799be1c04efed9ff94c506fd71e"
+    },
+    {
+      "size": 1509,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/mvsh-pack/mods__documentation__palladium__vanilla_models__sign__warped.json",
+      "path": "mods/documentation/palladium/vanilla_models/sign/warped.json",
+      "filename": "warped.json",
+      "sha256": "269908c64d108586428cefa09be3bdfd8fa43dd5b0ec220376976c5c9fbab46a"
     }
-  ],
-  "pack_name": "Multiverse Superheroes",
-  "version": "2026.09.15-0148"
+  ]
 }
