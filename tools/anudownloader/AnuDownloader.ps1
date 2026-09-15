@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.15.0"
+$AppVersion = "2.15.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1174,6 +1174,29 @@ function Get-AnuSqlitePath {
     return $null
 }
 
+function Remove-AnuModrinthFileRecords([string]$profileRoot, $fileNames) {
+    # Modrinth records every file it installed in its own database. Deleting a
+    # jar from disk without clearing that row makes the launcher refuse to
+    # start the instance - "needs repair or re-import" - so the rows have to go
+    # with the files. Modrinth is already closed by Close-AnuLauncherApps.
+    if (-not $fileNames -or @($fileNames).Count -eq 0) { return }
+    $sqlite = Get-AnuSqlitePath
+    if (-not $sqlite) { return }
+    $db = Join-Path $env:APPDATA "ModrinthApp\app.db"
+    if (-not (Test-Path $db)) { return }
+    $folder = (Split-Path $profileRoot -Leaf).Replace("'", "''")
+    foreach ($name in @($fileNames)) {
+        $rel = ("mods/" + $name).Replace("'", "''")
+        $match = "SELECT f.id FROM instance_files f JOIN instances i ON i.id = f.instance_id WHERE i.path = '$folder' AND f.relative_path = '$rel'"
+        $sql = @"
+DELETE FROM instance_content_entries WHERE file_id IN ($match);
+DELETE FROM store_instance_files WHERE file_id IN ($match);
+DELETE FROM instance_files WHERE id IN ($match);
+"@
+        try { & $sqlite $db $sql 2>&1 | Out-Null } catch { }
+    }
+}
+
 function Set-AnuModrinthJvmArgs([string]$profileRoot) {
     # Modrinth keeps launch settings in a SQLite database rather than a file
     # per instance: settings.extra_launch_args is the global "Java arguments"
@@ -1273,6 +1296,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
             }
         }
     }
+    if ($removedMods.Count -gt 0) { Remove-AnuModrinthFileRecords $profileRoot $removedMods }
 
     # Only flag "extra" files inside subfolders the manifest actually manages
     # (mods\, and config\/resourcepacks\/datapacks\ when the pack ships any) -
