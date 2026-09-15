@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.14.0"
+$AppVersion = "2.14.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1158,7 +1158,6 @@ function Set-AnuLauncherJvmArgs([string]$profileRoot, [string]$launcherLabel) {
                     $json | ConvertTo-Json -Depth 20 | Set-Content -Path $instancePath -Encoding UTF8
                 }
             }
-        }
         } elseif ($launcherLabel -eq "Modrinth") {
             Set-AnuModrinthJvmArgs $profileRoot
         }
