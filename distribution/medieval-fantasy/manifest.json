@@ -3915,6 +3915,69 @@
       "filename": "natures_spirit-common.toml",
       "size": 1997,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/40f71b0e41b9-config_natures_spirit-common.toml"
+    },
+    {
+      "path": "mods/LegendaryTooltips-1.20.1-forge-1.4.5.jar",
+      "sha256": "15521ab414b92f60e75bdd49724eb65bb6aa8b3d6f72c157cc261011d58d625e",
+      "filename": "LegendaryTooltips-1.20.1-forge-1.4.5.jar",
+      "size": 55258,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/15521ab414b9-mods_LegendaryTooltips-1.20.1-forge-1.4.5.jar"
+    },
+    {
+      "path": "mods/alexscavesdelight-1.0.27-final.jar",
+      "sha256": "2f3d350e46fc2269fbe16cce924ca66649518df123658ecd4028d26bf9ebca2d",
+      "filename": "alexscavesdelight-1.0.27-final.jar",
+      "size": 255639,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/2f3d350e46fc-mods_alexscavesdelight-1.0.27-final.jar"
+    },
+    {
+      "path": "mods/brb-1.10.0-rc5+1.20.0-1.jar",
+      "sha256": "f3146e547c160b5b17b2044e3c18f7483fece6c3d357e9ffbfbf6399b0599dd7",
+      "filename": "brb-1.10.0-rc5+1.20.0-1.jar",
+      "size": 1240706,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/f3146e547c16-mods_brb-1.10.0-rc5+1.20.0-1.jar"
+    },
+    {
+      "path": "mods/chatanimation-forge-1.3.0+mc1.20.1.jar",
+      "sha256": "5b5574687edf1e14a1cfcc34a68526148b098219c098d9030bebfcf458393b9c",
+      "filename": "chatanimation-forge-1.3.0+mc1.20.1.jar",
+      "size": 1031906,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/5b5574687edf-mods_chatanimation-forge-1.3.0+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/dynamiccrosshair-9.10+1.20.1-forge.jar",
+      "sha256": "b15287651f9360f9b0180600b8e9a168b1b7c091de5073726087fd8b483c90bd",
+      "filename": "dynamiccrosshair-9.10+1.20.1-forge.jar",
+      "size": 879924,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/b15287651f93-mods_dynamiccrosshair-9.10+1.20.1-forge.jar"
+    },
+    {
+      "path": "mods/freecam-forge-1.2.1+1.20.jar",
+      "sha256": "8d7778cb5d181e981cb6d7c1015e3597cd5a88a18b2924386a6f8790abb239b4",
+      "filename": "freecam-forge-1.2.1+1.20.jar",
+      "size": 75389,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/8d7778cb5d18-mods_freecam-forge-1.2.1+1.20.jar"
+    },
+    {
+      "path": "mods/holdmyitems-1.20.1-4v2.0.jar",
+      "sha256": "f307bfa98da0742b3c6dc164e04766f45e911a81d1eaf79025d6d92ff74875cc",
+      "filename": "holdmyitems-1.20.1-4v2.0.jar",
+      "size": 100362,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/f307bfa98da0-mods_holdmyitems-1.20.1-4v2.0.jar"
+    },
+    {
+      "path": "mods/mobcatalog-1.0.8+1.20.1.jar",
+      "sha256": "24a9481a81e93a9ed8a0863334f5bb301e705486c2328c71802ea8ff5368bd61",
+      "filename": "mobcatalog-1.0.8+1.20.1.jar",
+      "size": 503459,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/24a9481a81e9-mods_mobcatalog-1.0.8+1.20.1.jar"
+    },
+    {
+      "path": "mods/oculus-mc1.20.1-1.8.0.jar",
+      "sha256": "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
+      "filename": "oculus-mc1.20.1-1.8.0.jar",
+      "size": 2851119,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/0945df0cba0f-mods_oculus-mc1.20.1-1.8.0.jar"
     }
   ]
 }

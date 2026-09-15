@@ -997,3 +997,11 @@ Her paketin kendi `distribution/<paket>/patchnotes.md` dosyası vardır (örn. `
 - Değişiklik yoksa (örn. sadece AnuDownloader'ın kendi kodunu güncelledik, pakete dokunmadık) **patchnotes.md'ye ve version'a dokunma.**
 
 Yama notu içeriğini kullanıcı kendisi yazıp verir — Claude format dayatmaz.
+
+## Paket İçeriği = Kullanıcının Modrinth Client'ı
+
+MVSH ve Medieval Fantasy paketleri için kaynak referans, kullanıcının kendi bilgisayarındaki Modrinth App profil klasörüdür (`%APPDATA%\ModrinthApp\profiles\<Pack Adı>\`). Bu klasördeki **tüm mods/, resourcepacks/, datapacks/ dosyaları ve değiştirilmiş (default olmayan) config dosyaları** pakete dahil edilmelidir — sadece server'da kullanılan mod alt kümesi değil.
+
+- Client-only modlar (shader loader, minimap, crosshair, tooltip vb.) da pakete dahildir. Claude bunları "bu client-only, dışarıda bırakayım" diyerek elemeye çalışmamalı — kullanıcı zaten hangi modun pakette olacağına client'ında bulundurarak karar vermiştir.
+- Yeni bir mod pakete eklenirken dosyanın gerçekten çalışan bir mod jar'ı olduğu doğrulanmalı (örn. `-sources.jar` uzantılı dosyalar genelde derlenmiş kod içermez — Modrinth bazen yanlış dosya varyantını indirebilir). Şüpheli bir dosya bulunursa kullanıcıya bildirilmeli, sessizce dahil/hariç edilmemeli.
+- Server'daki `mods/` klasörü ile client pack manifest'i birebir aynı olmak zorunda değildir — server sadece server-side gereken modları çalıştırır, client pack daha geniş olabilir.
