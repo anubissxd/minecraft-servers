@@ -1,5 +1,4 @@
 {
-  "generated": "2026-09-15 16:50:23",
   "files": [
     {
       "path": "mods/accessories-neoforge-1.0.0-beta.48+1.20.1.jar",
@@ -42,13 +41,6 @@
       "filename": "alexscavesbettercombat.jar",
       "size": 3152,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/c10a9e8749f4-mods_alexscavesbettercombat.jar"
-    },
-    {
-      "path": "mods/alexscavesdelight-1.0.27-final.jar",
-      "sha256": "2f3d350e46fc2269fbe16cce924ca66649518df123658ecd4028d26bf9ebca2d",
-      "filename": "alexscavesdelight-1.0.27-final.jar",
-      "size": 255639,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/2f3d350e46fc-mods_alexscavesdelight-1.0.27-final.jar"
     },
     {
       "path": "mods/alexsdelight-1.5.jar",
@@ -308,13 +300,6 @@
       "filename": "cataclysm_compat_1.20.1-1.0.2.jar",
       "size": 19288,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/0350c2ea7318-mods_cataclysm_compat_1.20.1-1.0.2.jar"
-    },
-    {
-      "path": "mods/cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
-      "sha256": "e177494251434c5f04ebc065e6e1c478a327dcd14dd2550bde38adc640ff4ae8",
-      "filename": "cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
-      "size": 1266452,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/e17749425143-mods_cataclysm_spellbooks-1.2.9-1.20.1-all.jar"
     },
     {
       "path": "mods/cataclysm_ut_lite-7 - 1.20.1.jar",
@@ -1122,13 +1107,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/2832803cf947-mods_MobCaptains-v3.1.2.jar"
     },
     {
-      "path": "mods/mobcatalog-1.0.8+1.20.1.jar",
-      "sha256": "24a9481a81e93a9ed8a0863334f5bb301e705486c2328c71802ea8ff5368bd61",
-      "filename": "mobcatalog-1.0.8+1.20.1.jar",
-      "size": 503459,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/24a9481a81e9-mods_mobcatalog-1.0.8+1.20.1.jar"
-    },
-    {
       "path": "mods/mobplayeranimator-forge-1.20.1-1.3.3-all.jar",
       "sha256": "823554808cbca10866742470b534276910a0634cf695edc9c2cf08913b2293c4",
       "filename": "mobplayeranimator-forge-1.20.1-1.3.3-all.jar",
@@ -1626,13 +1604,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/e72bcce5e31a-mods_TravelersTitles-1.20-Forge-4.0.2.jar"
     },
     {
-      "path": "mods/traveloptics-6.3.0-1.20.1.jar",
-      "sha256": "878a0fb5a2057de530698fd63091b9fa1c23af0139054af108e9d566840a0fa9",
-      "filename": "traveloptics-6.3.0-1.20.1.jar",
-      "size": 27486118,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/878a0fb5a205-mods_traveloptics-6.3.0-1.20.1.jar"
-    },
-    {
       "path": "mods/twilightforest-1.20.1-4.3.2508-universal.jar",
       "sha256": "0bdc89263616d1b35c32ef82c5e9c14cbd20368e2fe8b468c72a28320be7a778",
       "filename": "twilightforest-1.20.1-4.3.2508-universal.jar",
@@ -1806,230 +1777,6 @@
       "filename": "YungsMenuTweaks-1.20.1-Forge-1.0.2.jar",
       "size": 157602,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/aea6b2a15800-mods_YungsMenuTweaks-1.20.1-Forge-1.0.2.jar"
-    },
-    {
-      "sha256": "c433f3d831e86faa956836bf327ca00151bd813d1a8ab36aa064d518a58790f7",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
-      "size": 321871,
-      "path": "resourcepacks/-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
-      "filename": "-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip"
-    },
-    {
-      "sha256": "79a6a38030cbf94309289e0baff191d51c5b177f17614b0ded64493ba87d41b8",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__[1.6] Enhanced Boss Bars.zip",
-      "size": 109140,
-      "path": "resourcepacks/[1.6] Enhanced Boss Bars.zip",
-      "filename": "[1.6] Enhanced Boss Bars.zip"
-    },
-    {
-      "sha256": "c9bd883e2bd6bf0218ceb1a527c5ea593a5c4872d89e886580ea4df136a6cd6f",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Clarent_12110_1201_v3.zip",
-      "size": 2581625,
-      "path": "resourcepacks/Clarent_12110_1201_v3.zip",
-      "filename": "Clarent_12110_1201_v3.zip"
-    },
-    {
-      "sha256": "9b10dc244acfb9474f59618005b8fcea5c99d43b71d4a7467c79dbe5ac0560fd",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__enchant icons 1.20 v1.3.zip",
-      "size": 164822,
-      "path": "resourcepacks/enchant icons 1.20 v1.3.zip",
-      "filename": "enchant icons 1.20 v1.3.zip"
-    },
-    {
-      "sha256": "817732a8fefab2b4493c4c50550a56a0180f674aa72dd800a6b3803bbdbcabe9",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Biomes O' Plenty.zip",
-      "size": 530467,
-      "path": "resourcepacks/Excalibur - Biomes O' Plenty.zip",
-      "filename": "Excalibur - Biomes O' Plenty.zip"
-    },
-    {
-      "sha256": "17461827fc2a82efc2d1874f1d6f07ce7c024521bfd8faf9ce994c8784332d46",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Overflowing Bars Compat v3.0.zip",
-      "size": 25087,
-      "path": "resourcepacks/Excalibur - Overflowing Bars Compat v3.0.zip",
-      "filename": "Excalibur - Overflowing Bars Compat v3.0.zip"
-    },
-    {
-      "sha256": "5721a064cb1adf452160d9c241a60faa19a0aa22f97a63f0a8a3a83fc0f0d985",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Xaero's World Map.zip",
-      "size": 408418,
-      "path": "resourcepacks/Excalibur - Xaero's World Map.zip",
-      "filename": "Excalibur - Xaero's World Map.zip"
-    },
-    {
-      "sha256": "baf0e531e7b5e0a2601ad597d78f0f9029788603618df4538bcafa4d571a61b0",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Cataclysm 1.0 (Forge).zip",
-      "size": 1438157,
-      "path": "resourcepacks/Excalibur Cataclysm 1.0 (Forge).zip",
-      "filename": "Excalibur Cataclysm 1.0 (Forge).zip"
-    },
-    {
-      "sha256": "17159db7055275e56caff2e4f46aceb5d474e22cf67ab4ee528e9890b1a4f872",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Curios & Accessories 1.3.zip",
-      "size": 111582,
-      "path": "resourcepacks/Excalibur Curios & Accessories 1.3.zip",
-      "filename": "Excalibur Curios & Accessories 1.3.zip"
-    },
-    {
-      "sha256": "704cdc7a4b5cf5c244a5315ff18e880a844d6a742aaa9fe965310618f1a68873",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Friends&Foes 2.2.zip",
-      "size": 122009,
-      "path": "resourcepacks/Excalibur Friends&Foes 2.2.zip",
-      "filename": "Excalibur Friends&Foes 2.2.zip"
-    },
-    {
-      "sha256": "8a3f29bb36f618d2d35d6c4fad17fe289494931dc2bffc181d580da6069a97d8",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Hold My Items Support 1.0.zip",
-      "size": 121933,
-      "path": "resourcepacks/Excalibur Hold My Items Support 1.0.zip",
-      "filename": "Excalibur Hold My Items Support 1.0.zip"
-    },
-    {
-      "sha256": "7a99a8d2cda1b95b547ad8ce5300a15f672bf3ba69046b1b47c51c2fc4d4eaf8",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Jei Support 1.3.zip",
-      "size": 39392,
-      "path": "resourcepacks/Excalibur Jei Support 1.3.zip",
-      "filename": "Excalibur Jei Support 1.3.zip"
-    },
-    {
-      "sha256": "6ea0f9d64140114c912919dfc244d57cb0e55f771d38cbd9039e5478cd80c0a4",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Mowzie's Mobs 1.0.zip",
-      "size": 276237,
-      "path": "resourcepacks/Excalibur Mowzie's Mobs 1.0.zip",
-      "filename": "Excalibur Mowzie's Mobs 1.0.zip"
-    },
-    {
-      "sha256": "f2c4c74828189c08e6d4ed83de21ca01155304bf66f31fe0596ac1f17f95fc48",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Ocean Delight  v1.0.zip",
-      "size": 33127,
-      "path": "resourcepacks/Excalibur Ocean Delight  v1.0.zip",
-      "filename": "Excalibur Ocean Delight  v1.0.zip"
-    },
-    {
-      "sha256": "1c8fd1385063b79b1472af5e771d47e290c4bc5744b7cf3515fa6aa6cd387183",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Serene Seasons.zip",
-      "size": 27455,
-      "path": "resourcepacks/Excalibur Serene Seasons.zip",
-      "filename": "Excalibur Serene Seasons.zip"
-    },
-    {
-      "sha256": "45b99a191838c7aff561eaa8890276624e10e3424d279921e5e9d37cc2316768",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Sophisticated v1.1.zip",
-      "size": 506362,
-      "path": "resourcepacks/Excalibur Sophisticated v1.1.zip",
-      "filename": "Excalibur Sophisticated v1.1.zip"
-    },
-    {
-      "sha256": "45357f69b8fd714c5f7ec4e54b6e5ab78fbf14c1fa3ac81b27fb4871df09b35e",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Trash Slot Support.zip",
-      "size": 4038,
-      "path": "resourcepacks/Excalibur Trash Slot Support.zip",
-      "filename": "Excalibur Trash Slot Support.zip"
-    },
-    {
-      "sha256": "a70f1be10e5471c2d7f12b066af70b60d00a054ec0187041b3b803397925a184",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Waystones 1.0.zip",
-      "size": 67832,
-      "path": "resourcepacks/Excalibur Waystones 1.0.zip",
-      "filename": "Excalibur Waystones 1.0.zip"
-    },
-    {
-      "sha256": "58a851bbad13f88820fe56836ac797a37f7bd1e6c4abda6024be56aa79109b8a",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Apotheosis Addon_v1.9.zip",
-      "size": 459059,
-      "path": "resourcepacks/Excalibur_Apotheosis Addon_v1.9.zip",
-      "filename": "Excalibur_Apotheosis Addon_v1.9.zip"
-    },
-    {
-      "sha256": "68fc6ed1ab3a190cb84aa2d141e89d90cf9c69d348d783271ce3c77cb1f3db7f",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Handcrafted_1.0_1.20.1.zip",
-      "size": 1457007,
-      "path": "resourcepacks/Excalibur_Handcrafted_1.0_1.20.1.zip",
-      "filename": "Excalibur_Handcrafted_1.0_1.20.1.zip"
-    },
-    {
-      "sha256": "0ae8f7ce27eca78f81b212edca9132a9c262a5295e5db45242266d99b85c5bff",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip",
-      "size": 222491,
-      "path": "resourcepacks/Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip",
-      "filename": "Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip"
-    },
-    {
-      "sha256": "b5131c446be7ff5a4005ad86f4bd64b79379f8a8e1bf66d0a990b011ae1503ce",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Lootr_v1.1.zip",
-      "size": 77791,
-      "path": "resourcepacks/Excalibur_Lootr_v1.1.zip",
-      "filename": "Excalibur_Lootr_v1.1.zip"
-    },
-    {
-      "sha256": "b88209346c8885dc21484031455369434db5a1ac912f91bd18433baaa02ecd7d",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Mcw-Roofs_v1.1.zip",
-      "size": 269438,
-      "path": "resourcepacks/Excalibur_Mcw-Roofs_v1.1.zip",
-      "filename": "Excalibur_Mcw-Roofs_v1.1.zip"
-    },
-    {
-      "sha256": "1c7aff7d0998e0af004d356a3fd6dccc35783c3c4aaf41fd96bcc08ea22fd010",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_MutantMonsters Addon_V1.2.zip",
-      "size": 127978,
-      "path": "resourcepacks/Excalibur_MutantMonsters Addon_V1.2.zip",
-      "filename": "Excalibur_MutantMonsters Addon_V1.2.zip"
-    },
-    {
-      "sha256": "ccf01766c56ad287071c795452ebdb6a33bf35a74f098d5191475cd479292d49",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_V1.20.zip",
-      "size": 17107369,
-      "path": "resourcepacks/Excalibur_V1.20.zip",
-      "filename": "Excalibur_V1.20.zip"
-    },
-    {
-      "sha256": "036008e27128672b326f23d1acafb96a2a2f2341ad5d647507f946800a11532d",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Variants&Ventures_1.21.1_V1.1.zip",
-      "size": 59969,
-      "path": "resourcepacks/Excalibur_Variants&Ventures_1.21.1_V1.1.zip",
-      "filename": "Excalibur_Variants&Ventures_1.21.1_V1.1.zip"
-    },
-    {
-      "sha256": "ecdf9b38b4bda6fab6fb60f331dadd6c941ba2e7eebb448602278515fa0a405c",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__exctrinkets.zip",
-      "size": 19865,
-      "path": "resourcepacks/exctrinkets.zip",
-      "filename": "exctrinkets.zip"
-    },
-    {
-      "sha256": "420ad586300bb4164ff441460ae0d1b2be68933cfd9321746fcef173c0437015",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__FA+All_Extensions-v1.8.1.zip",
-      "size": 425088,
-      "path": "resourcepacks/FA+All_Extensions-v1.8.1.zip",
-      "filename": "FA+All_Extensions-v1.8.1.zip"
-    },
-    {
-      "sha256": "8e44b29560d2e7d952c0a4f77f0451e6dcb048f827189bffc712b446be8de7f2",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__FreshAnimations_v1.10.4.zip",
-      "size": 850941,
-      "path": "resourcepacks/FreshAnimations_v1.10.4.zip",
-      "filename": "FreshAnimations_v1.10.4.zip"
-    },
-    {
-      "sha256": "9bc38e711b71c85063f40d3004dcd1640b2bd211996b5d34537c7c287e24100f",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Low Shield.zip",
-      "size": 3270,
-      "path": "resourcepacks/Low Shield.zip",
-      "filename": "Low Shield.zip"
-    },
-    {
-      "sha256": "25fc89fedc6d47fe2480a60910c65c8fd8b50121aaab919933e47cc6ba730a67",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__LowOnFire v26.2§8.zip",
-      "size": 42760,
-      "path": "resourcepacks/LowOnFire v26.2§8.zip",
-      "filename": "LowOnFire v26.2§8.zip"
-    },
-    {
-      "sha256": "6af714bbba44988516b2fd34f742fb7a633623c1cf01a1f6941d1740c9c9a5e2",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Simply Swords x Excalibur.zip",
-      "size": 51828,
-      "path": "resourcepacks/Simply Swords x Excalibur.zip",
-      "filename": "Simply Swords x Excalibur.zip"
     },
     {
       "sha256": "0bd3d656e2854fc2a954e3bdef00f022edc73de01f074865ab31ede901772985",
@@ -2396,32 +2143,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__farmersdelight-common.toml"
     },
     {
-      "sha256": "e3ca99e0f233e3bcf8b6762a85b1139f716bf96644318fe9cb022c270461b287",
-      "size": 1493,
-      "path": "config/ferritecore-mixin.toml",
-      "filename": "ferritecore-mixin.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__ferritecore-mixin.toml"
-    },
-    {
-      "sha256": "05f17e0700fdaf30b09f732d3a4e2bbe7011a319930b4ca86b4c630885cff7ab",
-      "size": 1117,
-      "path": "config/fml.toml",
-      "filename": "fml.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fml.toml"
-    },
-    {
       "sha256": "0b1b3c45343435184c9dde3149b38afcdb97953e287686ecda54385f53ebcddc",
       "size": 1628,
       "path": "config/forge-client.toml",
       "filename": "forge-client.toml",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__forge-client.toml"
-    },
-    {
-      "sha256": "ee3c57121829b033819d410d1d684b66865d165cee38ce62dbb36e4c4639d4b2",
-      "size": 1878,
-      "path": "config/friendsandfoes.json",
-      "filename": "friendsandfoes.json",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__friendsandfoes.json"
     },
     {
       "sha256": "f1d7bd782ae6603b429b3e5b7ce958deea5d2876fc03fc5e9d71feb7d7e152cb",
@@ -2592,13 +2318,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__notenoughanimations.json"
     },
     {
-      "sha256": "3dd9439113aff9ac933a3e845d887d1278e447606afdb4b3677596561cd2f04e",
-      "size": 254,
-      "path": "config/oculus.properties",
-      "filename": "oculus.properties",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__oculus.properties"
-    },
-    {
       "sha256": "1eaeee245711ad6b901f2c238d7aca59eaf637dd4a81accea6669c463fe5cf99",
       "size": 4415,
       "path": "config/origins-common.toml",
@@ -2606,25 +2325,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__origins-common.toml"
     },
     {
-      "sha256": "7a1a13be85b5895e025c86ebf66206057d4aac6140007a383c56f860c70d8b6e",
-      "size": 473,
-      "path": "config/packetfixer.properties",
-      "filename": "packetfixer.properties",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__packetfixer.properties"
-    },
-    {
       "sha256": "e9a129d0a2dbf13d36d4f3e47ae3b2b01d32a9e872a771633bf356d9cdebc895",
       "size": 389,
       "path": "config/pehkui-common.toml",
       "filename": "pehkui-common.toml",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__pehkui-common.toml"
-    },
-    {
-      "sha256": "4933acb18663de7cab3fb632f54b1931bbceac7cda0ef47ef34c5d56c210c63f",
-      "size": 590,
-      "path": "config/rightclickharvest.json5",
-      "filename": "rightclickharvest.json5",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rightclickharvest.json5"
     },
     {
       "sha256": "aa9058884b341c7c616f946f1186701aed801d99709e70fc5573ce144afca99a",
@@ -2702,13 +2407,6 @@
       "path": "config/tconstruct-common.toml",
       "filename": "tconstruct-common.toml",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__tconstruct-common.toml"
-    },
-    {
-      "sha256": "70da8cd57cd321ae43ec3774995de812116c67163c0ae8859965a3599e3aeefa",
-      "size": 534,
-      "path": "config/terrablender.toml",
-      "filename": "terrablender.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__terrablender.toml"
     },
     {
       "sha256": "60420a41571a4658b91babfa2b47d6fefb7c1766eeea969f51ff98ab34c2431c",
@@ -3684,20 +3382,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__biome_toggles.json"
     },
     {
-      "sha256": "4d2c61e691eb5e07dbea9c8dd3b03073911d01558ff741073561b5b4328f87fd",
-      "size": 108,
-      "path": "config/biomesoplenty/gameplay.toml",
-      "filename": "gameplay.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__gameplay.toml"
-    },
-    {
-      "sha256": "7d7e35202be844efd2180db1f6d799938218a750d30a98fe00b062aa142302d0",
-      "size": 510,
-      "path": "config/biomesoplenty/generation.toml",
-      "filename": "generation.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__generation.toml"
-    },
-    {
       "sha256": "c7384a22595488f79f3125b22cc175eb729267267807a084479419349797abc8",
       "size": 146,
       "path": "config/chunky/config.json",
@@ -3759,13 +3443,6 @@
       "path": "config/endinglib/advanced/endinglib-common.toml",
       "filename": "endinglib-common.toml",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__endinglib__advanced__endinglib-common.toml"
-    },
-    {
-      "sha256": "331f069e2ed6b7ff108bc0acc01131e507de78e02bca93ba83cffaeb71cf0065",
-      "size": 290,
-      "path": "config/fabric/indigo-renderer.properties",
-      "filename": "indigo-renderer.properties",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fabric__indigo-renderer.properties"
     },
     {
       "sha256": "ff492043eaf454c46e949d5eef32ece90cc5a19feb50a161dd29a43b5732c880",
@@ -3873,13 +3550,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fzzy_config__keybinds.toml"
     },
     {
-      "sha256": "3293abbffa782fff5952fac5f92a64e4298f826ea7af4c5fa0592eacf8262f0b",
-      "size": 50424,
-      "path": "config/goety/goety-attributes.toml",
-      "filename": "goety-attributes.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-attributes.toml"
-    },
-    {
       "sha256": "f1a4d5af41446646c9bc7a4b28ad251b0a4e31fe5539c67ebe845d1cebb4e89a",
       "size": 12852,
       "path": "config/goety/goety-brews.toml",
@@ -3892,13 +3562,6 @@
       "path": "config/goety/goety-items.toml",
       "filename": "goety-items.toml",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-items.toml"
-    },
-    {
-      "sha256": "0dd0ccd92d65e01606e2cc29c86aecd1d2698c9e2a310d759b388fea3163ca2b",
-      "size": 39527,
-      "path": "config/goety/goety-mobs.toml",
-      "filename": "goety-mobs.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-mobs.toml"
     },
     {
       "sha256": "6431879d266ee191060e655137f038194031a686b8f6ec94968bcd6ab839c4ec",
@@ -4321,20 +3984,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__revelationfix-modpack-common.toml"
     },
     {
-      "sha256": "5747bca234563bdc83973065621a20c5b598e0f8410ec304334ab3285b99da36",
-      "size": 471,
-      "path": "config/sereneseasons/fertility.toml",
-      "filename": "fertility.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__fertility.toml"
-    },
-    {
-      "sha256": "095714e7b1fa69af2a4f86ab0508a8f232c7a5e8e81eed116ca3c59694521d29",
-      "size": 6550,
-      "path": "config/sereneseasons/seasons.toml",
-      "filename": "seasons.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__seasons.toml"
-    },
-    {
       "sha256": "d9d37a9c19cd389e74fe0d14227b84671fd4136861c7b8dbff31dcf98ceeb77d",
       "size": 10569,
       "path": "config/servercore/config.yml",
@@ -4508,8 +4157,359 @@
       "path": "config/xaero/world-map/server_profiles/default.cfg",
       "filename": "default.cfg",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__world-map__server_profiles__default.cfg"
+    },
+    {
+      "sha256": "c433f3d831e86faa956836bf327ca00151bd813d1a8ab36aa064d518a58790f7",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
+      "size": 321871,
+      "path": "resourcepacks/-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
+      "filename": "-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip"
+    },
+    {
+      "sha256": "79a6a38030cbf94309289e0baff191d51c5b177f17614b0ded64493ba87d41b8",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__[1.6] Enhanced Boss Bars.zip",
+      "size": 109140,
+      "path": "resourcepacks/[1.6] Enhanced Boss Bars.zip",
+      "filename": "[1.6] Enhanced Boss Bars.zip"
+    },
+    {
+      "sha256": "c9bd883e2bd6bf0218ceb1a527c5ea593a5c4872d89e886580ea4df136a6cd6f",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Clarent_12110_1201_v3.zip",
+      "size": 2581625,
+      "path": "resourcepacks/Clarent_12110_1201_v3.zip",
+      "filename": "Clarent_12110_1201_v3.zip"
+    },
+    {
+      "sha256": "9b10dc244acfb9474f59618005b8fcea5c99d43b71d4a7467c79dbe5ac0560fd",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__enchant icons 1.20 v1.3.zip",
+      "size": 164822,
+      "path": "resourcepacks/enchant icons 1.20 v1.3.zip",
+      "filename": "enchant icons 1.20 v1.3.zip"
+    },
+    {
+      "sha256": "817732a8fefab2b4493c4c50550a56a0180f674aa72dd800a6b3803bbdbcabe9",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Biomes O' Plenty.zip",
+      "size": 530467,
+      "path": "resourcepacks/Excalibur - Biomes O' Plenty.zip",
+      "filename": "Excalibur - Biomes O' Plenty.zip"
+    },
+    {
+      "sha256": "17461827fc2a82efc2d1874f1d6f07ce7c024521bfd8faf9ce994c8784332d46",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Overflowing Bars Compat v3.0.zip",
+      "size": 25087,
+      "path": "resourcepacks/Excalibur - Overflowing Bars Compat v3.0.zip",
+      "filename": "Excalibur - Overflowing Bars Compat v3.0.zip"
+    },
+    {
+      "sha256": "5721a064cb1adf452160d9c241a60faa19a0aa22f97a63f0a8a3a83fc0f0d985",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur - Xaero's World Map.zip",
+      "size": 408418,
+      "path": "resourcepacks/Excalibur - Xaero's World Map.zip",
+      "filename": "Excalibur - Xaero's World Map.zip"
+    },
+    {
+      "sha256": "baf0e531e7b5e0a2601ad597d78f0f9029788603618df4538bcafa4d571a61b0",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Cataclysm 1.0 (Forge).zip",
+      "size": 1438157,
+      "path": "resourcepacks/Excalibur Cataclysm 1.0 (Forge).zip",
+      "filename": "Excalibur Cataclysm 1.0 (Forge).zip"
+    },
+    {
+      "sha256": "17159db7055275e56caff2e4f46aceb5d474e22cf67ab4ee528e9890b1a4f872",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Curios & Accessories 1.3.zip",
+      "size": 111582,
+      "path": "resourcepacks/Excalibur Curios & Accessories 1.3.zip",
+      "filename": "Excalibur Curios & Accessories 1.3.zip"
+    },
+    {
+      "sha256": "704cdc7a4b5cf5c244a5315ff18e880a844d6a742aaa9fe965310618f1a68873",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Friends&Foes 2.2.zip",
+      "size": 122009,
+      "path": "resourcepacks/Excalibur Friends&Foes 2.2.zip",
+      "filename": "Excalibur Friends&Foes 2.2.zip"
+    },
+    {
+      "sha256": "8a3f29bb36f618d2d35d6c4fad17fe289494931dc2bffc181d580da6069a97d8",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Hold My Items Support 1.0.zip",
+      "size": 121933,
+      "path": "resourcepacks/Excalibur Hold My Items Support 1.0.zip",
+      "filename": "Excalibur Hold My Items Support 1.0.zip"
+    },
+    {
+      "sha256": "7a99a8d2cda1b95b547ad8ce5300a15f672bf3ba69046b1b47c51c2fc4d4eaf8",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Jei Support 1.3.zip",
+      "size": 39392,
+      "path": "resourcepacks/Excalibur Jei Support 1.3.zip",
+      "filename": "Excalibur Jei Support 1.3.zip"
+    },
+    {
+      "sha256": "6ea0f9d64140114c912919dfc244d57cb0e55f771d38cbd9039e5478cd80c0a4",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Mowzie's Mobs 1.0.zip",
+      "size": 276237,
+      "path": "resourcepacks/Excalibur Mowzie's Mobs 1.0.zip",
+      "filename": "Excalibur Mowzie's Mobs 1.0.zip"
+    },
+    {
+      "sha256": "f2c4c74828189c08e6d4ed83de21ca01155304bf66f31fe0596ac1f17f95fc48",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Ocean Delight  v1.0.zip",
+      "size": 33127,
+      "path": "resourcepacks/Excalibur Ocean Delight  v1.0.zip",
+      "filename": "Excalibur Ocean Delight  v1.0.zip"
+    },
+    {
+      "sha256": "1c8fd1385063b79b1472af5e771d47e290c4bc5744b7cf3515fa6aa6cd387183",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Serene Seasons.zip",
+      "size": 27455,
+      "path": "resourcepacks/Excalibur Serene Seasons.zip",
+      "filename": "Excalibur Serene Seasons.zip"
+    },
+    {
+      "sha256": "45b99a191838c7aff561eaa8890276624e10e3424d279921e5e9d37cc2316768",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Sophisticated v1.1.zip",
+      "size": 506362,
+      "path": "resourcepacks/Excalibur Sophisticated v1.1.zip",
+      "filename": "Excalibur Sophisticated v1.1.zip"
+    },
+    {
+      "sha256": "45357f69b8fd714c5f7ec4e54b6e5ab78fbf14c1fa3ac81b27fb4871df09b35e",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Trash Slot Support.zip",
+      "size": 4038,
+      "path": "resourcepacks/Excalibur Trash Slot Support.zip",
+      "filename": "Excalibur Trash Slot Support.zip"
+    },
+    {
+      "sha256": "a70f1be10e5471c2d7f12b066af70b60d00a054ec0187041b3b803397925a184",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur Waystones 1.0.zip",
+      "size": 67832,
+      "path": "resourcepacks/Excalibur Waystones 1.0.zip",
+      "filename": "Excalibur Waystones 1.0.zip"
+    },
+    {
+      "sha256": "58a851bbad13f88820fe56836ac797a37f7bd1e6c4abda6024be56aa79109b8a",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Apotheosis Addon_v1.9.zip",
+      "size": 459059,
+      "path": "resourcepacks/Excalibur_Apotheosis Addon_v1.9.zip",
+      "filename": "Excalibur_Apotheosis Addon_v1.9.zip"
+    },
+    {
+      "sha256": "68fc6ed1ab3a190cb84aa2d141e89d90cf9c69d348d783271ce3c77cb1f3db7f",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Handcrafted_1.0_1.20.1.zip",
+      "size": 1457007,
+      "path": "resourcepacks/Excalibur_Handcrafted_1.0_1.20.1.zip",
+      "filename": "Excalibur_Handcrafted_1.0_1.20.1.zip"
+    },
+    {
+      "sha256": "0ae8f7ce27eca78f81b212edca9132a9c262a5295e5db45242266d99b85c5bff",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip",
+      "size": 222491,
+      "path": "resourcepacks/Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip",
+      "filename": "Excalibur_Irons_Spells_N_Spellbooks-1.3.0.zip"
+    },
+    {
+      "sha256": "b5131c446be7ff5a4005ad86f4bd64b79379f8a8e1bf66d0a990b011ae1503ce",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Lootr_v1.1.zip",
+      "size": 77791,
+      "path": "resourcepacks/Excalibur_Lootr_v1.1.zip",
+      "filename": "Excalibur_Lootr_v1.1.zip"
+    },
+    {
+      "sha256": "b88209346c8885dc21484031455369434db5a1ac912f91bd18433baaa02ecd7d",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Mcw-Roofs_v1.1.zip",
+      "size": 269438,
+      "path": "resourcepacks/Excalibur_Mcw-Roofs_v1.1.zip",
+      "filename": "Excalibur_Mcw-Roofs_v1.1.zip"
+    },
+    {
+      "sha256": "1c7aff7d0998e0af004d356a3fd6dccc35783c3c4aaf41fd96bcc08ea22fd010",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_MutantMonsters Addon_V1.2.zip",
+      "size": 127978,
+      "path": "resourcepacks/Excalibur_MutantMonsters Addon_V1.2.zip",
+      "filename": "Excalibur_MutantMonsters Addon_V1.2.zip"
+    },
+    {
+      "sha256": "ccf01766c56ad287071c795452ebdb6a33bf35a74f098d5191475cd479292d49",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_V1.20.zip",
+      "size": 17107369,
+      "path": "resourcepacks/Excalibur_V1.20.zip",
+      "filename": "Excalibur_V1.20.zip"
+    },
+    {
+      "sha256": "036008e27128672b326f23d1acafb96a2a2f2341ad5d647507f946800a11532d",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Excalibur_Variants&Ventures_1.21.1_V1.1.zip",
+      "size": 59969,
+      "path": "resourcepacks/Excalibur_Variants&Ventures_1.21.1_V1.1.zip",
+      "filename": "Excalibur_Variants&Ventures_1.21.1_V1.1.zip"
+    },
+    {
+      "sha256": "ecdf9b38b4bda6fab6fb60f331dadd6c941ba2e7eebb448602278515fa0a405c",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__exctrinkets.zip",
+      "size": 19865,
+      "path": "resourcepacks/exctrinkets.zip",
+      "filename": "exctrinkets.zip"
+    },
+    {
+      "sha256": "420ad586300bb4164ff441460ae0d1b2be68933cfd9321746fcef173c0437015",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__FA+All_Extensions-v1.8.1.zip",
+      "size": 425088,
+      "path": "resourcepacks/FA+All_Extensions-v1.8.1.zip",
+      "filename": "FA+All_Extensions-v1.8.1.zip"
+    },
+    {
+      "sha256": "8e44b29560d2e7d952c0a4f77f0451e6dcb048f827189bffc712b446be8de7f2",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__FreshAnimations_v1.10.4.zip",
+      "size": 850941,
+      "path": "resourcepacks/FreshAnimations_v1.10.4.zip",
+      "filename": "FreshAnimations_v1.10.4.zip"
+    },
+    {
+      "sha256": "9bc38e711b71c85063f40d3004dcd1640b2bd211996b5d34537c7c287e24100f",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Low Shield.zip",
+      "size": 3270,
+      "path": "resourcepacks/Low Shield.zip",
+      "filename": "Low Shield.zip"
+    },
+    {
+      "sha256": "25fc89fedc6d47fe2480a60910c65c8fd8b50121aaab919933e47cc6ba730a67",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__LowOnFire v26.2§8.zip",
+      "size": 42760,
+      "path": "resourcepacks/LowOnFire v26.2§8.zip",
+      "filename": "LowOnFire v26.2§8.zip"
+    },
+    {
+      "sha256": "6af714bbba44988516b2fd34f742fb7a633623c1cf01a1f6941d1740c9c9a5e2",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__Simply Swords x Excalibur.zip",
+      "size": 51828,
+      "path": "resourcepacks/Simply Swords x Excalibur.zip",
+      "filename": "Simply Swords x Excalibur.zip"
+    },
+    {
+      "size": 109280,
+      "sha256": "259526c86b4d68fffb416f14517afe31270122b5a914fe7e51cb0f7b19dd265b",
+      "path": "mods/accdelight-1.0.0-forge+1.20.1.jar",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__accdelight-1.0.0-forge+1.20.1.jar",
+      "filename": "accdelight-1.0.0-forge+1.20.1.jar"
+    },
+    {
+      "size": 187272,
+      "sha256": "69150ac62d8ce33309ea36ceb5b24c64dc45b13a055fb8c34d6dacdd4733d024",
+      "path": "mods/codxlib-1.6.0-forge+1.20.1.jar",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__codxlib-1.6.0-forge+1.20.1.jar",
+      "filename": "codxlib-1.6.0-forge+1.20.1.jar"
+    },
+    {
+      "size": 1387,
+      "sha256": "54da2ffa237b5ae41f198a247306c9578e6b1cb9f35376470c7ab3cfb66e7e13",
+      "path": "config/accdelight.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__accdelight.json",
+      "filename": "accdelight.json"
+    },
+    {
+      "size": 33,
+      "sha256": "9bbcd79887fd495801e28733a5c4e59b6ba7a1a51c45c6782d03804e6557abef",
+      "path": "config/codxlib.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__codxlib.json",
+      "filename": "codxlib.json"
+    },
+    {
+      "size": 1516,
+      "sha256": "c164439c632aa7c95c07edec5cfef74b8e2d5671a8445a781deeb4de7ad0c8b6",
+      "path": "config/ferritecore-mixin.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__ferritecore-mixin.toml",
+      "filename": "ferritecore-mixin.toml"
+    },
+    {
+      "size": 1147,
+      "sha256": "eb6e8b8eda9682889a83d55262ef96cf37153d58fe7f0fa5d5cb1da5d9f7dd9b",
+      "path": "config/fml.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fml.toml",
+      "filename": "fml.toml"
+    },
+    {
+      "size": 1936,
+      "sha256": "df93dbd6994b265a3fdd13961dc58cb6c465d413b315e749520ecfcd590a5f45",
+      "path": "config/friendsandfoes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__friendsandfoes.json",
+      "filename": "friendsandfoes.json"
+    },
+    {
+      "size": 254,
+      "sha256": "860d28937bbc3e9ee0cf2e9aaa1ab793343d629b9476accb3f8945030691cff6",
+      "path": "config/oculus.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__oculus.properties",
+      "filename": "oculus.properties"
+    },
+    {
+      "size": 488,
+      "sha256": "85b4aeca32df58601947ff78c64e412c6b7de2e41667e633b0319dde869e067d",
+      "path": "config/packetfixer.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__packetfixer.properties",
+      "filename": "packetfixer.properties"
+    },
+    {
+      "size": 609,
+      "sha256": "6eb5169563472ae96184c94e9f42ff7d76fdba403ed3190ffb308e817ea0a21e",
+      "path": "config/rightclickharvest.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rightclickharvest.json5",
+      "filename": "rightclickharvest.json5"
+    },
+    {
+      "size": 552,
+      "sha256": "59d79e8bc4a42e678196a7164e5841a9803f8684f1b52b9944ce554c9f353691",
+      "path": "config/terrablender.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__terrablender.toml",
+      "filename": "terrablender.toml"
+    },
+    {
+      "size": 113,
+      "sha256": "c48cf5d4b895aae33a2e757aa7b46768d3c30b93f7f09c7a2a3156d5622ec0f1",
+      "path": "config/biomesoplenty/gameplay.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__gameplay.toml",
+      "filename": "gameplay.toml"
+    },
+    {
+      "size": 525,
+      "sha256": "5bd28687e2aca9a8f781f5541cc259e807fdc84bee7e6f9a995dd215b7019c3f",
+      "path": "config/biomesoplenty/generation.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__generation.toml",
+      "filename": "generation.toml"
+    },
+    {
+      "size": 290,
+      "sha256": "b7bd06989328c9851c02dc69649facd32443a7a909238f5a9bdc007aa0e52709",
+      "path": "config/fabric/indigo-renderer.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fabric__indigo-renderer.properties",
+      "filename": "indigo-renderer.properties"
+    },
+    {
+      "size": 53492,
+      "sha256": "4690817c4a5b88bbe7e5746b6bcb67be2a43e0dd24d368e260d605bc9a2f06d4",
+      "path": "config/goety/goety-attributes.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-attributes.toml",
+      "filename": "goety-attributes.toml"
+    },
+    {
+      "size": 40768,
+      "sha256": "c27a8d6abb30efc6610dc65e6be3cea69ceec691c56b16d26d7a8647cd3b8da2",
+      "path": "config/goety/goety-mobs.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-mobs.toml",
+      "filename": "goety-mobs.toml"
+    },
+    {
+      "size": 485,
+      "sha256": "c5127ca2ad6134b149b9cfe4761fb52b618d8a90338dfb1e866be1b4ba1f05e6",
+      "path": "config/sereneseasons/fertility.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__fertility.toml",
+      "filename": "fertility.toml"
+    },
+    {
+      "size": 6778,
+      "sha256": "2825dafcd596906a4a41f1bf0a65c2fe4444178f27c633ad9ecc039f69b9142e",
+      "path": "config/sereneseasons/seasons.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__seasons.toml",
+      "filename": "seasons.toml"
     }
   ],
-  "version": "1.3.0",
-  "pack_name": "Medieval Fantasy"
+  "pack_name": "Medieval Fantasy",
+  "generated": "2026-09-15 18:33:32",
+  "version": "1.4.0"
 }
