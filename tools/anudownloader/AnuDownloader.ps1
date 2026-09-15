@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.10.0"
+$AppVersion = "2.11.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -63,6 +63,18 @@ function Get-AnuUrlHeaders([string]$url, [string]$method = "GET", [hashtable]$ex
 }
 
 function Save-AnuUrlToFile([string]$url, [string]$destPath) {
+    if (Test-Path -LiteralPath $destPath) {
+        # Modrinth App (and others) hardlink identical mod files from a
+        # shared cache to save disk space, and those hardlinked files are
+        # read-only by design. File.Create can't overwrite a read-only file
+        # (Access Denied), and even if it could, writing in place would
+        # corrupt that same physical data for every other hardlink pointing
+        # at it. Deleting the directory entry first only unlinks THIS copy -
+        # the shared cache blocks are untouched - then a fresh file is
+        # created with its own new data.
+        try { [System.IO.File]::SetAttributes($destPath, [System.IO.FileAttributes]::Normal) } catch { }
+        Remove-Item -LiteralPath $destPath -Force -ErrorAction SilentlyContinue
+    }
     $req = [System.Net.HttpWebRequest]::Create($url)
     $resp = $req.GetResponse()
     $stream = $resp.GetResponseStream()
@@ -1080,6 +1092,24 @@ function Close-AnuLauncherApps {
     Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -like "*TLauncher*" } | Stop-Process -Force -ErrorAction SilentlyContinue
 }
 
+function Close-AnuGameProcess([string]$profileRoot) {
+    # If the game itself (or a crashed-but-still-running instance) is open
+    # for this exact profile, its JVM holds an open file handle on every mod
+    # jar it loaded, and overwriting a locked file fails with Access Denied -
+    # this was silently causing partial "N files failed" results. Only kill
+    # java processes whose command line references THIS profile's own path,
+    # never a blind javaw.exe sweep (that could be a totally unrelated game).
+    try {
+        $procs = Get-CimInstance Win32_Process -Filter "Name='javaw.exe' OR Name='java.exe'" -ErrorAction SilentlyContinue
+        foreach ($proc in $procs) {
+            if ($proc.CommandLine -and $proc.CommandLine.Contains($profileRoot)) {
+                Stop-Process -Id $proc.ProcessId -Force -ErrorAction SilentlyContinue
+                Start-Sleep -Milliseconds 500
+            }
+        }
+    } catch { }
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
     Close-AnuLauncherApps
@@ -1087,6 +1117,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     # selectedTarget is the PROFILE ROOT - the pack syncs mods\, config\,
     # resourcepacks\ and datapacks\ underneath it, not just mods\.
     $profileRoot = $script:selectedTarget
+    Close-AnuGameProcess $profileRoot
     if (-not (Test-Path $profileRoot)) {
         New-Item -ItemType Directory -Path $profileRoot -Force | Out-Null
     }
