@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15 16:26:01",
+  "generated": "2026-09-15 16:34:32",
   "files": [
     {
       "path": "mods/accessories-neoforge-1.0.0-beta.48+1.20.1.jar",
@@ -728,6 +728,13 @@
       "filename": "fusion-1.3.15a-forge-mc1.20.1.jar",
       "size": 972886,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/fe295521d548-mods_fusion-1.3.15a-forge-mc1.20.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fzzy_config-0.7.6+1.20.1+forge.jar",
+      "path": "mods/fzzy_config-0.7.6+1.20.1+forge.jar",
+      "size": 2374667,
+      "sha256": "d39cd5d6b23b86468937e306776dc70faba900072c7e359ce9348d8a3c26982e",
+      "filename": "fzzy_config-0.7.6+1.20.1+forge.jar"
     },
     {
       "path": "mods/geckolib-forge-1.20.1-4.8.4.jar",
@@ -1549,6 +1556,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/602c8f17f6d8-mods_structureessentials-1.20.1-5.0.jar"
     },
     {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "path": "mods/supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "size": 206584,
+      "sha256": "bea425ef7e9cd27a7fc0f4b89e00cbd0a1ee050f071ecaa9f28f7238f400f0a3",
+      "filename": "supermartijn642configlib-1.1.8-forge-mc1.20.jar"
+    },
+    {
       "path": "mods/supermartijn642corelib-1.1.24a-forge-mc1.20.1.jar",
       "sha256": "d2f171eccda5ed74742cb60450f51939e4e4f637a49b4fc21efd9a941de52522",
       "filename": "supermartijn642corelib-1.1.24a-forge-mc1.20.1.jar",
@@ -1794,20 +1808,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/aea6b2a15800-mods_YungsMenuTweaks-1.20.1-Forge-1.0.2.jar"
     },
     {
-      "sha256": "0bd3d656e2854fc2a954e3bdef00f022edc73de01f074865ab31ede901772985",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
-      "size": 1023768,
-      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
-      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar"
-    },
-    {
-      "sha256": "4b94fd416f4dc9482a4fc02c6e7564c35f39e1b5162119fcabc4789ae20acdd3",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
-      "size": 93,
-      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
-      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input"
-    },
-    {
       "sha256": "c433f3d831e86faa956836bf327ca00151bd813d1a8ab36aa064d518a58790f7",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
       "size": 321871,
@@ -2030,20 +2030,6 @@
       "size": 51828,
       "path": "resourcepacks/Simply Swords x Excalibur.zip",
       "filename": "Simply Swords x Excalibur.zip"
-    },
-    {
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fzzy_config-0.7.6+1.20.1+forge.jar",
-      "path": "mods/fzzy_config-0.7.6+1.20.1+forge.jar",
-      "size": 2374667,
-      "sha256": "d39cd5d6b23b86468937e306776dc70faba900072c7e359ce9348d8a3c26982e",
-      "filename": "fzzy_config-0.7.6+1.20.1+forge.jar"
-    },
-    {
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__supermartijn642configlib-1.1.8-forge-mc1.20.jar",
-      "path": "mods/supermartijn642configlib-1.1.8-forge-mc1.20.jar",
-      "size": 206584,
-      "sha256": "bea425ef7e9cd27a7fc0f4b89e00cbd0a1ee050f071ecaa9f28f7238f400f0a3",
-      "filename": "supermartijn642configlib-1.1.8-forge-mc1.20.jar"
     }
   ],
   "version": "1.3.0",

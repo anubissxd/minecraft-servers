@@ -20,6 +20,22 @@ param(
 # first launch, so shipping them adds no value and just bloats the pack.
 $SyncedFolders = @("mods", "resourcepacks", "datapacks")
 
+# Paths under a synced folder that are generated at runtime, not pack content:
+#   mods\.connector\    - Sinytra Connector's per-machine Fabric->Forge jar cache
+#   mods\documentation\ - Palladium rewrites this HTML/JSON dump on game launch
+# Shipping either one is pointless and, because they change themselves, makes
+# every update check see a diff and re-download them forever.
+$ExcludedPrefixes = @("mods/.connector/", "mods/documentation/")
+
+# Superseded jars still sitting in the maintainer's local mods folder because
+# Modrinth leaves the old file behind when it updates a mod. Forge refuses to
+# load two files providing the same mod id, so only the current one ships.
+$ExcludedFiles = @(
+    "mods/goety-2.5.57.3.jar",                        # superseded by 2.5.58.0
+    "mods/fzzy_config-0.7.5+1.20.1+forge.jar",        # superseded by 0.7.6
+    "mods/fzzy_config-0.7.7+1.20.1+forge-sources.jar" # sources-only jar, no classes
+)
+
 function Get-FileSha256($path) {
     (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLower()
 }
@@ -53,6 +69,10 @@ foreach ($sub in $SyncedFolders) {
     if (-not (Test-Path $subPath)) { continue }
     Get-ChildItem -Path $subPath -Recurse -File | ForEach-Object {
         $relPath = $_.FullName.Substring($PackRoot.Length).TrimStart('\', '/') -replace '\\', '/'
+        foreach ($prefix in $ExcludedPrefixes) {
+            if ($relPath.StartsWith($prefix)) { return }
+        }
+        if ($ExcludedFiles -contains $relPath) { return }
         $scanned += [pscustomobject]@{ File = $_; RelPath = $relPath }
     }
 }
