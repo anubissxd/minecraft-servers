@@ -979,6 +979,26 @@ Bütün geliştirmeler mümkün olduğunca bu yapıyı daha **güvenli, modüler
 
 ---
 
+# İzin Gerektiren İki İşlem (EN ÖNEMLİ KURAL)
+
+Bu iki işlem **yalnızca kullanıcı açıkça söylediğinde** yapılır. Kullanıcı "şu modu kur", "şunu araştır", "şu sorunu çöz" dediğinde bu **izin sayılmaz** — hazırlık yapılır, sonuç anlatılır, sonra beklenir.
+
+## 1. Sunucuyu güncelleme/yeniden başlatma
+
+VDS'teki sunucuya mod ekleme/çıkarma, config değiştirme, `systemctl restart/stop` — hiçbiri kullanıcı **"sunucuyu güncelle"** (veya "başlat", "yeniden başlat") demeden yapılmaz.
+
+Kullanıcı sunucuda oynuyor olabilir ya da başkası bağlı olabilir; habersiz yeniden başlatma onları düşürür. Dosyaları hazırlayıp "şu değişiklikler hazır, sunucuyu güncelleyeyim mi?" diye sor.
+
+## 2. AnuDownloader'daki mod paketini güncelleme
+
+Manifest üretmek, GitHub Release'e dosya yüklemek, `index.json`'u güncellemek — yani **paketin kullanıcılara giden halini değiştirmek** — kullanıcı **"AnuDownloader'a gönder"** (veya "paketi yayınla/güncelle") demeden yapılmaz.
+
+Arkadaşları o paketi indirip oynuyor; yarım kalmış veya test edilmemiş bir paket yayınlanırsa onların kurulumu bozulur.
+
+**Her iki kural için de istisna yok.** Emin değilsen sor.
+
+---
+
 # AnuDownloader ve Yama Notları Sistemi
 
 `tools/anudownloader/` altında, arkadaşların kuracağı `AnuDownloader.exe` (Inno Setup installer: `AnuDownloader-Setup.exe`) bulunur. Bu uygulama `distribution/index.json`'da listelenen her mod paketini (şu an Medieval Fantasy ve Multiverse Superheroes) gösterir, kişinin Modrinth/CurseForge/TLauncher kurulumunu otomatik bulur ve sadece değişen/yeni mod dosyalarını indirir (tam pakette yeniden indirme yok).
