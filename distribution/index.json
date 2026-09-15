@@ -3,32 +3,5 @@
     "version": "2.14.1",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
-  "packs": [
-    {
-      "id": "medieval-fantasy",
-      "name": "Medieval Fantasy",
-      "folder_name": "Medieval Fantasy",
-      "description": "Fantezi/RPG odakli sunucu paketi.",
-      "version": "1.4.0",
-      "mc_version": "1.20.1",
-      "loader": "Forge",
-      "loader_version": "",
-      "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/5ce7950f4d92d1a2fdde707c512569efc353c3b9/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/5ce7950f4d92d1a2fdde707c512569efc353c3b9/distribution/medieval-fantasy/patchnotes.md"
-    },
-    {
-      "id": "mvsh",
-      "name": "Multiverse Superheroes",
-      "folder_name": "Multiverse Superheroes",
-      "description": "Superhero mod paketi (bakimda).",
-      "version": "1.5.0",
-      "mc_version": "1.20.1",
-      "loader": "Forge",
-      "loader_version": "47.4.10",
-      "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/5ce7950f4d92d1a2fdde707c512569efc353c3b9/distribution/mvsh/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/5ce7950f4d92d1a2fdde707c512569efc353c3b9/distribution/mvsh/patchnotes.md"
-    }
-  ]
+  "packs": []
 }
