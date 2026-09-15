@@ -14,8 +14,8 @@
       "loader": "Forge",
       "loader_version": "",
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/930b23bd41661992eeb5b94252e1f2aafba6b728/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/930b23bd41661992eeb5b94252e1f2aafba6b728/distribution/medieval-fantasy/patchnotes.md"
     },
     {
       "id": "mvsh",
@@ -27,8 +27,8 @@
       "loader": "Forge",
       "loader_version": "47.4.10",
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/mvsh/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/930b23bd41661992eeb5b94252e1f2aafba6b728/distribution/mvsh/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/930b23bd41661992eeb5b94252e1f2aafba6b728/distribution/mvsh/patchnotes.md"
     }
   ]
 }

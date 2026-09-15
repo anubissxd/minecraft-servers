@@ -998,6 +998,18 @@ Her paketin kendi `distribution/<paket>/patchnotes.md` dosyası vardır (örn. `
 
 Yama notu içeriğini kullanıcı kendisi yazıp verir — Claude format dayatmaz.
 
+## Dağıtım Adresleri: manifest/patchnotes commit SHA'sına sabitlenir
+
+`index.json` içindeki `manifest_url` ve `patchnotes_url` **her zaman bir commit SHA'sına pinlenmiş** `raw.githubusercontent.com` adresi olmalıdır:
+
+```
+https://raw.githubusercontent.com/anubissxd/minecraft-servers/<40-karakter-commit-sha>/distribution/<paket>/manifest.json
+```
+
+**Neden:** jsDelivr `@main` adresleri purge çağrısı "finished" dönse bile eski içeriği servis etmeye devam edebiliyor, `raw.../main/...` da ~5 dakika cache'liyor. Bu yüzden düzeltilmiş bir manifest kullanıcıya hiç ulaşmadı ve saatlerce "hâlâ bozuk" sanıldı. Commit SHA'lı adres her güncellemede değiştiği için cache diye bir sorun kalmıyor.
+
+**Nasıl uygulanır:** manifest.json değiştiğinde sıra şudur — (1) manifest'i commit+push et, (2) `git rev-parse HEAD` ile SHA'yı al, (3) `index.json`'daki ilgili `manifest_url`/`patchnotes_url`'ü o SHA ile güncelle, (4) index.json'u commit+push et, (5) sadece `index.json` için jsDelivr purge çağır. `index.json`'un kendisi jsDelivr'dan servis edilir ve orada purge güvenilir çalışıyor. `banner_url` nadiren değiştiği için `main` üzerinde kalabilir.
+
 ## Paket İçeriği = Kullanıcının Modrinth Client'ı
 
 MVSH ve Medieval Fantasy paketleri için kaynak referans, kullanıcının kendi bilgisayarındaki Modrinth App profil klasörüdür (`%APPDATA%\ModrinthApp\profiles\<Pack Adı>\`). Bu klasördeki **tüm mods/, resourcepacks/, datapacks/ dosyaları** pakete birebir dahil edilmelidir — sadece server'da kullanılan mod alt kümesi değil, tamamı. `Build-Manifest.ps1` bu klasörü `-PackRoot` olarak alıp tam mirror üretir.
