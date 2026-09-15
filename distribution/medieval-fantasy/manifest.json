@@ -858,13 +858,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/d1c8c6922bce-mods_moremobvariants-forge_1.20.1-1.3.0.1.jar"
     },
     {
-      "path": "mods/goety-2.5.57.3.jar",
-      "sha256": "ecf3ac8a3ddd2c6ff5ab6481d8f1ccc9e691acec95ce7c0e0d78bc6ee3abf430",
-      "filename": "goety-2.5.57.3.jar",
-      "size": 78825346,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/ecf3ac8a3ddd-mods_goety-2.5.57.3.jar"
-    },
-    {
       "path": "mods/darkermagic-1.3.1-1.20.1-ver.b.jar",
       "sha256": "d3dfbafa13d8e7caf98882f76702c87a8a05f4c61b399021ffd1423cd391928a",
       "filename": "darkermagic-1.3.1-1.20.1-ver.b.jar",
@@ -3978,6 +3971,13 @@
       "filename": "oculus-mc1.20.1-1.8.0.jar",
       "size": 2851119,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/0945df0cba0f-mods_oculus-mc1.20.1-1.8.0.jar"
+    },
+    {
+      "path": "mods/goety-2.5.58.0.jar",
+      "sha256": "cf29001873e7aacaa3b8c570390913b4e2e24a0f2e11dda61663634dbd8f0e8d",
+      "filename": "goety-2.5.58.0.jar",
+      "size": 79256714,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/cf29001873e7-mods_goety-2.5.58.0.jar"
     }
   ]
 }
