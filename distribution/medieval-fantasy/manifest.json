@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15 16:34:32",
+  "generated": "2026-09-15 16:50:23",
   "files": [
     {
       "path": "mods/accessories-neoforge-1.0.0-beta.48+1.20.1.jar",
@@ -2030,6 +2030,2484 @@
       "size": 51828,
       "path": "resourcepacks/Simply Swords x Excalibur.zip",
       "filename": "Simply Swords x Excalibur.zip"
+    },
+    {
+      "sha256": "0bd3d656e2854fc2a954e3bdef00f022edc73de01f074865ab31ede901772985",
+      "size": 1023768,
+      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
+      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar"
+    },
+    {
+      "sha256": "4b94fd416f4dc9482a4fc02c6e7564c35f39e1b5162119fcabc4789ae20acdd3",
+      "size": 93,
+      "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
+      "filename": "continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar.input"
+    },
+    {
+      "sha256": "d459b76d2a92b8770584a407f8bfc6570cc17923e95c32e23d083fe14505e60d",
+      "size": 745,
+      "path": "config/accessories.json5",
+      "filename": "accessories.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__accessories.json5"
+    },
+    {
+      "sha256": "6cc0653fede0a380a205e7c2b5b3790f6b3e5ac5de1d6ab970dee409220fc1c2",
+      "size": 102,
+      "path": "config/addonslib-common.toml",
+      "filename": "addonslib-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__addonslib-common.toml"
+    },
+    {
+      "sha256": "551d9a5f1b532575331f3821c5b13fbdf0cad33679fbc51f71bff95175ae9721",
+      "size": 5966,
+      "path": "config/alexscaves-general.toml",
+      "filename": "alexscaves-general.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves-general.toml"
+    },
+    {
+      "sha256": "401efa9056289c8a375d11a4eed5bb4fdcea8bee7340304ef9971ab6493aeca6",
+      "size": 35481,
+      "path": "config/alexsmobs.toml",
+      "filename": "alexsmobs.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs.toml"
+    },
+    {
+      "sha256": "94e633e170b101317b10447b0015fac4425c1f704ca0450baf429711c9127d2e",
+      "size": 87,
+      "path": "config/apoli-common.toml",
+      "filename": "apoli-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apoli-common.toml"
+    },
+    {
+      "sha256": "4f8278b45def834a2a6c03b9b2c29d821808bdb36e6be39abb4be38e81f863ae",
+      "size": 1337,
+      "path": "config/appleskin-client.toml",
+      "filename": "appleskin-client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__appleskin-client.toml"
+    },
+    {
+      "sha256": "7af1d59e3f3d947dd80b801aed3c9a0d2d29a46ed998f3de0eedc38c4639ec6b",
+      "size": 42762,
+      "path": "config/attributefix.json",
+      "filename": "attributefix.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__attributefix.json"
+    },
+    {
+      "sha256": "d263933ee4b13ea18ca743e8648d0cf2bc0f69a7d8c3f0e55829d9597d8c0c62",
+      "size": 2619,
+      "path": "config/attributeslib.cfg",
+      "filename": "attributeslib.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__attributeslib.cfg"
+    },
+    {
+      "sha256": "9f136b36f13fb0f7d0de277ecf6d933914c7dcc3f646136cd09a68e904659109",
+      "size": 509,
+      "path": "config/azurelib.json",
+      "filename": "azurelib.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__azurelib.json"
+    },
+    {
+      "sha256": "cc5ab8d54f24dcf897f3fe326ca7e5a843ced92c6e39763ff2a8f8ee40374d20",
+      "size": 100,
+      "path": "config/bagus_lib-common.toml",
+      "filename": "bagus_lib-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bagus_lib-common.toml"
+    },
+    {
+      "sha256": "deea0fbec10c9402fa3ce033d74a402ad42f1c0518b341138933132bf7680c1e",
+      "size": 944,
+      "path": "config/bettercombatadditions.json",
+      "filename": "bettercombatadditions.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercombatadditions.json"
+    },
+    {
+      "sha256": "c8fba68f434b5288b51476e67cf24d15c3809c6cf4ad37ea24ed877cfa783dc4",
+      "size": 602,
+      "path": "config/betterdeserttemples-forge-1_20.toml",
+      "filename": "betterdeserttemples-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdeserttemples-forge-1_20.toml"
+    },
+    {
+      "sha256": "61bddf5e2cdd86d220a56c7e79de8f49a16b269294e859a884a318834009e6ab",
+      "size": 3417,
+      "path": "config/betterdungeons-forge-1_20.toml",
+      "filename": "betterdungeons-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdungeons-forge-1_20.toml"
+    },
+    {
+      "sha256": "ce07dcc8f1e6d751f1c79f03ea7132ad06cac0d21e2a5cfd01eb3a7dc265cb80",
+      "size": 320,
+      "path": "config/betterendisland-forge-1_20.toml",
+      "filename": "betterendisland-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterendisland-forge-1_20.toml"
+    },
+    {
+      "sha256": "f2f62d4aeb0accb643062ecd12a24e5697e99a50bb8a258bb31d1b82e60636bb",
+      "size": 456,
+      "path": "config/betterfortresses-forge-1_20.toml",
+      "filename": "betterfortresses-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterfortresses-forge-1_20.toml"
+    },
+    {
+      "sha256": "0b6922c44eca9364bc0687d6b757342836c226e53114e30dd619a40dd21b08ff",
+      "size": 120,
+      "path": "config/betterjungletemples-forge-1_20.toml",
+      "filename": "betterjungletemples-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterjungletemples-forge-1_20.toml"
+    },
+    {
+      "sha256": "1d7adabcca64c0d0dca4494cfee67081cc2a3071e734594b2afe56559467211c",
+      "size": 3667,
+      "path": "config/bettermineshafts-forge-1_20.toml",
+      "filename": "bettermineshafts-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettermineshafts-forge-1_20.toml"
+    },
+    {
+      "sha256": "3fc30fb36ba5fc5cabbecb82aa5a9800d7e30539212ec88246be179ede48f382",
+      "size": 448,
+      "path": "config/betteroceanmonuments-forge-1_20.toml",
+      "filename": "betteroceanmonuments-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betteroceanmonuments-forge-1_20.toml"
+    },
+    {
+      "sha256": "b1a6d4c96bbfc7bd824427d25bcf41a3e165f156c61eb5fa5351928474a7a635",
+      "size": 793,
+      "path": "config/betterstrongholds-forge-1_20.toml",
+      "filename": "betterstrongholds-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds-forge-1_20.toml"
+    },
+    {
+      "sha256": "7867f84eff68a159b630c1f1be013b60e88be0ee07f4fb1371f7823f494124c8",
+      "size": 428,
+      "path": "config/betterwitchhuts-forge-1_20.toml",
+      "filename": "betterwitchhuts-forge-1_20.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterwitchhuts-forge-1_20.toml"
+    },
+    {
+      "sha256": "acd27174a9e9b7c2332118e6176c8f000815c6162ccac9030710db2a27d9938b",
+      "size": 296,
+      "path": "config/brb.toml",
+      "filename": "brb.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__brb.toml"
+    },
+    {
+      "sha256": "67f01683358b22dae1b77567f31a399227c379288b5069ab4fb9ca0f513cd3ce",
+      "size": 167,
+      "path": "config/calio-common.toml",
+      "filename": "calio-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__calio-common.toml"
+    },
+    {
+      "sha256": "e309110397629770f5080b9ba81ab26e9476250c4372a051ece7c13557370f29",
+      "size": 7072,
+      "path": "config/carryon-common.toml",
+      "filename": "carryon-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__carryon-common.toml"
+    },
+    {
+      "sha256": "43dad8d1d10e687ac0b54c4eadcef64042b333db1670701fce90503f0e53ae46",
+      "size": 874,
+      "path": "config/cataclysm_spellbooks_config.toml",
+      "filename": "cataclysm_spellbooks_config.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__cataclysm_spellbooks_config.toml"
+    },
+    {
+      "sha256": "a59a4c9fca43b7e46a3ad90878670f7e62c5a8e7f2a7213d674b26ef9653558d",
+      "size": 25304,
+      "path": "config/cataclysm-common.toml",
+      "filename": "cataclysm-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__cataclysm-common.toml"
+    },
+    {
+      "sha256": "fa8eebf200c797ea7f62eb932f3eee7dfa50356daccd7a5dff8017827215e8d9",
+      "size": 185,
+      "path": "config/chatanimation.json",
+      "filename": "chatanimation.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chatanimation.json"
+    },
+    {
+      "sha256": "0a41518641bbb4133fc61b934e8663ae5271ffd8190a281e5b35d1efd97fb3e3",
+      "size": 636,
+      "path": "config/citadel-common.toml",
+      "filename": "citadel-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__citadel-common.toml"
+    },
+    {
+      "sha256": "92809d098b5efeca95c37ec4fef9184bd169160d18efecf81f395c4030c0f83f",
+      "size": 2471,
+      "path": "config/collective.json5",
+      "filename": "collective.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__collective.json5"
+    },
+    {
+      "sha256": "060e296a5fddce603e50034e3cdb6059c3a0e122d0aae3d85a0523341c82ea22",
+      "size": 144,
+      "path": "config/connector.json",
+      "filename": "connector.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__connector.json"
+    },
+    {
+      "sha256": "04a3493f1a07ccd33117de519c82ce4e6465b3e0b28f39919dafd17c3353fc96",
+      "size": 1204,
+      "path": "config/craftingtweaks-common.toml",
+      "filename": "craftingtweaks-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__craftingtweaks-common.toml"
+    },
+    {
+      "sha256": "b3d553461e00b92a05b8f99e9b0b7caaf848b76f0234e50a3c1fa6d53d28fdbe",
+      "size": 1316,
+      "path": "config/cupboard.json",
+      "filename": "cupboard.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__cupboard.json"
+    },
+    {
+      "sha256": "541ee90994c1cf3d4e132df2ac3ff74004bc3952d3914ae843b5089a4dda8a95",
+      "size": 156,
+      "path": "config/curios-common.toml",
+      "filename": "curios-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__curios-common.toml"
+    },
+    {
+      "sha256": "717b8c0ab425203d43122cda301428aafc560bea84d03636c9f40afc23ab0053",
+      "size": 2248,
+      "path": "config/darkdoppelganger-common.toml",
+      "filename": "darkdoppelganger-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__darkdoppelganger-common.toml"
+    },
+    {
+      "sha256": "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7",
+      "size": 728,
+      "path": "config/deeperdarker-common.toml",
+      "filename": "deeperdarker-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__deeperdarker-common.toml"
+    },
+    {
+      "sha256": "61614b063831404bb915053b90ce65f678922008ad531d0e85fc60fd6884bfca",
+      "size": 36080,
+      "path": "config/DistantHorizons.toml",
+      "filename": "DistantHorizons.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__DistantHorizons.toml"
+    },
+    {
+      "sha256": "b9f4428f21aaacf95acf58e97de4b990c3e9b0bcf48c0b54c318b2b50e347b92",
+      "size": 68,
+      "path": "config/draggable_lists.json5",
+      "filename": "draggable_lists.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__draggable_lists.json5"
+    },
+    {
+      "sha256": "e6ff2f904302a8d54cc888fda68af70c6a3b943b13fe694a92e1832b9c6a6977",
+      "size": 1326,
+      "path": "config/dungeonsweaponry-common.json",
+      "filename": "dungeonsweaponry-common.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__dungeonsweaponry-common.json"
+    },
+    {
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size": 3,
+      "path": "config/dynamic_fps.json",
+      "filename": "dynamic_fps.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__dynamic_fps.json"
+    },
+    {
+      "sha256": "d114fbd97132f5c899d3aff453c4683b02e4c2cf5e5fb23cf877745c001608aa",
+      "size": 377,
+      "path": "config/dynamiclights.json",
+      "filename": "dynamiclights.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__dynamiclights.json"
+    },
+    {
+      "sha256": "a834bdbf6ea6aa214d461d83f75b9e87f043845952be4d84a1154ce7c88747a6",
+      "size": 427,
+      "path": "config/embeddium-fingerprint.json",
+      "filename": "embeddium-fingerprint.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__embeddium-fingerprint.json"
+    },
+    {
+      "sha256": "09ff183e061d93b79514bc171bf9118497578757e7a5c45946039487656e2619",
+      "size": 269,
+      "path": "config/embeddium-mixins.properties",
+      "filename": "embeddium-mixins.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__embeddium-mixins.properties"
+    },
+    {
+      "sha256": "b4b0aaec74cd2c37a2d0d384a4195768d8d7cbc9f86c7d993694e394fa35664d",
+      "size": 852,
+      "path": "config/embeddium-options.json",
+      "filename": "embeddium-options.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__embeddium-options.json"
+    },
+    {
+      "sha256": "6cf273cc8acf37b68944b938c66b5dea4be72efb77d1ec8a1269ea4a3a3cf5f0",
+      "size": 42,
+      "path": "config/emf_compat.json",
+      "filename": "emf_compat.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__emf_compat.json"
+    },
+    {
+      "sha256": "55b03b9bb1b44edc787a2d6661929d64e59a42a618651c8340e845ed6c9c2d06",
+      "size": 3208,
+      "path": "config/enchantwithmob-common.toml",
+      "filename": "enchantwithmob-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__enchantwithmob-common.toml"
+    },
+    {
+      "sha256": "69e1df6089b71c3c2fe2c7cf6760937094fd22434111f527229a9fcea3f90bc5",
+      "size": 189,
+      "path": "config/enchdesc.json",
+      "filename": "enchdesc.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__enchdesc.json"
+    },
+    {
+      "sha256": "d6ff2922e9d2752d80821be3c02abf3bba0ba5e4efd57399553dfd87b9f9561f",
+      "size": 1242,
+      "path": "config/entity_model_features.json",
+      "filename": "entity_model_features.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__entity_model_features.json"
+    },
+    {
+      "sha256": "bd66edf9d1a72cd717bbe9b17b41ffd16963b089493e5ddae3d3ad69153105ba",
+      "size": 1452,
+      "path": "config/entity_texture_features.json",
+      "filename": "entity_texture_features.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__entity_texture_features.json"
+    },
+    {
+      "sha256": "e92e6772c4b6ec28b9c179c80831d56d11fc65064591424a120133d397b2ab49",
+      "size": 2228,
+      "path": "config/entityculling.json",
+      "filename": "entityculling.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__entityculling.json"
+    },
+    {
+      "sha256": "a5ba22e63061c1fb67f0f895f17681351eaeccc225faef966c29ee630593275e",
+      "size": 28,
+      "path": "config/etf_warnings.json",
+      "filename": "etf_warnings.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__etf_warnings.json"
+    },
+    {
+      "sha256": "a05079b5dbd8e2b989a348eb3fb341da5b98a23e1a9f22c86cba866bd646267e",
+      "size": 3863,
+      "path": "config/farmersdelight-common.toml",
+      "filename": "farmersdelight-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__farmersdelight-common.toml"
+    },
+    {
+      "sha256": "e3ca99e0f233e3bcf8b6762a85b1139f716bf96644318fe9cb022c270461b287",
+      "size": 1493,
+      "path": "config/ferritecore-mixin.toml",
+      "filename": "ferritecore-mixin.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__ferritecore-mixin.toml"
+    },
+    {
+      "sha256": "05f17e0700fdaf30b09f732d3a4e2bbe7011a319930b4ca86b4c630885cff7ab",
+      "size": 1117,
+      "path": "config/fml.toml",
+      "filename": "fml.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fml.toml"
+    },
+    {
+      "sha256": "0b1b3c45343435184c9dde3149b38afcdb97953e287686ecda54385f53ebcddc",
+      "size": 1628,
+      "path": "config/forge-client.toml",
+      "filename": "forge-client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__forge-client.toml"
+    },
+    {
+      "sha256": "ee3c57121829b033819d410d1d684b66865d165cee38ce62dbb36e4c4639d4b2",
+      "size": 1878,
+      "path": "config/friendsandfoes.json",
+      "filename": "friendsandfoes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__friendsandfoes.json"
+    },
+    {
+      "sha256": "f1d7bd782ae6603b429b3e5b7ce958deea5d2876fc03fc5e9d71feb7d7e152cb",
+      "size": 1225,
+      "path": "config/global_packs.toml",
+      "filename": "global_packs.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__global_packs.toml"
+    },
+    {
+      "sha256": "67386cd39119a61152bfe3b29adcfc04ac9246be444c8b1264eb751dd3f12dc6",
+      "size": 6901,
+      "path": "config/goblintraders-entities.toml",
+      "filename": "goblintraders-entities.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goblintraders-entities.toml"
+    },
+    {
+      "sha256": "8a010dcfb16b94a5d1bcb7c19161a7cc2e9547653303a325d8de54514b316de8",
+      "size": 715,
+      "path": "config/goety_revelation.toml",
+      "filename": "goety_revelation.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety_revelation.toml"
+    },
+    {
+      "sha256": "084377f5a7cfbf86d39118eb94334da66a4de11fbd4f1e07e0b88e40bce54db3",
+      "size": 15517,
+      "path": "config/iceandfire-common.toml",
+      "filename": "iceandfire-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire-common.toml"
+    },
+    {
+      "sha256": "f2b7f219198f0a911d04b09f545f2c1256e8d114951443924878dc10963e16aa",
+      "size": 1060,
+      "path": "config/immediatelyfast.json",
+      "filename": "immediatelyfast.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__immediatelyfast.json"
+    },
+    {
+      "sha256": "71e9140fc7ad79caa63c26e379056436c214e2bb0241a74fae9a9d5143d6a856",
+      "size": 7031,
+      "path": "config/ironfurnaces-client.toml",
+      "filename": "ironfurnaces-client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__ironfurnaces-client.toml"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "path": "config/ironfurnaces.toml",
+      "filename": "ironfurnaces.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__ironfurnaces.toml"
+    },
+    {
+      "sha256": "554edb2ce54ce7f21ebede3d968d04551fc64fe1d4de5bdc30876dd5ebdf96b6",
+      "size": 2474,
+      "path": "config/item_obliterator.json5",
+      "filename": "item_obliterator.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__item_obliterator.json5"
+    },
+    {
+      "sha256": "c94085d83817aa5ab1cf8273413a9aaeba032a791ad9f64311398639877b6b10",
+      "size": 8908,
+      "path": "config/itemphysic.json",
+      "filename": "itemphysic.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__itemphysic.json"
+    },
+    {
+      "sha256": "0ef72814d01469250f5733923b9f7b4e75818461c214f9a353589b7bf56679dd",
+      "size": 20835,
+      "path": "config/legendary_monsters-common.toml",
+      "filename": "legendary_monsters-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__legendary_monsters-common.toml"
+    },
+    {
+      "sha256": "6af411644e22ede34383135509cb96b2a636d8ed45494b28976514a95537105e",
+      "size": 72,
+      "path": "config/letmedespawn.json",
+      "filename": "letmedespawn.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__letmedespawn.json"
+    },
+    {
+      "sha256": "01d75dd7be8fbe04ec4e19bdf36fd1f5cd40daa74bd366b6533cb8e65a62dec5",
+      "size": 238,
+      "path": "config/lootr-client.toml",
+      "filename": "lootr-client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__lootr-client.toml"
+    },
+    {
+      "sha256": "80e5f311165898d0a77966f90d25f2b9b1d6e73fa199b20565f47c9ff061129e",
+      "size": 6521,
+      "path": "config/lootr-common.toml",
+      "filename": "lootr-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__lootr-common.toml"
+    },
+    {
+      "sha256": "9bcdd9f5ae6c9fecc3a0dfee7507bf17c56702f14e40db9cdde90148f1d3b387",
+      "size": 34,
+      "path": "config/midnightlib.json",
+      "filename": "midnightlib.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__midnightlib.json"
+    },
+    {
+      "sha256": "d40a0510a5eaf56e3c48e881348d7d826c5a1f61aa29b69cf0fc33dd96d6fdcd",
+      "size": 104,
+      "path": "config/modernfix-common.toml",
+      "filename": "modernfix-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__modernfix-common.toml"
+    },
+    {
+      "sha256": "cc9db08ca3f44714cf14117fb1772eed88c9cc3272fea6d17e657292c8799fe0",
+      "size": 6643,
+      "path": "config/modernfix-mixins.properties",
+      "filename": "modernfix-mixins.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__modernfix-mixins.properties"
+    },
+    {
+      "sha256": "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4",
+      "size": 135,
+      "path": "config/MouseTweaks.cfg",
+      "filename": "MouseTweaks.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__MouseTweaks.cfg"
+    },
+    {
+      "sha256": "e42b0834c14fe11a09d0e330daed8c35090fdf9de864b4e06bb13ccd155b7d06",
+      "size": 35158,
+      "path": "config/mowziesmobs-common.toml",
+      "filename": "mowziesmobs-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mowziesmobs-common.toml"
+    },
+    {
+      "sha256": "0e1662186bcba15036ebe5a8ce282bc9128b34602a7d07897244bbbd18c34962",
+      "size": 944,
+      "path": "config/mutantmonsters-common.toml",
+      "filename": "mutantmonsters-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mutantmonsters-common.toml"
+    },
+    {
+      "sha256": "e392c33b7f08309120bc31ad5e63f47ed45085ba35d009ad06ed072bd32ecb10",
+      "size": 760,
+      "path": "config/mutantmonsters-server.toml",
+      "filename": "mutantmonsters-server.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mutantmonsters-server.toml"
+    },
+    {
+      "sha256": "022aeb6c92073255d6ad01f0f47eecf574bcb19aa9bc9d8d11eeae1479079226",
+      "size": 3703,
+      "path": "config/naturalist.json",
+      "filename": "naturalist.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__naturalist.json"
+    },
+    {
+      "sha256": "40f71b0e41b9214cd893f147da20f04b09fa01d36f51ec6d2b14a9b06c5654bd",
+      "size": 1997,
+      "path": "config/natures_spirit-common.toml",
+      "filename": "natures_spirit-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__natures_spirit-common.toml"
+    },
+    {
+      "sha256": "f97fc5ae7dd7d312e86ecddf2e4491fee3e3a16b7a26cbb3aa078fdd3255c4df",
+      "size": 266,
+      "path": "config/necronomicon.json5",
+      "filename": "necronomicon.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__necronomicon.json5"
+    },
+    {
+      "sha256": "45121987f8bbbb948bd5096ffb02b1361c762b3e34836b3f9097a9a4ef7222d4",
+      "size": 3357,
+      "path": "config/notenoughanimations.json",
+      "filename": "notenoughanimations.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__notenoughanimations.json"
+    },
+    {
+      "sha256": "3dd9439113aff9ac933a3e845d887d1278e447606afdb4b3677596561cd2f04e",
+      "size": 254,
+      "path": "config/oculus.properties",
+      "filename": "oculus.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__oculus.properties"
+    },
+    {
+      "sha256": "1eaeee245711ad6b901f2c238d7aca59eaf637dd4a81accea6669c463fe5cf99",
+      "size": 4415,
+      "path": "config/origins-common.toml",
+      "filename": "origins-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__origins-common.toml"
+    },
+    {
+      "sha256": "7a1a13be85b5895e025c86ebf66206057d4aac6140007a383c56f860c70d8b6e",
+      "size": 473,
+      "path": "config/packetfixer.properties",
+      "filename": "packetfixer.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__packetfixer.properties"
+    },
+    {
+      "sha256": "e9a129d0a2dbf13d36d4f3e47ae3b2b01d32a9e872a771633bf356d9cdebc895",
+      "size": 389,
+      "path": "config/pehkui-common.toml",
+      "filename": "pehkui-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__pehkui-common.toml"
+    },
+    {
+      "sha256": "4933acb18663de7cab3fb632f54b1931bbceac7cda0ef47ef34c5d56c210c63f",
+      "size": 590,
+      "path": "config/rightclickharvest.json5",
+      "filename": "rightclickharvest.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rightclickharvest.json5"
+    },
+    {
+      "sha256": "aa9058884b341c7c616f946f1186701aed801d99709e70fc5573ce144afca99a",
+      "size": 2915,
+      "path": "config/rpg_mob_levelling.toml",
+      "filename": "rpg_mob_levelling.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rpg_mob_levelling.toml"
+    },
+    {
+      "sha256": "45162f45aa2db525a0edc483959f35b6d958ba2e54066a4f87e7f3c3f0f99166",
+      "size": 497,
+      "path": "config/skinlayers.json",
+      "filename": "skinlayers.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__skinlayers.json"
+    },
+    {
+      "sha256": "b377e97ca3d8ae8560448b92ab820872d7c11bef0ca52dcf3f4901b44c6ddca7",
+      "size": 116,
+      "path": "config/sophisticatedbackpacks-common.toml",
+      "filename": "sophisticatedbackpacks-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sophisticatedbackpacks-common.toml"
+    },
+    {
+      "sha256": "af42e7af0872345d37d7976e3102920b4150cc45f1fa83ad1cd06559184374d5",
+      "size": 11482,
+      "path": "config/sophisticatedcore-common.toml",
+      "filename": "sophisticatedcore-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sophisticatedcore-common.toml"
+    },
+    {
+      "sha256": "43861ecdb8d9dd176511ce1b1179cc5d020e2433173eab447c887273ca7770fc",
+      "size": 2510,
+      "path": "config/sophisticatedinventoryinteractions-common.toml",
+      "filename": "sophisticatedinventoryinteractions-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sophisticatedinventoryinteractions-common.toml"
+    },
+    {
+      "sha256": "c28b85c07cc46de89e8d4e18db0386be880e7c62badaebc60973afa5f687632b",
+      "size": 184,
+      "path": "config/sophisticatedstorage-common.toml",
+      "filename": "sophisticatedstorage-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sophisticatedstorage-common.toml"
+    },
+    {
+      "sha256": "7c951d4959fc1830e0be9f91d157307ed63266b3535a25f9e1845c446b1d945f",
+      "size": 4608,
+      "path": "config/spartanshields-common.toml",
+      "filename": "spartanshields-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spartanshields-common.toml"
+    },
+    {
+      "sha256": "cc4caa087d84a1f8462227554456619a991f0fecf737d926ff23fd4dfe1acdde",
+      "size": 19878,
+      "path": "config/spartanweaponry-common.toml",
+      "filename": "spartanweaponry-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spartanweaponry-common.toml"
+    },
+    {
+      "sha256": "b2b16aad46bca666c1a8393826b2e767cada40664083bea333003b7d969a88ed",
+      "size": 302,
+      "path": "config/spawnanimations.json",
+      "filename": "spawnanimations.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spawnanimations.json"
+    },
+    {
+      "sha256": "4869bec1625d1ab28c17fbdd7c86fcaca209e59fb6d7955a45ad3348b43fa9ef",
+      "size": 3844,
+      "path": "config/structureessentials.json",
+      "filename": "structureessentials.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__structureessentials.json"
+    },
+    {
+      "sha256": "c25c28f715d616dfd201eb6c2fbeacc3deb33f0ddddfa9b7a275b7d6c03dbb5b",
+      "size": 7723,
+      "path": "config/tconstruct-common.toml",
+      "filename": "tconstruct-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__tconstruct-common.toml"
+    },
+    {
+      "sha256": "70da8cd57cd321ae43ec3774995de812116c67163c0ae8859965a3599e3aeefa",
+      "size": 534,
+      "path": "config/terrablender.toml",
+      "filename": "terrablender.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__terrablender.toml"
+    },
+    {
+      "sha256": "60420a41571a4658b91babfa2b47d6fefb7c1766eeea969f51ff98ab34c2431c",
+      "size": 97,
+      "path": "config/transition.json",
+      "filename": "transition.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__transition.json"
+    },
+    {
+      "sha256": "27ef03d4cace8016a12c021daeed1c96d2957a8b6f425177bf01cee15fed14e2",
+      "size": 743,
+      "path": "config/trashslot-common.toml",
+      "filename": "trashslot-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__trashslot-common.toml"
+    },
+    {
+      "sha256": "fe0bed19bd0927b3d519816c73378730689080a8f07e66a6167c266ffde29dd2",
+      "size": 44,
+      "path": "config/trender.json",
+      "filename": "trender.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__trender.json"
+    },
+    {
+      "sha256": "ae4d9b6a2f63f37de7630a0bc4333e3ab682a6fa713347dae899ffe512a6b9f5",
+      "size": 7648,
+      "path": "config/twilightforest-common.toml",
+      "filename": "twilightforest-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__twilightforest-common.toml"
+    },
+    {
+      "sha256": "98c9fc6616389a8e1305358c68060656a13fff1b02b3754ae33d07bb1f2d8fb4",
+      "size": 1323,
+      "path": "config/villagernames.json5",
+      "filename": "villagernames.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__villagernames.json5"
+    },
+    {
+      "sha256": "7885b862b10bf4b14d3103909971114a736d14a52e4a7994ace0d66a2474c14c",
+      "size": 11520,
+      "path": "config/visual_workbench.json",
+      "filename": "visual_workbench.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__visual_workbench.json"
+    },
+    {
+      "sha256": "54383dd0f5b4dd7b5e9bfc765032d886cacb83dad1621c7863876170646d9a27",
+      "size": 6846,
+      "path": "config/waystones-common.toml",
+      "filename": "waystones-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__waystones-common.toml"
+    },
+    {
+      "sha256": "ed1668371bfd1025c9784977f0850294152f5de58c1c5fd30f36c64061e9d071",
+      "size": 534,
+      "path": "config/weaponleveling.json",
+      "filename": "weaponleveling.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__weaponleveling.json"
+    },
+    {
+      "sha256": "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820",
+      "size": 35,
+      "path": "config/yacl.json5",
+      "filename": "yacl.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__yacl.json5"
+    },
+    {
+      "sha256": "1106f174658cdf06203205d51ddd9f2daaedc0266e904ec327f5d4aa6ec5e35e",
+      "size": 2521,
+      "path": "config/YungsCaveBiomes-forge-1_20_1.toml",
+      "filename": "YungsCaveBiomes-forge-1_20_1.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__YungsCaveBiomes-forge-1_20_1.toml"
+    },
+    {
+      "sha256": "68c9266286a43da177f1c3f8038722aaae74fb5b2ffa56fa65f13b714bda4848",
+      "size": 801,
+      "path": "config/yungsmenutweaks-forge-1_20_1.toml",
+      "filename": "yungsmenutweaks-forge-1_20_1.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__yungsmenutweaks-forge-1_20_1.toml"
+    },
+    {
+      "sha256": "d286a521c5fd852ef189e15f02952d3e6f529efbb67fe769d88d45183279c3b9",
+      "size": 272,
+      "path": "config/alexscaves_biome_generation/abyssal_chasm.json",
+      "filename": "abyssal_chasm.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__abyssal_chasm.json"
+    },
+    {
+      "sha256": "02120d68d535ce346b1d66d42a039a0683ee4432b8537d70fbb2f1bf59c4d364",
+      "size": 227,
+      "path": "config/alexscaves_biome_generation/candy_cavity.json",
+      "filename": "candy_cavity.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__candy_cavity.json"
+    },
+    {
+      "sha256": "5eea375f709ff5d7096b51fdc32b671952e1d2aed9f48c9bd9bc8e50ec2cb7f7",
+      "size": 226,
+      "path": "config/alexscaves_biome_generation/forlorn_hollows.json",
+      "filename": "forlorn_hollows.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__forlorn_hollows.json"
+    },
+    {
+      "sha256": "cf811ff0e46881d7993eb4910d9891ff6472554b613d3b3940deb0c6f1e0a779",
+      "size": 226,
+      "path": "config/alexscaves_biome_generation/magnetic_caves.json",
+      "filename": "magnetic_caves.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__magnetic_caves.json"
+    },
+    {
+      "sha256": "f0e2da7cf5d77abef1bd270cb7c288e3f57c001005fe41e11d545d948b06474d",
+      "size": 227,
+      "path": "config/alexscaves_biome_generation/primordial_caves.json",
+      "filename": "primordial_caves.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__primordial_caves.json"
+    },
+    {
+      "sha256": "d6d7d5becfd20cca48dabcb838021694740bd874fba80a259b05d37bcc720a43",
+      "size": 226,
+      "path": "config/alexscaves_biome_generation/toxic_caves.json",
+      "filename": "toxic_caves.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexscaves_biome_generation__toxic_caves.json"
+    },
+    {
+      "sha256": "df14afd6e1e96ace0dc8e4c71bc325e3baec8dbeaebf61f682561a70fc145f9d",
+      "size": 754,
+      "path": "config/alexsmobs/alligator_snapping_turtle_spawns.json",
+      "filename": "alligator_snapping_turtle_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__alligator_snapping_turtle_spawns.json"
+    },
+    {
+      "sha256": "ca961946a7b3c6e9abcb1bb82bbf36e1f9ce01d11769a06a7fbff6351293ff5d",
+      "size": 1036,
+      "path": "config/alexsmobs/anaconda_spawns.json",
+      "filename": "anaconda_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__anaconda_spawns.json"
+    },
+    {
+      "sha256": "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990",
+      "size": 1166,
+      "path": "config/alexsmobs/anteater_spawns.json",
+      "filename": "anteater_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__anteater_spawns.json"
+    },
+    {
+      "sha256": "f8b51a798bfa4b51e0ee8fb78c860ca5b2677583db10584792a0e1548f17d396",
+      "size": 2723,
+      "path": "config/alexsmobs/bald_eagle_spawns.json",
+      "filename": "bald_eagle_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__bald_eagle_spawns.json"
+    },
+    {
+      "sha256": "1d5d0ce4ef42e94f0361c41b4b2402b64e87f0b1b987e1f1b2f6b2ac377211a7",
+      "size": 1697,
+      "path": "config/alexsmobs/banana_slug_spawns.json",
+      "filename": "banana_slug_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__banana_slug_spawns.json"
+    },
+    {
+      "sha256": "78e726ed002a31f5084a7b49fcce467c5623a046981d6c59d9ed7c4eb6cdbb1e",
+      "size": 1761,
+      "path": "config/alexsmobs/bison_spawns.json",
+      "filename": "bison_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__bison_spawns.json"
+    },
+    {
+      "sha256": "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f",
+      "size": 146,
+      "path": "config/alexsmobs/blobfish_spawns.json",
+      "filename": "blobfish_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__blobfish_spawns.json"
+    },
+    {
+      "sha256": "7d1f784ab378e1e851e73dbb6f81866420c1328d25f754546d82c417bf304644",
+      "size": 4020,
+      "path": "config/alexsmobs/blue_jay_spawns.json",
+      "filename": "blue_jay_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__blue_jay_spawns.json"
+    },
+    {
+      "sha256": "47eef91378d3d6455a911d58cc3afdbfcdda7fd49968a7921b22620faa8ff672",
+      "size": 257,
+      "path": "config/alexsmobs/bone_serpent_spawns.json",
+      "filename": "bone_serpent_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__bone_serpent_spawns.json"
+    },
+    {
+      "sha256": "5d5a9d2039b6df546b788f62cb376cc29312a7115a5553541652aad7259436a6",
+      "size": 486,
+      "path": "config/alexsmobs/bunfungus_spawns.json",
+      "filename": "bunfungus_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__bunfungus_spawns.json"
+    },
+    {
+      "sha256": "73b8f83ddfa936642b38af1003e3c47eab6f089ad61612ee5181137409038f57",
+      "size": 642,
+      "path": "config/alexsmobs/cachalot_whale_beached_spawns.json",
+      "filename": "cachalot_whale_beached_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cachalot_whale_beached_spawns.json"
+    },
+    {
+      "sha256": "fb901f1ea0bce7b9fb51dfaeb565539a3c1a9ee86bafb49caddac7ca1002e296",
+      "size": 893,
+      "path": "config/alexsmobs/cachalot_whale_spawns.json",
+      "filename": "cachalot_whale_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cachalot_whale_spawns.json"
+    },
+    {
+      "sha256": "542cca079ae671a6d928737b622b205deebfe2aed5864a01b5048f501aec2753",
+      "size": 291,
+      "path": "config/alexsmobs/caiman_spawns.json",
+      "filename": "caiman_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__caiman_spawns.json"
+    },
+    {
+      "sha256": "83b68d395236771ae9276f48b2988cfa9eb65e14dc41531b37a6b4e77c64859a",
+      "size": 1184,
+      "path": "config/alexsmobs/capuchin_monkey_spawns.json",
+      "filename": "capuchin_monkey_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__capuchin_monkey_spawns.json"
+    },
+    {
+      "sha256": "3c097d29c1f74807815d4c13e3586a76528ac3c104670ce95852bd3b62f9e16e",
+      "size": 1097,
+      "path": "config/alexsmobs/catfish_spawns.json",
+      "filename": "catfish_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__catfish_spawns.json"
+    },
+    {
+      "sha256": "973b8ebc19fa04e02b050f28359ee6bffbae93367f49ecac10892f4a2c1dad7d",
+      "size": 2200,
+      "path": "config/alexsmobs/cave_centipede_spawns.json",
+      "filename": "cave_centipede_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cave_centipede_spawns.json"
+    },
+    {
+      "sha256": "97a67afb52f1398f2c55e2a74001e5b893394e28d3f0eb00695f049bdd19f204",
+      "size": 2085,
+      "path": "config/alexsmobs/cockroach_spawns.json",
+      "filename": "cockroach_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cockroach_spawns.json"
+    },
+    {
+      "sha256": "cf9ba87b0d2001543fe09d8f6a4c602c03644643a9bd49d1e9ca0b041ab4dc02",
+      "size": 414,
+      "path": "config/alexsmobs/comb_jelly_spawns.json",
+      "filename": "comb_jelly_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__comb_jelly_spawns.json"
+    },
+    {
+      "sha256": "8e1d05a9b4ab8b923ff4951ef391665f3bdd218d943152f6f1f57509786bc0f7",
+      "size": 371,
+      "path": "config/alexsmobs/cosmaw_spawns.json",
+      "filename": "cosmaw_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cosmaw_spawns.json"
+    },
+    {
+      "sha256": "aed14e990ed38ee78214b1ea4a15e06bca1b8d098e1e440596be9ab14e4403b8",
+      "size": 139,
+      "path": "config/alexsmobs/cosmic_cod_spawns.json",
+      "filename": "cosmic_cod_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__cosmic_cod_spawns.json"
+    },
+    {
+      "sha256": "104fa9ce71421c5023abba88ce382957828b22341b44c2d03b3300b760482c9d",
+      "size": 785,
+      "path": "config/alexsmobs/crimson_mosquito_spawns.json",
+      "filename": "crimson_mosquito_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__crimson_mosquito_spawns.json"
+    },
+    {
+      "sha256": "a73d36d1b5dd75eb20f6143193b991e942f4ef4cef725835b66ec01197d7074f",
+      "size": 1007,
+      "path": "config/alexsmobs/crocodile_spawns.json",
+      "filename": "crocodile_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__crocodile_spawns.json"
+    },
+    {
+      "sha256": "cace87b5d504be10d1fff107ad14349066ae1c39d5200a7a29bdd5476167d9b8",
+      "size": 5146,
+      "path": "config/alexsmobs/crow_spawns.json",
+      "filename": "crow_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__crow_spawns.json"
+    },
+    {
+      "sha256": "e7855fa7d73f4d3af77f47ddd70b4fcbab7862302d004b4ddae9dddc75c4e402",
+      "size": 145,
+      "path": "config/alexsmobs/devils_hole_pupfish_spawns.json",
+      "filename": "devils_hole_pupfish_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__devils_hole_pupfish_spawns.json"
+    },
+    {
+      "sha256": "0fa8f72e4c73805727577a343758cfd39377cbdadebb88b6b2343183053e16cb",
+      "size": 403,
+      "path": "config/alexsmobs/dropbear_spawns.json",
+      "filename": "dropbear_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__dropbear_spawns.json"
+    },
+    {
+      "sha256": "cac271d780a6ed65db7b22e6944b6d456805d72b309865d6293ad6aa4f60c3e2",
+      "size": 1163,
+      "path": "config/alexsmobs/elephant_spawns.json",
+      "filename": "elephant_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__elephant_spawns.json"
+    },
+    {
+      "sha256": "70e30e058709266e665eb6642df126eeee744d05e63d77344501e78cb4a37851",
+      "size": 1661,
+      "path": "config/alexsmobs/emu_spawns.json",
+      "filename": "emu_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__emu_spawns.json"
+    },
+    {
+      "sha256": "ca6e68bd3e74eb9cedcdbae4c82f594c4e85bdd54e1d0e35344a3febb9672980",
+      "size": 250,
+      "path": "config/alexsmobs/endergrade_spawns.json",
+      "filename": "endergrade_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__endergrade_spawns.json"
+    },
+    {
+      "sha256": "846748f4f352dead7fae39221d653713b7cbd775eaf10f80e0dea86f4e9ccb9a",
+      "size": 603,
+      "path": "config/alexsmobs/enderiophage_spawns.json",
+      "filename": "enderiophage_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__enderiophage_spawns.json"
+    },
+    {
+      "sha256": "c245528d844458d8ac416572ee0df7575bb23d58beb07367d4cd55c66fec9000",
+      "size": 266,
+      "path": "config/alexsmobs/farseer.json",
+      "filename": "farseer.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__farseer.json"
+    },
+    {
+      "sha256": "f729be2a0bc7bccc88cde40464f990d6074bfcf52a0d1d6719d8ebcd63c496ff",
+      "size": 147,
+      "path": "config/alexsmobs/flutter_spawns.json",
+      "filename": "flutter_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__flutter_spawns.json"
+    },
+    {
+      "sha256": "e7855fa7d73f4d3af77f47ddd70b4fcbab7862302d004b4ddae9dddc75c4e402",
+      "size": 145,
+      "path": "config/alexsmobs/fly_spawns.json",
+      "filename": "fly_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__fly_spawns.json"
+    },
+    {
+      "sha256": "69904b309696b6081cdec1ea87bdb62f84886cf6dac600a8bca231860c3a3f2f",
+      "size": 716,
+      "path": "config/alexsmobs/flying_fish_spawns.json",
+      "filename": "flying_fish_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__flying_fish_spawns.json"
+    },
+    {
+      "sha256": "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f",
+      "size": 146,
+      "path": "config/alexsmobs/frilled_shark_spawns.json",
+      "filename": "frilled_shark_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__frilled_shark_spawns.json"
+    },
+    {
+      "sha256": "2cc43cdc9df3b20cc2eeb75a3c11736558f544571640607d08dec5c0a939c02d",
+      "size": 934,
+      "path": "config/alexsmobs/froststalker_spawns.json",
+      "filename": "froststalker_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__froststalker_spawns.json"
+    },
+    {
+      "sha256": "17a5c3263942410596f91fb0aece138e5115bfabfa2a5913a63406fcb64b42d0",
+      "size": 1050,
+      "path": "config/alexsmobs/gazelle_spawns.json",
+      "filename": "gazelle_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__gazelle_spawns.json"
+    },
+    {
+      "sha256": "cdd0380bfa9b754856150966a042f807ac48d2f9409f4f2b543be19e87f4c41f",
+      "size": 1001,
+      "path": "config/alexsmobs/gelada_monkey_spawns.json",
+      "filename": "gelada_monkey_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__gelada_monkey_spawns.json"
+    },
+    {
+      "sha256": "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f",
+      "size": 146,
+      "path": "config/alexsmobs/giant_squid_spawns.json",
+      "filename": "giant_squid_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__giant_squid_spawns.json"
+    },
+    {
+      "sha256": "8c90151f66a632b01e7b8f6998f72618720aae5362c1df0bdd7fefdb13cc20c8",
+      "size": 1053,
+      "path": "config/alexsmobs/gorilla_spawns.json",
+      "filename": "gorilla_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__gorilla_spawns.json"
+    },
+    {
+      "sha256": "7d1f784ab378e1e851e73dbb6f81866420c1328d25f754546d82c417bf304644",
+      "size": 4020,
+      "path": "config/alexsmobs/grizzly_bear_spawns.json",
+      "filename": "grizzly_bear_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__grizzly_bear_spawns.json"
+    },
+    {
+      "sha256": "263974f58a4b48df633648246820681745da9f9e16f30fefe6e07f576251dfb1",
+      "size": 1132,
+      "path": "config/alexsmobs/guster_spawns.json",
+      "filename": "guster_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__guster_spawns.json"
+    },
+    {
+      "sha256": "a5eeb1a3843a12ef4fde1d8a3a5f13161034457c0901d3f938aa71a20e6712f3",
+      "size": 254,
+      "path": "config/alexsmobs/hammerhead_shark_spawns.json",
+      "filename": "hammerhead_shark_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__hammerhead_shark_spawns.json"
+    },
+    {
+      "sha256": "6aa305d47ca32364d445c04c8a20da36a7ccef97955c27e834d4114604d2785d",
+      "size": 3029,
+      "path": "config/alexsmobs/hummingbird_spawns.json",
+      "filename": "hummingbird_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__hummingbird_spawns.json"
+    },
+    {
+      "sha256": "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124",
+      "size": 1252,
+      "path": "config/alexsmobs/jerboa_spawns.json",
+      "filename": "jerboa_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__jerboa_spawns.json"
+    },
+    {
+      "sha256": "70e30e058709266e665eb6642df126eeee744d05e63d77344501e78cb4a37851",
+      "size": 1661,
+      "path": "config/alexsmobs/kangaroo_spawns.json",
+      "filename": "kangaroo_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__kangaroo_spawns.json"
+    },
+    {
+      "sha256": "695a3eb4d61a8208cc634871c237b0e6efc980ac668793f4686848e32cda0907",
+      "size": 775,
+      "path": "config/alexsmobs/komodo_dragon_spawns.json",
+      "filename": "komodo_dragon_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__komodo_dragon_spawns.json"
+    },
+    {
+      "sha256": "07d0215377f12f1299ec46b6277426c3cf957aa1d310c97fa943cdf5ace8d260",
+      "size": 142,
+      "path": "config/alexsmobs/laviathan_spawns.json",
+      "filename": "laviathan_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__laviathan_spawns.json"
+    },
+    {
+      "sha256": "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990",
+      "size": 1166,
+      "path": "config/alexsmobs/leafcutter_anthill_spawns.json",
+      "filename": "leafcutter_anthill_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__leafcutter_anthill_spawns.json"
+    },
+    {
+      "sha256": "bb0c918e8dbd4d003417a1bcabb38b8433d1f9be95fe6f8feef95d30616b49a7",
+      "size": 398,
+      "path": "config/alexsmobs/lobster_spawns.json",
+      "filename": "lobster_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__lobster_spawns.json"
+    },
+    {
+      "sha256": "8483d96341369b430ff2ebfebd7562b0c58c40b96be541cc88189fc696606a0d",
+      "size": 1037,
+      "path": "config/alexsmobs/maned_wolf_spawns.json",
+      "filename": "maned_wolf_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__maned_wolf_spawns.json"
+    },
+    {
+      "sha256": "4f6099fe4d9f99530f9f0f9bae7e55c0713506efdc47da69d227ae62137647e4",
+      "size": 385,
+      "path": "config/alexsmobs/mantis_shrimp_spawns.json",
+      "filename": "mantis_shrimp_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__mantis_shrimp_spawns.json"
+    },
+    {
+      "sha256": "9c68a433ab6f75ff9e8d46868480158e4c1f46949779cb0b0d973f7759dbfc2d",
+      "size": 373,
+      "path": "config/alexsmobs/mimic_octopus_spawns.json",
+      "filename": "mimic_octopus_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__mimic_octopus_spawns.json"
+    },
+    {
+      "sha256": "fcace6e8c558df6eb13827f7a2b4a7f43c9fdfd3015331bd7e277329ca034c34",
+      "size": 365,
+      "path": "config/alexsmobs/mimicube_spawns.json",
+      "filename": "mimicube_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__mimicube_spawns.json"
+    },
+    {
+      "sha256": "abac051da2458ec848604b66a6d7889f7c715060bb9706c1d1822155127d096c",
+      "size": 2291,
+      "path": "config/alexsmobs/moose_spawns.json",
+      "filename": "moose_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__moose_spawns.json"
+    },
+    {
+      "sha256": "542cca079ae671a6d928737b622b205deebfe2aed5864a01b5048f501aec2753",
+      "size": 291,
+      "path": "config/alexsmobs/mudskipper_spawns.json",
+      "filename": "mudskipper_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__mudskipper_spawns.json"
+    },
+    {
+      "sha256": "5d5a9d2039b6df546b788f62cb376cc29312a7115a5553541652aad7259436a6",
+      "size": 486,
+      "path": "config/alexsmobs/mungus_spawns.json",
+      "filename": "mungus_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__mungus_spawns.json"
+    },
+    {
+      "sha256": "973b8ebc19fa04e02b050f28359ee6bffbae93367f49ecac10892f4a2c1dad7d",
+      "size": 2200,
+      "path": "config/alexsmobs/murmur.json",
+      "filename": "murmur.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__murmur.json"
+    },
+    {
+      "sha256": "2e62ae273c3488a294068e5ed737dbf08791f4758cd3659308824d7bf4ece377",
+      "size": 255,
+      "path": "config/alexsmobs/orca_spawns.json",
+      "filename": "orca_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__orca_spawns.json"
+    },
+    {
+      "sha256": "b96f9e44f59f54b67460784fb1fdfa06d053f9ca9abb4fc3b04f222fd65ee958",
+      "size": 625,
+      "path": "config/alexsmobs/platypus_spawns.json",
+      "filename": "platypus_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__platypus_spawns.json"
+    },
+    {
+      "sha256": "59c5832a40ef0e7212a4d499862f931a5dfcd3ff6d68598153f1274191b0939d",
+      "size": 148,
+      "path": "config/alexsmobs/potoo_spawns.json",
+      "filename": "potoo_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__potoo_spawns.json"
+    },
+    {
+      "sha256": "2f353aa8720d03fbdef9d9e4932ecc4435b7923bbc72191fab6f46acb66d3a12",
+      "size": 3712,
+      "path": "config/alexsmobs/raccoon_spawns.json",
+      "filename": "raccoon_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__raccoon_spawns.json"
+    },
+    {
+      "sha256": "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124",
+      "size": 1252,
+      "path": "config/alexsmobs/rain_frog_spawns.json",
+      "filename": "rain_frog_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__rain_frog_spawns.json"
+    },
+    {
+      "sha256": "b8662bb3de9e2e5cc4af3773700fe6446c389980a80f6350f99d51f3fa2cef39",
+      "size": 1646,
+      "path": "config/alexsmobs/rattlesnake_spawns.json",
+      "filename": "rattlesnake_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__rattlesnake_spawns.json"
+    },
+    {
+      "sha256": "17a5c3263942410596f91fb0aece138e5115bfabfa2a5913a63406fcb64b42d0",
+      "size": 1050,
+      "path": "config/alexsmobs/rhinoceros_spawns.json",
+      "filename": "rhinoceros_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__rhinoceros_spawns.json"
+    },
+    {
+      "sha256": "b8662bb3de9e2e5cc4af3773700fe6446c389980a80f6350f99d51f3fa2cef39",
+      "size": 1646,
+      "path": "config/alexsmobs/roadrunner_spawns.json",
+      "filename": "roadrunner_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__roadrunner_spawns.json"
+    },
+    {
+      "sha256": "98dc351abc061685560adc82bd3ffa6e4c87d4faab81e9bb6a9e2a6f07cdb177",
+      "size": 673,
+      "path": "config/alexsmobs/rocky_roller_spawns.json",
+      "filename": "rocky_roller_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__rocky_roller_spawns.json"
+    },
+    {
+      "sha256": "4dca182ebef46ea0076b8e8066add18f69527cf2f81da83e77e0409127c92dc4",
+      "size": 1296,
+      "path": "config/alexsmobs/seagull_spawns.json",
+      "filename": "seagull_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__seagull_spawns.json"
+    },
+    {
+      "sha256": "ef706c1e2ba0b9356523f8aeb3679303ab98d85c9b761d0e55962e930be4d8e6",
+      "size": 877,
+      "path": "config/alexsmobs/seal_spawns.json",
+      "filename": "seal_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__seal_spawns.json"
+    },
+    {
+      "sha256": "0d8683c0a1b8176d4e89f88c4f3b1e6fbf6b269781497a190749904c7323eeec",
+      "size": 623,
+      "path": "config/alexsmobs/shoebill_spawns.json",
+      "filename": "shoebill_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__shoebill_spawns.json"
+    },
+    {
+      "sha256": "86aad88d05c283679e85900cab1bf3977d496849005ac068a14e40b93db35aa2",
+      "size": 374,
+      "path": "config/alexsmobs/skelewag_spawns.json",
+      "filename": "skelewag_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__skelewag_spawns.json"
+    },
+    {
+      "sha256": "f812e719afb24421c6853dacf4d1f66864305e335cfdf6193613d7c408ecab30",
+      "size": 276,
+      "path": "config/alexsmobs/skreecher.json",
+      "filename": "skreecher.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__skreecher.json"
+    },
+    {
+      "sha256": "01cc2eb4d92ba30b7301b9325a353cd96c5c7ff263c348795bfb34698cf8f11b",
+      "size": 2037,
+      "path": "config/alexsmobs/skunk_spawns.json",
+      "filename": "skunk_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__skunk_spawns.json"
+    },
+    {
+      "sha256": "fdf546af7c7ff2307d0862c0802450eef1e99554af3a340e7a6af69fa5785ea5",
+      "size": 1808,
+      "path": "config/alexsmobs/snow_leopard_spawns.json",
+      "filename": "snow_leopard_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__snow_leopard_spawns.json"
+    },
+    {
+      "sha256": "45407796e49769550eef92fd3953daa191c85aaf032fb2be32fe591b0199a172",
+      "size": 523,
+      "path": "config/alexsmobs/soul_vulture_spawns.json",
+      "filename": "soul_vulture_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__soul_vulture_spawns.json"
+    },
+    {
+      "sha256": "ca6e68bd3e74eb9cedcdbae4c82f594c4e85bdd54e1d0e35344a3febb9672980",
+      "size": 250,
+      "path": "config/alexsmobs/spectre_spawns.json",
+      "filename": "spectre_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__spectre_spawns.json"
+    },
+    {
+      "sha256": "5ee746cf50b358048a0243e4c45997285cf4a9b736758d388ad730d4ed493900",
+      "size": 664,
+      "path": "config/alexsmobs/straddler_spawns.json",
+      "filename": "straddler_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__straddler_spawns.json"
+    },
+    {
+      "sha256": "5ee746cf50b358048a0243e4c45997285cf4a9b736758d388ad730d4ed493900",
+      "size": 664,
+      "path": "config/alexsmobs/stradpole_spawns.json",
+      "filename": "stradpole_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__stradpole_spawns.json"
+    },
+    {
+      "sha256": "cec5208e2e9f12aa8ce13d0f6d34a18500a77d143441c9b511df21c623fe368f",
+      "size": 418,
+      "path": "config/alexsmobs/sugar_glider_spawns.json",
+      "filename": "sugar_glider_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__sugar_glider_spawns.json"
+    },
+    {
+      "sha256": "7b82ff39e191bd213cd8ecf06ff9a78c4658e6f6b9d8b48a4fcc4017e7268cb5",
+      "size": 3925,
+      "path": "config/alexsmobs/sunbird_spawns.json",
+      "filename": "sunbird_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__sunbird_spawns.json"
+    },
+    {
+      "sha256": "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124",
+      "size": 1252,
+      "path": "config/alexsmobs/tarantula_hawk_spawns.json",
+      "filename": "tarantula_hawk_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__tarantula_hawk_spawns.json"
+    },
+    {
+      "sha256": "40c769365424d492a4c17700bb8cfac4c8ce7fac2bc16728f0c4287e3a043130",
+      "size": 1908,
+      "path": "config/alexsmobs/tasmanian_devil_spawns.json",
+      "filename": "tasmanian_devil_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__tasmanian_devil_spawns.json"
+    },
+    {
+      "sha256": "b96f9e44f59f54b67460784fb1fdfa06d053f9ca9abb4fc3b04f222fd65ee958",
+      "size": 625,
+      "path": "config/alexsmobs/terrapin_spawns.json",
+      "filename": "terrapin_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__terrapin_spawns.json"
+    },
+    {
+      "sha256": "f88fc1b519759fe41347afca59030619365e173c577e8c1adfcb88777078d066",
+      "size": 1209,
+      "path": "config/alexsmobs/tiger_spawns.json",
+      "filename": "tiger_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__tiger_spawns.json"
+    },
+    {
+      "sha256": "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990",
+      "size": 1166,
+      "path": "config/alexsmobs/toucan_spawns.json",
+      "filename": "toucan_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__toucan_spawns.json"
+    },
+    {
+      "sha256": "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124",
+      "size": 1252,
+      "path": "config/alexsmobs/triops_spawns.json",
+      "filename": "triops_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__triops_spawns.json"
+    },
+    {
+      "sha256": "9ab4772704660c679ea30dff2db2c1272843e00675e2a7e610adcc6486120c3c",
+      "size": 882,
+      "path": "config/alexsmobs/tusklin_spawns.json",
+      "filename": "tusklin_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__tusklin_spawns.json"
+    },
+    {
+      "sha256": "97a67afb52f1398f2c55e2a74001e5b893394e28d3f0eb00695f049bdd19f204",
+      "size": 2085,
+      "path": "config/alexsmobs/underminer.json",
+      "filename": "underminer.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__underminer.json"
+    },
+    {
+      "sha256": "6712a2d6165ed52b7d251a8fc4cbfb6c1f834210a8bda82b55440402fd2d3273",
+      "size": 18,
+      "path": "config/alexsmobs/void_worm_spawns.json",
+      "filename": "void_worm_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__void_worm_spawns.json"
+    },
+    {
+      "sha256": "6712a2d6165ed52b7d251a8fc4cbfb6c1f834210a8bda82b55440402fd2d3273",
+      "size": 18,
+      "path": "config/alexsmobs/warped_mosco_spawns.json",
+      "filename": "warped_mosco_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__warped_mosco_spawns.json"
+    },
+    {
+      "sha256": "72126b26d7f3ae03b80df97dd103e0cec87d10829e86ac8b08da23abc7b318d8",
+      "size": 661,
+      "path": "config/alexsmobs/warped_toad_spawns.json",
+      "filename": "warped_toad_spawns.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__alexsmobs__warped_toad_spawns.json"
+    },
+    {
+      "sha256": "56840e4c6a265049bce2846b6c11d0267a6fafa1b72a75b9d7b9a94dc55c5022",
+      "size": 6502,
+      "path": "config/apotheosis/adventure.cfg",
+      "filename": "adventure.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__adventure.cfg"
+    },
+    {
+      "sha256": "7b78aadde067ed6ac31b87a0a28702c8d782a0dbc45a55fd7ab678772de3d15e",
+      "size": 1020,
+      "path": "config/apotheosis/apotheosis.cfg",
+      "filename": "apotheosis.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__apotheosis.cfg"
+    },
+    {
+      "sha256": "557cc1b6ba1369f5d2459054cc2b9e9f91c58b9cdecb0a3023a911b435b1a9c8",
+      "size": 465,
+      "path": "config/apotheosis/ench.cfg",
+      "filename": "ench.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__ench.cfg"
+    },
+    {
+      "sha256": "a14ac5f546ad3cbd4203b6fc6b9204846d97427a817286799ebf88009c9443ef",
+      "size": 190303,
+      "path": "config/apotheosis/enchantments.cfg",
+      "filename": "enchantments.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__enchantments.cfg"
+    },
+    {
+      "sha256": "dea4d260e6eac868297c0f9cd80545fd6b54f7344c678b89edda980a3fc5e8cf",
+      "size": 708,
+      "path": "config/apotheosis/garden.cfg",
+      "filename": "garden.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__garden.cfg"
+    },
+    {
+      "sha256": "b4beeacb183f0ad7c7339ec1ba67d43785fd03bbb6aa85a132d6140b4aa4d7f9",
+      "size": 178698,
+      "path": "config/apotheosis/names.cfg",
+      "filename": "names.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__names.cfg"
+    },
+    {
+      "sha256": "41cbb8ec035cdefaf47ca7ca71187b41eb8ce67905f825cc05e3c8dd8ba2702e",
+      "size": 815,
+      "path": "config/apotheosis/potion.cfg",
+      "filename": "potion.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__potion.cfg"
+    },
+    {
+      "sha256": "40913dd340992cb232ed886157673decf3a02a0faa28bb05caf55906da4f7f79",
+      "size": 1009,
+      "path": "config/apotheosis/spawner.cfg",
+      "filename": "spawner.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__spawner.cfg"
+    },
+    {
+      "sha256": "9c06164bad9a22d779a4986dc231071e7a9d3bc8f1d7d67fa277999e510d2a78",
+      "size": 787,
+      "path": "config/apotheosis/village.cfg",
+      "filename": "village.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__apotheosis__village.cfg"
+    },
+    {
+      "sha256": "dfae4a12bf924a5e12380032ff257ec535c6b003fef539a3893adb05c0a69c56",
+      "size": 551,
+      "path": "config/artifacts/client.json5",
+      "filename": "client.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__artifacts__client.json5"
+    },
+    {
+      "sha256": "736bec8c910558091bb749ac7adb013822a253a02f1f70637eb193952768d2b1",
+      "size": 1584,
+      "path": "config/artifacts/common.json5",
+      "filename": "common.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__artifacts__common.json5"
+    },
+    {
+      "sha256": "0ea0a367e15ae00ff22700c63e8aea04b708af3e71196a3146a4fafa33b290e3",
+      "size": 609,
+      "path": "config/bc_particle/config.json5",
+      "filename": "config.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bc_particle__config.json5"
+    },
+    {
+      "sha256": "e6f25132180339d5b7f53c1f5473f28cdf743f76292bc8f87142e4b0300e0f2c",
+      "size": 546,
+      "path": "config/bettercaves/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercaves__README.txt"
+    },
+    {
+      "sha256": "ad0e43cd1d8fff16d76ff6036699bd67598ff8bc18220b7e8e951245c92cf139",
+      "size": 168,
+      "path": "config/bettercaves/forge-1_20_1/liquidregions.json",
+      "filename": "liquidregions.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercaves__forge-1_20_1__liquidregions.json"
+    },
+    {
+      "sha256": "1dc29f3ad9f62887f2667aeaed28c3fd3a2520055382ecb3636e3cb9ea563baa",
+      "size": 743,
+      "path": "config/bettercaves/forge-1_20_1/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercaves__forge-1_20_1__README.txt"
+    },
+    {
+      "sha256": "754feb4474a3f4d9fe6bd08f38c248fd5a796ed51f38d7d5704680250f3a34ca",
+      "size": 2995,
+      "path": "config/bettercombat/fallback_compatibility.json",
+      "filename": "fallback_compatibility.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercombat__fallback_compatibility.json"
+    },
+    {
+      "sha256": "cdf806c0ace89872a439f44f383132ed75003ae3445d55faa02a5f5b29aad4ef",
+      "size": 5268,
+      "path": "config/bettercombat/server.json5",
+      "filename": "server.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercombat__server.json5"
+    },
+    {
+      "sha256": "3646bc39be8c42a1432506e77721f3b963d33948d4bbd4cd5a10703834979116",
+      "size": 722,
+      "path": "config/betterdeserttemples/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdeserttemples__README.txt"
+    },
+    {
+      "sha256": "bc0a2d0f16c8ce12a9cca46f2973cc725f5e6d7a4ba5cd8d924d06b0a15da527",
+      "size": 1104,
+      "path": "config/betterdeserttemples/forge-1_20/armorstands.json",
+      "filename": "armorstands.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdeserttemples__forge-1_20__armorstands.json"
+    },
+    {
+      "sha256": "9177ea77e522ea6ac8ce3ea0b8b5ba8d98e824f21af0da121e7cbcd78bdc8f34",
+      "size": 614,
+      "path": "config/betterdeserttemples/forge-1_20/itemframes.json",
+      "filename": "itemframes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdeserttemples__forge-1_20__itemframes.json"
+    },
+    {
+      "sha256": "80ba474fdd1912739a1dc3326de6539ccfceb9d5c97f540131b567e295a7b112",
+      "size": 1683,
+      "path": "config/betterdeserttemples/forge-1_20/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterdeserttemples__forge-1_20__README.txt"
+    },
+    {
+      "sha256": "70c4264947f42dd780d476f3d36966c2d01c23d6f089d98c317f8a820e4040ee",
+      "size": 871,
+      "path": "config/betterfortresses/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterfortresses__README.txt"
+    },
+    {
+      "sha256": "ec8cb16a102f7142ae8687f2f26344ebd9d416fadc89b05a8b0e783da4ad41e7",
+      "size": 901,
+      "path": "config/betterfortresses/forge-1_20/itemframes.json",
+      "filename": "itemframes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterfortresses__forge-1_20__itemframes.json"
+    },
+    {
+      "sha256": "1175dbf9cd2e7c91b1c852a51e3c0203c68484917e877465b283e2370ad62864",
+      "size": 1339,
+      "path": "config/betterfortresses/forge-1_20/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterfortresses__forge-1_20__README.txt"
+    },
+    {
+      "sha256": "fa89bc39ee43668a4255c74734c567dfae7bf78f77c9f10eb7372db201db71ef",
+      "size": 6492,
+      "path": "config/bettermobcombat/server.json5",
+      "filename": "server.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettermobcombat__server.json5"
+    },
+    {
+      "sha256": "13c5f6bd52bf778533a100453d8b295802f923109e0a2951446a00674113700b",
+      "size": 707,
+      "path": "config/betterstrongholds/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__README.txt"
+    },
+    {
+      "sha256": "eaf04d7a567a6d626da397756bda2c56005ca2fb68ac19f3717e5803c3114b94",
+      "size": 1131,
+      "path": "config/betterstrongholds/forge-1_20/armorstands.json",
+      "filename": "armorstands.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__forge-1_20__armorstands.json"
+    },
+    {
+      "sha256": "7e08d0219cd3a13987feb18916aeeb4a0314713d732eff08832986dccef1aed2",
+      "size": 680,
+      "path": "config/betterstrongholds/forge-1_20/itemframes.json",
+      "filename": "itemframes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__forge-1_20__itemframes.json"
+    },
+    {
+      "sha256": "659893b0bcc7da7037e62d1b6090573a44948f2ffddd675d3bd77ba7d797622f",
+      "size": 346,
+      "path": "config/betterstrongholds/forge-1_20/ores.json",
+      "filename": "ores.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__forge-1_20__ores.json"
+    },
+    {
+      "sha256": "89a9e8ca3be505dbf6d91ee5d287f79ba5c93699a074da4bcf3b7ad9303c5f9d",
+      "size": 238,
+      "path": "config/betterstrongholds/forge-1_20/rareblocks.json",
+      "filename": "rareblocks.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__forge-1_20__rareblocks.json"
+    },
+    {
+      "sha256": "5aad271e60a03218eb5207dd78df8d1d36c676f212bf823701e33646010d2f19",
+      "size": 2830,
+      "path": "config/betterstrongholds/forge-1_20/README.txt",
+      "filename": "README.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterstrongholds__forge-1_20__README.txt"
+    },
+    {
+      "sha256": "6e81cf8f8ffd55004413d05e2579a63613d39a180bf5a4ff67ffa98ec44b1aa9",
+      "size": 2101,
+      "path": "config/biomesoplenty/biome_toggles.json",
+      "filename": "biome_toggles.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__biome_toggles.json"
+    },
+    {
+      "sha256": "4d2c61e691eb5e07dbea9c8dd3b03073911d01558ff741073561b5b4328f87fd",
+      "size": 108,
+      "path": "config/biomesoplenty/gameplay.toml",
+      "filename": "gameplay.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__gameplay.toml"
+    },
+    {
+      "sha256": "7d7e35202be844efd2180db1f6d799938218a750d30a98fe00b062aa142302d0",
+      "size": 510,
+      "path": "config/biomesoplenty/generation.toml",
+      "filename": "generation.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__generation.toml"
+    },
+    {
+      "sha256": "c7384a22595488f79f3125b22cc175eb729267267807a084479419349797abc8",
+      "size": 146,
+      "path": "config/chunky/config.json",
+      "filename": "config.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__config.json"
+    },
+    {
+      "sha256": "bddeff5a95a00aaed5c3d2a37bc73d81a1a69a31377f251330aca1265be6945a",
+      "size": 76741,
+      "path": "config/collective/entity_names.json",
+      "filename": "entity_names.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__collective__entity_names.json"
+    },
+    {
+      "sha256": "41541c8bde94015ae8d524a38676f3439a076d99eb8d6db3a6a64615fe661f60",
+      "size": 275,
+      "path": "config/combatdash/combatdash Client.toml",
+      "filename": "combatdash Client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash Client.toml"
+    },
+    {
+      "sha256": "1657159a0b82091c4e7257d29aa2fc7d18ab6a614a316748d1c6b0dc914296ac",
+      "size": 701,
+      "path": "config/combatdash/combatdash Server.toml",
+      "filename": "combatdash Server.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash Server.toml"
+    },
+    {
+      "sha256": "b807ca9ebe5ca5e45c8367b08cb97a08aa73181b66da4ab7c9f92e02200ca01e",
+      "size": 396,
+      "path": "config/combatroll/enchantments.json",
+      "filename": "enchantments.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatroll__enchantments.json"
+    },
+    {
+      "sha256": "6c3ec2b2926b78c73dddf0cfedaf483efb7c3fe8a093f557e560ab280a0683f4",
+      "size": 1280,
+      "path": "config/combatroll/server.json5",
+      "filename": "server.json5",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatroll__server.json5"
+    },
+    {
+      "sha256": "4f0ad3cd5b8a5026cd856fd5c897b5bb428db86b89aaf3f3de5e43fbbe1501e0",
+      "size": 2769,
+      "path": "config/endinglib/endinglib-command.toml",
+      "filename": "endinglib-command.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__endinglib__endinglib-command.toml"
+    },
+    {
+      "sha256": "62820d049e23141d3c9066820430e89e5c74125d9dcfeabd2d8e3af9019b878f",
+      "size": 141,
+      "path": "config/endinglib/endinglib-common.toml",
+      "filename": "endinglib-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__endinglib__endinglib-common.toml"
+    },
+    {
+      "sha256": "3a05578b3f71a0bc20af3df05f16c99ace86fda8ebb963df80119086efe4fa23",
+      "size": 168,
+      "path": "config/endinglib/advanced/endinglib-common.toml",
+      "filename": "endinglib-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__endinglib__advanced__endinglib-common.toml"
+    },
+    {
+      "sha256": "331f069e2ed6b7ff108bc0acc01131e507de78e02bca93ba83cffaeb71cf0065",
+      "size": 290,
+      "path": "config/fabric/indigo-renderer.properties",
+      "filename": "indigo-renderer.properties",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fabric__indigo-renderer.properties"
+    },
+    {
+      "sha256": "ff492043eaf454c46e949d5eef32ece90cc5a19feb50a161dd29a43b5732c880",
+      "size": 51,
+      "path": "config/fancymenu/custom_gui_screens.txt",
+      "filename": "custom_gui_screens.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__custom_gui_screens.txt"
+    },
+    {
+      "sha256": "535db450a125a856472e38d6c9cd7ed94961e83a9c19fcaab25c6b6ccb515c60",
+      "size": 26,
+      "path": "config/fancymenu/customizablemenus.txt",
+      "filename": "customizablemenus.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__customizablemenus.txt"
+    },
+    {
+      "sha256": "9a25d3dc708e43eabafce5479a13c02dae15bc7f673afb2745b8b2ba48a97dc0",
+      "size": 42,
+      "path": "config/fancymenu/legacy_checklist.txt",
+      "filename": "legacy_checklist.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__legacy_checklist.txt"
+    },
+    {
+      "sha256": "94207c2272a0a28b70720c967cd52f49e4d06d7aecf61b3fa687c505e06e08f6",
+      "size": 4398,
+      "path": "config/fancymenu/options.txt",
+      "filename": "options.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__options.txt"
+    },
+    {
+      "sha256": "3d7d4cda73d6bde134a568ccbe4e8d2e7fbe701570012b71fa45acdb2258c823",
+      "size": 23,
+      "path": "config/fancymenu/user_variables.db",
+      "filename": "user_variables.db",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__user_variables.db"
+    },
+    {
+      "sha256": "993c16664fe2d1b9e8ad107bf1c19c1dbb244729c403ed058ca2e54616dc5452",
+      "size": 9349,
+      "path": "config/fancymenu/ui_themes/cherry_blossom.json",
+      "filename": "cherry_blossom.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__cherry_blossom.json"
+    },
+    {
+      "sha256": "1e7505231b9d99e6315845043ce810dfc7004ce1d8f5a4ceddb4ecb96c03ac50",
+      "size": 9347,
+      "path": "config/fancymenu/ui_themes/cozy_campfire.json",
+      "filename": "cozy_campfire.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__cozy_campfire.json"
+    },
+    {
+      "sha256": "54316a2b309ddb472b9133f8ccb8694dce9b57be6ebcfb3c2e9d1bbfdade3f26",
+      "size": 9359,
+      "path": "config/fancymenu/ui_themes/dark_high_contrast.json",
+      "filename": "dark_high_contrast.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__dark_high_contrast.json"
+    },
+    {
+      "sha256": "01e2a3b5d250c0259a7f97f0d353785bfeab6d7ee2e147c16bb910f1d23e9498",
+      "size": 9329,
+      "path": "config/fancymenu/ui_themes/dark.json",
+      "filename": "dark.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__dark.json"
+    },
+    {
+      "sha256": "7c96ba2f2cb4d59d20eaf88960de7a9308ce8a3460c4e1757e07c42e174ea65a",
+      "size": 9361,
+      "path": "config/fancymenu/ui_themes/light_high_contrast.json",
+      "filename": "light_high_contrast.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__light_high_contrast.json"
+    },
+    {
+      "sha256": "a05e95f7b62f338049fe0045d9a6a50060d3aba52d5ab83ac1ed6ff55cac1153",
+      "size": 9331,
+      "path": "config/fancymenu/ui_themes/light.json",
+      "filename": "light.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__light.json"
+    },
+    {
+      "sha256": "7c6a5d5b19e53ca2f88371c2e867f51339b045697aab29864df5877a6bba9311",
+      "size": 9345,
+      "path": "config/fancymenu/ui_themes/pumpkin_soup.json",
+      "filename": "pumpkin_soup.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__pumpkin_soup.json"
+    },
+    {
+      "sha256": "fa63577441fd576ebac90ecf06b7ded376cbf80ca5103d398bc9a73a25c6c2c0",
+      "size": 9343,
+      "path": "config/fancymenu/ui_themes/purple_void.json",
+      "filename": "purple_void.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__purple_void.json"
+    },
+    {
+      "sha256": "cfa46554bbb027efe3c2184a073ee652000acac2500cd5136764f901355ec0cd",
+      "size": 9347,
+      "path": "config/fancymenu/ui_themes/spooky_season.json",
+      "filename": "spooky_season.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__ui_themes__spooky_season.json"
+    },
+    {
+      "sha256": "26ac5810c9b5dc5c1968827357f0a58c58ac2b6f7b082630960228e16585062f",
+      "size": 6403,
+      "path": "config/fzzy_config/keybinds.toml",
+      "filename": "keybinds.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fzzy_config__keybinds.toml"
+    },
+    {
+      "sha256": "3293abbffa782fff5952fac5f92a64e4298f826ea7af4c5fa0592eacf8262f0b",
+      "size": 50424,
+      "path": "config/goety/goety-attributes.toml",
+      "filename": "goety-attributes.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-attributes.toml"
+    },
+    {
+      "sha256": "f1a4d5af41446646c9bc7a4b28ad251b0a4e31fe5539c67ebe845d1cebb4e89a",
+      "size": 12852,
+      "path": "config/goety/goety-brews.toml",
+      "filename": "goety-brews.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-brews.toml"
+    },
+    {
+      "sha256": "87eca01918f499330d55aac46f9bd7881f07399c778958ae20b771c5fff384c2",
+      "size": 21169,
+      "path": "config/goety/goety-items.toml",
+      "filename": "goety-items.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-items.toml"
+    },
+    {
+      "sha256": "0dd0ccd92d65e01606e2cc29c86aecd1d2698c9e2a310d759b388fea3163ca2b",
+      "size": 39527,
+      "path": "config/goety/goety-mobs.toml",
+      "filename": "goety-mobs.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-mobs.toml"
+    },
+    {
+      "sha256": "6431879d266ee191060e655137f038194031a686b8f6ec94968bcd6ab839c4ec",
+      "size": 55404,
+      "path": "config/goety/goety-spells.toml",
+      "filename": "goety-spells.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety-spells.toml"
+    },
+    {
+      "sha256": "d055d59522a041bbb657376e41b0fba32bfce38a43072d0890033004802d5470",
+      "size": 11519,
+      "path": "config/goety/goety.toml",
+      "filename": "goety.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__goety__goety.toml"
+    },
+    {
+      "sha256": "8c44f2cf4903712ff88743373cd6893b31226af031f9822ec63ae337abdbb4b0",
+      "size": 767,
+      "path": "config/iceandfire/amphithere_biomes.json",
+      "filename": "amphithere_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__amphithere_biomes.json"
+    },
+    {
+      "sha256": "d01094612d9d8a48e99809522ff7e009bc1ec7e03a57e0f5f8c9cd51ef44b0bb",
+      "size": 907,
+      "path": "config/iceandfire/cockatrice_biomes.json",
+      "filename": "cockatrice_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__cockatrice_biomes.json"
+    },
+    {
+      "sha256": "0ec4ed27179c0a74651de2fe91cc17024ca05bd598b7f8043ebb794ad6d16a3a",
+      "size": 610,
+      "path": "config/iceandfire/cyclops_cave_biomes.json",
+      "filename": "cyclops_cave_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__cyclops_cave_biomes.json"
+    },
+    {
+      "sha256": "119e3398276786acafe198ebf3fd62d62e0e62e544ec74980c32bf0356c6f0c9",
+      "size": 1369,
+      "path": "config/iceandfire/deathworm_biomes.json",
+      "filename": "deathworm_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__deathworm_biomes.json"
+    },
+    {
+      "sha256": "119e3398276786acafe198ebf3fd62d62e0e62e544ec74980c32bf0356c6f0c9",
+      "size": 1369,
+      "path": "config/iceandfire/desert_myrmex_biomes.json",
+      "filename": "desert_myrmex_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__desert_myrmex_biomes.json"
+    },
+    {
+      "sha256": "0366d55cbee86bf899cd68bee919b8b07f0925a44943a1fab08ffb89505fbeb7",
+      "size": 2113,
+      "path": "config/iceandfire/fire_dragon_biomes.json",
+      "filename": "fire_dragon_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__fire_dragon_biomes.json"
+    },
+    {
+      "sha256": "0366d55cbee86bf899cd68bee919b8b07f0925a44943a1fab08ffb89505fbeb7",
+      "size": 2113,
+      "path": "config/iceandfire/fire_dragon_cave_biomes.json",
+      "filename": "fire_dragon_cave_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__fire_dragon_cave_biomes.json"
+    },
+    {
+      "sha256": "119e3398276786acafe198ebf3fd62d62e0e62e544ec74980c32bf0356c6f0c9",
+      "size": 1369,
+      "path": "config/iceandfire/fire_dragon_skeleton_biomes.json",
+      "filename": "fire_dragon_skeleton_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__fire_dragon_skeleton_biomes.json"
+    },
+    {
+      "sha256": "0a1b2ea4da236463e214dd7eed0a7837df420c3957ad61434d65995111a67b9a",
+      "size": 277,
+      "path": "config/iceandfire/fire_lily_biomes.json",
+      "filename": "fire_lily_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__fire_lily_biomes.json"
+    },
+    {
+      "sha256": "071e4cf9db64d5771b17d2487d8229562311c584ce56a824abb478f2cc00a911",
+      "size": 255,
+      "path": "config/iceandfire/forest_troll_biomes.json",
+      "filename": "forest_troll_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__forest_troll_biomes.json"
+    },
+    {
+      "sha256": "91d500462895af7576de5eb64efd00faed857504f9eefe56cfa418a28ae34001",
+      "size": 624,
+      "path": "config/iceandfire/frost_lily_biomes.json",
+      "filename": "frost_lily_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__frost_lily_biomes.json"
+    },
+    {
+      "sha256": "0ec4ed27179c0a74651de2fe91cc17024ca05bd598b7f8043ebb794ad6d16a3a",
+      "size": 610,
+      "path": "config/iceandfire/gorgon_temple_biomes.json",
+      "filename": "gorgon_temple_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__gorgon_temple_biomes.json"
+    },
+    {
+      "sha256": "44810e5361d38ad87b5028ffaf139832bcbce16c55898de796e79dd86b99d7ab",
+      "size": 467,
+      "path": "config/iceandfire/graveyard_biomes.json",
+      "filename": "graveyard_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__graveyard_biomes.json"
+    },
+    {
+      "sha256": "e33237977094c9d26012e2a1883c75ff7062ca16d43f2c9a66f4ceb5d92d2fc0",
+      "size": 254,
+      "path": "config/iceandfire/hippocampus_biomes.json",
+      "filename": "hippocampus_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippocampus_biomes.json"
+    },
+    {
+      "sha256": "8a199a14a2abf91b76855781bd37ed146491e896fd05ba714a806bc47b2c1657",
+      "size": 855,
+      "path": "config/iceandfire/hippogryph_biomes.json",
+      "filename": "hippogryph_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_biomes.json"
+    },
+    {
+      "sha256": "c482e650dee2fc71d0ba8726ebea20d78b9e345865449c57d5717ed55af05b37",
+      "size": 279,
+      "path": "config/iceandfire/hippogryph_black_biomes.json",
+      "filename": "hippogryph_black_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_black_biomes.json"
+    },
+    {
+      "sha256": "a05e7cbe7541bff74314da9b23976b072e727387185840645e60f5eb98e989be",
+      "size": 486,
+      "path": "config/iceandfire/hippogryph_brown_biomes.json",
+      "filename": "hippogryph_brown_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_brown_biomes.json"
+    },
+    {
+      "sha256": "88466c293acef0b7725de96c7d21747948769d2e6b33e952d4c204472c898ecd",
+      "size": 601,
+      "path": "config/iceandfire/hippogryph_chestnut_biomes.json",
+      "filename": "hippogryph_chestnut_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_chestnut_biomes.json"
+    },
+    {
+      "sha256": "dd16c76d368fd696927c4d5b5cee80f682c0e7fe057af1a93e6cc9059b5abaab",
+      "size": 286,
+      "path": "config/iceandfire/hippogryph_creamy_biomes.json",
+      "filename": "hippogryph_creamy_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_creamy_biomes.json"
+    },
+    {
+      "sha256": "a77dad8b397928fb3b1d9b249b586b8103f866790d215b9bed549add0fa6f3db",
+      "size": 1050,
+      "path": "config/iceandfire/hippogryph_dark_brown_biomes.json",
+      "filename": "hippogryph_dark_brown_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_dark_brown_biomes.json"
+    },
+    {
+      "sha256": "dbb0b4d04fe34c05a26f26df87d21967a4f6090670cfd6194e6de9badf254a1b",
+      "size": 418,
+      "path": "config/iceandfire/hippogryph_gray_biomes.json",
+      "filename": "hippogryph_gray_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_gray_biomes.json"
+    },
+    {
+      "sha256": "172c79ed677b97663434c8bd90311802556489bcb8afb5fe246f5c8cac840ea4",
+      "size": 1249,
+      "path": "config/iceandfire/hippogryph_white_biomes.json",
+      "filename": "hippogryph_white_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hippogryph_white_biomes.json"
+    },
+    {
+      "sha256": "ae56c23cf566a2fd020dfa6dd2acbbc4ca7770ee98223fd293b0bd0290fd816a",
+      "size": 747,
+      "path": "config/iceandfire/hydra_cave_biomes.json",
+      "filename": "hydra_cave_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__hydra_cave_biomes.json"
+    },
+    {
+      "sha256": "31c08e6b056b55ed9afc91ab57f11c8e0806f9d5859886445de0acf5fd35035b",
+      "size": 534,
+      "path": "config/iceandfire/ice_dragon_biomes.json",
+      "filename": "ice_dragon_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__ice_dragon_biomes.json"
+    },
+    {
+      "sha256": "31c08e6b056b55ed9afc91ab57f11c8e0806f9d5859886445de0acf5fd35035b",
+      "size": 534,
+      "path": "config/iceandfire/ice_dragon_cave_biomes.json",
+      "filename": "ice_dragon_cave_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__ice_dragon_cave_biomes.json"
+    },
+    {
+      "sha256": "91d500462895af7576de5eb64efd00faed857504f9eefe56cfa418a28ae34001",
+      "size": 624,
+      "path": "config/iceandfire/ice_dragon_skeleton_biomes.json",
+      "filename": "ice_dragon_skeleton_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__ice_dragon_skeleton_biomes.json"
+    },
+    {
+      "sha256": "8c44f2cf4903712ff88743373cd6893b31226af031f9822ec63ae337abdbb4b0",
+      "size": 767,
+      "path": "config/iceandfire/jungle_myrmex_biomes.json",
+      "filename": "jungle_myrmex_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__jungle_myrmex_biomes.json"
+    },
+    {
+      "sha256": "65ba1662b1a2c9b6f97c6a0f108ee1d1d0e928226d7fc1a05634e0a55329bbbf",
+      "size": 1748,
+      "path": "config/iceandfire/lightning_dragon_biomes.json",
+      "filename": "lightning_dragon_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__lightning_dragon_biomes.json"
+    },
+    {
+      "sha256": "65ba1662b1a2c9b6f97c6a0f108ee1d1d0e928226d7fc1a05634e0a55329bbbf",
+      "size": 1748,
+      "path": "config/iceandfire/lightning_dragon_cave_biomes.json",
+      "filename": "lightning_dragon_cave_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__lightning_dragon_cave_biomes.json"
+    },
+    {
+      "sha256": "d01094612d9d8a48e99809522ff7e009bc1ec7e03a57e0f5f8c9cd51ef44b0bb",
+      "size": 907,
+      "path": "config/iceandfire/lightning_dragon_skeleton_biomes.json",
+      "filename": "lightning_dragon_skeleton_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__lightning_dragon_skeleton_biomes.json"
+    },
+    {
+      "sha256": "d01094612d9d8a48e99809522ff7e009bc1ec7e03a57e0f5f8c9cd51ef44b0bb",
+      "size": 907,
+      "path": "config/iceandfire/lightning_lily_biomes.json",
+      "filename": "lightning_lily_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__lightning_lily_biomes.json"
+    },
+    {
+      "sha256": "183480a63bca5a487b31b28b0ec742fb21f3115a6a1de2f38f0f6daf81d46e3e",
+      "size": 728,
+      "path": "config/iceandfire/mausoleum_biomes.json",
+      "filename": "mausoleum_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__mausoleum_biomes.json"
+    },
+    {
+      "sha256": "a05e7cbe7541bff74314da9b23976b072e727387185840645e60f5eb98e989be",
+      "size": 486,
+      "path": "config/iceandfire/mountain_troll_biomes.json",
+      "filename": "mountain_troll_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__mountain_troll_biomes.json"
+    },
+    {
+      "sha256": "e7855fa7d73f4d3af77f47ddd70b4fcbab7862302d004b4ddae9dddc75c4e402",
+      "size": 145,
+      "path": "config/iceandfire/ore_gen_biomes.json",
+      "filename": "ore_gen_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__ore_gen_biomes.json"
+    },
+    {
+      "sha256": "f363deb6b29d728bacaaf301fa456a393f8ce0498bde963884368956eb42ffdb",
+      "size": 2194,
+      "path": "config/iceandfire/pixie_village_biomes.json",
+      "filename": "pixie_village_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__pixie_village_biomes.json"
+    },
+    {
+      "sha256": "91d500462895af7576de5eb64efd00faed857504f9eefe56cfa418a28ae34001",
+      "size": 624,
+      "path": "config/iceandfire/sapphire_gen_biomes.json",
+      "filename": "sapphire_gen_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__sapphire_gen_biomes.json"
+    },
+    {
+      "sha256": "e33237977094c9d26012e2a1883c75ff7062ca16d43f2c9a66f4ceb5d92d2fc0",
+      "size": 254,
+      "path": "config/iceandfire/sea_serpent_biomes.json",
+      "filename": "sea_serpent_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__sea_serpent_biomes.json"
+    },
+    {
+      "sha256": "e33237977094c9d26012e2a1883c75ff7062ca16d43f2c9a66f4ceb5d92d2fc0",
+      "size": 254,
+      "path": "config/iceandfire/siren_biomes.json",
+      "filename": "siren_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__siren_biomes.json"
+    },
+    {
+      "sha256": "7b0d7d7459b06d0f5a01e0d3cb803d534f9b654ad3b4d9e336f0f50fbe06f4d7",
+      "size": 250,
+      "path": "config/iceandfire/snowy_troll_biomes.json",
+      "filename": "snowy_troll_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__snowy_troll_biomes.json"
+    },
+    {
+      "sha256": "ae56c23cf566a2fd020dfa6dd2acbbc4ca7770ee98223fd293b0bd0290fd816a",
+      "size": 747,
+      "path": "config/iceandfire/stymphalian_bird_biomes.json",
+      "filename": "stymphalian_bird_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__stymphalian_bird_biomes.json"
+    },
+    {
+      "sha256": "46fb4b80eb9d9667223509ea17aa4b5aa65851f3cb09c09886d6b9dde1a63601",
+      "size": 632,
+      "path": "config/iceandfire/wandering_cyclops_biomes.json",
+      "filename": "wandering_cyclops_biomes.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__wandering_cyclops_biomes.json"
+    },
+    {
+      "sha256": "7a8fd5e37e183cccd59a72a4af0b9e1fe1b4d930cd034b2f11da7307a8741580",
+      "size": 257,
+      "path": "config/irons_spellbooks_spell_config/global_config.json",
+      "filename": "global_config.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__irons_spellbooks_spell_config__global_config.json"
+    },
+    {
+      "sha256": "541980774266d09df56b33352ca4d5bdd54f38f2a237577e7738706d7d926313",
+      "size": 683,
+      "path": "config/irons_spellbooks_spell_config/irons_spellbooks/example.txt",
+      "filename": "example.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__irons_spellbooks_spell_config__irons_spellbooks__example.txt"
+    },
+    {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2,
+      "path": "config/jade/server-plugin-overrides.json",
+      "filename": "server-plugin-overrides.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jade__server-plugin-overrides.json"
+    },
+    {
+      "sha256": "3b39339cdb0eebfcd93b4225286889d730474a19a92966523fbd7726da330476",
+      "size": 1145,
+      "path": "config/jade/sort-order.json",
+      "filename": "sort-order.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jade__sort-order.json"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "path": "config/jamlib/known_suspicious_jars.txt",
+      "filename": "known_suspicious_jars.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jamlib__known_suspicious_jars.txt"
+    },
+    {
+      "sha256": "45da374d3f826ff85a33027d64ff84010d66d4987e6d7ebf488b207e847ca4ec",
+      "size": 1048,
+      "path": "config/mobbility/combat_roll.toml",
+      "filename": "combat_roll.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mobbility__combat_roll.toml"
+    },
+    {
+      "sha256": "ae4a9975a6c3e931365f7ba3f219b3287c00a0013042efcd99b44cf5d3cd7259",
+      "size": 19101,
+      "path": "config/mobbility/irons_spellbooks.toml",
+      "filename": "irons_spellbooks.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mobbility__irons_spellbooks.toml"
+    },
+    {
+      "sha256": "499bef437f202399f1f780d421e2f9c2443c454f2dd25dd2a4f2f6a2e05d3a9f",
+      "size": 814,
+      "path": "config/mobbility/mobbility.toml",
+      "filename": "mobbility.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mobbility__mobbility.toml"
+    },
+    {
+      "sha256": "e99a0254d93ce376a26f711927592d00415b43ff35ec888c968166a37d4f91ce",
+      "size": 10002,
+      "path": "config/mobbility/spellcategories.toml",
+      "filename": "spellcategories.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__mobbility__spellcategories.toml"
+    },
+    {
+      "sha256": "f2a1b5e8545b2e0bf1e9905497f4c7622dd691fcdc7ee62f82c1d777c04c73ac",
+      "size": 430,
+      "path": "config/modpack-update-checker/config.json",
+      "filename": "config.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__modpack-update-checker__config.json"
+    },
+    {
+      "sha256": "548156b84adda7e833d8f8d0cc5dd82dff1ba23a93011c4770ad548f1b9c82b0",
+      "size": 42,
+      "path": "config/puffish_skills/config.json",
+      "filename": "config.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__puffish_skills__config.json"
+    },
+    {
+      "sha256": "bf48349ea3ba4676504ebc2dc70d736607f6222f6831628135cf66dc30a1bd14",
+      "size": 191,
+      "path": "config/revelationfix/goety-modify-client.toml",
+      "filename": "goety-modify-client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__goety-modify-client.toml"
+    },
+    {
+      "sha256": "cf131d1c37973821917c3da5332933b70143dae90e86590d7b560012378c372f",
+      "size": 913,
+      "path": "config/revelationfix/goety-modify-common.toml",
+      "filename": "goety-modify-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__goety-modify-common.toml"
+    },
+    {
+      "sha256": "1b6654bbb0ae3269c0a16b56a32ee969cd0b30c9e407ad16640d92e90b590d1a",
+      "size": 1290,
+      "path": "config/revelationfix/revelationfix-block.toml",
+      "filename": "revelationfix-block.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__revelationfix-block.toml"
+    },
+    {
+      "sha256": "09bfb9de2cff8b11e2ec40d729e2b46120977d183b80ab1ca8d38c495d9a5571",
+      "size": 3043,
+      "path": "config/revelationfix/revelationfix-common.toml",
+      "filename": "revelationfix-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__revelationfix-common.toml"
+    },
+    {
+      "sha256": "937a1d5ab6005c2b0655860b6e75f6de40d4598ba873500ee8ec1867a42761ce",
+      "size": 3793,
+      "path": "config/revelationfix/revelationfix-item.toml",
+      "filename": "revelationfix-item.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__revelationfix-item.toml"
+    },
+    {
+      "sha256": "68c0515af82a3097084690ce88fcb68c496a5fe8bbdad2a9c67b170e2f8000d9",
+      "size": 626,
+      "path": "config/revelationfix/revelationfix-modpack-common.toml",
+      "filename": "revelationfix-modpack-common.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__revelationfix__revelationfix-modpack-common.toml"
+    },
+    {
+      "sha256": "5747bca234563bdc83973065621a20c5b598e0f8410ec304334ab3285b99da36",
+      "size": 471,
+      "path": "config/sereneseasons/fertility.toml",
+      "filename": "fertility.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__fertility.toml"
+    },
+    {
+      "sha256": "095714e7b1fa69af2a4f86ab0508a8f232c7a5e8e81eed116ca3c59694521d29",
+      "size": 6550,
+      "path": "config/sereneseasons/seasons.toml",
+      "filename": "seasons.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sereneseasons__seasons.toml"
+    },
+    {
+      "sha256": "d9d37a9c19cd389e74fe0d14227b84671fd4136861c7b8dbff31dcf98ceeb77d",
+      "size": 10569,
+      "path": "config/servercore/config.yml",
+      "filename": "config.yml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__servercore__config.yml"
+    },
+    {
+      "sha256": "299965ce464b4c0bb4a79dfd2dba2cdfd63f3360628b0d5b0d3b3988003f4f0d",
+      "size": 1204,
+      "path": "config/servercore/optimizations.yml",
+      "filename": "optimizations.yml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__servercore__optimizations.yml"
+    },
+    {
+      "sha256": "e7a5c5756ccadd5d968049a8820c83dce700d7d478a843385688d38d135a9217",
+      "size": 11974,
+      "path": "config/simplyswords/compatibility.toml",
+      "filename": "compatibility.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__compatibility.toml"
+    },
+    {
+      "sha256": "4f911868905452dc01a779d424fe298c583cc31ae57b0c76157c806f70c38727",
+      "size": 3651,
+      "path": "config/simplyswords/gem_powers.toml",
+      "filename": "gem_powers.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__gem_powers.toml"
+    },
+    {
+      "sha256": "0452c273bf163f178c6b03663070a9d732a63e3fecbb28b3fd4fb45dd3c6eafa",
+      "size": 873,
+      "path": "config/simplyswords/general.toml",
+      "filename": "general.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__general.toml"
+    },
+    {
+      "sha256": "d34c7814baa027aa67fde721f3a437bcb6b3e9a89f0245970fd1489525ef5620",
+      "size": 106,
+      "path": "config/simplyswords/gui.toml",
+      "filename": "gui.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__gui.toml"
+    },
+    {
+      "sha256": "d4a49a7f776392a6643171d6b440c0afb897b285ba88c44aa8386b2aa2c9d55a",
+      "size": 1314,
+      "path": "config/simplyswords/loot.toml",
+      "filename": "loot.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__loot.toml"
+    },
+    {
+      "sha256": "978429e6e9aa6852c38d67cc221d7d71d8502b92df3a5803ff8c3b6966c890ce",
+      "size": 85,
+      "path": "config/simplyswords/status_effects.toml",
+      "filename": "status_effects.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__status_effects.toml"
+    },
+    {
+      "sha256": "7bc78411abd8406bf6ffd41b4e93adb2b4d2922e71e6c99357b8d0ef666e6792",
+      "size": 16376,
+      "path": "config/simplyswords/unique_effects.toml",
+      "filename": "unique_effects.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__unique_effects.toml"
+    },
+    {
+      "sha256": "7880be9f01875cd9e99c653c5afb1c41d98a9e649657f08bd47e702895fe133b",
+      "size": 4777,
+      "path": "config/simplyswords/weapon_attributes.toml",
+      "filename": "weapon_attributes.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplyswords__weapon_attributes.toml"
+    },
+    {
+      "sha256": "3e5b250f6fa5e4ffb246fd04e6dcffde1cbf4da77d424e9d88e115444427cb09",
+      "size": 342,
+      "path": "config/simplytooltips/config.toml",
+      "filename": "config.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__simplytooltips__config.toml"
+    },
+    {
+      "sha256": "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42",
+      "size": 117,
+      "path": "config/spark/config.json",
+      "filename": "config.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spark__config.json"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "path": "config/villagernames/customnames.txt",
+      "filename": "customnames.txt",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__villagernames__customnames.txt"
+    },
+    {
+      "sha256": "43ed9dbfa5b4d6f0f3d2e8c2ced17ad298164b22c68ff11d415257a39b074336",
+      "size": 26,
+      "path": "config/xaero/lib/client.cfg",
+      "filename": "client.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__lib__client.cfg"
+    },
+    {
+      "sha256": "98f698d96a6d21d830a455b4ad045b70516fa63c298021742d8499e7f0366cd2",
+      "size": 236,
+      "path": "config/xaero/lib/common.cfg",
+      "filename": "common.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__lib__common.cfg"
+    },
+    {
+      "sha256": "34ae854b17d896d7cb853bdc28c27231a3947e91cb9f0991f372846ee3c2a907",
+      "size": 121,
+      "path": "config/xaero/lib/profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__lib__profiles__default.cfg"
+    },
+    {
+      "sha256": "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a",
+      "size": 75,
+      "path": "config/xaero/lib/server_profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__lib__server_profiles__default.cfg"
+    },
+    {
+      "sha256": "c0915eff5d1a7905cd1038d646eb9086fd1a29e2f637d53535e4da161de17b9f",
+      "size": 235,
+      "path": "config/xaero/minimap/client.cfg",
+      "filename": "client.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__minimap__client.cfg"
+    },
+    {
+      "sha256": "2b49df024c03a369c62a303c72755e7fedeb4f4653ff53a12fd37bd83ccd4ed0",
+      "size": 147,
+      "path": "config/xaero/minimap/common.cfg",
+      "filename": "common.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__minimap__common.cfg"
+    },
+    {
+      "sha256": "53b57c6a7bc117d6c2bc7a1fa8f1e5cbc963946d10f0de22fa55d2cb0929285e",
+      "size": 3737,
+      "path": "config/xaero/minimap/profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__minimap__profiles__default.cfg"
+    },
+    {
+      "sha256": "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a",
+      "size": 75,
+      "path": "config/xaero/minimap/server_profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__minimap__server_profiles__default.cfg"
+    },
+    {
+      "sha256": "d0f079a8df083f6f60a0e0c1316a25fc841755a91bdcb2f86c66ead8e7d4d13d",
+      "size": 521,
+      "path": "config/xaero/world-map/client.cfg",
+      "filename": "client.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__world-map__client.cfg"
+    },
+    {
+      "sha256": "0c229eb0daf85bd09af51f21eeeb99497a3bd50a825d5ab1ca695fb21bf6cf9d",
+      "size": 141,
+      "path": "config/xaero/world-map/common.cfg",
+      "filename": "common.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__world-map__common.cfg"
+    },
+    {
+      "sha256": "5422abf9c83fedef6509144293fad20f588d4bb6ce0cf1af78cbcd2bcd0d2ccf",
+      "size": 1619,
+      "path": "config/xaero/world-map/profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__world-map__profiles__default.cfg"
+    },
+    {
+      "sha256": "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a",
+      "size": 75,
+      "path": "config/xaero/world-map/server_profiles/default.cfg",
+      "filename": "default.cfg",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__xaero__world-map__server_profiles__default.cfg"
     }
   ],
   "version": "1.3.0",
