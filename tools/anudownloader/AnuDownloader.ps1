@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.9.0"
+$AppVersion = "2.10.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1066,8 +1066,23 @@ function Get-ManifestRelPath($f) {
     return (Join-Path "mods" $f.filename)
 }
 
+function Close-AnuLauncherApps {
+    # Close the launcher UIs (not the game itself, which runs as its own
+    # separate process once started) before installing/updating, so when the
+    # player reopens them they pick up the freshly-set JAVA_TOOL_OPTIONS env
+    # var (already-running processes never see an env var set after they
+    # started - only new ones do).
+    foreach ($name in @("Modrinth App", "CurseForge")) {
+        Get-Process -Name $name -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+    }
+    # TLauncher's own process name varies by build/version, so match its
+    # window title instead of guessing an exe name.
+    Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -like "*TLauncher*" } | Stop-Process -Force -ErrorAction SilentlyContinue
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
+    Close-AnuLauncherApps
 
     # selectedTarget is the PROFILE ROOT - the pack syncs mods\, config\,
     # resourcepacks\ and datapacks\ underneath it, not just mods\.
