@@ -1,4 +1,4 @@
-﻿# AnuDownloader - incremental modpack installer/updater
+# AnuDownloader - incremental modpack installer/updater
 # Shows available modpacks as banner tiles, lets the user pick which launcher
 # (Modrinth / CurseForge / TLauncher) to install into by clicking its logo,
 # auto-detecting that launcher's folder across any drive, and only downloads
@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.12.0"
+$AppVersion = "2.13.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1071,6 +1071,17 @@ Add-ButtonClick $btnPatchNotes "Önce bir mod paketi seç." {
     }
 }
 
+function Test-AnuSeedOnlyPath($manifestPath) {
+    # These ship with the pack so a fresh install is complete, but the game
+    # rewrites them itself afterwards (mod configs on launch, Palladium's
+    # documentation dump, Connector's remapped-jar cache). Re-syncing them
+    # would overwrite the player's own settings and, because the file changes
+    # again on the next launch, every update check would download it forever.
+    if (-not $manifestPath) { return $false }
+    $p = $manifestPath -replace '\\', '/'
+    return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
+}
+
 function Get-ManifestRelPath($f) {
     # New manifests carry a "path" (e.g. "config/foo.toml"); legacy manifests
     # only had a bare filename, which always meant mods\<filename>.
@@ -1186,6 +1197,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
         if (-not (Test-Path -LiteralPath $localPath)) {
             $toDownload += @{ file = $f; rel = $relPath }; continue
         }
+        if (Test-AnuSeedOnlyPath $f.path) { continue }
         if ((Get-FileSha256 $localPath) -ne $f.sha256) { $toDownload += @{ file = $f; rel = $relPath } }
     }
 
