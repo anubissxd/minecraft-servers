@@ -998,6 +998,22 @@ Her paketin kendi `distribution/<paket>/patchnotes.md` dosyası vardır (örn. `
 
 Yama notu içeriğini kullanıcı kendisi yazıp verir — Claude format dayatmaz.
 
+## Derlemeden Önce Syntax Kontrolü ZORUNLU
+
+`ps2exe` script'i **parse etmeden** exe'ye gömer — yani syntax hatası olan bir script sorunsuz "derlenir", hata ancak kullanıcı uygulamayı açtığında bir hata kutusu olarak patlar. Bu şekilde herkeste açılmayan bir sürüm yayınlandı.
+
+`AnuDownloader.ps1` derlenmeden önce mutlaka şu kontrol çalıştırılmalı:
+
+```powershell
+$errors = $null
+$null = [System.Management.Automation.Language.Parser]::ParseFile('AnuDownloader.ps1', [ref]$null, [ref]$errors)
+if ($errors) { $errors | ForEach-Object { "satir $($_.Extent.StartLineNumber): $($_.Message)" }; throw "syntax hatasi" }
+```
+
+Derledikten sonra da exe bir kez açılıp **görünür pencere sayısı 1 ve başlığı "AnuDownloader"** mı diye bakılmalı; hata kutusu da aynı başlığı taşıdığı için sadece "process ayakta" yeterli değildir.
+
+Bozuk bir sürüm yayınlandıysa: o sürümü kuran kişi uygulamayı açamayacağı için **uygulama içi güncelleme düğmesini kullanamaz**. Düzeltme sürümü GitHub Release'e yüklendikten sonra kullanıcıya installer linki elle verilmelidir.
+
 ## Dağıtım Adresleri: manifest/patchnotes commit SHA'sına sabitlenir
 
 `index.json` içindeki `manifest_url` ve `patchnotes_url` **her zaman bir commit SHA'sına pinlenmiş** `raw.githubusercontent.com` adresi olmalıdır:
