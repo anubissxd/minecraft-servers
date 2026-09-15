@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.13.0"
+$AppVersion = "2.14.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1159,9 +1159,57 @@ function Set-AnuLauncherJvmArgs([string]$profileRoot, [string]$launcherLabel) {
                 }
             }
         }
-        # Modrinth App stores its config in an internal SQLite database, not
-        # an editable file - no safe way to patch it from here yet.
+        } elseif ($launcherLabel -eq "Modrinth") {
+            Set-AnuModrinthJvmArgs $profileRoot
+        }
     } catch { }
+}
+
+function Get-AnuSqlitePath {
+    # sqlite3.exe ships next to our own exe (Inno Setup installs both).
+    try {
+        $exeDir = Split-Path ([Diagnostics.Process]::GetCurrentProcess().MainModule.FileName) -Parent
+        $candidate = Join-Path $exeDir "sqlite3.exe"
+        if (Test-Path $candidate) { return $candidate }
+    } catch { }
+    return $null
+}
+
+function Set-AnuModrinthJvmArgs([string]$profileRoot) {
+    # Modrinth keeps launch settings in a SQLite database rather than a file
+    # per instance: settings.extra_launch_args is the global "Java arguments"
+    # box, instance_launch_overrides.overrides holds the per-instance one.
+    # Both are stored as SQLite JSONB blobs, so they have to be written back
+    # with jsonb() to stay in that format.
+    $sqlite = Get-AnuSqlitePath
+    if (-not $sqlite) { return }
+    $db = Join-Path $env:APPDATA "ModrinthApp\app.db"
+    if (-not (Test-Path $db)) { return }
+
+    $argsJson = '["-Duser.language=en","-Duser.country=US"]'
+    $folderName = (Split-Path $profileRoot -Leaf).Replace("'", "''")
+
+    # Append rather than assign, and skip rows that already force a locale, so
+    # arguments the player set themselves (heap size etc) survive.
+    $sql = @"
+UPDATE settings
+   SET extra_launch_args = jsonb(json_insert(json(extra_launch_args),
+       '`$[#]', '-Duser.language=en', '`$[#]', '-Duser.country=US'))
+ WHERE id = 0
+   AND json(extra_launch_args) NOT LIKE '%user.language%';
+UPDATE instance_launch_overrides
+   SET overrides = jsonb_set(overrides, '`$.extra_launch_args', jsonb('$argsJson'))
+ WHERE instance_id IN (SELECT id FROM instances WHERE path = '$folderName')
+   AND json_extract(overrides, '`$.extra_launch_args') IS NULL;
+UPDATE instance_launch_overrides
+   SET overrides = jsonb_set(overrides, '`$.extra_launch_args',
+       jsonb(json_insert(json_extract(overrides, '`$.extra_launch_args'),
+       '`$[#]', '-Duser.language=en', '`$[#]', '-Duser.country=US')))
+ WHERE instance_id IN (SELECT id FROM instances WHERE path = '$folderName')
+   AND json_extract(overrides, '`$.extra_launch_args') IS NOT NULL
+   AND json_extract(overrides, '`$.extra_launch_args') NOT LIKE '%user.language%';
+"@
+    try { & $sqlite $db $sql 2>&1 | Out-Null } catch { }
 }
 
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {

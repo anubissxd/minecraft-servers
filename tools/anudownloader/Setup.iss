@@ -1,5 +1,5 @@
 #define MyAppName "AnuDownloader"
-#define MyAppVersion "2.13.0"
+#define MyAppVersion "2.14.0"
 #define MyAppPublisher "Anubis"
 #define MyAppExeName "AnuDownloader.exe"
 
@@ -30,6 +30,9 @@ Name: "desktopicon"; Description: "Masaustune kisayol olustur"; GroupDescription
 [Files]
 Source: "AnuDownloader.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "AnuDownloader.ico"; DestDir: "{app}"; Flags: ignoreversion
+; Modrinth keeps its launch settings in a SQLite database, so the locale fix
+; needs a sqlite client to write them.
+Source: "sqlite3.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
