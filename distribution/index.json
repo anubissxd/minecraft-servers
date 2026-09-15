@@ -3,5 +3,19 @@
     "version": "2.14.1",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
-  "packs": []
+  "packs": [
+    {
+      "id": "medieval-fantasy",
+      "name": "Medieval Fantasy",
+      "folder_name": "Medieval Fantasy",
+      "description": "Fantezi/RPG odakli sunucu paketi.",
+      "version": "1.0.0",
+      "mc_version": "1.20.1",
+      "loader": "Forge",
+      "loader_version": "47.4.23",
+      "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/aac42e09455ec9ffed6ee24229c4362e6b8e94b8/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/aac42e09455ec9ffed6ee24229c4362e6b8e94b8/distribution/medieval-fantasy/patchnotes.md"
+    }
+  ]
 }
