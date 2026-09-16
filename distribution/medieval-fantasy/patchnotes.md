@@ -1,4 +1,4 @@
-## Paket Güncellemesi (1.2.5)
+## Paket Güncellemesi (1.2.6)
 
-* **Diminishing Health** pakete eklendi — sunucuya girmek için bu güncelleme şart ("mismatched mod list" hatası bunun için).
-* Her ölümde yarım kalp kalıcı olarak gider (alt sınır 1 kalp). Yalnızca 2 saat ölmeden hayatta kalınca yarım kalp geri gelir; ölünce sayaç sıfırlanır. Uyku/altın elma geri getirmez.
+* Diminishing Health paketten çıkarıldı (BielGG's Spells ile çakışıp sunucuya girişi engelliyordu). Bu güncelleme olmadan sunucuya girilemez — Kur / Güncelle.
+* Ölüm cezası artık sunucu tarafında: her ölümde yarım kalp gider, 2 saat ölmeden yaşayınca geri gelir. Skill/ekipmandan gelen ekstra kalpler etkilenmez, alt sınır 1 kalp.
