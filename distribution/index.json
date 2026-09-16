@@ -9,13 +9,13 @@
       "name": "Medieval Fantasy",
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "mc_version": "1.20.1",
       "loader": "Forge",
       "loader_version": "47.4.20",
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/c413c93708d5c8d36262f97659517d837ddee231/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/c413c93708d5c8d36262f97659517d837ddee231/distribution/medieval-fantasy/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/878396a32c55132853478f68d20aa04b8e91be5d/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/878396a32c55132853478f68d20aa04b8e91be5d/distribution/medieval-fantasy/patchnotes.md"
     }
   ]
 }
