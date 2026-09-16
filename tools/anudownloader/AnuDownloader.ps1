@@ -12,11 +12,12 @@ $AppVersion = "2.16.2"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # jsDelivr kept serving a stale index.json for 10-30 minutes after a purge it
-# reported as finished, three releases in a row. raw.githubusercontent.com
-# honours a unique query string as a fresh URL, so every fetch bypasses its
-# cache entirely and a published version is visible within seconds.
-$IndexUrl   = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
-function Get-AnuIndexUrl { return "$IndexUrl?nocache=$([DateTime]::UtcNow.Ticks)" }
+# reported as finished, and raw.githubusercontent.com caches ~5 minutes and
+# ignores query strings. The contents API is never cached (60 requests/hour
+# per IP unauthenticated; the app makes ~12), so a published version is
+# visible the moment it is pushed.
+$IndexUrl   = "https://api.github.com/repos/anubissxd/minecraft-servers/contents/distribution/index.json?ref=main"
+$IndexHeaders = @{ "Accept" = "application/vnd.github.raw"; "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" }
 $CacheDir   = Join-Path $ConfigDir "cache"
 
 foreach ($d in @($ConfigDir, $CacheDir)) {
@@ -841,7 +842,7 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
 }
 
 try {
-    $index = Invoke-RestMethod -Uri (Get-AnuIndexUrl) -Headers @{ "Cache-Control" = "no-cache" }
+    $index = Invoke-RestMethod -Uri $IndexUrl -Headers $IndexHeaders
     $script:packs = $index.packs
 
     if ($index.app -and $index.app.version -and $index.app.setup_url) {
@@ -1457,7 +1458,7 @@ $script:pendingUpdateUrl = $null
 
 function Check-ForLiveUpdate {
     try {
-        $idx = Invoke-RestMethod -Uri (Get-AnuIndexUrl) -Headers @{ "Cache-Control" = "no-cache" }
+        $idx = Invoke-RestMethod -Uri $IndexUrl -Headers $IndexHeaders
         if ($idx.app -and $idx.app.version -and $idx.app.setup_url) {
             if ([version]$idx.app.version -gt [version]$AppVersion) {
                 $script:pendingUpdateUrl = $idx.app.setup_url
