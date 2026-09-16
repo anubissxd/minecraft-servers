@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.6",
-  "generated": "2026-09-16 23:36:51",
+  "version": "1.2.7",
+  "generated": "2026-09-16 23:42:08",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -4063,6 +4063,20 @@
       "sha256": "7edec59968166f0091b9a490043a198cd84c251b6fc9b88feb8989913c70ee0d",
       "size": 2261,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
+    },
+    {
+      "path": "mods/polymorph-forge-0.49.11+1.20.1.jar",
+      "filename": "polymorph-forge-0.49.11+1.20.1.jar",
+      "sha256": "cb633f3a3220ccfd00efbb57fb37bf7be44b5266195103af26add462fa71d86a",
+      "size": 301935,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__polymorph-forge-0.49.11+1.20.1.jar"
+    },
+    {
+      "path": "config/polymorph-integrations.toml",
+      "filename": "polymorph-integrations.toml",
+      "sha256": "47c2b8a65ca08ee0a73400bf6b8ccc0a831b4c220fa95097eff6216456fc511a",
+      "size": 327,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__polymorph-integrations.toml"
     }
   ]
 }
