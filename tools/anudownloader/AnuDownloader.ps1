@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.2"
+$AppVersion = "2.16.3"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # jsDelivr kept serving a stale index.json for 10-30 minutes after a purge it
@@ -1085,6 +1085,13 @@ function Test-AnuSeedOnlyPath($manifestPath) {
     # again on the next launch, every update check would download it forever.
     if (-not $manifestPath) { return $false }
     $p = $manifestPath -replace '\\', '/'
+    # Settings that MUST match the server or the player is refused at the
+    # handshake are the exception: they are re-synced every time. BielGG's
+    # experience profile decides whether its spells module (and its network
+    # channel) even loads; a player who picked "patches only" on first launch
+    # can never join a server running the full mod.
+    $alwaysSync = @("config/bielgg_spells-experience.properties")
+    if ($alwaysSync -contains $p) { return $false }
     return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
 }
 
