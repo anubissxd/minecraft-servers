@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.0"
+$AppVersion = "2.16.1"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1238,14 +1238,18 @@ UPDATE instance_launch_overrides
 # Resource Packs screen. index.json lists them lowest-priority first, the same
 # order Minecraft stores them. Whatever else the player has enabled stays;
 # only the pack's own entries are rewritten so their order stays right.
-# Each is also allowed in incompatibleResourcePacks: a pack built for a newer
-# game (Icon Fresh's pack_format 34 on 1.20.1) is otherwise silently dropped.
+#
+# incompatibleResourcePacks gets ONLY the packs whose pack_format really
+# doesn't match the game (Icon Fresh's 34 on 1.20.1): without that entry the
+# game drops them, but a compatible pack listed there is dropped too - the
+# game "removes it from the incompatibility list" and skips selecting it on
+# that launch, then saves options.txt without it.
 function ConvertTo-AnuJsonStringArray($items) {
     $parts = @($items | ForEach-Object { '"' + ($_ -replace '\\', '\\' -replace '"', '\"') + '"' })
     return '[' + ($parts -join ',') + ']'
 }
 
-function Set-AnuOptionsList([string[]]$lines, [string]$key, $ours, [bool]$ensureVanilla) {
+function Set-AnuOptionsList([string[]]$lines, [string]$key, $ours, $remove, [bool]$ensureVanilla) {
     $idx = -1
     for ($i = 0; $i -lt $lines.Count; $i++) {
         if ($lines[$i].StartsWith("${key}:")) { $idx = $i; break }
@@ -1254,24 +1258,70 @@ function Set-AnuOptionsList([string[]]$lines, [string]$key, $ours, [bool]$ensure
     if ($idx -ge 0) {
         try { $existing = @(ConvertFrom-Json $lines[$idx].Substring($key.Length + 1)) } catch { $existing = @() }
     }
-    $keep = @($existing | Where-Object { $ours -notcontains $_ })
+    $keep = @($existing | Where-Object { $_ -and $ours -notcontains $_ -and $remove -notcontains $_ })
     if ($ensureVanilla -and $keep -notcontains 'vanilla') { $keep = @('vanilla') + $keep }
     $newLine = "${key}:" + (ConvertTo-AnuJsonStringArray (@($keep) + @($ours)))
     if ($idx -ge 0) { $lines[$idx] = $newLine } else { $lines += $newLine }
     return $lines
 }
 
-function Set-AnuEnabledResourcePacks([string]$profileRoot, $packNames) {
+# pack_format the game expects for a given Minecraft version.
+function Get-AnuExpectedPackFormat([string]$mcVersion) {
+    switch -Wildcard ($mcVersion) {
+        "1.20"   { return 15 }  "1.20.1" { return 15 }
+        "1.20.2" { return 18 }
+        "1.20.3" { return 22 }  "1.20.4" { return 22 }
+        "1.20.5" { return 32 }  "1.20.6" { return 32 }
+        "1.21"   { return 34 }  "1.21.1" { return 34 }
+        "1.21.2" { return 42 }  "1.21.3" { return 42 }
+        "1.21.4" { return 46 }
+        "1.21.5" { return 55 }
+        "1.21.6" { return 63 }
+        "1.21.7" { return 64 }  "1.21.8" { return 64 }
+        default  { return $null }
+    }
+}
+
+function Test-AnuResourcePackCompatible([string]$zipPath, [string]$mcVersion) {
+    $expected = Get-AnuExpectedPackFormat $mcVersion
+    if (-not $expected) { return $true }
+    try {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction Stop
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
+        try {
+            $entry = $zip.GetEntry("pack.mcmeta")
+            if (-not $entry) { return $true }
+            $reader = New-Object System.IO.StreamReader($entry.Open())
+            $meta = (ConvertFrom-Json $reader.ReadToEnd()).pack
+            $reader.Close()
+        } finally { $zip.Dispose() }
+        if ([int]$meta.pack_format -eq $expected) { return $true }
+        # supported_formats only counts from 1.20.2 (pack_format 18) on
+        if ($expected -ge 18 -and $meta.supported_formats) {
+            $sf = $meta.supported_formats
+            if ($sf -is [array] -and $sf.Count -eq 2) { return ([int]$sf[0] -le $expected -and $expected -le [int]$sf[1]) }
+            if ($sf.min_inclusive) { return ([int]$sf.min_inclusive -le $expected -and $expected -le [int]$sf.max_inclusive) }
+        }
+        return $false
+    } catch { return $true }
+}
+
+function Set-AnuEnabledResourcePacks([string]$profileRoot, $packNames, [string]$mcVersion) {
     $names = @($packNames | Where-Object { $_ })
     if ($names.Count -eq 0) { return }
     $ours = @($names | ForEach-Object { "file/$_" })
+    $incompatible = @()
+    foreach ($n in $names) {
+        $zip = Join-Path (Join-Path $profileRoot "resourcepacks") $n
+        if ((Test-Path -LiteralPath $zip) -and -not (Test-AnuResourcePackCompatible $zip $mcVersion)) { $incompatible += "file/$n" }
+    }
     $optionsPath = Join-Path $profileRoot "options.txt"
     $lines = @()
     if (Test-Path -LiteralPath $optionsPath) {
         $lines = @([System.IO.File]::ReadAllLines($optionsPath, [System.Text.Encoding]::UTF8))
     }
-    $lines = Set-AnuOptionsList $lines 'resourcePacks' $ours $true
-    $lines = Set-AnuOptionsList $lines 'incompatibleResourcePacks' $ours $false
+    $lines = Set-AnuOptionsList $lines 'resourcePacks' $ours @() $true
+    $lines = Set-AnuOptionsList $lines 'incompatibleResourcePacks' $incompatible $ours $false
     try {
         [System.IO.File]::WriteAllLines($optionsPath, [string[]]$lines, (New-Object System.Text.UTF8Encoding $false))
     } catch {
@@ -1380,7 +1430,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
         }
     }
 
-    Set-AnuEnabledResourcePacks $profileRoot $script:selectedPack.enabled_resourcepacks
+    Set-AnuEnabledResourcePacks $profileRoot $script:selectedPack.enabled_resourcepacks $script:selectedPack.mc_version
 
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $profileRoot -Force
     Save-Config $cfg
