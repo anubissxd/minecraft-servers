@@ -1,6 +1,6 @@
 {
   "app": {
-    "version": "2.15.1",
+    "version": "2.16.0",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
   "packs": [
@@ -9,13 +9,23 @@
       "name": "Medieval Fantasy",
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "mc_version": "1.20.1",
       "loader": "Forge",
       "loader_version": "47.4.20",
+      "enabled_resourcepacks": [
+        "FreshAnimations_v1.10.4.zip",
+        "FA+All_Extensions-v1.8.1.zip",
+        "FA+Details-v2.2.1.zip",
+        "FA+Player-v1.1.zip",
+        "-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
+        "GoetyRevelation art style.zip",
+        "GR Old Textures.zip",
+        "Icon Fresh 1.2.zip"
+      ],
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/878396a32c55132853478f68d20aa04b8e91be5d/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/878396a32c55132853478f68d20aa04b8e91be5d/distribution/medieval-fantasy/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/8c92bd42e4a4cd6e97ab1ad45381ececfdcf551a/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/8c92bd42e4a4cd6e97ab1ad45381ececfdcf551a/distribution/medieval-fantasy/patchnotes.md"
     }
   ]
 }
