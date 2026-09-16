@@ -46,6 +46,7 @@ $FolderMap = [ordered]@{
     "client-extra/mods"                 = "mods"
     "client-extra/resourcepacks"        = "resourcepacks"
     "world/datapacks/anubis_customs"    = "global_packs/required_data/anubis_customs"
+    "global_packs/required_data"       = "global_packs/required_data"
 }
 
 function Invoke-Ssh([string]$command) {
@@ -71,6 +72,14 @@ foreach ($src in $FolderMap.Keys) {
 }
 $lines = Invoke-Ssh ($findParts -join "; ")
 
+# Mods the server runs but players must not get: pure server-side tuning
+# (AI Improvements, Chunky, Starlight...). One jar filename per line in
+# <server>/server-only-mods.txt; blank lines and # comments are ignored.
+$ServerOnlyMods = @()
+$soRaw = Invoke-Ssh "cat '$ServerPath/server-only-mods.txt' 2>/dev/null"
+foreach ($l in @($soRaw)) { $t = "$l".Trim(); if ($t -and -not $t.StartsWith("#")) { $ServerOnlyMods += $t } }
+if ($ServerOnlyMods.Count -gt 0) { Write-Host "Sunucu-only mod: $($ServerOnlyMods.Count) (pakete girmez)" }
+
 # Runtime scratch the server writes but players must never receive. spark's
 # tmp/ in particular holds profiler dumps, some of them zero bytes - and the
 # GitHub asset API rejects an empty file outright, which aborts the whole build.
@@ -88,6 +97,7 @@ foreach ($line in $lines) {
     $excluded = $false
     foreach ($p in $ExcludedPrefixes) { if ($rel.StartsWith($p)) { $excluded = $true } }
     foreach ($s in $ExcludedSuffixes) { if ($rel.EndsWith($s)) { $excluded = $true } }
+    if ($rel.StartsWith("mods/") -and $ServerOnlyMods -contains $rel.Substring(5)) { $excluded = $true }
     # e3b0c442... is the sha256 of empty input: an empty file, which GitHub
     # refuses to host as a release asset.
     if ($parts[0].Trim().ToLower() -eq "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855") { $excluded = $true }
