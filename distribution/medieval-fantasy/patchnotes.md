@@ -1,6 +1,6 @@
-## Paket Güncellemesi (1.2.1)
+## Paket Güncellemesi (1.2.2)
 
-* Sunucuya bağlanırken çıkan "ResourceLocationException" hatası giderildi. Sebep Somake Spells modunun bozuk tarif senkronuydu; o tarif tipi sunucudan kaldırıldı. Mod ve büyüler duruyor, sadece Upgrade Forge bloğu tarif üretmiyor.
-* Yeni mod: Hold My Items – Reforged (eşyaları iki elle tutma animasyonları, client tarafı).
-* keepInventory açık: ölünce eşyalar düşmüyor.
-* 214 mod: 171'i sunucuyla ortak, 43'ü sadece client tarafı.
+* Kaynak paketleri (Fresh Animations ve eklentileri, Fresh Moves, Goety Revelation dokuları, Icon Fresh) artık kurulumda otomatik etkinleşiyor. Oyun içinde Resource Packs menüsüne girmenize gerek yok. (AnuDownloader 2.16.0 gerekir — sağ üstteki ⟳ ile güncelleyin.)
+* Yeni kaynak paketleri: GoetyRevelation art style, GR Old Textures.
+* Sunucu logosu ve açıklaması eklendi.
+* Önceki (1.2.1): bağlantı hatası düzeltmesi, Hold My Items, keepInventory.

@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.1",
-  "generated": "2026-09-16 12:25:33",
+  "version": "1.2.2",
+  "generated": "2026-09-16 12:48:42",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -2518,6 +2518,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__skinrestorer__config.json"
     },
     {
+      "path": "config/skinrestorer/mojang_profile_cache.json",
+      "filename": "mojang_profile_cache.json",
+      "sha256": "eaecc04fa814348cd9eccbccd7a76524eac966269b84b3463cc024d750b77076",
+      "size": 218,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__skinrestorer__mojang_profile_cache.json"
+    },
+    {
       "path": "config/necronomicon.json5",
       "filename": "necronomicon.json5",
       "sha256": "f97fc5ae7dd7d312e86ecddf2e4491fee3e3a16b7a26cbb3aa078fdd3255c4df",
@@ -3260,6 +3267,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__betterfortresses-forge-1_20.toml"
     },
     {
+      "path": "config/modernfix-mixins.properties",
+      "filename": "modernfix-mixins.properties",
+      "sha256": "366dc228b8df1dd7c5dff436a2197222d6dbe871bd4d729c5b2886cc77a8de3e",
+      "size": 6682,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__modernfix-mixins.properties"
+    },
+    {
       "path": "config/deeperdarker-common.toml",
       "filename": "deeperdarker-common.toml",
       "sha256": "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7",
@@ -3461,6 +3475,13 @@
       "sha256": "16cadaef8e571c86ae3d7e63e1704d9c6a7bdafa466ea485f8f1b3d139c7dcb3",
       "size": 814220,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_model_features-3.3.5-1.20.1-forge.jar"
+    },
+    {
+      "path": "mods/holdmyitems-1.20.1-4v2.0.jar",
+      "filename": "holdmyitems-1.20.1-4v2.0.jar",
+      "sha256": "f307bfa98da0742b3c6dc164e04766f45e911a81d1eaf79025d6d92ff74875cc",
+      "size": 100362,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__holdmyitems-1.20.1-4v2.0.jar"
     },
     {
       "path": "mods/TravelersTitles-1.20-Forge-4.0.2.jar",
@@ -3778,25 +3799,18 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__FreshAnimations_v1.10.4.zip"
     },
     {
-      "path": "config/skinrestorer/mojang_profile_cache.json",
-      "filename": "mojang_profile_cache.json",
-      "sha256": "eaecc04fa814348cd9eccbccd7a76524eac966269b84b3463cc024d750b77076",
-      "size": 218,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__skinrestorer__mojang_profile_cache.json"
+      "path": "resourcepacks/GR Old Textures.zip",
+      "filename": "GR Old Textures.zip",
+      "sha256": "2631bdb136cebbba49c40fe34d84c05387ee4d6b0edc03a8242a5726740d00aa",
+      "size": 45359,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__GR_Old_Textures.zip"
     },
     {
-      "path": "config/modernfix-mixins.properties",
-      "filename": "modernfix-mixins.properties",
-      "sha256": "366dc228b8df1dd7c5dff436a2197222d6dbe871bd4d729c5b2886cc77a8de3e",
-      "size": 6682,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__modernfix-mixins.properties"
-    },
-    {
-      "path": "mods/holdmyitems-1.20.1-4v2.0.jar",
-      "filename": "holdmyitems-1.20.1-4v2.0.jar",
-      "sha256": "f307bfa98da0742b3c6dc164e04766f45e911a81d1eaf79025d6d92ff74875cc",
-      "size": 100362,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__holdmyitems-1.20.1-4v2.0.jar"
+      "path": "resourcepacks/GoetyRevelation art style.zip",
+      "filename": "GoetyRevelation art style.zip",
+      "sha256": "c11b7938b8963068f8c2233ab0cb93958fa619b3a1317e4fe52aa4998c54d711",
+      "size": 36944,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/resourcepacks__GoetyRevelation_art_style.zip"
     }
   ]
 }

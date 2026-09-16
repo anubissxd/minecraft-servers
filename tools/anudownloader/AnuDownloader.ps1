@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.15.1"
+$AppVersion = "2.16.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 $IndexUrl   = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
@@ -1234,6 +1234,51 @@ UPDATE instance_launch_overrides
     try { & $sqlite $db $sql 2>&1 | Out-Null } catch { }
 }
 
+# Turn the pack's resource packs on in options.txt so nobody has to open the
+# Resource Packs screen. index.json lists them lowest-priority first, the same
+# order Minecraft stores them. Whatever else the player has enabled stays;
+# only the pack's own entries are rewritten so their order stays right.
+# Each is also allowed in incompatibleResourcePacks: a pack built for a newer
+# game (Icon Fresh's pack_format 34 on 1.20.1) is otherwise silently dropped.
+function ConvertTo-AnuJsonStringArray($items) {
+    $parts = @($items | ForEach-Object { '"' + ($_ -replace '\\', '\\' -replace '"', '\"') + '"' })
+    return '[' + ($parts -join ',') + ']'
+}
+
+function Set-AnuOptionsList([string[]]$lines, [string]$key, $ours, [bool]$ensureVanilla) {
+    $idx = -1
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+        if ($lines[$i].StartsWith("${key}:")) { $idx = $i; break }
+    }
+    $existing = @()
+    if ($idx -ge 0) {
+        try { $existing = @(ConvertFrom-Json $lines[$idx].Substring($key.Length + 1)) } catch { $existing = @() }
+    }
+    $keep = @($existing | Where-Object { $ours -notcontains $_ })
+    if ($ensureVanilla -and $keep -notcontains 'vanilla') { $keep = @('vanilla') + $keep }
+    $newLine = "${key}:" + (ConvertTo-AnuJsonStringArray (@($keep) + @($ours)))
+    if ($idx -ge 0) { $lines[$idx] = $newLine } else { $lines += $newLine }
+    return $lines
+}
+
+function Set-AnuEnabledResourcePacks([string]$profileRoot, $packNames) {
+    $names = @($packNames | Where-Object { $_ })
+    if ($names.Count -eq 0) { return }
+    $ours = @($names | ForEach-Object { "file/$_" })
+    $optionsPath = Join-Path $profileRoot "options.txt"
+    $lines = @()
+    if (Test-Path -LiteralPath $optionsPath) {
+        $lines = @([System.IO.File]::ReadAllLines($optionsPath, [System.Text.Encoding]::UTF8))
+    }
+    $lines = Set-AnuOptionsList $lines 'resourcePacks' $ours $true
+    $lines = Set-AnuOptionsList $lines 'incompatibleResourcePacks' $ours $false
+    try {
+        [System.IO.File]::WriteAllLines($optionsPath, [string[]]$lines, (New-Object System.Text.UTF8Encoding $false))
+    } catch {
+        Write-AnuDebugLog "options.txt yazilamadi ($optionsPath): $($_.Exception.Message)"
+    }
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
     Close-AnuLauncherApps
@@ -1334,6 +1379,8 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
             [System.Windows.Forms.Application]::DoEvents()
         }
     }
+
+    Set-AnuEnabledResourcePacks $profileRoot $script:selectedPack.enabled_resourcepacks
 
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $profileRoot -Force
     Save-Config $cfg
