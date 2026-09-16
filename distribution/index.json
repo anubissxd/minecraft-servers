@@ -9,7 +9,7 @@
       "name": "Medieval Fantasy",
       "folder_name": "Medieval Fantasy",
       "description": "Fantezi/RPG odakli sunucu paketi.",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "mc_version": "1.20.1",
       "loader": "Forge",
       "loader_version": "47.4.20",
@@ -18,14 +18,15 @@
         "FA+All_Extensions-v1.8.1.zip",
         "FA+Details-v2.2.1.zip",
         "FA+Player-v1.1.zip",
+        "MMV+FA+Details-v2.0.0.zip",
         "-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip",
         "GoetyRevelation art style.zip",
         "GR Old Textures.zip",
         "Icon Fresh 1.2.zip"
       ],
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/8c92bd42e4a4cd6e97ab1ad45381ececfdcf551a/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/8c92bd42e4a4cd6e97ab1ad45381ececfdcf551a/distribution/medieval-fantasy/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/25f1b87831c7ed7d29120cd6f7e2fab54bb8b677/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/25f1b87831c7ed7d29120cd6f7e2fab54bb8b677/distribution/medieval-fantasy/patchnotes.md"
     }
   ]
 }
