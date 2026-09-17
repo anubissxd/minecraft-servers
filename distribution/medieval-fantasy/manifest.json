@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.15",
-  "generated": "2026-09-18 01:10:35",
+  "version": "1.2.16",
+  "generated": "2026-09-18 01:20:28",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -2903,6 +2903,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__biomesoplenty__gameplay.toml"
     },
     {
+      "path": "config/combatroll/hud_config.json",
+      "filename": "hud_config.json",
+      "sha256": "2d62e8cccf47341b0527fff242339c59d37649c4034cce5c5ad15e92d2da4354",
+      "size": 95,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatroll__hud_config.json"
+    },
+    {
       "path": "config/combatroll/client.json5",
       "filename": "client.json5",
       "sha256": "e9714f119c3862a898e53eab1a4ba6220a2194a5bdf0aea86623042d6cbf57e3",
@@ -3785,6 +3792,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jade__sort-order.json"
     },
     {
+      "path": "config/spell_engine/hud_config.json",
+      "filename": "hud_config.json",
+      "sha256": "86792edf540c5f73a7c7246614f6af927e3f905ea4b29ee2e5848b1e96783c28",
+      "size": 482,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spell_engine__hud_config.json"
+    },
+    {
       "path": "config/spell_engine/client.json5",
       "filename": "client.json5",
       "sha256": "5941886e148d33d62e4546d5dcf7ca13365cc062e47b8a500b9d4abf80aea80f",
@@ -4007,6 +4021,13 @@
       "sha256": "cdf806c0ace89872a439f44f383132ed75003ae3445d55faa02a5f5b29aad4ef",
       "size": 5268,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bettercombat__server.json5"
+    },
+    {
+      "path": "config/irons_spellbooks-client.toml",
+      "filename": "irons_spellbooks-client.toml",
+      "sha256": "5a3f0826cde6b8cd1f5896de3422b7fbbb595ea4a849380c8c7285992ad90d6e",
+      "size": 3505,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__irons_spellbooks-client.toml"
     },
     {
       "path": "config/betterdeserttemples-forge-1_20.toml",
@@ -4378,6 +4399,13 @@
       "sha256": "1657159a0b82091c4e7257d29aa2fc7d18ab6a614a316748d1c6b0dc914296ac",
       "size": 701,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Server.toml"
+    },
+    {
+      "path": "config/combatdash/combatdash Client.toml",
+      "filename": "combatdash Client.toml",
+      "sha256": "b361206a5be7197245640230852af988eba355f24e2aa16d8718bd9c6a60caf0",
+      "size": 273,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Client.toml"
     },
     {
       "path": "config/smallships-common.toml",
@@ -5017,39 +5045,18 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__skill_tree_for_pufferfishs_skills__puffish_skills__categories__chopping_wood__experience.json"
     },
     {
-      "path": "config/combatroll/hud_config.json",
-      "filename": "hud_config.json",
-      "sha256": "2d62e8cccf47341b0527fff242339c59d37649c4034cce5c5ad15e92d2da4354",
-      "size": 95,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatroll__hud_config.json"
+      "path": "config/spark/activity.json",
+      "filename": "activity.json",
+      "sha256": "dd41bb2f61691b9c3bbec279412238e7d390c0872d95045bae4a38d8e6a25527",
+      "size": 222,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spark__activity.json"
     },
     {
-      "path": "config/spell_engine/hud_config.json",
-      "filename": "hud_config.json",
-      "sha256": "86792edf540c5f73a7c7246614f6af927e3f905ea4b29ee2e5848b1e96783c28",
-      "size": 482,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spell_engine__hud_config.json"
-    },
-    {
-      "path": "config/irons_spellbooks-client.toml",
-      "filename": "irons_spellbooks-client.toml",
-      "sha256": "5a3f0826cde6b8cd1f5896de3422b7fbbb595ea4a849380c8c7285992ad90d6e",
-      "size": 3505,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__irons_spellbooks-client.toml"
-    },
-    {
-      "path": "config/combatdash/combatdash Client.toml",
-      "filename": "combatdash Client.toml",
-      "sha256": "b361206a5be7197245640230852af988eba355f24e2aa16d8718bd9c6a60caf0",
-      "size": 273,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Client.toml"
-    },
-    {
-      "path": "mods/anubis-dashhud-1.1.0.jar",
-      "filename": "anubis-dashhud-1.1.0.jar",
-      "sha256": "9c3f80c66a46b85f7ff2e4ed9a8fb8b60b2d9625f61564c914d24e5f5b7944f2",
-      "size": 7015,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__anubis-dashhud-1.1.0.jar"
+      "path": "mods/anubis-dashhud-1.1.1.jar",
+      "filename": "anubis-dashhud-1.1.1.jar",
+      "sha256": "f2cd4a1eab3f7c5458057f9f91a7d3c7c926eab86a7677bc42e91c7d306fe203",
+      "size": 7210,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__anubis-dashhud-1.1.1.jar"
     }
   ]
 }
