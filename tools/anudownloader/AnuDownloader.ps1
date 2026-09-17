@@ -8,16 +8,32 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.3"
+$AppVersion = "2.16.4"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
-# jsDelivr kept serving a stale index.json for 10-30 minutes after a purge it
-# reported as finished, and raw.githubusercontent.com caches ~5 minutes and
-# ignores query strings. The contents API is never cached (60 requests/hour
-# per IP unauthenticated; the app makes ~12), so a published version is
-# visible the moment it is pushed.
-$IndexUrl   = "https://api.github.com/repos/anubissxd/minecraft-servers/contents/distribution/index.json?ref=main"
-$IndexHeaders = @{ "Accept" = "application/vnd.github.raw"; "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" }
+# index.json sources, tried in order. The GitHub contents API is never cached
+# (a published version shows up the moment it is pushed) but allows only 60
+# requests/hour per IP - and on ISPs that share one public IP between many
+# homes (CGNAT) that pool is shared too, which turned into 403s for some
+# players. raw.githubusercontent.com caches ~5 minutes, jsDelivr 10-30, but
+# neither rate-limits, so they are the fallbacks: worst case a new version is
+# seen a few minutes late instead of not at all.
+$IndexSources = @(
+    @{ Url = "https://api.github.com/repos/anubissxd/minecraft-servers/contents/distribution/index.json?ref=main"
+       Headers = @{ "Accept" = "application/vnd.github.raw"; "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } },
+    @{ Url = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
+       Headers = @{ "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } },
+    @{ Url = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
+       Headers = @{ "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } }
+)
+function Get-AnuIndex {
+    $lastError = $null
+    foreach ($src in $IndexSources) {
+        try { return Invoke-RestMethod -Uri $src.Url -Headers $src.Headers -TimeoutSec 20 }
+        catch { $lastError = $_ }
+    }
+    throw $lastError
+}
 $CacheDir   = Join-Path $ConfigDir "cache"
 
 foreach ($d in @($ConfigDir, $CacheDir)) {
@@ -842,7 +858,7 @@ function Invoke-AnuSelfUpdate([string]$setupUrl) {
 }
 
 try {
-    $index = Invoke-RestMethod -Uri $IndexUrl -Headers $IndexHeaders
+    $index = Get-AnuIndex
     $script:packs = $index.packs
 
     if ($index.app -and $index.app.version -and $index.app.setup_url) {
@@ -1465,7 +1481,7 @@ $script:pendingUpdateUrl = $null
 
 function Check-ForLiveUpdate {
     try {
-        $idx = Invoke-RestMethod -Uri $IndexUrl -Headers $IndexHeaders
+        $idx = Get-AnuIndex
         if ($idx.app -and $idx.app.version -and $idx.app.setup_url) {
             if ([version]$idx.app.version -gt [version]$AppVersion) {
                 $script:pendingUpdateUrl = $idx.app.setup_url
