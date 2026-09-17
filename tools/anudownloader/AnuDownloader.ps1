@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.4"
+$AppVersion = "2.16.5"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1193,6 +1193,58 @@ function Set-AnuLauncherJvmArgs([string]$profileRoot, [string]$launcherLabel) {
     } catch { }
 }
 
+# TLauncher injects OptiFine into any profile that has it ticked, on every
+# launch, through its LibLoader - and OptiFine cannot coexist with Embeddium
+# and Oculus, so the game dies on startup and the player blames the pack.
+# Deleting the jar is not enough (it comes back next launch); the tick itself
+# lives in the profile's TLauncherAdditional.json ("additionalMods") and the
+# version json ("modpack.usedOptifine" / "modsLibraries"). All three are
+# cleaned, best-effort, and every change is logged for support.
+function Remove-AnuTLauncherOptiFine([string]$profileRoot) {
+    $folderName = Split-Path $profileRoot -Leaf
+    $changed = @()
+    try {
+        $addPath = Join-Path $profileRoot "TLauncherAdditional.json"
+        if (Test-Path $addPath) {
+            $add = Get-Content $addPath -Raw | ConvertFrom-Json
+            $dirty = $false
+            if ($add.PSObject.Properties['additionalMods'] -and $add.additionalMods) {
+                $kept = @($add.additionalMods | Where-Object { "$_" -notmatch 'optifine' })
+                if ($kept.Count -ne @($add.additionalMods).Count) { $add.additionalMods = $kept; $dirty = $true }
+            }
+            if ($add.PSObject.Properties['libraries'] -and $add.libraries) {
+                $kept = @($add.libraries | Where-Object { "$($_.name)" -notmatch 'optifine' })
+                if ($kept.Count -ne @($add.libraries).Count) { $add.libraries = $kept; $dirty = $true }
+            }
+            if ($dirty) { $add | ConvertTo-Json -Depth 20 | Set-Content -Path $addPath -Encoding UTF8; $changed += "TLauncherAdditional.json" }
+        }
+    } catch { Write-AnuDebugLog "TLauncher OptiFine (additional) hata: $($_.Exception.Message)" }
+    try {
+        $verPath = Join-Path $profileRoot "$folderName.json"
+        if (Test-Path $verPath) {
+            $ver = Get-Content $verPath -Raw | ConvertFrom-Json
+            $dirty = $false
+            if ($ver.PSObject.Properties['modpack'] -and $ver.modpack -and $ver.modpack.PSObject.Properties['usedOptifine'] -and $ver.modpack.usedOptifine) {
+                $ver.modpack.usedOptifine = $false; $dirty = $true
+            }
+            if ($ver.PSObject.Properties['modsLibraries'] -and $ver.modsLibraries) {
+                $kept = @($ver.modsLibraries | Where-Object { "$($_.name)" -notmatch 'optifine' })
+                if ($kept.Count -ne @($ver.modsLibraries).Count) { $ver.modsLibraries = $kept; $dirty = $true }
+            }
+            if ($dirty) { $ver | ConvertTo-Json -Depth 20 | Set-Content -Path $verPath -Encoding UTF8; $changed += "$folderName.json" }
+        }
+    } catch { Write-AnuDebugLog "TLauncher OptiFine (version json) hata: $($_.Exception.Message)" }
+    try {
+        $modsDir = Join-Path $profileRoot "mods"
+        if (Test-Path $modsDir) {
+            Get-ChildItem -LiteralPath $modsDir -Filter *.jar -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'optifine' } | ForEach-Object {
+                Remove-Item -LiteralPath $_.FullName -Force -ErrorAction Stop; $changed += $_.Name
+            }
+        }
+    } catch { Write-AnuDebugLog "TLauncher OptiFine (mods) hata: $($_.Exception.Message)" }
+    if ($changed.Count -gt 0) { Write-AnuDebugLog "TLauncher OptiFine temizlendi: $($changed -join ', ')" }
+}
+
 function Get-AnuSqlitePath {
     # sqlite3.exe ships next to our own exe (Inno Setup installs both).
     try {
@@ -1366,7 +1418,10 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     # resourcepacks\ and datapacks\ underneath it, not just mods\.
     $profileRoot = $script:selectedTarget
     Close-AnuGameProcess $profileRoot
-    if ($script:selectedLauncherData) { Set-AnuLauncherJvmArgs $profileRoot $script:selectedLauncherData.Label }
+    if ($script:selectedLauncherData) {
+        Set-AnuLauncherJvmArgs $profileRoot $script:selectedLauncherData.Label
+        if ($script:selectedLauncherData.Label -eq "TLauncher") { Remove-AnuTLauncherOptiFine $profileRoot }
+    }
     if (-not (Test-Path $profileRoot)) {
         New-Item -ItemType Directory -Path $profileRoot -Force | Out-Null
     }
