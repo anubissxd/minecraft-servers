@@ -1,0 +1,40 @@
+plugins {
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+
+version = '1.1.0'
+group = 'anubis.dashhud'
+base { archivesName = 'anubis-dashhud' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+}
+
+mixin {
+    add sourceSets.main, 'anubis_dashhud.refmap.json'
+    config 'anubis_dashhud.mixins.json'
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.20'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    // compile against Iron's Spells for the layout mixin (deobfuscated by ForgeGradle)
+    implementation fg.deobf(files('libs/irons_spellbooks.jar'))
+}
+
+tasks.named('jar', Jar) {
+    manifest {
+        attributes([
+            'Implementation-Version': project.version,
+            'MixinConfigs': 'anubis_dashhud.mixins.json'
+        ])
+    }
+}

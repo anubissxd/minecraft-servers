@@ -1,0 +1,123 @@
+package anubis.dashhud;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RenderGuiEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.lang.reflect.Field;
+
+/**
+ * Anubis Dash HUD - draws Combat Dash's dash bars itself, so they never fade
+ * out when full and never hide because of an offhand item, and shows the
+ * dash keybinding next to them. Reads Combat Dash's data by reflection, so it
+ * has no compile-time dependency and never touches the original mod.
+ */
+@Mod("anubis_dashhud")
+public class DashHud {
+    private static final ResourceLocation BACK = new ResourceLocation("combat_dash", "textures/screens/arrowback.png");
+    private static final ResourceLocation FILL = new ResourceLocation("combat_dash", "textures/screens/arrow_1401.png");
+
+    private static Capability<Object> playerVarsCap;
+    private static Field dashCooldownField;
+    private static KeyMapping dashKey;
+    private static Object cfgX, cfgY;
+    private static boolean lookedUp = false;
+
+    public DashHud() {
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> MinecraftForge.EVENT_BUS.register(DashHud.class));
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void lookup() {
+        lookedUp = true;
+        try {
+            Class<?> vars = Class.forName("combat_dash.network.CombatDashModVariables");
+            playerVarsCap = (Capability<Object>) vars.getField("PLAYER_VARIABLES_CAPABILITY").get(null);
+            dashCooldownField = Class.forName("combat_dash.network.CombatDashModVariables$PlayerVariables").getField("DashCooldown");
+            dashKey = (KeyMapping) Class.forName("combat_dash.init.CombatDashModKeyMappings").getField("DASH").get(null);
+            Class<?> cfg = Class.forName("combat_dash.configuration.CombatDashClientConfiguration");
+            cfgX = cfg.getField("DASHCONFIGXZPOS").get(null);
+            cfgY = cfg.getField("DASHCONFIGYPOS").get(null);
+        } catch (Throwable t) {
+            playerVarsCap = null;
+        }
+    }
+
+    private static double cfgValue(Object configValue, double fallback) {
+        try { return ((Number) configValue.getClass().getMethod("get").invoke(configValue)).doubleValue(); }
+        catch (Throwable t) { return fallback; }
+    }
+
+    private static AttributeInstance attrInst(Player p, String id) {
+        Attribute a = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combat_dash", id));
+        return a == null ? null : p.getAttribute(a);
+    }
+
+    @SubscribeEvent
+    public static void onRender(RenderGuiEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        Player player = mc.player;
+        if (player == null || mc.options.hideGui) return;
+        if (!lookedUp) lookup();
+        if (playerVarsCap == null) return;
+        AttributeInstance enabled = attrInst(player, "enabledash");
+        if (enabled == null || enabled.getValue() != 1.0) return;
+
+        double cooldown;
+        try {
+            LazyOptional<Object> opt = player.getCapability(playerVarsCap, null);
+            Object vars = opt.orElse(null);
+            if (vars == null) return;
+            cooldown = dashCooldownField.getDouble(vars);
+        } catch (Throwable t) { return; }
+
+        AttributeInstance maxInst = attrInst(player, "max_dash_amount");
+        int bars = maxInst == null ? 3 : (int) maxInst.getValue();
+        if (bars <= 0) bars = 3;
+        AttributeInstance cdInst = attrInst(player, "dash_cool_down");
+        double perBar = cdInst == null ? 0 : cdInst.getBaseValue();
+        if (perBar <= 0) return;
+
+        int screenW = event.getWindow().getGuiScaledWidth();
+        int screenH = event.getWindow().getGuiScaledHeight();
+        int baseX = (int) (cfgValue(cfgX, -114) + 8.0);
+        int baseY = (int) cfgValue(cfgY, 16);
+
+        GuiGraphics g = event.getGuiGraphics();
+        RenderSystem.enableBlend();
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.defaultBlendFunc();
+        RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
+        int leftmost = Integer.MAX_VALUE;
+        for (int i = 0; i < bars; i++) {
+            int x = screenW / 2 + baseX - i * 5;
+            int y = screenH - baseY;
+            leftmost = Math.min(leftmost, x - 1);
+            g.blit(BACK, x - 1, y - 1, 0, 0, 11, 13, 11, 13);
+            double fill = Math.max(0.0, Math.min(1.0, (cooldown - i * perBar) / perBar));
+            int barHeight = (int) (11.0 * (1.0 - fill));
+            g.blit(FILL, x, y, 0, 0, 9, barHeight, 9, 11);
+        }
+        // key label to the left of the bars, like Combat Roll's
+        if (dashKey != null) {
+            String label = dashKey.getTranslatedKeyMessage().getString();
+            int tw = mc.font.width(label);
+            g.drawString(mc.font, label, leftmost - tw - 3, screenH - baseY + 2, 0xFFFFFF, true);
+        }
+    }
+}

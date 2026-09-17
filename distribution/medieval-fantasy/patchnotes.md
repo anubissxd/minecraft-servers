@@ -1,5 +1,4 @@
-## Paket Güncellemesi (1.2.14)
+## Paket Güncellemesi (1.2.15)
 
-* **HUD düzeni herkeste aynı:** Iron's büyü çubuğu sol alt köşe, mana barı her zaman görünür, Spell Engine tuş ipuçları hotbar'ın sağı, Combat Roll hotbar'ın solu, Combat Dash barı yan elde eşya varken de aynı yerde. Yemek tutunca büyü ipucu değişmez.
-* Bu ayarlar AnuDownloader 2.16.6 ile her kurulumda eşitlenir (kendi değiştirdiğin HUD ayarı üstüne yazılır).
-* Not: Combat Dash barı doluyken gizleniyor — modun kendi davranışı, ayarı yok.
+* Yeni HUD düzeni: Iron's büyüleri sol altta 5'li satırlar halinde, üstünde mana barı; hotbar'ın sağında Dash (tuş adıyla, her zaman görünür) ve Roll; en sağda silah skill ipuçları.
+* Bunun için küçük bir client modu eklendi (Anubis Dash HUD). Sunucu tarafında değişiklik yok.
