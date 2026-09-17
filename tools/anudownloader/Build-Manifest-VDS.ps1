@@ -45,6 +45,7 @@ $FolderMap = [ordered]@{
     "datapacks"                         = "datapacks"
     "client-extra/mods"                 = "mods"
     "client-extra/resourcepacks"        = "resourcepacks"
+    "client-extra/shaderpacks"          = "shaderpacks"
     "world/datapacks/anubis_customs"    = "global_packs/required_data/anubis_customs"
     "global_packs/required_data"       = "global_packs/required_data"
 }
