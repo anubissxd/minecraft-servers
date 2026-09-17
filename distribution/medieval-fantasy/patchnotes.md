@@ -1,6 +1,7 @@
-## Paket Güncellemesi (1.2.10)
+## Paket Güncellemesi (1.2.11)
 
-* **Irklar kaldırıldı, sınıflar geldi:** Origins ırk seçimi kapatıldı (herkes İnsan), yerine **Origins: Classes** — girişte Blacksmith, Cleric, Explorer, Farmer, Lumberjack, Merchant, Miner, Rancher, Warrior, Beekeeper arasından sınıf seçilir. Daha önce ırk seçmiş olanlar İnsan'a döner.
-* **More Mob Variants** kaldırıldı (inek/domuz/örümcek doku bozuklukları bitti). Pufferfish'in Origins entegrasyonu da kaldırıldı (çalışmıyordu).
-* **Zorluk: Hard.** Doğal can yenilenmesi kapalı — can artık tokluktan dolmaz; iksir, altın elma, iyileştirme büyüleri, regen efektli yemekler ve Apotheosis eşyaları gerekir.
-* Sunucu: gece 04:00 otomatik yedek, SSH sertleştirme.
+* **RPG Series** (Better Combat'ın yazarından): Skill Tree, Wizards, Paladins & Priests, Archers, Rogues & Warriors, Jewelry, Relics, Arsenal, Armory. Yeni sınıf ekipmanları, büyüler (Spell Engine), mücevherler, kalıntılar ve Pufferfish Skills'e bağlı yeni yetenek ağacı.
+* **Origins tamamen kaldırıldı** (ırk ve sınıf seçimi yok). Karakter kimliği artık ekipman + yetenek ağaçlarıyla.
+* **Kaldırıldı:** Marium's Soulslike Weaponry — RPG Series ile aynı kütüphanenin uyumsuz sürümlerini istiyor, ikisi bir arada olamıyor. Soulslike eşyaları envanterden kaybolur.
+* Puffish Skills Leveling denendi, Pufferfish Skills ile çöktü, paketlenmedi.
+* Not: RPG Series büyüleri Iron's Spells'ten ayrı sistemdir; kendi asa/kitap ve tuşlarıyla kullanılır.
