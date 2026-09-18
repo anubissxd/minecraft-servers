@@ -1,5 +1,4 @@
-## Paket Güncellemesi (1.2.17)
+## Paket Güncellemesi (1.2.18)
 
-* HUD: Iron's büyü ızgarası sol alt köşeye yaslı (alt satırdan yukarı dolar), mana barı hemen üstünde; Dash barının tuş ikonu barın üstünde, Roll etiketi üstte; silah skill ipuçları kenardan içeride.
-* Anubis Dash HUD 1.3.0: Dash barı artık her koşulda çizilir.
+* HUD ince ayar: büyü ızgarası sol alt köşeye tam yaslı, mana barı biraz yukarıda; silah skill ipuçları sağ kenara yaslı; Roll göstergesi hotbar'ın sağında Dash'ten sonra.
 * Sunucu tarafında değişiklik yok.
