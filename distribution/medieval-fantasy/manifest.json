@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.20",
-  "generated": "2026-09-18 16:36:31",
+  "version": "1.2.21",
+  "generated": "2026-09-18 16:46:56",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -544,6 +544,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__sophisticatedstorage-1.20.1-1.4.86.2131.jar"
     },
     {
+      "path": "mods/EndingLibrary-1.20.1-2.2.1-all.jar",
+      "filename": "EndingLibrary-1.20.1-2.2.1-all.jar",
+      "sha256": "4479f21fd8464ebd0243710eb66b5e931bdce8dc70c9fcf1c3f0314291354ff4",
+      "size": 2415921,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__EndingLibrary-1.20.1-2.2.1-all.jar"
+    },
+    {
       "path": "mods/epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
       "filename": "epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
       "sha256": "f22f6f92475271f515b226f4496fffddacdd712a31f195413afa4b925a35c22d",
@@ -556,6 +563,13 @@
       "sha256": "620a6a8b65f294679d9a157d4cf9b340cd71f30aaee971e4e009fc7ec9e4c0fd",
       "size": 5063,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__ApothicCombat-1.20.1-1.1.0.jar"
+    },
+    {
+      "path": "mods/jei-1.20.1-forge-15.59.0.212.jar",
+      "filename": "jei-1.20.1-forge-15.59.0.212.jar",
+      "sha256": "0f39187f57cadd7b27a4511038628e212b53a1b184edf53121614418ed6a7442",
+      "size": 1826038,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__jei-1.20.1-forge-15.59.0.212.jar"
     },
     {
       "path": "mods/chipped-forge-1.20.1-3.0.7.jar",
@@ -864,6 +878,13 @@
       "sha256": "521258f9b254b2be0205b40db882cbcdc26cf87babc8449939646f75d8e6c3b3",
       "size": 14541,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__JRFTL-1.20.1-1.6.0.jar"
+    },
+    {
+      "path": "mods/goety-2.5.58.3.jar",
+      "filename": "goety-2.5.58.3.jar",
+      "sha256": "d41611de0e5423e3043e8e11df7ee2797f10def7ae848a7d7662aa4acd95242c",
+      "size": 79316929,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__goety-2.5.58.3.jar"
     },
     {
       "path": "mods/YungsExtras-1.20-Forge-4.0.3.jar",
@@ -1298,6 +1319,13 @@
       "sha256": "aac4e08d747aff26150823c0b34e4d4156ee6bbf1d6145f4db6a62980b7a3193",
       "size": 15461501,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__knights_and_castles-1.0.6+beta-forge-1.20.1.jar"
+    },
+    {
+      "path": "mods/legendarymonsters-2.2.3 MC 1.20.1.jar",
+      "filename": "legendarymonsters-2.2.3 MC 1.20.1.jar",
+      "sha256": "a90a3009e502ba4f235e5bd9a7493c2307e4060f0ee21fd02e62f9893912321c",
+      "size": 44954907,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__legendarymonsters-2.2.3_MC_1.20.1.jar"
     },
     {
       "path": "mods/globalpacks-forge-1.20.1-19.3.7.jar",
@@ -3295,13 +3323,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__config.json"
     },
     {
-      "path": "config/chunky/tasks/minecraft/overworld.properties",
-      "filename": "overworld.properties",
-      "sha256": "713af99672f61bd0f62c466922a1f6e9b45fe0e4101ab2c92fe66605bfa51466",
-      "size": 127,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__tasks__minecraft__overworld.properties"
-    },
-    {
       "path": "config/waystones-common.toml",
       "filename": "waystones-common.toml",
       "sha256": "54383dd0f5b4dd7b5e9bfc765032d886cacb83dad1621c7863876170646d9a27",
@@ -3680,6 +3701,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__sophisticatedcore-common.toml"
     },
     {
+      "path": "config/fancymenu/options.txt",
+      "filename": "options.txt",
+      "sha256": "6df834ff0756d1d57f5ff20abcc8d5e716f7736fe38f83f390d5b4f539b407ab",
+      "size": 4400,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__options.txt"
+    },
+    {
       "path": "config/curiosbackslot-client.toml",
       "filename": "curiosbackslot-client.toml",
       "sha256": "6196ffd2b45dc37926e9d87429c31fbfdbeb6c2de27cf6d8c9aa531247581474",
@@ -3762,13 +3790,6 @@
       "sha256": "6b3a0457f39f713ce3e29b6b9589a587d3f81cafa4e4bd872edccb029f696944",
       "size": 1509,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jade__sort-order.json"
-    },
-    {
-      "path": "config/spell_engine/hud_config.json",
-      "filename": "hud_config.json",
-      "sha256": "5e774baa736ba43e7f8045d3bf375454ba81924fa6e226c9950be62d2c6ef727",
-      "size": 480,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spell_engine__hud_config.json"
     },
     {
       "path": "config/spell_engine/client.json5",
@@ -4583,6 +4604,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Searchables-forge-1.20.1-1.0.3.jar"
     },
     {
+      "path": "mods/skinlayers3d-forge-1.11.3-mc1.20.1.jar",
+      "filename": "skinlayers3d-forge-1.11.3-mc1.20.1.jar",
+      "sha256": "6229ea6e5d77dd1f66d21163bf3187abb899d59f508dae63ab67ecbb0f804cc5",
+      "size": 2093560,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__skinlayers3d-forge-1.11.3-mc1.20.1.jar"
+    },
+    {
       "path": "mods/Highlighter-1.20.1-forge-1.1.9.jar",
       "filename": "Highlighter-1.20.1-forge-1.1.9.jar",
       "sha256": "8389c409257541c06789cd2287725d3df173168d9a0ebb9ff44c9b319e8b8026",
@@ -4595,6 +4623,13 @@
       "sha256": "f3146e547c160b5b17b2044e3c18f7483fece6c3d357e9ffbfbf6399b0599dd7",
       "size": 1240706,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__brb-1.10.0-rc5+1.20.0-1.jar"
+    },
+    {
+      "path": "mods/entity_model_features-3.3.9-1.20.1-forge.jar",
+      "filename": "entity_model_features-3.3.9-1.20.1-forge.jar",
+      "sha256": "a6bf54761d6572c5868eec9320d642c263a6490d045fcff437f00d7cf87c2c8f",
+      "size": 826048,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_model_features-3.3.9-1.20.1-forge.jar"
     },
     {
       "path": "mods/entityculling-forge-1.10.5-mc1.20.1.jar",
@@ -4623,6 +4658,13 @@
       "sha256": "12fe19e2bbacda90240dc71773590e055b27977dd1ba217806c06bbb4e3a9975",
       "size": 101393,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__defaultoptions-forge-1.20.1-18.0.5.jar"
+    },
+    {
+      "path": "mods/chatanimation-forge-1.3.3+mc1.20.1.jar",
+      "filename": "chatanimation-forge-1.3.3+mc1.20.1.jar",
+      "sha256": "431da94acc595487a27b174c40c15c6e2ccce5a8e9538ed8ee04f2d95eacdca3",
+      "size": 1067270,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__chatanimation-forge-1.3.3+mc1.20.1.jar"
     },
     {
       "path": "mods/athena-forge-1.20.1-3.1.2.jar",
@@ -4786,6 +4828,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__YungsMenuTweaks-1.20.1-Forge-1.0.2.jar"
     },
     {
+      "path": "mods/entity_texture_features-7.2.4-1.20.1-forge.jar",
+      "filename": "entity_texture_features-7.2.4-1.20.1-forge.jar",
+      "sha256": "de36ff8d3dcb75688d04a3c3ac5a338f654372589deb42533a81921ad55dd49f",
+      "size": 982567,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_texture_features-7.2.4-1.20.1-forge.jar"
+    },
+    {
       "path": "mods/BetterPingDisplay-1.20.1-1.1.jar",
       "filename": "BetterPingDisplay-1.20.1-1.1.jar",
       "sha256": "055e30e18e836f41879093e9e60842019d529a0205a6fa0c05e607a3cc9815db",
@@ -4933,67 +4982,18 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
     },
     {
-      "path": "mods/EndingLibrary-1.20.1-2.2.1-all.jar",
-      "filename": "EndingLibrary-1.20.1-2.2.1-all.jar",
-      "sha256": "4479f21fd8464ebd0243710eb66b5e931bdce8dc70c9fcf1c3f0314291354ff4",
-      "size": 2415921,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__EndingLibrary-1.20.1-2.2.1-all.jar"
+      "path": "config/chunky/tasks/minecraft/overworld.properties",
+      "filename": "overworld.properties",
+      "sha256": "4b9fd103541c37b2fbafad87e497f34de49858d3ada1b7ce33ee1ed2a550d162",
+      "size": 129,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__tasks__minecraft__overworld.properties"
     },
     {
-      "path": "mods/jei-1.20.1-forge-15.59.0.212.jar",
-      "filename": "jei-1.20.1-forge-15.59.0.212.jar",
-      "sha256": "0f39187f57cadd7b27a4511038628e212b53a1b184edf53121614418ed6a7442",
-      "size": 1826038,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__jei-1.20.1-forge-15.59.0.212.jar"
-    },
-    {
-      "path": "mods/goety-2.5.58.3.jar",
-      "filename": "goety-2.5.58.3.jar",
-      "sha256": "d41611de0e5423e3043e8e11df7ee2797f10def7ae848a7d7662aa4acd95242c",
-      "size": 79316929,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__goety-2.5.58.3.jar"
-    },
-    {
-      "path": "mods/legendarymonsters-2.2.3 MC 1.20.1.jar",
-      "filename": "legendarymonsters-2.2.3 MC 1.20.1.jar",
-      "sha256": "a90a3009e502ba4f235e5bd9a7493c2307e4060f0ee21fd02e62f9893912321c",
-      "size": 44954907,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__legendarymonsters-2.2.3_MC_1.20.1.jar"
-    },
-    {
-      "path": "config/fancymenu/options.txt",
-      "filename": "options.txt",
-      "sha256": "6df834ff0756d1d57f5ff20abcc8d5e716f7736fe38f83f390d5b4f539b407ab",
-      "size": 4400,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__options.txt"
-    },
-    {
-      "path": "mods/skinlayers3d-forge-1.11.3-mc1.20.1.jar",
-      "filename": "skinlayers3d-forge-1.11.3-mc1.20.1.jar",
-      "sha256": "6229ea6e5d77dd1f66d21163bf3187abb899d59f508dae63ab67ecbb0f804cc5",
-      "size": 2093560,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__skinlayers3d-forge-1.11.3-mc1.20.1.jar"
-    },
-    {
-      "path": "mods/entity_model_features-3.3.9-1.20.1-forge.jar",
-      "filename": "entity_model_features-3.3.9-1.20.1-forge.jar",
-      "sha256": "a6bf54761d6572c5868eec9320d642c263a6490d045fcff437f00d7cf87c2c8f",
-      "size": 826048,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_model_features-3.3.9-1.20.1-forge.jar"
-    },
-    {
-      "path": "mods/chatanimation-forge-1.3.3+mc1.20.1.jar",
-      "filename": "chatanimation-forge-1.3.3+mc1.20.1.jar",
-      "sha256": "431da94acc595487a27b174c40c15c6e2ccce5a8e9538ed8ee04f2d95eacdca3",
-      "size": 1067270,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__chatanimation-forge-1.3.3+mc1.20.1.jar"
-    },
-    {
-      "path": "mods/entity_texture_features-7.2.4-1.20.1-forge.jar",
-      "filename": "entity_texture_features-7.2.4-1.20.1-forge.jar",
-      "sha256": "de36ff8d3dcb75688d04a3c3ac5a338f654372589deb42533a81921ad55dd49f",
-      "size": 982567,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_texture_features-7.2.4-1.20.1-forge.jar"
+      "path": "config/spell_engine/hud_config.json",
+      "filename": "hud_config.json",
+      "sha256": "0bd11e639ae66bf2a7ca5e40e760579c7ae4fbaa448d8425a5af17576b773062",
+      "size": 651,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__spell_engine__hud_config.json"
     }
   ]
 }
