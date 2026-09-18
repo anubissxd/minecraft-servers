@@ -47,6 +47,7 @@ public class DashHud {
     }
 
     public DashHud() {
+        net.minecraftforge.fml.ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.CLIENT, HudConfig.SPEC, "anubis_dashhud-client.toml");
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> MinecraftForge.EVENT_BUS.register(DashHud.class));
     }
 
@@ -101,8 +102,22 @@ public class DashHud {
 
         int screenW = event.getWindow().getGuiScaledWidth();
         int screenH = event.getWindow().getGuiScaledHeight();
-        int baseX = (int) (cfgValue(cfgX, -114) + 8.0);
-        int baseY = (int) cfgValue(cfgY, 16);
+        // baseX is the rightmost bar; the others step 5 to the left of it
+        int baseX, baseY;
+        switch (HudConfig.DASH_ANCHOR.get()) {
+            case BottomLeft -> {
+                baseX = HudConfig.DASH_X.get() + (bars - 1) * 5 + 1;
+                baseY = HudConfig.DASH_Y.get();
+            }
+            case BottomRight -> {
+                baseX = screenW - HudConfig.DASH_X.get() - 10;
+                baseY = HudConfig.DASH_Y.get();
+            }
+            default -> {
+                baseX = screenW / 2 + (int) (cfgValue(cfgX, -114) + 8.0);
+                baseY = (int) cfgValue(cfgY, 16);
+            }
+        }
 
         GuiGraphics g = event.getGuiGraphics();
         RenderSystem.enableBlend();
@@ -111,7 +126,7 @@ public class DashHud {
         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
         int leftmost = Integer.MAX_VALUE;
         for (int i = 0; i < bars; i++) {
-            int x = screenW / 2 + baseX - i * 5;
+            int x = baseX - i * 5;
             int y = screenH - baseY;
             leftmost = Math.min(leftmost, x - 1);
             g.blit(BACK, x - 1, y - 1, 0, 0, 11, 13, 11, 13);
@@ -134,12 +149,12 @@ public class DashHud {
                     case 4 -> { u = 16; v = 16; }  // button 5
                     default -> { u = 32; v = 16; }
                 }
-                int iconX = screenW / 2 + baseX - (bars - 1) * 5 / 2 - 1; // centred above the bars
-                g.blit(MOUSE_ICONS, iconX, hintY - 15, u, v, 10, 12, 256, 256);
+                int iconX = baseX - (bars - 1) * 5 / 2 - 1; // centred above the bars
+                g.blit(MOUSE_ICONS, iconX, hintY - 13, u, v, 10, 12, 256, 256);
             } else {
                 String label = dashKey.getTranslatedKeyMessage().getString();
                 int tw = mc.font.width(label);
-                g.drawString(mc.font, label, screenW / 2 + baseX - (bars - 1) * 5 / 2 + 4 - tw / 2, hintY - 12, 0xFFFFFF, true);
+                g.drawString(mc.font, label, baseX - (bars - 1) * 5 / 2 + 4 - tw / 2, hintY - 10, 0xFFFFFF, true);
             }
         }
     }

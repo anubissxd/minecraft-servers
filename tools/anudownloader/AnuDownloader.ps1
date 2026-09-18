@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.6"
+$AppVersion = "2.16.7"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1115,7 +1115,8 @@ function Test-AnuSeedOnlyPath($manifestPath) {
         "config/combatroll/hud_config.json",
         "config/combatroll/client.json5",
         "config/spell_engine/hud_config.json",
-        "config/spell_engine/client.json5"
+        "config/spell_engine/client.json5",
+        "config/anubis_dashhud-client.toml"
     )
     if ($alwaysSync -contains $p) { return $false }
     return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
