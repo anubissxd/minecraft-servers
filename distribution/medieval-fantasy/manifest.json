@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.19",
-  "generated": "2026-09-18 16:04:20",
+  "version": "1.2.20",
+  "generated": "2026-09-18 16:36:31",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -52,13 +52,6 @@
       "sha256": "ed042ed803a8a54c1bb9f6b2b15b691f68b577fc7f83f9af9c42c0aa364bd97e",
       "size": 319419,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__wl_bc_compat-forge-1.0.0.jar"
-    },
-    {
-      "path": "mods/goety-2.5.58.1.jar",
-      "filename": "goety-2.5.58.1.jar",
-      "sha256": "719ec7aa596ef368b52a17e1b524d6772745940a5db997de6b8cf45b3b1f51a7",
-      "size": 79258484,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__goety-2.5.58.1.jar"
     },
     {
       "path": "mods/cinematiccataclysm-1.0.1-1.20.1.jar",
@@ -241,13 +234,6 @@
       "sha256": "0350c2ea731861f516c285ce668e6dce2958dc88d1e1edc9f53b31af7d584875",
       "size": 19288,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__cataclysm_compat_1.20.1-1.0.2.jar"
-    },
-    {
-      "path": "mods/EndingLibrary-1.20.1-2.2-all.jar",
-      "filename": "EndingLibrary-1.20.1-2.2-all.jar",
-      "sha256": "4ba87b086a2fda841493615310eb29941d502966f1d627c8c66fbe9e00d2aed2",
-      "size": 2413714,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__EndingLibrary-1.20.1-2.2-all.jar"
     },
     {
       "path": "mods/combat_dash-1.7-forge-1.20.1.jar",
@@ -684,13 +670,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__melody_forge_1.0.3_MC_1.20.1-1.20.4.jar"
     },
     {
-      "path": "mods/stronger-skill-tree-for-pufferfishs-skills-1.4.2.jar",
-      "filename": "stronger-skill-tree-for-pufferfishs-skills-1.4.2.jar",
-      "sha256": "ea44e73e84dba70f1173ff89d3bbd63d176f2a1d00ec92581203e38f504ff7ca",
-      "size": 117737,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__stronger-skill-tree-for-pufferfishs-skills-1.4.2.jar"
-    },
-    {
       "path": "mods/irons_spells_dynamic_skilltree_1.1.0.jar",
       "filename": "irons_spells_dynamic_skilltree_1.1.0.jar",
       "sha256": "07ecb47f5a374879f72239dec136ee8f7c08366384507d32aedb6419afe1e07e",
@@ -1048,13 +1027,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__cristellib-1.1.6-forge.jar"
     },
     {
-      "path": "mods/legendarymonsters-2.2.2 MC 1.20.1.jar",
-      "filename": "legendarymonsters-2.2.2 MC 1.20.1.jar",
-      "sha256": "8fc236e768acabe168c575f6ec76a3a587f0178a14f2706f6afa26dc470a69a8",
-      "size": 44963704,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__legendarymonsters-2.2.2_MC_1.20.1.jar"
-    },
-    {
       "path": "mods/skill_tree-forge-1.6.1+1.20.1.jar",
       "filename": "skill_tree-forge-1.6.1+1.20.1.jar",
       "sha256": "a7cef08b04e06da3f6b63d8065364b3efe06dce9a5e1d7a8ad90dab0a92ca4c0",
@@ -1214,13 +1186,6 @@
       "sha256": "12cffc99dccca69d294ba5bc39c331367794b339061572a6f3773620303a2f51",
       "size": 619255,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar"
-    },
-    {
-      "path": "mods/jei-1.20.1-forge-15.59.0.211.jar",
-      "filename": "jei-1.20.1-forge-15.59.0.211.jar",
-      "sha256": "2e2b9ccc6c0f78df44eb9301ef3b75be0e0e26538679246a3accb8dfb8f10e10",
-      "size": 1825582,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__jei-1.20.1-forge-15.59.0.211.jar"
     },
     {
       "path": "mods/Clumps-forge-1.20.1-12.0.0.4.jar",
@@ -4422,6 +4387,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Server.toml"
     },
     {
+      "path": "config/combatdash/combatdash Client.toml",
+      "filename": "combatdash Client.toml",
+      "sha256": "0b2734132db11af4918b4f92695c06666ac87ad86186635f17fe0151b9bb637c",
+      "size": 285,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Client.toml"
+    },
+    {
       "path": "config/smallships-common.toml",
       "filename": "smallships-common.toml",
       "sha256": "2c2914337fc96d44520ac1758afed504616cd9b13a11a0992c3d3528c79a5c5b",
@@ -4513,13 +4485,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__natures_spirit-common.toml"
     },
     {
-      "path": "mods/entity_model_features-3.3.5-1.20.1-forge.jar",
-      "filename": "entity_model_features-3.3.5-1.20.1-forge.jar",
-      "sha256": "16cadaef8e571c86ae3d7e63e1704d9c6a7bdafa466ea485f8f1b3d139c7dcb3",
-      "size": 814220,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_model_features-3.3.5-1.20.1-forge.jar"
-    },
-    {
       "path": "mods/catalogue-forge-1.20.1-1.8.0.jar",
       "filename": "catalogue-forge-1.20.1-1.8.0.jar",
       "sha256": "58445fc445546ab0db677edb9bf45bb87b99370e6483ee9080d816a9109cb210",
@@ -4588,13 +4553,6 @@
       "sha256": "537f84f1153369d61878965846a8ead7c5eae3a6ad917b04c02521ad76182ad2",
       "size": 208850,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__AdvancementPlaques-1.20.1-forge-1.6.9.jar"
-    },
-    {
-      "path": "mods/chatanimation-forge-1.3.0+mc1.20.1.jar",
-      "filename": "chatanimation-forge-1.3.0+mc1.20.1.jar",
-      "sha256": "5b5574687edf1e14a1cfcc34a68526148b098219c098d9030bebfcf458393b9c",
-      "size": 1031906,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__chatanimation-forge-1.3.0+mc1.20.1.jar"
     },
     {
       "path": "mods/LegendaryTooltips-1.20.1-forge-1.4.5.jar",
@@ -4751,13 +4709,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fallingleaves-1.20.1-2.1.2.jar"
     },
     {
-      "path": "mods/skinlayers3d-forge-1.11.2-mc1.20.1.jar",
-      "filename": "skinlayers3d-forge-1.11.2-mc1.20.1.jar",
-      "sha256": "2d35eff3e2642e8a6f7fb4cc7461211699ee2e32b9644e0d3b3bd6ba1574551c",
-      "size": 2168901,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__skinlayers3d-forge-1.11.2-mc1.20.1.jar"
-    },
-    {
       "path": "mods/AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
       "filename": "AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
       "sha256": "41688a2ba90e5b07beb0e1844cfd0b21a4294b1073de144ae0a7f519b336a18b",
@@ -4819,13 +4770,6 @@
       "sha256": "15629cea789e5ca733165682865f4a58fd71caed3168418fe91260845e83bdea",
       "size": 11794,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__anubis-dashhud-1.4.1.jar"
-    },
-    {
-      "path": "mods/entity_texture_features-7.2.1-1.20.1-forge.jar",
-      "filename": "entity_texture_features-7.2.1-1.20.1-forge.jar",
-      "sha256": "5b1b7d22af62e337b9a12cbec4402ce25e23d8f010b6593a6815ca5b7fb8cc4d",
-      "size": 975706,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_texture_features-7.2.1-1.20.1-forge.jar"
     },
     {
       "path": "mods/emf_compat_carry_on_1.20.1_2.0.0.jar",
@@ -4947,69 +4891,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__pack.mcmeta"
     },
     {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/vampire/experience.json",
-      "filename": "experience.json",
-      "sha256": "989c6dd541bf383d0013976c5b2afb1002f518919464b4b5fbcf615e0a4438ff",
-      "size": 532,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__vampire__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/arcanist/experience.json",
-      "filename": "experience.json",
-      "sha256": "aec6c55695918e0122447c10b5bdd5d65ae1e8a86e075afeeb8b0e229479cdbf",
-      "size": 951,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__arcanist__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/combat/experience.json",
-      "filename": "experience.json",
-      "sha256": "9fbe0a715299b5afc1d7aacee98dbb8a54449c4179cdd5a1c280d7adb0a6a2b2",
-      "size": 6173,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__combat__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/excavation/experience.json",
-      "filename": "experience.json",
-      "sha256": "d26761d0e1a62838aab619692e48c000376a6e4325d80b8bc8a4efef336fe7e5",
-      "size": 3294,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__excavation__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/woodworking/experience.json",
-      "filename": "experience.json",
-      "sha256": "ef6fac959a1b5cef48125c6f0f8520638c935e4ddb3a381bae10639a5fafc8e7",
-      "size": 3237,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__woodworking__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/mining/experience.json",
-      "filename": "experience.json",
-      "sha256": "6756926463fc35967cfe596605d3bf6355bf712af7bde4d73fb88454e2bafc0f",
-      "size": 7479,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__mining__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/herbalism/experience.json",
-      "filename": "experience.json",
-      "sha256": "fc4147e7661ae4dba150507c91cd10debda48d670843a42a1339ad50898e54ef",
-      "size": 7098,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__herbalism__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/arcwise/puffish_skills/categories/tough_guy/experience.json",
-      "filename": "experience.json",
-      "sha256": "d446345c997a130b7e02b5888ed445682b8eec30a84e5b24de1fcc3359aee647",
-      "size": 8766,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__arcwise__puffish_skills__categories__tough_guy__experience.json"
-    },
-    {
-      "path": "global_packs/required_data/anubis_fixes/data/adventurer_skills/puffish_skills/categories/adventurer_skills/experience.json",
-      "filename": "experience.json",
-      "sha256": "c244f04b793246d6b35a581b22e3bf44b6c1f4090e615c4753d51c21914ec5e1",
-      "size": 5451,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__adventurer_skills__puffish_skills__categories__adventurer_skills__experience.json"
-    },
-    {
       "path": "global_packs/required_data/anubis_fixes/data/c/tags/blocks/ores_in_ground/stone.json",
       "filename": "stone.json",
       "sha256": "38ac3d4f0dabd8a86f81afd5c374209680d780b3e6a9c5818b33aebe209eafdd",
@@ -5052,32 +4933,67 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
     },
     {
-      "path": "global_packs/required_data/anubis_fixes/data/skill_tree_for_pufferfishs_skills/puffish_skills/categories/combat/experience.json",
-      "filename": "experience.json",
-      "sha256": "235e9627332309d819d09fe411699096b550774db2c1746437c796eb7bd6840b",
-      "size": 831,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__skill_tree_for_pufferfishs_skills__puffish_skills__categories__combat__experience.json"
+      "path": "mods/EndingLibrary-1.20.1-2.2.1-all.jar",
+      "filename": "EndingLibrary-1.20.1-2.2.1-all.jar",
+      "sha256": "4479f21fd8464ebd0243710eb66b5e931bdce8dc70c9fcf1c3f0314291354ff4",
+      "size": 2415921,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__EndingLibrary-1.20.1-2.2.1-all.jar"
     },
     {
-      "path": "global_packs/required_data/anubis_fixes/data/skill_tree_for_pufferfishs_skills/puffish_skills/categories/mining/experience.json",
-      "filename": "experience.json",
-      "sha256": "ecd388e00e77cb72e08c18b6842437b32f638bb4439d60b063b9fbb720e1737a",
-      "size": 3209,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__skill_tree_for_pufferfishs_skills__puffish_skills__categories__mining__experience.json"
+      "path": "mods/jei-1.20.1-forge-15.59.0.212.jar",
+      "filename": "jei-1.20.1-forge-15.59.0.212.jar",
+      "sha256": "0f39187f57cadd7b27a4511038628e212b53a1b184edf53121614418ed6a7442",
+      "size": 1826038,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__jei-1.20.1-forge-15.59.0.212.jar"
     },
     {
-      "path": "global_packs/required_data/anubis_fixes/data/skill_tree_for_pufferfishs_skills/puffish_skills/categories/chopping_wood/experience.json",
-      "filename": "experience.json",
-      "sha256": "461338797e64053dfa8c0a550b451951e7fc0a04a5c3a6ffd01613ce1dd02825",
-      "size": 951,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__skill_tree_for_pufferfishs_skills__puffish_skills__categories__chopping_wood__experience.json"
+      "path": "mods/goety-2.5.58.3.jar",
+      "filename": "goety-2.5.58.3.jar",
+      "sha256": "d41611de0e5423e3043e8e11df7ee2797f10def7ae848a7d7662aa4acd95242c",
+      "size": 79316929,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__goety-2.5.58.3.jar"
     },
     {
-      "path": "config/combatdash/combatdash Client.toml",
-      "filename": "combatdash Client.toml",
-      "sha256": "0b2734132db11af4918b4f92695c06666ac87ad86186635f17fe0151b9bb637c",
-      "size": 285,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash_Client.toml"
+      "path": "mods/legendarymonsters-2.2.3 MC 1.20.1.jar",
+      "filename": "legendarymonsters-2.2.3 MC 1.20.1.jar",
+      "sha256": "a90a3009e502ba4f235e5bd9a7493c2307e4060f0ee21fd02e62f9893912321c",
+      "size": 44954907,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__legendarymonsters-2.2.3_MC_1.20.1.jar"
+    },
+    {
+      "path": "config/fancymenu/options.txt",
+      "filename": "options.txt",
+      "sha256": "6df834ff0756d1d57f5ff20abcc8d5e716f7736fe38f83f390d5b4f539b407ab",
+      "size": 4400,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__fancymenu__options.txt"
+    },
+    {
+      "path": "mods/skinlayers3d-forge-1.11.3-mc1.20.1.jar",
+      "filename": "skinlayers3d-forge-1.11.3-mc1.20.1.jar",
+      "sha256": "6229ea6e5d77dd1f66d21163bf3187abb899d59f508dae63ab67ecbb0f804cc5",
+      "size": 2093560,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__skinlayers3d-forge-1.11.3-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/entity_model_features-3.3.9-1.20.1-forge.jar",
+      "filename": "entity_model_features-3.3.9-1.20.1-forge.jar",
+      "sha256": "a6bf54761d6572c5868eec9320d642c263a6490d045fcff437f00d7cf87c2c8f",
+      "size": 826048,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_model_features-3.3.9-1.20.1-forge.jar"
+    },
+    {
+      "path": "mods/chatanimation-forge-1.3.3+mc1.20.1.jar",
+      "filename": "chatanimation-forge-1.3.3+mc1.20.1.jar",
+      "sha256": "431da94acc595487a27b174c40c15c6e2ccce5a8e9538ed8ee04f2d95eacdca3",
+      "size": 1067270,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__chatanimation-forge-1.3.3+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/entity_texture_features-7.2.4-1.20.1-forge.jar",
+      "filename": "entity_texture_features-7.2.4-1.20.1-forge.jar",
+      "sha256": "de36ff8d3dcb75688d04a3c3ac5a338f654372589deb42533a81921ad55dd49f",
+      "size": 982567,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__entity_texture_features-7.2.4-1.20.1-forge.jar"
     }
   ]
 }

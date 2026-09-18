@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.7"
+$AppVersion = "2.16.8"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1107,7 +1107,8 @@ function Test-AnuSeedOnlyPath($manifestPath) {
     # channel) even loads; a player who picked "patches only" on first launch
     # can never join a server running the full mod.
     # The HUD layout files are synced too, so everyone sees the same screen
-    # (spell bar, mana bar, dash/roll widgets, spell hotkey hints).
+    # (spell bar, mana bar, dash/roll widgets, spell hotkey hints), and
+    # FancyMenu's options so its editor bar stays hidden for players.
     $alwaysSync = @(
         "config/bielgg_spells-experience.properties",
         "config/irons_spellbooks-client.toml",
@@ -1116,7 +1117,8 @@ function Test-AnuSeedOnlyPath($manifestPath) {
         "config/combatroll/client.json5",
         "config/spell_engine/hud_config.json",
         "config/spell_engine/client.json5",
-        "config/anubis_dashhud-client.toml"
+        "config/anubis_dashhud-client.toml",
+        "config/fancymenu/options.txt"
     )
     if ($alwaysSync -contains $p) { return $false }
     return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
