@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.8"
+$AppVersion = "2.16.9"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1108,7 +1108,9 @@ function Test-AnuSeedOnlyPath($manifestPath) {
     # can never join a server running the full mod.
     # The HUD layout files are synced too, so everyone sees the same screen
     # (spell bar, mana bar, dash/roll widgets, spell hotkey hints), and
-    # FancyMenu's options so its editor bar stays hidden for players.
+    # FancyMenu's options so its editor bar stays hidden for players. Spell Engine's
+    # weapon skills and Apotheosis' equipment types are computed on both sides,
+    # so those two must match the server as well.
     $alwaysSync = @(
         "config/bielgg_spells-experience.properties",
         "config/irons_spellbooks-client.toml",
@@ -1118,7 +1120,9 @@ function Test-AnuSeedOnlyPath($manifestPath) {
         "config/spell_engine/hud_config.json",
         "config/spell_engine/client.json5",
         "config/anubis_dashhud-client.toml",
-        "config/fancymenu/options.txt"
+        "config/fancymenu/options.txt",
+        "config/spell_engine/weapon_fallback.json",
+        "config/apotheosis/adventure.cfg"
     )
     if ($alwaysSync -contains $p) { return $false }
     return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
