@@ -32,7 +32,7 @@ public class SpellBarLayoutMixin {
             int row = i / COLUMNS;
             int column = i % COLUMNS;
             float x = compensateX + column * boxSize;
-            float y = (row - rows) * boxSize; // bottom row ends at the anchor
+            float y = -(row + 1) * boxSize; // first row at the bottom, later rows stack upward
             Vec2 location = new Vec2(x, y);
             location = location.add(-spriteSize / 2f);
             ClientRenderCache.relativeSpellBarSlotLocations.add(location);

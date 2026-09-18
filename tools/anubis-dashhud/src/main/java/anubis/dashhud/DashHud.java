@@ -1,5 +1,6 @@
 package anubis.dashhud;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -23,20 +24,27 @@ import java.lang.reflect.Field;
 
 /**
  * Anubis Dash HUD - draws Combat Dash's dash bars itself, so they never fade
- * out when full and never hide because of an offhand item, and shows the
- * dash keybinding next to them. Reads Combat Dash's data by reflection, so it
+ * out when full and never hide because of an offhand item. Reads Combat
+ * Dash's data by reflection, so it
  * has no compile-time dependency and never touches the original mod.
  */
 @Mod("anubis_dashhud")
 public class DashHud {
     private static final ResourceLocation BACK = new ResourceLocation("combat_dash", "textures/screens/arrowback.png");
     private static final ResourceLocation FILL = new ResourceLocation("combat_dash", "textures/screens/arrow_1401.png");
+    private static final ResourceLocation MOUSE_ICONS = new ResourceLocation("spell_engine", "textures/hud/widgets.png");
 
     private static Capability<Object> playerVarsCap;
     private static Field dashCooldownField;
     private static KeyMapping dashKey;
     private static Object cfgX, cfgY;
     private static boolean lookedUp = false;
+    private static final org.slf4j.Logger LOG = com.mojang.logging.LogUtils.getLogger();
+    private static long lastDebug = 0;
+    private static void debug(String why) {
+        long now = System.currentTimeMillis();
+        if (now - lastDebug > 10000) { lastDebug = now; LOG.info("[anubis_dashhud] not drawing: {}", why); }
+    }
 
     public DashHud() {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> MinecraftForge.EVENT_BUS.register(DashHud.class));
@@ -55,6 +63,7 @@ public class DashHud {
             cfgY = cfg.getField("DASHCONFIGYPOS").get(null);
         } catch (Throwable t) {
             playerVarsCap = null;
+            LOG.warn("[anubis_dashhud] lookup failed", t);
         }
     }
 
@@ -74,24 +83,21 @@ public class DashHud {
         Player player = mc.player;
         if (player == null || mc.options.hideGui) return;
         if (!lookedUp) lookup();
-        if (playerVarsCap == null) return;
-        AttributeInstance enabled = attrInst(player, "enabledash");
-        if (enabled == null || enabled.getValue() != 1.0) return;
+        if (playerVarsCap == null) { debug("lookup failed"); return; }
 
         double cooldown;
         try {
             LazyOptional<Object> opt = player.getCapability(playerVarsCap, null);
             Object vars = opt.orElse(null);
-            if (vars == null) return;
-            cooldown = dashCooldownField.getDouble(vars);
-        } catch (Throwable t) { return; }
+            cooldown = vars == null ? Double.MAX_VALUE : dashCooldownField.getDouble(vars); // no sync yet = show full
+        } catch (Throwable t) { debug("cap read: " + t); return; }
 
         AttributeInstance maxInst = attrInst(player, "max_dash_amount");
         int bars = maxInst == null ? 3 : (int) maxInst.getValue();
         if (bars <= 0) bars = 3;
         AttributeInstance cdInst = attrInst(player, "dash_cool_down");
         double perBar = cdInst == null ? 0 : cdInst.getBaseValue();
-        if (perBar <= 0) return;
+        if (perBar <= 0) { debug("dash_cool_down base=" + perBar); return; }
 
         int screenW = event.getWindow().getGuiScaledWidth();
         int screenH = event.getWindow().getGuiScaledHeight();
@@ -113,11 +119,28 @@ public class DashHud {
             int barHeight = (int) (11.0 * (1.0 - fill));
             g.blit(FILL, x, y, 0, 0, 9, barHeight, 9, 11);
         }
-        // key label to the left of the bars, like Combat Roll's
+        // keybinding hint to the left of the bars: Spell Engine's mouse icons
+        // for mouse buttons (same look as its spell hotbar), key name otherwise
         if (dashKey != null) {
-            String label = dashKey.getTranslatedKeyMessage().getString();
-            int tw = mc.font.width(label);
-            g.drawString(mc.font, label, leftmost - tw - 3, screenH - baseY + 2, 0xFFFFFF, true);
+            int hintY = screenH - baseY;
+            InputConstants.Key key = dashKey.getKey();
+            if (key.getType() == InputConstants.Type.MOUSE) {
+                int u, v;
+                switch (key.getValue()) {
+                    case 0 -> { u = 0; v = 0; }    // left
+                    case 1 -> { u = 16; v = 0; }   // right
+                    case 2 -> { u = 32; v = 0; }   // middle
+                    case 3 -> { u = 0; v = 16; }   // button 4
+                    case 4 -> { u = 16; v = 16; }  // button 5
+                    default -> { u = 32; v = 16; }
+                }
+                int iconX = screenW / 2 + baseX - (bars - 1) * 5 / 2 - 1; // centred above the bars
+                g.blit(MOUSE_ICONS, iconX, hintY - 15, u, v, 10, 12, 256, 256);
+            } else {
+                String label = dashKey.getTranslatedKeyMessage().getString();
+                int tw = mc.font.width(label);
+                g.drawString(mc.font, label, screenW / 2 + baseX - (bars - 1) * 5 / 2 + 4 - tw / 2, hintY - 12, 0xFFFFFF, true);
+            }
         }
     }
 }
