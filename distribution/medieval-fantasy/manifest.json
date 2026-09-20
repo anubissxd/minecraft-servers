@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.24",
-  "generated": "2026-09-20 03:07:53",
+  "version": "1.2.25",
+  "generated": "2026-09-20 04:18:24",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -5330,6 +5330,342 @@
       "sha256": "7edec59968166f0091b9a490043a198cd84c251b6fc9b88feb8989913c70ee0d",
       "size": 2261,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
+    },
+    {
+      "path": "mods/Titles-1.20.1-3.8.4.jar",
+      "filename": "Titles-1.20.1-3.8.4.jar",
+      "sha256": "c2af4a369e087c79eeb3aca47ce41fe880e9bd1d01c7fdb4f85bb082abcef1de",
+      "size": 219165,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Titles-1.20.1-3.8.4.jar"
+    },
+    {
+      "path": "config/titles-common.toml",
+      "filename": "titles-common.toml",
+      "sha256": "926dfe8e37cf2c06facc97ea50f6a177e13ab08d55a83a3f5a46a1cbd560868c",
+      "size": 245,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__titles-common.toml"
+    },
+    {
+      "path": "kubejs/server_scripts/anubis_title_perks.js",
+      "filename": "anubis_title_perks.js",
+      "sha256": "31b7edf8da4db54d031809b9b921e4f20b65786c6b9b3999cc7b9c5fe92aeba9",
+      "size": 1743,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__anubis_title_perks.js"
+    },
+    {
+      "path": "kubejs/assets/kubejs/textures/gui/spell_icons/amaterasu.png",
+      "filename": "amaterasu.png",
+      "sha256": "fe7a9998e1909a5d728232e52548998b5b58458c0a4da2f90efdcd7ba0239ae2",
+      "size": 227,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__textures__gui__spell_icons__amaterasu.png"
+    },
+    {
+      "path": "kubejs/assets/kubejs/lang/en_us.json",
+      "filename": "en_us.json",
+      "sha256": "8b33ff683ac9904e70cf02dd07eee2849cc23ca2b62810a0a352d4d9ef154ea4",
+      "size": 113,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__en_us.json"
+    },
+    {
+      "path": "kubejs/assets/kubejs/lang/tr_tr.json",
+      "filename": "tr_tr.json",
+      "sha256": "79d65cdfd4f56b1904ba06d3025cfaf40543c8eba7b40dc36598e59849312a5a",
+      "size": 110,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__tr_tr.json"
+    },
+    {
+      "path": "kubejs/startup_scripts/anubis_anime_spells.js",
+      "filename": "anubis_anime_spells.js",
+      "sha256": "884cf3eabf8a41b86b0efc76a8607d6d4163a962f2aa6e71899877351fc0f40f",
+      "size": 3128,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__startup_scripts__anubis_anime_spells.js"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/pack.mcmeta",
+      "filename": "pack.mcmeta",
+      "sha256": "d3db3baf550798418888fa87af8b1e0a9fcbbba0a564a0020e2729b75b9de116",
+      "size": 104,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__pack.mcmeta"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/pack.png",
+      "filename": "pack.png",
+      "sha256": "808563a16aa3e51b4fbbef6593c134f5066c25ed122c591b202115068cdc7045",
+      "size": 12170,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__pack.png"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/minecraft/recipes/packed_ice.json",
+      "filename": "packed_ice.json",
+      "sha256": "428e5787db4bed8bda95aacf857ca4270344d3630161608861bd4b252257901b",
+      "size": 575,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__minecraft__recipes__packed_ice.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/minecraft/recipes/wheat.json",
+      "filename": "wheat.json",
+      "sha256": "e280bbb0e76a8a51547b5cddd463bbef25150d226a35f335ab05cc41daa43d2b",
+      "size": 223,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__minecraft__recipes__wheat.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/bread_to_wheat.json",
+      "filename": "bread_to_wheat.json",
+      "sha256": "0945be9617282994697fef3276ccfea581133ac96491984ec40fee5c0a83fab5",
+      "size": 387,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__bread_to_wheat.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/bricks_to_brick.json",
+      "filename": "bricks_to_brick.json",
+      "sha256": "8ca3d67f9a46fe3dc5eeb33f4c124da5513b38384c289b428cd822100e8e5960",
+      "size": 382,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__bricks_to_brick.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/honeycomb_block_to_honeycomb.json",
+      "filename": "honeycomb_block_to_honeycomb.json",
+      "sha256": "724e19f136d9bab95180fa2c9825b90eacca0269fb0538b1763dfdf15d94dccf",
+      "size": 411,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__honeycomb_block_to_honeycomb.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/quartz_block_to_quartz.json",
+      "filename": "quartz_block_to_quartz.json",
+      "sha256": "dd6be03c697bf33f4e9fe923f59a0745c226ee9a909e70fbf297910c9fb8a221",
+      "size": 402,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__quartz_block_to_quartz.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/amethyst_block_to_amethyst_shard.json",
+      "filename": "amethyst_block_to_amethyst_shard.json",
+      "sha256": "87782360f535f3265bd7cd69b5faa15175ead8c2c8e273df6f3139a632921d12",
+      "size": 414,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__amethyst_block_to_amethyst_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/prismarine_to_prismarine_shard.json",
+      "filename": "prismarine_to_prismarine_shard.json",
+      "sha256": "968c8702a9248bcc6fe2df72070cb511cec2c5abd29fa8d7f173b39248174f74",
+      "size": 408,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__prismarine_to_prismarine_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/nether_wart_block_to_nether_wart.json",
+      "filename": "nether_wart_block_to_nether_wart.json",
+      "sha256": "302e091a74bc6238507ffb7463bf7dd1826a117c548f8b1901b9b00fb1a00333",
+      "size": 417,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__nether_wart_block_to_nether_wart.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/snow_block_to_snowball.json",
+      "filename": "snow_block_to_snowball.json",
+      "sha256": "2e6ed3e8fc620a82bc4b64947429ccca72ca20c9c3240384b3e154c61ea487b1",
+      "size": 400,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__snow_block_to_snowball.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/wool_to_string.json",
+      "filename": "wool_to_string.json",
+      "sha256": "0338d007ce6ec46b65e7780781085c7a657804c4f44d40eb6fec6ab5d562d02d",
+      "size": 386,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__wool_to_string.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/prismarine_bricks_to_prismarine_shard.json",
+      "filename": "prismarine_bricks_to_prismarine_shard.json",
+      "sha256": "8d18b7bec1c69790c1997f895f26b74dcc51374245a2733b2b2f1999950a332f",
+      "size": 422,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__prismarine_bricks_to_prismarine_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/nether_bricks_to_nether_brick.json",
+      "filename": "nether_bricks_to_nether_brick.json",
+      "sha256": "8227c94fa84bf31b3b699fd74de04e07e4f138bb80298161df1f80980747eb9b",
+      "size": 410,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__nether_bricks_to_nether_brick.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/misc/clay_to_clay_ball.json",
+      "filename": "clay_to_clay_ball.json",
+      "sha256": "864934dcd7a893a780b5eb9d5b728af05b5a617a4b4bb67bf3cad62ab748ac3e",
+      "size": 389,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__misc__clay_to_clay_ball.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/building_blocks/blue_ice_to_packed_ice.json",
+      "filename": "blue_ice_to_packed_ice.json",
+      "sha256": "61ffcecc5468800e7fc62b6c0d9bc78c953067f2579274dbc89b9448a6fd4f27",
+      "size": 398,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__building_blocks__blue_ice_to_packed_ice.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/building_blocks/dripstone_block_to_pointed_dripstone.json",
+      "filename": "dripstone_block_to_pointed_dripstone.json",
+      "sha256": "669c820faede52924bdbe3f8aa59b0f67f3ef2c6c1b4b6b92ec21053064f2005",
+      "size": 419,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__building_blocks__dripstone_block_to_pointed_dripstone.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/advancements/recipes/building_blocks/packed_ice_to_ice.json",
+      "filename": "packed_ice_to_ice.json",
+      "sha256": "bf720e5bd8db0820055d1f9c0ce6d1240dab6d5d2b550292ccb8c871168d5eba",
+      "size": 395,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__advancements__recipes__building_blocks__packed_ice_to_ice.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/bread_to_wheat.json",
+      "filename": "bread_to_wheat.json",
+      "sha256": "d0a0f4b63b1291cfc6629bd19a04ff0d28bf88eba10dac15253aa6a832b5c891",
+      "size": 219,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__bread_to_wheat.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/bricks_to_brick.json",
+      "filename": "bricks_to_brick.json",
+      "sha256": "dea7bf8e86bc1b44aa9b2239d51820605716d016666b8bf3d688ece3dbfb4d6d",
+      "size": 200,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__bricks_to_brick.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/honeycomb_block_to_honeycomb.json",
+      "filename": "honeycomb_block_to_honeycomb.json",
+      "sha256": "dc9ebea38702cfdba4c835c73bb3987a4b6d79b5873e6c3f397c98914f972dd5",
+      "size": 213,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__honeycomb_block_to_honeycomb.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/quartz_block_to_quartz.json",
+      "filename": "quartz_block_to_quartz.json",
+      "sha256": "8f33e77b7a457aae59b4caeaff57bbf663ab540beacb0fedf61882d6544a6219",
+      "size": 207,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__quartz_block_to_quartz.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/amethyst_block_to_amethyst_shard.json",
+      "filename": "amethyst_block_to_amethyst_shard.json",
+      "sha256": "49d352fbae510fbfa5368644b562d7b85a57ec8d2954598f2b311fab9d43a683",
+      "size": 217,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__amethyst_block_to_amethyst_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/blue_ice_to_packed_ice.json",
+      "filename": "blue_ice_to_packed_ice.json",
+      "sha256": "ba77d5f784be433e8b6b523450248c7b8e9d4dd9b4ada034d64abc1a3f72fc58",
+      "size": 236,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__blue_ice_to_packed_ice.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/prismarine_to_prismarine_shard.json",
+      "filename": "prismarine_to_prismarine_shard.json",
+      "sha256": "e0cb78dd598b49854d97cbd101b7bc61e25fc48a15a26d5806cd1c06f749e226",
+      "size": 246,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__prismarine_to_prismarine_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/nether_wart_block_to_nether_wart.json",
+      "filename": "nether_wart_block_to_nether_wart.json",
+      "sha256": "694a1cddd4017e3a6451dc74d828a2f8243633cc5b4533daeff4cdc44888e857",
+      "size": 217,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__nether_wart_block_to_nether_wart.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/dripstone_block_to_pointed_dripstone.json",
+      "filename": "dripstone_block_to_pointed_dripstone.json",
+      "sha256": "0a02324386a993abae445f05dcca1825689daa91e6e29f73a35315191ac19712",
+      "size": 225,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__dripstone_block_to_pointed_dripstone.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/snow_block_to_snowball.json",
+      "filename": "snow_block_to_snowball.json",
+      "sha256": "8863b8a9a27af854f534abe38f37749334c66fa8a7c4fd8152cba02edbe2eb2f",
+      "size": 207,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__snow_block_to_snowball.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/wool_to_string.json",
+      "filename": "wool_to_string.json",
+      "sha256": "ea8fbec252d52c105534273c5c12a97fd6d292d4a1c57e1bf08e69659fe44332",
+      "size": 198,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__wool_to_string.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/packed_ice_to_ice.json",
+      "filename": "packed_ice_to_ice.json",
+      "sha256": "27c696e592f02e7e9cee4dee8cf90bae76b7e8581fc5a3e1ab50f3d63700d836",
+      "size": 206,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__packed_ice_to_ice.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/prismarine_bricks_to_prismarine_shard.json",
+      "filename": "prismarine_bricks_to_prismarine_shard.json",
+      "sha256": "8cdc758dec4e4a5ef5292f94f0ff7c0e46ddca390079123dcf26eaf5f6514d46",
+      "size": 253,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__prismarine_bricks_to_prismarine_shard.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/nether_bricks_to_nether_brick.json",
+      "filename": "nether_bricks_to_nether_brick.json",
+      "sha256": "56bda221debcaac117c7c6cb4085994c4274af0b2d3c5c63c36fedcb3073440f",
+      "size": 214,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__nether_bricks_to_nether_brick.json"
+    },
+    {
+      "path": "global_packs/required_data/uncrafting_recipes/data/uncrafting_recipes/recipes/clay_to_clay_ball.json",
+      "filename": "clay_to_clay_ball.json",
+      "sha256": "528f772bb8554b6c141d944a7a01a6ef2566aafbacc74fa4a7b39169e3fe23ac",
+      "size": 202,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__uncrafting_recipes__data__uncrafting_recipes__recipes__clay_to_clay_ball.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/config.json",
+      "filename": "config.json",
+      "sha256": "f23554eb4921a4f09d15fddf3c37ff590a5e7239495aace60989885e64701e0d",
+      "size": 47,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__config.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/categories/anubis/experience.json",
+      "filename": "experience.json",
+      "sha256": "e0ff58e7c1caa531217dc0f3cee40ae63f20b4d433cad3de403f798eb761e86a",
+      "size": 578,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__categories__anubis__experience.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/categories/anubis/definitions.json",
+      "filename": "definitions.json",
+      "sha256": "7fcd5bc7b9f1a66e88ec41710790e3873df4675a97e835da66145a7076d70fe1",
+      "size": 2747,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__categories__anubis__definitions.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/categories/anubis/connections.json",
+      "filename": "connections.json",
+      "sha256": "92ea315be6342e85321a125b11143026b426b4bb552cccee21a7f73bdd081e5f",
+      "size": 113,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__categories__anubis__connections.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/categories/anubis/skills.json",
+      "filename": "skills.json",
+      "sha256": "f7a26dcf3815ddbeaf9e771f65b5f42f5e6bfd57be5650918cbfe5a36d3bd2f1",
+      "size": 370,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__categories__anubis__skills.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/puffish_skills/categories/anubis/category.json",
+      "filename": "category.json",
+      "sha256": "68eee8ac20fb791df5ecae8b905c3f41e39a3bff1044aeda7d2aafddf5e68875",
+      "size": 349,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__puffish_skills__categories__anubis__category.json"
+    },
+    {
+      "path": "global_packs/required_data/anubis_fixes/data/anubis/titles/anubis.json",
+      "filename": "anubis.json",
+      "sha256": "a3e3cc6d5aed91f31a9ab839af1d09476e7b6695079fb3feb79d9063265b9257",
+      "size": 143,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__anubis__titles__anubis.json"
     }
   ]
 }
