@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.26",
-  "generated": "2026-09-20 04:34:51",
+  "version": "1.2.27",
+  "generated": "2026-09-20 18:10:17",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -1391,6 +1391,20 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__easy_npc_config_ui-forge-1.20.1-7.12.1.jar"
     },
     {
+      "path": "mods/Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar",
+      "filename": "Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar",
+      "sha256": "f62538f9a43b26e8dd3dd814b94556be298e9d16c1eed996a014e3b6dda47ae1",
+      "size": 1515161,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar"
+    },
+    {
+      "path": "mods/Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar",
+      "filename": "Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar",
+      "sha256": "00c1d88e999ab5ce732e1e9fd2570c1881241323a50574f9b21df09a9e6a9271",
+      "size": 1047873,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar"
+    },
+    {
       "path": "mods/pufferfish_unofficial_additions-1.20.1-2.2.4-all.jar",
       "filename": "pufferfish_unofficial_additions-1.20.1-2.2.4-all.jar",
       "sha256": "e0de9cabd9d52f0b5bc56439ddfdd99dcfa78cebd81d722db7bbd46a0bd3e4b1",
@@ -1634,13 +1648,6 @@
       "sha256": "24b3bdc844755e8a39571b5000d8dd829543f7b150d154016ccd926e47d06a71",
       "size": 179190,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__YungsBetterWitchHuts-1.20-Forge-3.0.3.jar"
-    },
-    {
-      "path": "mods/emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar",
-      "filename": "emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar",
-      "sha256": "ffaac96e37e6fa950080e2eb4aa361aa8b7bd6c4370862f39893ac2d266d7c14",
-      "size": 680255,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar"
     },
     {
       "path": "mods/bmcfix-forge-1.0.2.jar",
@@ -3708,13 +3715,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__endermanoverhaul.jsonc"
     },
     {
-      "path": "config/emotecraft_emote_map.json",
-      "filename": "emotecraft_emote_map.json",
-      "sha256": "0ce5a209870e0673c14f68d4581de2cefc67a3c37aa7071c943b711a69835775",
-      "size": 117,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__emotecraft_emote_map.json"
-    },
-    {
       "path": "config/resourceful-config-web.json",
       "filename": "resourceful-config-web.json",
       "sha256": "3c61ce414e420b1714dc67cfb0d0914178136fa6eff04e712490885340b88943",
@@ -4464,6 +4464,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__jrftl-common.toml"
     },
     {
+      "path": "config/enhancedcelestials2core-mixins.properties",
+      "filename": "enhancedcelestials2core-mixins.properties",
+      "sha256": "36b0d118a1924aa3f2436fa16cc46a366c9a7f138765ae86caec05977be98bd5",
+      "size": 737,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__enhancedcelestials2core-mixins.properties"
+    },
+    {
       "path": "config/xaero/minimap/server_profiles/default.cfg",
       "filename": "default.cfg",
       "sha256": "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a",
@@ -4525,13 +4532,6 @@
       "sha256": "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7",
       "size": 728,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__deeperdarker-common.toml"
-    },
-    {
-      "path": "config/emotecraft.json",
-      "filename": "emotecraft.json",
-      "sha256": "9df6ee0c1042374c6fcd90b6e3f34c549b056854a9197918c737db1b10138ae0",
-      "size": 232,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__emotecraft.json"
     },
     {
       "path": "config/lootr-client.toml",
@@ -5066,6 +5066,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__notenoughanimations-forge-1.12.4-mc1.20.1.jar"
     },
     {
+      "path": "mods/Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar",
+      "filename": "Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar",
+      "sha256": "2ce9f56c66a97f645ff249260a750f37a74c0e4ae0b2db9cbca73bdff4f0f0e2",
+      "size": 119897,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar"
+    },
+    {
       "path": "mods/emf_compat_better_combat_1.20.1_2.0.0.jar",
       "filename": "emf_compat_better_combat_1.20.1_2.0.0.jar",
       "sha256": "ade1dc40c5dfbdd78fe9c786dfe8e8aeaa0ad141def2233e1069b611e9f03aae",
@@ -5598,39 +5605,46 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
     },
     {
-      "path": "mods/Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar",
-      "filename": "Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar",
-      "sha256": "f62538f9a43b26e8dd3dd814b94556be298e9d16c1eed996a014e3b6dda47ae1",
-      "size": 1515161,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Default-Lunar-Events-Forge-1.20.1-1.0.0.6.jar"
-    },
-    {
-      "path": "mods/Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar",
-      "filename": "Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar",
-      "sha256": "00c1d88e999ab5ce732e1e9fd2570c1881241323a50574f9b21df09a9e6a9271",
-      "size": 1047873,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.3.jar"
-    },
-    {
       "path": "config/chunky/tasks/minecraft/overworld.properties",
       "filename": "overworld.properties",
-      "sha256": "154bc1b350d2260ccefc54bc2d279d6ecaef5706be80674b9d9f0788feb29989",
-      "size": 130,
+      "sha256": "723fe31373248d391475ef997eb86e4c5b42d4021b9defc78363953b846f40c7",
+      "size": 127,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__tasks__minecraft__overworld.properties"
     },
     {
-      "path": "config/enhancedcelestials2core-mixins.properties",
-      "filename": "enhancedcelestials2core-mixins.properties",
-      "sha256": "36b0d118a1924aa3f2436fa16cc46a366c9a7f138765ae86caec05977be98bd5",
-      "size": 737,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__enhancedcelestials2core-mixins.properties"
+      "path": "kubejs/server_scripts/anubis_hub_spawn.js",
+      "filename": "anubis_hub_spawn.js",
+      "sha256": "5eb4b6e1d77663d497e0da367d03a947666003f088f60cfdea398a147aa4415f",
+      "size": 945,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__anubis_hub_spawn.js"
     },
     {
-      "path": "mods/Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar",
-      "filename": "Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar",
-      "sha256": "2ce9f56c66a97f645ff249260a750f37a74c0e4ae0b2db9cbca73bdff4f0f0e2",
-      "size": 119897,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar"
+      "path": "kubejs/assets/kubejs/textures/gui/spell_icons/amaterasu.png",
+      "filename": "amaterasu.png",
+      "sha256": "fe7a9998e1909a5d728232e52548998b5b58458c0a4da2f90efdcd7ba0239ae2",
+      "size": 227,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__textures__gui__spell_icons__amaterasu.png"
+    },
+    {
+      "path": "kubejs/assets/kubejs/lang/en_us.json",
+      "filename": "en_us.json",
+      "sha256": "8b33ff683ac9904e70cf02dd07eee2849cc23ca2b62810a0a352d4d9ef154ea4",
+      "size": 113,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__en_us.json"
+    },
+    {
+      "path": "kubejs/assets/kubejs/lang/tr_tr.json",
+      "filename": "tr_tr.json",
+      "sha256": "79d65cdfd4f56b1904ba06d3025cfaf40543c8eba7b40dc36598e59849312a5a",
+      "size": 110,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__tr_tr.json"
+    },
+    {
+      "path": "kubejs/startup_scripts/anubis_anime_spells.js",
+      "filename": "anubis_anime_spells.js",
+      "sha256": "ff51f521fdcac3742193a73b046bd47bb4da40990c40238a5ab7c6edca2fd222",
+      "size": 4979,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__startup_scripts__anubis_anime_spells.js"
     }
   ]
 }
