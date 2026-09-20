@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
   "version": "1.2.27",
-  "generated": "2026-09-20 18:10:17",
+  "generated": "2026-09-20 23:28:07",
   "source": "vds:/root/servers/medieval-fantasy",
   "files": [
     {
@@ -5241,6 +5241,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__example.js"
     },
     {
+      "path": "kubejs/server_scripts/anubis_hub_spawn.js",
+      "filename": "anubis_hub_spawn.js",
+      "sha256": "5eb4b6e1d77663d497e0da367d03a947666003f088f60cfdea398a147aa4415f",
+      "size": 945,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__anubis_hub_spawn.js"
+    },
+    {
       "path": "kubejs/client_scripts/spell_scrolls_jei.js",
       "filename": "spell_scrolls_jei.js",
       "sha256": "30663e69b0ceff49847b8289bea03c7551620940bb10732484af583b41cfbff3",
@@ -5607,44 +5614,9 @@
     {
       "path": "config/chunky/tasks/minecraft/overworld.properties",
       "filename": "overworld.properties",
-      "sha256": "723fe31373248d391475ef997eb86e4c5b42d4021b9defc78363953b846f40c7",
-      "size": 127,
+      "sha256": "65765fcc0966f64382005d90a1823f53a4227f4f219f9a9fc4b60aa9dbd47e9d",
+      "size": 129,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__chunky__tasks__minecraft__overworld.properties"
-    },
-    {
-      "path": "kubejs/server_scripts/anubis_hub_spawn.js",
-      "filename": "anubis_hub_spawn.js",
-      "sha256": "5eb4b6e1d77663d497e0da367d03a947666003f088f60cfdea398a147aa4415f",
-      "size": 945,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__anubis_hub_spawn.js"
-    },
-    {
-      "path": "kubejs/assets/kubejs/textures/gui/spell_icons/amaterasu.png",
-      "filename": "amaterasu.png",
-      "sha256": "fe7a9998e1909a5d728232e52548998b5b58458c0a4da2f90efdcd7ba0239ae2",
-      "size": 227,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__textures__gui__spell_icons__amaterasu.png"
-    },
-    {
-      "path": "kubejs/assets/kubejs/lang/en_us.json",
-      "filename": "en_us.json",
-      "sha256": "8b33ff683ac9904e70cf02dd07eee2849cc23ca2b62810a0a352d4d9ef154ea4",
-      "size": 113,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__en_us.json"
-    },
-    {
-      "path": "kubejs/assets/kubejs/lang/tr_tr.json",
-      "filename": "tr_tr.json",
-      "sha256": "79d65cdfd4f56b1904ba06d3025cfaf40543c8eba7b40dc36598e59849312a5a",
-      "size": 110,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__assets__kubejs__lang__tr_tr.json"
-    },
-    {
-      "path": "kubejs/startup_scripts/anubis_anime_spells.js",
-      "filename": "anubis_anime_spells.js",
-      "sha256": "ff51f521fdcac3742193a73b046bd47bb4da40990c40238a5ab7c6edca2fd222",
-      "size": 4979,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__startup_scripts__anubis_anime_spells.js"
     }
   ]
 }
