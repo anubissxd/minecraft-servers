@@ -10,6 +10,8 @@
 #                                                           server must not load
 #   <server>/client-extra/resourcepacks -> resourcepacks/
 #   <server>/datapacks/                 -> datapacks/
+#   <server>/kubejs/                    -> kubejs/          scripts run on both sides
+#                                                           (JEI entries, singleplayer fixes)
 #
 # config/ is written by AnuDownloader only when the file is missing, because the
 # game rewrites those files itself - see Test-AnuSeedOnlyPath in AnuDownloader.ps1.
@@ -46,6 +48,7 @@ $FolderMap = [ordered]@{
     "client-extra/mods"                 = "mods"
     "client-extra/resourcepacks"        = "resourcepacks"
     "client-extra/shaderpacks"          = "shaderpacks"
+    "kubejs"                            = "kubejs"
     "world/datapacks/anubis_customs"    = "global_packs/required_data/anubis_customs"
     "global_packs/required_data"       = "global_packs/required_data"
 }
@@ -84,7 +87,7 @@ if ($ServerOnlyMods.Count -gt 0) { Write-Host "Sunucu-only mod: $($ServerOnlyMod
 # Runtime scratch the server writes but players must never receive. spark's
 # tmp/ in particular holds profiler dumps, some of them zero bytes - and the
 # GitHub asset API rejects an empty file outright, which aborts the whole build.
-$ExcludedPrefixes = @("config/spark/tmp/")
+$ExcludedPrefixes = @("config/spark/tmp/", "kubejs/config/", "kubejs/README.txt")
 # Config backups a mod rewrites on its own; shipping them just confuses players.
 $ExcludedSuffixes = @(".bak", ".tmp", ".log")
 

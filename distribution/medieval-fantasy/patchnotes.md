@@ -1,5 +1,7 @@
-## Paket Güncellemesi (1.2.23)
+## Paket Güncellemesi (1.2.24)
 
-* **Çökme düzeltmesi:** Born in Chaos'un Missionary mob'una vurulunca sunucu (ve yanındaki oyuncunun oyunu) çöküyordu — somakespells'in uyumsuz bir yaması yüzünden. Yama devre dışı bırakıldı; sabahki 5 çökmenin sebebi buydu.
-* **Easy NPC** eklendi: görev veren NPC'ler için altyapı (FTB Quests ile birlikte). NPC'ler ve ilk görevler sonraki güncellemede gelecek.
+* **Başlangıç alanı** yenilendi: yeni dünya doğma noktası, Waystone ve Miu.
+* **Yeni modlar:** Bountiful (görev panosu), Ping Wheel + Ping to Map (haritaya işaret), Dungeon Difficulty (uzaklaştıkça zorlaşan yaratıklar ve daha iyi ganimet), Enhanced Celestials (kanlı ay, hasat ayı), ChoiceTheorem's Overhauled Villages, Structory + Towers, Let's Do: Candlelight ve Bakery, Aquaculture 2, Emotecraft, Tom's Simple Storage, Sophisticated Inventory Interactions, Arda's Uncrafting Table, Animal Feeding Trough.
+* **Kaldırılan:** Medieval Craft.
+* Spell Engine büyü parşömenleri artık JEI'de aranabiliyor.
 * Sunucu güncellendi; eski paketle girilemez, AnuDownloader'ı çalıştırın.
