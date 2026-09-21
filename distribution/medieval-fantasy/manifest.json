@@ -4208,13 +4208,6 @@
       "filename": "supermartijn642corelib-1.1.24b-forge-mc1.20.1.jar"
     },
     {
-      "path": "mods/wind_spellbooks-1.20.1-1.0.3.jar",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__wind_spellbooks-1.20.1-1.0.3.jar",
-      "size": 491179,
-      "sha256": "925189907f1f1a925751bf921685769e75c67d36d5ff46d12e2e774468865f61",
-      "filename": "wind_spellbooks-1.20.1-1.0.3.jar"
-    },
-    {
       "path": "mods/.connector/continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__.connector__continuity-3.0.0+1.20.1.forge_mapped_srg_1.20.1.jar",
       "size": 1023767,
