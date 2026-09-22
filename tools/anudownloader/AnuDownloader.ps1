@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.9"
+$AppVersion = "2.16.10"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -18,12 +18,21 @@ $ConfigFile = Join-Path $ConfigDir "config.json"
 # players. raw.githubusercontent.com caches ~5 minutes, jsDelivr 10-30, but
 # neither rate-limits, so they are the fallbacks: worst case a new version is
 # seen a few minutes late instead of not at all.
+
+# raw.githubusercontent.com and jsDelivr ignore the Cache-Control header
+# above and enforce their own TTL (~5 min / ~10-30 min) regardless - a
+# player behind a 403'd IP could keep landing on a stale index.json (with an
+# outdated manifest_url from BEFORE a fix was pushed) for that whole window.
+# A cache-busting query param defeats it: both CDNs key their cache by the
+# full URL including query string, so a value that changes every few
+# minutes forces a fresh fetch instead of a cached one.
+$AnuCacheBuster = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
 $IndexSources = @(
     @{ Url = "https://api.github.com/repos/anubissxd/minecraft-servers/contents/distribution/index.json?ref=main"
        Headers = @{ "Accept" = "application/vnd.github.raw"; "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } },
-    @{ Url = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json"
+    @{ Url = "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/index.json?cb=$AnuCacheBuster"
        Headers = @{ "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } },
-    @{ Url = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json"
+    @{ Url = "https://cdn.jsdelivr.net/gh/anubissxd/minecraft-servers@main/distribution/index.json?cb=$AnuCacheBuster"
        Headers = @{ "User-Agent" = "AnuDownloader"; "Cache-Control" = "no-cache" } }
 )
 function Get-AnuIndex {
