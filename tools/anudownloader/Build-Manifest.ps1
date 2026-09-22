@@ -20,7 +20,7 @@ param(
 # (config\, Palladium's documentation dump, Connector's jar cache) still ship,
 # but AnuDownloader only writes those when they are missing - see
 # Test-AnuSeedOnlyPath there.
-$SyncedFolders = @("mods", "config", "resourcepacks", "datapacks")
+$SyncedFolders = @("mods", "config", "resourcepacks", "datapacks", "kubejs")
 
 # Modrinth leaves the old jar behind when it updates a mod, and Forge refuses
 # to load two files providing the same mod id. Any such leftovers must be
