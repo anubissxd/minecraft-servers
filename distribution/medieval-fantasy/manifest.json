@@ -4433,14 +4433,14 @@
     },
     {
       "path": "config/combatdash/combatdash Client.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash Client.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash.Client.toml",
       "size": 295,
       "sha256": "0e2ad49182914ad3fff756ad4295eaa34d6ef0fab82913dc38e591d6c395d348",
       "filename": "combatdash Client.toml"
     },
     {
       "path": "config/combatdash/combatdash Server.toml",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash Server.toml",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__combatdash__combatdash.Server.toml",
       "size": 728,
       "sha256": "baca9eb172282d31dfcf848cec607dd53a30195b7bc95f01b99b56abbf6bf3c6",
       "filename": "combatdash Server.toml"
@@ -5518,14 +5518,14 @@
     },
     {
       "path": "config/jei/world/local/New World/lookupHistory.ini",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__jei__world__local__New World__lookupHistory.ini",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__jei__world__local__New.World__lookupHistory.ini",
       "size": 66,
       "sha256": "e65265b6ffd4d2af2479bf9062232c099f78d2265b586c2dd7f0e4fdb7a0b9a9",
       "filename": "lookupHistory.ini"
     },
     {
       "path": "config/jei/world/server/Medieval Fantasy (31_58_91_7 25567)/bookmarks.json",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__jei__world__server__Medieval Fantasy (31_58_91_7 25567)__bookmarks.json",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__jei__world__server__Medieval.Fantasy.31_58_91_7.25567.__bookmarks.json",
       "size": 237,
       "sha256": "f14c08e55719535a3e7f5867c3577bc12d0c77349d1c55a0e0d5b1574690138e",
       "filename": "bookmarks.json"
@@ -6372,14 +6372,14 @@
     },
     {
       "path": "resourcepacks/EFA_1.10.4 Hotfix 3.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__EFA_1.10.4 Hotfix 3.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__EFA_1.10.4.Hotfix.3.zip",
       "size": 1805045,
       "sha256": "81b40431358b190c8c1105614d85b28e22849ee0ef50b7929038d05da16ec5c0",
       "filename": "EFA_1.10.4 Hotfix 3.zip"
     },
     {
       "path": "resourcepacks/Excalibur - Overflowing Bars Compat v3.0.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur - Overflowing Bars Compat v3.0.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.-.Overflowing.Bars.Compat.v3.0.zip",
       "size": 25087,
       "sha256": "17461827fc2a82efc2d1874f1d6f07ce7c024521bfd8faf9ce994c8784332d46",
       "filename": "Excalibur - Overflowing Bars Compat v3.0.zip"
@@ -6393,56 +6393,56 @@
     },
     {
       "path": "resourcepacks/Excalibur Additions - Minor Mod Support 1.7.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Additions - Minor Mod Support 1.7.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Additions.-.Minor.Mod.Support.1.7.zip",
       "size": 857796,
       "sha256": "58d406e5e02e0324d07c10a196482497106fd204d53bb84860aec884790b30ba",
       "filename": "Excalibur Additions - Minor Mod Support 1.7.zip"
     },
     {
       "path": "resourcepacks/Excalibur AppleSkin Addon.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur AppleSkin Addon.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.AppleSkin.Addon.zip",
       "size": 27470,
       "sha256": "3979f9d90792fc5893828394123552a189941750a0615dfb2b01f4b9ae45f71b",
       "filename": "Excalibur AppleSkin Addon.zip"
     },
     {
       "path": "resourcepacks/Excalibur BOMD Support 1.1.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur BOMD Support 1.1.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.BOMD.Support.1.1.zip",
       "size": 175006,
       "sha256": "3339d5d04ff3799bdb52cb57dc9d6d98710ed7b71dfd369d87293d3469ebebdc",
       "filename": "Excalibur BOMD Support 1.1.zip"
     },
     {
       "path": "resourcepacks/Excalibur Cataclysm 1.0 (Forge).zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Cataclysm 1.0 (Forge).zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Cataclysm.1.0.Forge.zip",
       "size": 1438157,
       "sha256": "baf0e531e7b5e0a2601ad597d78f0f9029788603618df4538bcafa4d571a61b0",
       "filename": "Excalibur Cataclysm 1.0 (Forge).zip"
     },
     {
       "path": "resourcepacks/Excalibur Curios & Accessories 1.3.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Curios & Accessories 1.3.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Curios.Accessories.1.3.zip",
       "size": 111582,
       "sha256": "17159db7055275e56caff2e4f46aceb5d474e22cf67ab4ee528e9890b1a4f872",
       "filename": "Excalibur Curios & Accessories 1.3.zip"
     },
     {
       "path": "resourcepacks/Excalibur Friends&Foes 2.2.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Friends&Foes 2.2.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Friends.Foes.2.2.zip",
       "size": 122009,
       "sha256": "704cdc7a4b5cf5c244a5315ff18e880a844d6a742aaa9fe965310618f1a68873",
       "filename": "Excalibur Friends&Foes 2.2.zip"
     },
     {
       "path": "resourcepacks/Excalibur Hold My Items Support 1.0.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Hold My Items Support 1.0.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Hold.My.Items.Support.1.0.zip",
       "size": 121933,
       "sha256": "8a3f29bb36f618d2d35d6c4fad17fe289494931dc2bffc181d580da6069a97d8",
       "filename": "Excalibur Hold My Items Support 1.0.zip"
     },
     {
       "path": "resourcepacks/Excalibur Jei Support 1.3.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Jei Support 1.3.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Jei.Support.1.3.zip",
       "size": 39392,
       "sha256": "7a99a8d2cda1b95b547ad8ce5300a15f672bf3ba69046b1b47c51c2fc4d4eaf8",
       "filename": "Excalibur Jei Support 1.3.zip"
@@ -6456,28 +6456,28 @@
     },
     {
       "path": "resourcepacks/Excalibur Serene Seasons.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Serene Seasons.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Serene.Seasons.zip",
       "size": 27455,
       "sha256": "1c8fd1385063b79b1472af5e771d47e290c4bc5744b7cf3515fa6aa6cd387183",
       "filename": "Excalibur Serene Seasons.zip"
     },
     {
       "path": "resourcepacks/Excalibur Sophisticated v1.2.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Sophisticated v1.2.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Sophisticated.v1.2.zip",
       "size": 534412,
       "sha256": "c14ab73e7b2b7accbb0c9f302d991d5bb834ebe9d3b1395ebc5974d1ec2cef5a",
       "filename": "Excalibur Sophisticated v1.2.zip"
     },
     {
       "path": "resourcepacks/Excalibur Waystones 1.0.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Waystones 1.0.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Waystones.1.0.zip",
       "size": 67832,
       "sha256": "a70f1be10e5471c2d7f12b066af70b60d00a054ec0187041b3b803397925a184",
       "filename": "Excalibur Waystones 1.0.zip"
     },
     {
       "path": "resourcepacks/Excalibur Wither-Golem Spawn Animation 1.4.zip",
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur Wither-Golem Spawn Animation 1.4.zip",
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/resourcepacks__Excalibur.Wither-Golem.Spawn.Animation.1.4.zip",
       "size": 71263,
       "sha256": "4d9ce4ebb88d8a521f7f381d596cfdbd76aa375566f0efcd82bec88e3a7fb4d9",
       "filename": "Excalibur Wither-Golem Spawn Animation 1.4.zip"
