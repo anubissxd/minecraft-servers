@@ -203,11 +203,30 @@ if ($toUpload.Count -gt 0) {
 }
 Remove-Item $tmpDir -Recurse -Force -ErrorAction SilentlyContinue
 
+# Files dropped from the pack that must also disappear from players who already
+# have them. AnuDownloader only prunes loose mod jars on its own, so anything
+# else (resourcepacks, shaderpacks...) is listed in remove.txt next to the
+# manifest, one player-side path per line.
+$removeFile = Join-Path (Split-Path $ManifestOut -Parent) "remove.txt"
+$removeList = @()
+if (Test-Path $removeFile) {
+    $shipped = @{}
+    foreach ($f in $newFiles) { $shipped[$f.path] = $true }
+    foreach ($l in Get-Content $removeFile -Encoding UTF8) {
+        $t = $l.Trim()
+        if (-not $t -or $t.StartsWith("#")) { continue }
+        if ($shipped.ContainsKey($t)) { throw "remove.txt pakette hala olan bir dosyayi siliyor: $t" }
+        $removeList += $t
+    }
+    Write-Host "Oyunculardan silinecek dosya: $($removeList.Count)"
+}
+
 $manifest = [pscustomobject]@{
     pack_name = $PackName
     version   = $Version
     generated = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
     source    = "vds:$ServerPath"
+    remove    = $removeList
     files     = $newFiles
 }
 $dir = Split-Path $ManifestOut -Parent
