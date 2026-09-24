@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.2.30",
-  "generated": "2026-09-24 23:25:53",
+  "version": "1.3.0",
+  "generated": "2026-09-25 02:37:29",
   "source": "vds:/root/servers/medieval-fantasy",
   "remove": [
     "resourcepacks/BrewinAndChewin-Excalibur_Support_1.20.1_v1.1.zip",
@@ -68,20 +68,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__SpartanWeaponry-1.20.1-forge-3.2.1-all.jar"
     },
     {
-      "path": "mods/ardas_uncrafting_table-1.2-forge-1.20.1.jar",
-      "filename": "ardas_uncrafting_table-1.2-forge-1.20.1.jar",
-      "sha256": "0248839a617b99a6685d14bb26d6275f390808d2d46284471b0fdebb0255e536",
-      "size": 176192,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__ardas_uncrafting_table-1.2-forge-1.20.1.jar"
-    },
-    {
-      "path": "mods/Structory_1.20.x_v1.3.5.jar",
-      "filename": "Structory_1.20.x_v1.3.5.jar",
-      "sha256": "f13e9f54fa5b7cdf09c3110bda9b79f8f60bd5bb0476fc5626c5e590dd46e6e1",
-      "size": 1286462,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Structory_1.20.x_v1.3.5.jar"
-    },
-    {
       "path": "mods/resourcefullib-forge-1.20.1-2.1.29.jar",
       "filename": "resourcefullib-forge-1.20.1-2.1.29.jar",
       "sha256": "b13afb95231d88e1caea5a045967e0fc291b29020b0d26ad39e6f9e9a551fee8",
@@ -101,13 +87,6 @@
       "sha256": "ed042ed803a8a54c1bb9f6b2b15b691f68b577fc7f83f9af9c42c0aa364bd97e",
       "size": 319419,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__wl_bc_compat-forge-1.0.0.jar"
-    },
-    {
-      "path": "mods/betterarcheology-1.2.1-1.20.1.jar",
-      "filename": "betterarcheology-1.2.1-1.20.1.jar",
-      "sha256": "4180f72ec4b69690ec160ac50e48c087f0fe7c98681dcd1f70d82ed5cbfeec9e",
-      "size": 982838,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__betterarcheology-1.2.1-1.20.1.jar"
     },
     {
       "path": "mods/soulslike-weaponry-1.4.10-1.20.1-forge.jar",
@@ -143,13 +122,6 @@
       "sha256": "05f7b5d52f6b8f0fd7f8b4822fa07a192d1394d83a264309c9d221d6d4fd21c5",
       "size": 642732,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Patchouli-1.20.1-85-FORGE.jar"
-    },
-    {
-      "path": "mods/weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
-      "filename": "weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
-      "sha256": "da63af14bd71b0be80376ed5ccc4e3669214e0e8baa5c7c1bbfa83d567513e9a",
-      "size": 283977,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__weaponmaster_ydm-forge-1.20.1-4.2.3.jar"
     },
     {
       "path": "mods/epic-knights-1.20.1-forge-10.15.jar",
@@ -194,27 +166,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__YungsBetterDungeons-1.20-Forge-4.0.4.jar"
     },
     {
-      "path": "mods/Mantle-1.20.1-1.11.117.jar",
-      "filename": "Mantle-1.20.1-1.11.117.jar",
-      "sha256": "bcb9681f78dde0da7e63e92abb341dc0dc09503fc1ab78c96f9d40571edc240d",
-      "size": 1652715,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Mantle-1.20.1-1.11.117.jar"
-    },
-    {
-      "path": "mods/coroutil-forge-1.20.1-1.3.7.jar",
-      "filename": "coroutil-forge-1.20.1-1.3.7.jar",
-      "sha256": "11448808a42c17425cf2ea39701841008683d6ad6e2838a34eef0253251a870f",
-      "size": 64187,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__coroutil-forge-1.20.1-1.3.7.jar"
-    },
-    {
-      "path": "mods/formations-1.0.4-forge-mc1.20.2.jar",
-      "filename": "formations-1.0.4-forge-mc1.20.2.jar",
-      "sha256": "2386c12440e3464a38f300faaa52a9ce00d78d0cb70b0c8115d1148053095ac8",
-      "size": 290100,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__formations-1.0.4-forge-mc1.20.2.jar"
-    },
-    {
       "path": "mods/caelus-forge-3.2.0+1.20.1.jar",
       "filename": "caelus-forge-3.2.0+1.20.1.jar",
       "sha256": "43cabe35f0618c0bd01af02e7568ca6f15fd32bb6a90d04c9898bb01e8dc1e81",
@@ -236,13 +187,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__arcanists_equipage-1.0.2-20.1.jar"
     },
     {
-      "path": "mods/farmers_spell-1.0.5-1.20.1-all.jar",
-      "filename": "farmers_spell-1.0.5-1.20.1-all.jar",
-      "sha256": "0576f3df39ab6e928beca64acd817e5ee6d97674b913b1a8131d7b69dd9040cd",
-      "size": 6146330,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__farmers_spell-1.0.5-1.20.1-all.jar"
-    },
-    {
       "path": "mods/natures_spirit-2.2.5-1.20.1.jar",
       "filename": "natures_spirit-2.2.5-1.20.1.jar",
       "sha256": "07818dd985b100ae71b98c755961c135b07c3a08faf5d95afc87fab71a3b9e86",
@@ -250,25 +194,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__natures_spirit-2.2.5-1.20.1.jar"
     },
     {
-      "path": "mods/Structory_Towers_1.20.x_v1.0.7.jar",
-      "filename": "Structory_Towers_1.20.x_v1.0.7.jar",
-      "sha256": "74aa182524af55e172d7bfcf828dd1c1a3259a304980e7a94fbfbf1f0d9fac0c",
-      "size": 526234,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Structory_Towers_1.20.x_v1.0.7.jar"
-    },
-    {
       "path": "mods/sophisticatedcore-1.20.1-1.5.1.2335.jar",
       "filename": "sophisticatedcore-1.20.1-1.5.1.2335.jar",
       "sha256": "d9f02d479d49b2aeb606dfc0ff3bd43991229ca89c85585f9d3be9abf17a40cc",
       "size": 1734797,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__sophisticatedcore-1.20.1-1.5.1.2335.jar"
-    },
-    {
-      "path": "mods/IllagerInvasion-v8.0.7-1.20.1-Forge.jar",
-      "filename": "IllagerInvasion-v8.0.7-1.20.1-Forge.jar",
-      "sha256": "790d52067b30e85ff0dcc4131cf709f9f45c619bdc6b6ff11ed8ac4e3f61acda",
-      "size": 2341695,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__IllagerInvasion-v8.0.7-1.20.1-Forge.jar"
     },
     {
       "path": "mods/constructionwand-1.20.1-2.11.jar",
@@ -376,20 +306,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__goetyawaken-1.3.9.3-nodiag.jar"
     },
     {
-      "path": "mods/nethersdelight-1.20.1-4.0.jar",
-      "filename": "nethersdelight-1.20.1-4.0.jar",
-      "sha256": "28b072bc5c09ee889468546676c9bf0268eaa415865704bbeeb33f6a37005a30",
-      "size": 366047,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__nethersdelight-1.20.1-4.0.jar"
-    },
-    {
-      "path": "mods/elder_tales-1.5.1.jar",
-      "filename": "elder_tales-1.5.1.jar",
-      "sha256": "223464a72458fd6bc249ca60c5f7761f16db11489502c3157758de12815d768d",
-      "size": 19406871,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__elder_tales-1.5.1.jar"
-    },
-    {
       "path": "mods/valhelsia_structures-forge-1.20.1-1.1.2.jar",
       "filename": "valhelsia_structures-forge-1.20.1-1.1.2.jar",
       "sha256": "ce2196035200ff1f07ce209d17aae98c0670db601128a3b970edcd69095edd6a",
@@ -474,20 +390,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__MutantMonsters-v8.0.8-1.20.1-Forge.jar"
     },
     {
-      "path": "mods/simplest_excavators-1.20.1-1.1.5.jar",
-      "filename": "simplest_excavators-1.20.1-1.1.5.jar",
-      "sha256": "2a9e83b2cd1982ed13b17e6f287e548845cde05efaee5d74b6eaa6ded29194de",
-      "size": 45454,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__simplest_excavators-1.20.1-1.1.5.jar"
-    },
-    {
-      "path": "mods/TConstruct-1.20.1-3.12.1.231.jar",
-      "filename": "TConstruct-1.20.1-3.12.1.231.jar",
-      "sha256": "474bb3e14646be1b4e343aa0d3a8482ff5db6350da19355fac6c5ddd2050ac19",
-      "size": 23870231,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__TConstruct-1.20.1-3.12.1.231.jar"
-    },
-    {
       "path": "mods/Incendium_1.20.x_v5.3.5.jar",
       "filename": "Incendium_1.20.x_v5.3.5.jar",
       "sha256": "96068e4d66ea503efebb1e31d28c2d6ce85db749049463cab9f799c8c0ae1e75",
@@ -535,13 +437,6 @@
       "sha256": "a12f393691d4125c94c0e059592c2e54b1b21e4f887597fccb3a8f743d4cec63",
       "size": 220435,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__spawnanimations-v1.11.2-mc1.17-1.21.10-mod.jar"
-    },
-    {
-      "path": "mods/toms_storage-1.20-1.7.1.jar",
-      "filename": "toms_storage-1.20-1.7.1.jar",
-      "sha256": "08552be86f960111e501227707dc089c91b8a55f6c1be09baee188338576ff9b",
-      "size": 520148,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__toms_storage-1.20-1.7.1.jar"
     },
     {
       "path": "mods/trashslot-forge-1.20.1-15.1.5.jar",
@@ -754,13 +649,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Ribbits-1.20.1-Forge-3.0.5.jar"
     },
     {
-      "path": "mods/spelunkery-1.20.1-0.3.16-forge.jar",
-      "filename": "spelunkery-1.20.1-0.3.16-forge.jar",
-      "sha256": "453bcccc18e64c6fb43130ae2b8317aa289204f75477db5dddfb6db6175f8975",
-      "size": 2754568,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__spelunkery-1.20.1-0.3.16-forge.jar"
-    },
-    {
       "path": "mods/ftb-library-forge-2001.2.13.jar",
       "filename": "ftb-library-forge-2001.2.13.jar",
       "sha256": "41810281b65336265cae2c88412022d02f2f0a3f28c66a06173d86f98acf14a7",
@@ -780,13 +668,6 @@
       "sha256": "bf330d4204723f824e6adddce95e02bed13270095dd6f0e28dbea39da5bfdf9e",
       "size": 5563706,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__immersive_melodies-0.8.0+1.20.1-forge.jar"
-    },
-    {
-      "path": "mods/paladin_spells-1.20.1-1.1.1.jar",
-      "filename": "paladin_spells-1.20.1-1.1.1.jar",
-      "sha256": "cf66371f9544037183fc9be011330a02cc939256e40e43bc49e5fdcc9a1518dc",
-      "size": 1876504,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__paladin_spells-1.20.1-1.1.1.jar"
     },
     {
       "path": "mods/armory-forge-1.5.2+1.20.1.jar",
@@ -810,13 +691,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__paladins-forge-3.1.1+1.20.1.jar"
     },
     {
-      "path": "mods/smallships-forge-1.20.1-2.0.0-b1.4.jar",
-      "filename": "smallships-forge-1.20.1-2.0.0-b1.4.jar",
-      "sha256": "f79a4dcab3e1c8e4d14467cbfa655f4a16e0f0d0901e8f9bde9e3f5e36735eff",
-      "size": 1816687,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__smallships-forge-1.20.1-2.0.0-b1.4.jar"
-    },
-    {
       "path": "mods/alexsmobs-1.22.9.jar",
       "filename": "alexsmobs-1.22.9.jar",
       "sha256": "16bc5bcc19db9029c24f951346ec71098e6f5b0afef96e61894a2e9407aad37c",
@@ -829,20 +703,6 @@
       "sha256": "da9d2fe1b8d861df8aec6d75ff54277db469a301e23689b8a9c9e173b1247610",
       "size": 336013,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__familiarslib-1.20.1-1.6.jar"
-    },
-    {
-      "path": "mods/bielgg_spells-1.5-patchwork.jar",
-      "filename": "bielgg_spells-1.5-patchwork.jar",
-      "sha256": "6fa4dc388423911de350f37c25348f7ad5de7014502669dfdb59ee4aa15db740",
-      "size": 33309934,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__bielgg_spells-1.5-patchwork.jar"
-    },
-    {
-      "path": "mods/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
-      "filename": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
-      "sha256": "933e2a7e79c4594f965f7f7d00b1f28a98ec2a180ad8f9f90310a266fe5cf5d8",
-      "size": 37178,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__melody_forge_1.0.3_MC_1.20.1-1.20.4.jar"
     },
     {
       "path": "mods/irons_spells_dynamic_skilltree_1.1.0.jar",
@@ -894,13 +754,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__friendsandfoes-forge-mc1.20.1-3.0.9.jar"
     },
     {
-      "path": "mods/PhilipsRuins1.20.1-5.7.jar",
-      "filename": "PhilipsRuins1.20.1-5.7.jar",
-      "sha256": "5cdafaca61c34ad7e38aea13033fcb5e8cadc557226be4fbcc0743db2222fbe3",
-      "size": 1525512,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__PhilipsRuins1.20.1-5.7.jar"
-    },
-    {
       "path": "mods/ftb-teams-forge-2001.3.2.jar",
       "filename": "ftb-teams-forge-2001.3.2.jar",
       "sha256": "b1cb4d82ea9f137a87e12a7aaf3329619294b56f7d70337dfd557a76e10b6e07",
@@ -936,13 +789,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__CerbonsAPI-Forge-1.20.1-1.1.0.jar"
     },
     {
-      "path": "mods/constructs_casting-2.2.5.jar",
-      "filename": "constructs_casting-2.2.5.jar",
-      "sha256": "b3ce1045c46083b097d5ba0219026458fb70759edfe1be0deee5c99628bf83b0",
-      "size": 2001758,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__constructs_casting-2.2.5.jar"
-    },
-    {
       "path": "mods/darkermagic-1.3.1-1.20.1-ver.b.jar",
       "filename": "darkermagic-1.3.1-1.20.1-ver.b.jar",
       "sha256": "d3dfbafa13d8e7caf98882f76702c87a8a05f4c61b399021ffd1423cd391928a",
@@ -955,13 +801,6 @@
       "sha256": "101c30d01d0cf9d86190f578eb1e43bd06b64092e95662a00ef52946f472c7b1",
       "size": 370524,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__YungsApi-1.20-Forge-4.0.6.jar"
-    },
-    {
-      "path": "mods/simplest_hammers-1.20.1-1.1.4.jar",
-      "filename": "simplest_hammers-1.20.1-1.1.4.jar",
-      "sha256": "0b5a0e2dd9f851ad1be98c41a1fda1b84b2857a63a0ef8f605101d865a1dbd3f",
-      "size": 45465,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__simplest_hammers-1.20.1-1.1.4.jar"
     },
     {
       "path": "mods/MobCaptains-v3.1.2.jar",
@@ -1006,13 +845,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__gtbcs_spell_lib-2.2.0-1.20.1.jar"
     },
     {
-      "path": "mods/farmersrespite-1.20.1-2.1.2.jar",
-      "filename": "farmersrespite-1.20.1-2.1.2.jar",
-      "sha256": "21c15ef71f66684cbd94080e04649741bdf2b2ea6a6d542783e8961365d090bb",
-      "size": 537307,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__farmersrespite-1.20.1-2.1.2.jar"
-    },
-    {
       "path": "mods/YungsCaveBiomes-1.20.1-Forge-2.0.5.jar",
       "filename": "YungsCaveBiomes-1.20.1-Forge-2.0.5.jar",
       "sha256": "b799668cbbc0903e885f5b638119d0221186e5dbfe812eaf391f86ab8a97bd42",
@@ -1032,13 +864,6 @@
       "sha256": "745e93950e39d377200e8799cc5339d4a1adfa634da7aa5ee212bad7adfbb966",
       "size": 4117,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__iceandfirebettercombat.jar"
-    },
-    {
-      "path": "mods/enhancedai-3.3.7.5.jar",
-      "filename": "enhancedai-3.3.7.5.jar",
-      "sha256": "d0299bf27bdb5f4fa6af1e8fb33b21277f1ba5613a811dd96aecb9f03e941069",
-      "size": 1387972,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__enhancedai-3.3.7.5.jar"
     },
     {
       "path": "mods/arsenal-forge-1.5.0+1.20.1.jar",
@@ -1174,13 +999,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__wizards-forge-3.1.2+1.20.1.jar"
     },
     {
-      "path": "mods/bettermobcombat-forge-1.20.1-1.3.0-norecruits.jar",
-      "filename": "bettermobcombat-forge-1.20.1-1.3.0-norecruits.jar",
-      "sha256": "4d8f208eb2f1d2496230f72bf8f97e1dd1fa845cc98493ee7fcc00d08bc9f5f1",
-      "size": 264885,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__bettermobcombat-forge-1.20.1-1.3.0-norecruits.jar"
-    },
-    {
       "path": "mods/waystones-forge-1.20.1-14.1.21.jar",
       "filename": "waystones-forge-1.20.1-14.1.21.jar",
       "sha256": "fd6fe3c645328ea7be5bc6723d02c881e34650e0cbd4527ba59e42fa4cbe3c80",
@@ -1230,13 +1048,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__skill_tree-forge-1.6.1+1.20.1.jar"
     },
     {
-      "path": "mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
-      "filename": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
-      "sha256": "e78686b92c3761ec26eb9d3c53efdd3d6ca77981cbd3723995e1163b7103ae0b",
-      "size": 625185,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__konkrete_forge_1.8.0_MC_1.20-1.20.1.jar"
-    },
-    {
       "path": "mods/hazennstuff-watered-down-edition-1.1.2.jar",
       "filename": "hazennstuff-watered-down-edition-1.1.2.jar",
       "sha256": "cce49aa74707634ac78e955442eb6a75e2122338db7f7b91da0286f375014f90",
@@ -1249,13 +1060,6 @@
       "sha256": "1e895e85cf5b1e1905ef3178ec155c8badfe22a1577b92c09143a5aa1f4ce0f2",
       "size": 1181413,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__cloth-config-11.1.136-forge.jar"
-    },
-    {
-      "path": "mods/zombieawareness-1.20.1-1.13.1.jar",
-      "filename": "zombieawareness-1.20.1-1.13.1.jar",
-      "sha256": "4f5104f7d29e1d065364d2483885f3751da2bef09a734cead2fce81c82c46586",
-      "size": 291139,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__zombieawareness-1.20.1-1.13.1.jar"
     },
     {
       "path": "mods/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar",
@@ -1305,13 +1109,6 @@
       "sha256": "8a88a70c5b2ebea1b180063120c358d82417019884e716de6de75181dc9063c6",
       "size": 440233,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__MoogsStructureLib-forge-1.20-3.3.1.jar"
-    },
-    {
-      "path": "mods/fancymenu_forge_3.9.12_MC_1.20.1.jar",
-      "filename": "fancymenu_forge_3.9.12_MC_1.20.1.jar",
-      "sha256": "60aa6a94e0c021c989bbea978ea6a233ac2e23e364f15825a8beb7b5ab0b94cf",
-      "size": 26181250,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fancymenu_forge_3.9.12_MC_1.20.1.jar"
     },
     {
       "path": "mods/rogues-forge-3.1.1+1.20.1.jar",
@@ -1657,13 +1454,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Placebo-1.20.1-8.6.3.jar"
     },
     {
-      "path": "mods/lithostitched-forge-1.20.1-1.4.11.jar",
-      "filename": "lithostitched-forge-1.20.1-1.4.11.jar",
-      "sha256": "c19a5a36c0e6cb3782cf7ca5b9648fb1bce5fc41fd737bed423a1f4971bccf75",
-      "size": 476347,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__lithostitched-forge-1.20.1-1.4.11.jar"
-    },
-    {
       "path": "mods/irons_spells_js-1.20.1-6.5-3.14-r2-release.jar",
       "filename": "irons_spells_js-1.20.1-6.5-3.14-r2-release.jar",
       "sha256": "da5f2aad3faaec251a37e1d77e3081da71f16569b4ee5b23870a892ad6bb13a6",
@@ -1720,25 +1510,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__architectury-9.2.14-forge.jar"
     },
     {
-      "path": "mods/recruits-1.20.1-1.15.2.jar",
-      "filename": "recruits-1.20.1-1.15.2.jar",
-      "sha256": "4b53c1b752e886ba10985aad2df30d668971810230eb77867e07428a21d1af7f",
-      "size": 2811101,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__recruits-1.20.1-1.15.2.jar"
-    },
-    {
       "path": "mods/Icarus-Forge-2.13.2.jar",
       "filename": "Icarus-Forge-2.13.2.jar",
       "sha256": "7489b1adde05e8403a76a903e200dcf7efe775f13c268b57e5b445ba97657a10",
       "size": 364613,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Icarus-Forge-2.13.2.jar"
-    },
-    {
-      "path": "mods/tlc_forge-1.0.3-R-1.20.X.jar",
-      "filename": "tlc_forge-1.0.3-R-1.20.X.jar",
-      "sha256": "bb7da52ed3f577b7b1d16bd97951d1cc15552195cc494a7efe35d109198d9878",
-      "size": 713860,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__tlc_forge-1.0.3-R-1.20.X.jar"
     },
     {
       "path": "mods/shield_api-forge-2.2.0+1.20.1.jar",
@@ -1788,27 +1564,6 @@
       "sha256": "91ad6b459e0c7a16a9f3dc90230248a696600ceec6646aa23263559b8648dbc3",
       "size": 134551,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Iceberg-1.20.1-forge-1.1.25.jar"
-    },
-    {
-      "path": "mods/formationsoverworld-1.0.5-mc1.20.jar",
-      "filename": "formationsoverworld-1.0.5-mc1.20.jar",
-      "sha256": "a20bb649f0b64d1fc0c8488c36b213887d0c54e87a8ee2c0588f617b12b2ce37",
-      "size": 873590,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__formationsoverworld-1.0.5-mc1.20.jar"
-    },
-    {
-      "path": "mods/frightsdelight-forge-1.20.1-1.4.8.jar",
-      "filename": "frightsdelight-forge-1.20.1-1.4.8.jar",
-      "sha256": "73e288714a5da2fa37e5275830066e0f7d1e076c4749a61d58fc75d170896f01",
-      "size": 949541,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__frightsdelight-forge-1.20.1-1.4.8.jar"
-    },
-    {
-      "path": "mods/puffish_biome_dither-1.0.0-1.19.2-forge.jar",
-      "filename": "puffish_biome_dither-1.0.0-1.19.2-forge.jar",
-      "sha256": "29dfd2b641ac68ea7b508525596a4932bf8a1460980e3fc9b074d0ef3ada6690",
-      "size": 4807,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__puffish_biome_dither-1.0.0-1.19.2-forge.jar"
     },
     {
       "path": "mods/letsdo-candlelight-forge-1.2.13.jar",
@@ -2417,7 +2172,7 @@
       "filename": "jungle_myrmex_biomes.json",
       "sha256": "8c44f2cf4903712ff88743373cd6893b31226af031f9822ec63ae337abdbb4b0",
       "size": 767,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__iceandfire__jungle_myrmex_biomes.json"
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__iceandfire__jungle_myrmex_biomes.json"
     },
     {
       "path": "config/iceandfire/lightning_dragon_skeleton_biomes.json",
@@ -3491,13 +3246,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__spartanshields-common.toml"
     },
     {
-      "path": "config/attributefix.json",
-      "filename": "attributefix.json",
-      "sha256": "e527b5df310580b8da9279c29a725479e4fcfb18fad562a0316e7ab983e44b18",
-      "size": 51316,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__attributefix.json"
-    },
-    {
       "path": "config/somakespells/general/common.toml",
       "filename": "common.toml",
       "sha256": "08c2e655f185494ef1c686a1978112bc892c8b249c01019e2b413cf22346224b",
@@ -3916,20 +3664,6 @@
       "sha256": "6b812820a3996ecb9294f45c06159ceb93591e5f1bf023b791207695231b461b",
       "size": 31623,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rpg_series__loot_scrolls_v2.json"
-    },
-    {
-      "path": "config/rpg_series/tag_cache.json",
-      "filename": "tag_cache.json",
-      "sha256": "65e3995a3ed69e6bed3f44ae4a802d1107c066466fda9a0304c6c30195b77f24",
-      "size": 19967,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__rpg_series__tag_cache.json"
-    },
-    {
-      "path": "config/rpg_series/loot_fallback_report.json",
-      "filename": "loot_fallback_report.json",
-      "sha256": "4a2764e143dd68cdcc7454d2f34a434bd6befe1e7ae7ae778b44663a7c36e7ee",
-      "size": 140011,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__rpg_series__loot_fallback_report.json"
     },
     {
       "path": "config/dungeon_difficulty/difficulty_v2.json",
@@ -4898,13 +4632,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__betterfortresses-forge-1_20.toml"
     },
     {
-      "path": "config/modernfix-mixins.properties",
-      "filename": "modernfix-mixins.properties",
-      "sha256": "366dc228b8df1dd7c5dff436a2197222d6dbe871bd4d729c5b2886cc77a8de3e",
-      "size": 6682,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__modernfix-mixins.properties"
-    },
-    {
       "path": "config/deeperdarker-common.toml",
       "filename": "deeperdarker-common.toml",
       "sha256": "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7",
@@ -5106,13 +4833,6 @@
       "sha256": "f2d768cf91699ba214e08f368898c2e07ecf72afa50096a72e3d3222ebb0b973",
       "size": 2431,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__puffish_skill_leveling__pufferfish_skills_bridge.json"
-    },
-    {
-      "path": "config/spark/activity.json",
-      "filename": "activity.json",
-      "sha256": "24467452455a6086e59fb6f8a0441588dbc9232d99e5a8d3a863e62a4257226e",
-      "size": 442,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__spark__activity.json"
     },
     {
       "path": "config/spark/config.json",
@@ -5318,6 +5038,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__fusion-1.3.15b-forge-mc1.20.1.jar"
     },
     {
+      "path": "mods/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "filename": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "sha256": "933e2a7e79c4594f965f7f7d00b1f28a98ec2a180ad8f9f90310a266fe5cf5d8",
+      "size": 37178,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__melody_forge_1.0.3_MC_1.20.1-1.20.4.jar"
+    },
+    {
       "path": "mods/dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",
       "filename": "dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",
       "sha256": "b0ecdf3a0619208441062ceeebce79256223ac4e341844a09a6859170d671920",
@@ -5367,13 +5094,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__MouseTweaks-forge-mc1.20.1-2.25.1.jar"
     },
     {
-      "path": "mods/Resourcify (1.20.1-forge)-1.8.6.jar",
-      "filename": "Resourcify (1.20.1-forge)-1.8.6.jar",
-      "sha256": "c5111a468437a6c439bba642281a3dabfca76c7d3960e5015ab8a7f7c7d269a3",
-      "size": 2947068,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__Resourcify__1.20.1-forge_-1.8.6.jar"
-    },
-    {
       "path": "mods/Presence Footsteps [FORGE] 1.0.0.jar",
       "filename": "Presence Footsteps [FORGE] 1.0.0.jar",
       "sha256": "290cce2b6e9916c5713769fc830475d8a51e9745f5b33688e32a35dd10d43e37",
@@ -5409,11 +5129,25 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__emf_compat_core_1.20.1_2.0.0.jar"
     },
     {
+      "path": "mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "filename": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "sha256": "e78686b92c3761ec26eb9d3c53efdd3d6ca77981cbd3723995e1163b7103ae0b",
+      "size": 625185,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__konkrete_forge_1.8.0_MC_1.20-1.20.1.jar"
+    },
+    {
       "path": "mods/fallingleaves-1.20.1-2.1.2.jar",
       "filename": "fallingleaves-1.20.1-2.1.2.jar",
       "sha256": "6202d8241f01e21278fd5de644fd2e992824069f2cf0fc9dc6a74ab2218015b6",
       "size": 124212,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fallingleaves-1.20.1-2.1.2.jar"
+    },
+    {
+      "path": "mods/fancymenu_forge_3.9.12_MC_1.20.1.jar",
+      "filename": "fancymenu_forge_3.9.12_MC_1.20.1.jar",
+      "sha256": "60aa6a94e0c021c989bbea978ea6a233ac2e23e364f15825a8beb7b5ab0b94cf",
+      "size": 26181250,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__fancymenu_forge_3.9.12_MC_1.20.1.jar"
     },
     {
       "path": "mods/AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
@@ -5633,20 +5367,6 @@
       "sha256": "a19b7c81a150bd965b153ded9c45ee7649eaad9e10d0a5ec1d662e7b15ceadb2"
     },
     {
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__anubis_hub_spawn.js",
-      "size": 945,
-      "path": "kubejs/server_scripts/anubis_hub_spawn.js",
-      "filename": "anubis_hub_spawn.js",
-      "sha256": "5eb4b6e1d77663d497e0da367d03a947666003f088f60cfdea398a147aa4415f"
-    },
-    {
-      "path": "kubejs/server_scripts/chidori_proc.js",
-      "filename": "chidori_proc.js",
-      "sha256": "c992684b38a4c3aefa89dc5767fe833f8fa930651e2d537398f5117cd53c0944",
-      "size": 5046,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__chidori_proc.js"
-    },
-    {
       "path": "kubejs/server_scripts/tsukiyomi_proc.js",
       "filename": "tsukiyomi_proc.js",
       "sha256": "0532cfd18544e133fd17486c8cbcbe15333b1287490f8f54ad3edf5ce2fbae49",
@@ -5729,6 +5449,13 @@
       "sha256": "c9a5e420823ee3bead728ed0e51b4f342a28f9ec0c2d1e20cf660a7050afb70a",
       "size": 2417,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__rasengan_spell.js"
+    },
+    {
+      "path": "kubejs/startup_scripts/chidori_spell.js",
+      "filename": "chidori_spell.js",
+      "sha256": "e6d20d9cb08e7377d249cd429757bfbe9db5ac546782b17230ecd3189609703c",
+      "size": 2909,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__chidori_spell.js"
     },
     {
       "path": "global_packs/required_data/uncrafting_recipes/pack.mcmeta",
@@ -5997,13 +5724,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/global_packs__required_data__anubis_fixes__data__apotheosis__gems__core__guardian.json"
     },
     {
-      "path": "global_packs/required_data/anubis_fixes/data/tconstruct/tinkering/modifiers/necrotic.json",
-      "filename": "necrotic.json",
-      "sha256": "411ed61e96584a9e0bc53c57570a73b54f6c9800c5c7c0f5768713df97003a82",
-      "size": 232,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/global_packs__required_data__anubis_fixes__data__tconstruct__tinkering__modifiers__necrotic.json"
-    },
-    {
       "path": "global_packs/required_data/anubis_fixes/data/c/tags/blocks/ores_in_ground/stone.json",
       "filename": "stone.json",
       "sha256": "38ac3d4f0dabd8a86f81afd5c374209680d780b3e6a9c5818b33aebe209eafdd",
@@ -6088,25 +5808,193 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
     },
     {
+      "path": "mods/FastFurnace-1.20.1-8.0.2.jar",
+      "filename": "FastFurnace-1.20.1-8.0.2.jar",
+      "sha256": "970c11c090e7a364e2e006aabb5e573f79901e710e97195334ee5802317776e8",
+      "size": 6170,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__FastFurnace-1.20.1-8.0.2.jar"
+    },
+    {
+      "path": "mods/canary-mc1.20.1-0.3.3.jar",
+      "filename": "canary-mc1.20.1-0.3.3.jar",
+      "sha256": "51f6d78dd6c7874657e5757fd2f5d780aa3cd415052ad071077b8894c6430942",
+      "size": 594191,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__canary-mc1.20.1-0.3.3.jar"
+    },
+    {
+      "path": "mods/starlight-1.1.2+forge.1cda73c.jar",
+      "filename": "starlight-1.1.2+forge.1cda73c.jar",
+      "sha256": "e90763c86d362c7cb427dbb70e89985c11a882fdd69ae7d04ac2e23a106eb500",
+      "size": 110583,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__starlight-1.1.2+forge.1cda73c.jar"
+    },
+    {
+      "path": "mods/saturn-mc1.20.1-0.1.3.jar",
+      "filename": "saturn-mc1.20.1-0.1.3.jar",
+      "sha256": "7e6dcc7c2b0db19ec2f965fac91a49e13dcc611f2d86f6bb56d7d68da901aaf8",
+      "size": 92319,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__saturn-mc1.20.1-0.1.3.jar"
+    },
+    {
+      "path": "mods/midnightlib-forge-1.9.2+1.20.1.jar",
+      "filename": "midnightlib-forge-1.9.2+1.20.1.jar",
+      "sha256": "19af8e16930380e0669cb457a7f591c9ecac131cf3d879cc77f0fd7afe41b849",
+      "size": 61987,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__midnightlib-forge-1.9.2+1.20.1.jar"
+    },
+    {
+      "path": "mods/smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
+      "filename": "smoothboot(reloaded)-mc1.20.1-0.0.4.jar",
+      "sha256": "5a0d2682493ffa7b140a7b81f0d1e70c7536c97969397cf9e718e31391b5b9d5",
+      "size": 41044,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__smoothboot_reloaded_-mc1.20.1-0.0.4.jar"
+    },
+    {
+      "path": "mods/memoryleakfix-forge-1.17+-1.1.5.jar",
+      "filename": "memoryleakfix-forge-1.17+-1.1.5.jar",
+      "sha256": "925c3db4e1d085a43c4d2beaa4eec18367c22abc90c2ce8594b8a129fd3f28dd",
+      "size": 227925,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__memoryleakfix-forge-1.17+-1.1.5.jar"
+    },
+    {
+      "path": "mods/FastWorkbench-1.20.1-8.0.4.jar",
+      "filename": "FastWorkbench-1.20.1-8.0.4.jar",
+      "sha256": "86d20c6879bf86ef76b3fd94998d3e5c3327acb5d5324b6eb0b5348354766620",
+      "size": 28188,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__FastWorkbench-1.20.1-8.0.4.jar"
+    },
+    {
+      "path": "mods/noisium-forge-2.3.0+mc1.20-1.20.1.jar",
+      "filename": "noisium-forge-2.3.0+mc1.20-1.20.1.jar",
+      "sha256": "b0b020250c81e8cce7776c3dc8f7085f269e2007570d5fbd492c4497ad60685c",
+      "size": 218152,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__noisium-forge-2.3.0+mc1.20-1.20.1.jar"
+    },
+    {
+      "path": "mods/FastSuite-1.20.1-5.1.2.jar",
+      "filename": "FastSuite-1.20.1-5.1.2.jar",
+      "sha256": "5e05cb3ce05785a0061a41b7a83443074a6c26dd7d9db75c453fa2487481d54e",
+      "size": 26600,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__FastSuite-1.20.1-5.1.2.jar"
+    },
+    {
+      "path": "config/attributefix.json",
+      "filename": "attributefix.json",
+      "sha256": "98cf155dabb3f3245e7af6d9254f324c00a1ae15d6d7a77c5659150d6f3d4cac",
+      "size": 51316,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__attributefix.json"
+    },
+    {
+      "path": "config/canary.properties",
+      "filename": "canary.properties",
+      "sha256": "a37eb7f218ab61f3277a103a85c5bd14ff0abe0dff94e17883bcbb5ea28a3855",
+      "size": 422,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__canary.properties"
+    },
+    {
       "path": "config/chunky/tasks/minecraft/overworld.properties",
       "filename": "overworld.properties",
-      "sha256": "61950d6f8e9fc48bb0fe570544f19b65a1307e2aae7ae586059d0e98fb49ef59",
-      "size": 130,
+      "sha256": "cba8fcaedb449a0ff6e28fd487b00669e4473d432662ee9af67dc54eced6eedd",
+      "size": 136,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__chunky__tasks__minecraft__overworld.properties"
+    },
+    {
+      "path": "config/fastsuite.cfg",
+      "filename": "fastsuite.cfg",
+      "sha256": "4d26b4c93838e3e912a8e09f9be0395cd0b7a264f250ea8aa72d68507ce12250",
+      "size": 894,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__fastsuite.cfg"
+    },
+    {
+      "path": "config/rpg_series/tag_cache.json",
+      "filename": "tag_cache.json",
+      "sha256": "e31cd1b8afd802f21582226b5ae26915d816eb40b9122042605a3ded223d615b",
+      "size": 19967,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__rpg_series__tag_cache.json"
+    },
+    {
+      "path": "config/rpg_series/loot_fallback_report.json",
+      "filename": "loot_fallback_report.json",
+      "sha256": "49af0fcf75d51eecbf89479dcc62694f6d3a5001945fb8f395de6443bf056849",
+      "size": 133622,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__rpg_series__loot_fallback_report.json"
+    },
+    {
+      "path": "config/saturn-optimizations.toml",
+      "filename": "saturn-optimizations.toml",
+      "sha256": "212c1c6b7fa0f671de835a6ac4f67bfb20d9b5bce6de698824b1ebe395ff704b",
+      "size": 436,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__saturn-optimizations.toml"
+    },
+    {
+      "path": "config/fastbench.cfg",
+      "filename": "fastbench.cfg",
+      "sha256": "8133f67a8d39f7a9cc0737636ffde75326b602201354de5dd3bd716491713219",
+      "size": 522,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__fastbench.cfg"
+    },
+    {
+      "path": "config/structure_layout_optimizer.jsonc",
+      "filename": "structure_layout_optimizer.jsonc",
+      "sha256": "c1150586b8ab28b23913ed762c3907952a00835f5f2e5dc3dd493efe64c67f77",
+      "size": 938,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__structure_layout_optimizer.jsonc"
+    },
+    {
+      "path": "config/smoothboot.json",
+      "filename": "smoothboot.json",
+      "sha256": "8a26fe1d4060fbce70962894e1fc73c442e8678b3176975e5e99163d9414eec3",
+      "size": 197,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__smoothboot.json"
+    },
+    {
+      "path": "config/modernfix-mixins.properties",
+      "filename": "modernfix-mixins.properties",
+      "sha256": "c0ed4a10c3e9c3a288171354749aa60457c091b83c59169dcf4507f6aad6fc9c",
+      "size": 6701,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__modernfix-mixins.properties"
+    },
+    {
+      "path": "config/spark/activity.json",
+      "filename": "activity.json",
+      "sha256": "b7674a84c006bee3fafc40cffafe1c0d0300deec472a84a88c195451980a7e1b",
+      "size": 662,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__spark__activity.json"
+    },
+    {
+      "path": "mods/cullleaves-forge-4.1.1+1.20.1.jar",
+      "filename": "cullleaves-forge-4.1.1+1.20.1.jar",
+      "sha256": "eec8f9e98d456bbc0e6b2b82e928fbaedc4fd6c1055bd50311cb35d81802d6fc",
+      "size": 97480,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__cullleaves-forge-4.1.1+1.20.1.jar"
+    },
+    {
+      "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
+      "filename": "BadOptimizations-2.4.1-1.20.1.jar",
+      "sha256": "3da53cdf856757d9ec7df0be86bc23b2c7d67a019b490f8f64317d4d9b77cac8",
+      "size": 460234,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__BadOptimizations-2.4.1-1.20.1.jar"
+    },
+    {
+      "path": "mods/QuestPlaques-1.20.1-1.0.2.jar",
+      "filename": "QuestPlaques-1.20.1-1.0.2.jar",
+      "sha256": "a4934c9bf11e3617cce7549c8c377219488edc6f3b440ed9a9856b9a01cd6ebc",
+      "size": 44989,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__QuestPlaques-1.20.1-1.0.2.jar"
     },
     {
       "path": "kubejs/server_scripts/rasengan_proc.js",
       "filename": "rasengan_proc.js",
-      "sha256": "38940c7b9b57772d84304d68ef1d78c8c6e6d92ea4d162e3a509a62a61f1a3b4",
-      "size": 8122,
+      "sha256": "e6d7547f4168e3c51d7fc85300843d2e96719d8edff465f072c7daf0748f0228",
+      "size": 5561,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__rasengan_proc.js"
     },
     {
-      "path": "kubejs/startup_scripts/chidori_spell.js",
-      "filename": "chidori_spell.js",
-      "sha256": "e6d20d9cb08e7377d249cd429757bfbe9db5ac546782b17230ecd3189609703c",
-      "size": 2909,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__chidori_spell.js"
+      "path": "kubejs/server_scripts/chidori_proc.js",
+      "filename": "chidori_proc.js",
+      "sha256": "06593de31a9a38b54f171197a3cff7d755c0eaa0789206cc62b3f6cc4ffd778d",
+      "size": 5147,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__chidori_proc.js"
     }
   ]
 }

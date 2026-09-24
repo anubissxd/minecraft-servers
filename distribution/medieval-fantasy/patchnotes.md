@@ -1,8 +1,9 @@
-# Medieval Fantasy - 1.2.30
+# Medieval Fantasy - 1.3.0
 
-- **Chidori:** Iron's tek el yükleme animasyonu; elde çıtırdayan mavi-beyaz şimşek ve etrafa sıçrayan arklar, koşarken kıvılcım izi. Verdiği hız Speed II → Speed III. Vuruşta gökten inen şimşek, hedefin içinden geçen ışık çizgisi ve şok dalgası.
-- **Rasengan:** Iron's iki el animasyonu; elde parlak çekirdek etrafında dönen 3 halkalı enerji küresi ve uğultu. Vuruşta hedef yarım saniye yerinde öğütülür (büyüyen küre, şok dalgası atımları), sonra hasarla birlikte sert şekilde fırlatılır: büyük çift şok dalgası, patlama, yerde spiral halka ve arkasında dönen iz.
-- **Tsukiyomi:** Atanın gözünde kızıl parlama; hedefte dönen kızıl halka, 3 tomoe, kızıl ay ve kalp atışı sesi, ekran kararır. Süre bitince kızıl patlama.
-- **Amaterasu:** Artık anında atılıyor (2 saniyelik bekleme kaldırıldı).
-- Tüm büyülere Iron's Spells sesleri eklendi.
+- **Yeni dünya:** Sunucu sıfırdan, temiz bir dünyayla açılıyor. Dünya önceden üretildi; keşif sırasındaki takılmalar büyük ölçüde gitti.
+- **Performans:** Canary, Noisium, Saturn, Memory Leak Fix, FastSuite / FastWorkbench / FastFurnace, Smooth Boot, Async Locator, Structure Layout Optimizer, Alternate Current; oyuncu tarafında BadOptimizations, Cull Leaves ve Starlight eklendi.
+- **Kaldırılan modlar:** Tinkers' Construct, Villager Recruits, Zombie Awareness, BielGG's Spells, Elder Tales, Paladin Spells, Farmer's Respite, Farmer's Spell, Fright's Delight, Nether's Delight, Illager Invasion, Small Ships, Spelunkery, Tom's Simple Storage, Better Archeology, Arda's Uncrafting Table, Simplest Hammers / Excavators, YDM's Weapon Master, Resourcify.
+- **Kaldırılan yapı modları:** ChoiceTheorem's Overhauled Village, Structory, Structory: Towers, Philips Ruins, Formations Overworld, The Lost Castle.
+- **Arazi koruma:** Open Parties and Claims ile kişi başı en fazla 4 chunk alınabiliyor.
+- **Büyüler:** Chidori ve Rasengan her vuruşta tam bonus hasar veriyor (bazen eksik vuruyordu).
 - Sunucu güncellendi; eski paketle girilemez, AnuDownloader'ı çalıştırın.
