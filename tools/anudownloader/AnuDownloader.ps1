@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.11"
+$AppVersion = "2.16.12"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1150,12 +1150,28 @@ function Close-AnuLauncherApps {
     # player reopens them they pick up the freshly-set JAVA_TOOL_OPTIONS env
     # var (already-running processes never see an env var set after they
     # started - only new ones do).
+    # Modrinth/CurseForge are reopened afterwards by Start-AnuClosedLaunchers,
+    # so remember which exe each running one came from. TLauncher is closed
+    # but deliberately not reopened.
+    $script:anuClosedLaunchers = @()
     foreach ($name in @("Modrinth App", "CurseForge")) {
-        Get-Process -Name $name -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+        $procs = @(Get-Process -Name $name -ErrorAction SilentlyContinue)
+        $exe = $procs | ForEach-Object { try { $_.Path } catch { $null } } | Where-Object { $_ } | Select-Object -First 1
+        if ($exe) { $script:anuClosedLaunchers += $exe }
+        $procs | Stop-Process -Force -ErrorAction SilentlyContinue
     }
     # TLauncher's own process name varies by build/version, so match its
     # window title instead of guessing an exe name.
     Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -like "*TLauncher*" } | Stop-Process -Force -ErrorAction SilentlyContinue
+}
+
+function Start-AnuClosedLaunchers {
+    foreach ($exe in @($script:anuClosedLaunchers)) {
+        if ($exe -and (Test-Path -LiteralPath $exe)) {
+            try { Start-Process -FilePath $exe -ErrorAction Stop } catch { Write-AnuDebugLog "Launcher yeniden acilamadi ($exe): $($_.Exception.Message)" }
+        }
+    }
+    $script:anuClosedLaunchers = @()
 }
 
 function Close-AnuGameProcess([string]$profileRoot) {
@@ -1462,6 +1478,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     } catch {
         $win.Form.Close()
         Show-AnuDialog "Manifest indirilemedi:`n$($_.Exception.Message)" | Out-Null
+        Start-AnuClosedLaunchers
         return
     }
 
@@ -1577,6 +1594,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     if ($removedByPack.Count -gt 0) { $summary += "`nPaketten kaldırılan $($removedByPack.Count) dosya silindi." }
     if ($extra.Count -gt 0) { $summary += "`nPakette olmayan $($extra.Count) ekstra dosya var (dokunulmadı)." }
     Show-AnuDialog $summary | Out-Null
+    Start-AnuClosedLaunchers
 }
 
 $script:pendingUpdateUrl = $null
