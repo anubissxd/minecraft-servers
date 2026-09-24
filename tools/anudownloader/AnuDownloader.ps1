@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.10"
+$AppVersion = "2.16.11"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1281,19 +1281,19 @@ function Get-AnuSqlitePath {
     return $null
 }
 
-function Remove-AnuModrinthFileRecords([string]$profileRoot, $fileNames) {
+function Remove-AnuModrinthFileRecords([string]$profileRoot, $relPaths) {
     # Modrinth records every file it installed in its own database. Deleting a
     # jar from disk without clearing that row makes the launcher refuse to
     # start the instance - "needs repair or re-import" - so the rows have to go
     # with the files. Modrinth is already closed by Close-AnuLauncherApps.
-    if (-not $fileNames -or @($fileNames).Count -eq 0) { return }
+    if (-not $relPaths -or @($relPaths).Count -eq 0) { return }
     $sqlite = Get-AnuSqlitePath
     if (-not $sqlite) { return }
     $db = Join-Path $env:APPDATA "ModrinthApp\app.db"
     if (-not (Test-Path $db)) { return }
     $folder = (Split-Path $profileRoot -Leaf).Replace("'", "''")
-    foreach ($name in @($fileNames)) {
-        $rel = ("mods/" + $name).Replace("'", "''")
+    foreach ($relPath in @($relPaths)) {
+        $rel = $relPath.Replace("'", "''")
         $match = "SELECT f.id FROM instance_files f JOIN instances i ON i.id = f.instance_id WHERE i.path = '$folder' AND f.relative_path = '$rel'"
         $sql = @"
 DELETE FROM instance_content_entries WHERE file_id IN ($match);
@@ -1501,7 +1501,27 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
             }
         }
     }
-    if ($removedMods.Count -gt 0) { Remove-AnuModrinthFileRecords $profileRoot $removedMods }
+    if ($removedMods.Count -gt 0) { Remove-AnuModrinthFileRecords $profileRoot ($removedMods | ForEach-Object { "mods/$_" }) }
+
+    # Files the pack wants gone from every player. Only loose mod jars are
+    # cleaned up automatically above - resourcepacks\ and the rest are left
+    # alone because players keep their own files there - so a pack that drops
+    # something outside mods\ lists it in the manifest's "remove" array.
+    $removedByPack = @()
+    foreach ($entry in @($manifest.remove)) {
+        if (-not $entry) { continue }
+        $rel = ("$entry" -replace '\\', '/').Trim()
+        if ($rel -match '^/|^[A-Za-z]:|(^|/)\.\.(/|$)') { continue }
+        $target = Join-Path $profileRoot ($rel -replace '/', '\')
+        if (Test-Path -LiteralPath $target -PathType Leaf) {
+            try {
+                [System.IO.File]::SetAttributes($target, [System.IO.FileAttributes]::Normal)
+                Remove-Item -LiteralPath $target -Force -ErrorAction Stop
+                $removedByPack += $rel
+            } catch { Write-AnuDebugLog "Remove failed rel=${rel}: $($_.Exception.Message)" }
+        }
+    }
+    if ($removedByPack.Count -gt 0) { Remove-AnuModrinthFileRecords $profileRoot $removedByPack }
 
     # Only flag "extra" files inside subfolders the manifest actually manages
     # (mods\, and config\/resourcepacks\/datapacks\ when the pack ships any) -
@@ -1554,6 +1574,7 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     }
     if ($errorCount -gt 0) { $summary += "`n$errorCount dosya indirilemedi." }
     if ($removedMods.Count -gt 0) { $summary += "`nPaketten çıkarılan $($removedMods.Count) mod silindi." }
+    if ($removedByPack.Count -gt 0) { $summary += "`nPaketten kaldırılan $($removedByPack.Count) dosya silindi." }
     if ($extra.Count -gt 0) { $summary += "`nPakette olmayan $($extra.Count) ekstra dosya var (dokunulmadı)." }
     Show-AnuDialog $summary | Out-Null
 }

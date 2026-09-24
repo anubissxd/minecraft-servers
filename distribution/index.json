@@ -1,6 +1,6 @@
 {
   "app": {
-    "version": "2.16.10",
+    "version": "2.16.11",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
   "packs": [
@@ -26,8 +26,8 @@
         "Icon Fresh 1.2.zip"
       ],
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/745288ea5dd3742302aa1c2775aa8e6457c2301e/distribution/medieval-fantasy/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/745288ea5dd3742302aa1c2775aa8e6457c2301e/distribution/medieval-fantasy/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/45254b25948c8a6c6fa09e15bacfaf1a4b015a2a/distribution/medieval-fantasy/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/45254b25948c8a6c6fa09e15bacfaf1a4b015a2a/distribution/medieval-fantasy/patchnotes.md"
     }
   ]
 }
