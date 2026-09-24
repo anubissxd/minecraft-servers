@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
   "version": "1.2.30",
-  "generated": "2026-09-24 19:18:52",
+  "generated": "2026-09-24 23:25:53",
   "source": "vds:/root/servers/medieval-fantasy",
   "remove": [
     "resourcepacks/BrewinAndChewin-Excalibur_Support_1.20.1_v1.1.zip",
@@ -5640,6 +5640,20 @@
       "sha256": "5eb4b6e1d77663d497e0da367d03a947666003f088f60cfdea398a147aa4415f"
     },
     {
+      "path": "kubejs/server_scripts/chidori_proc.js",
+      "filename": "chidori_proc.js",
+      "sha256": "c992684b38a4c3aefa89dc5767fe833f8fa930651e2d537398f5117cd53c0944",
+      "size": 5046,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__chidori_proc.js"
+    },
+    {
+      "path": "kubejs/server_scripts/tsukiyomi_proc.js",
+      "filename": "tsukiyomi_proc.js",
+      "sha256": "0532cfd18544e133fd17486c8cbcbe15333b1287490f8f54ad3edf5ce2fbae49",
+      "size": 3667,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__tsukiyomi_proc.js"
+    },
+    {
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__client_scripts__spell_scrolls_jei.js",
       "size": 2038,
       "path": "kubejs/client_scripts/spell_scrolls_jei.js",
@@ -5689,11 +5703,32 @@
       "sha256": "7e0e1fcbc1b11632f2b4971bfaf079c045f7ec6f30c945eb5fba53e976337261"
     },
     {
+      "path": "kubejs/startup_scripts/tsukiyomi_spell.js",
+      "filename": "tsukiyomi_spell.js",
+      "sha256": "7e62713281b2026cf214e96fcd9ceaaee9aa1df7b48838129376c2caa01b1f81",
+      "size": 4545,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__tsukiyomi_spell.js"
+    },
+    {
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__startup_scripts__example.js",
       "size": 127,
       "path": "kubejs/startup_scripts/example.js",
       "filename": "example.js",
       "sha256": "395c96d3ddd178821db851f387e91560e606ea752177f66d2016f12bd0542b8f"
+    },
+    {
+      "path": "kubejs/startup_scripts/amaterasu_spell.js",
+      "filename": "amaterasu_spell.js",
+      "sha256": "5b603559f586f8ea2f0057f7ac699bb3c45e56879baebc16cb404a1fdf4a5f02",
+      "size": 3356,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__amaterasu_spell.js"
+    },
+    {
+      "path": "kubejs/startup_scripts/rasengan_spell.js",
+      "filename": "rasengan_spell.js",
+      "sha256": "c9a5e420823ee3bead728ed0e51b4f342a28f9ec0c2d1e20cf660a7050afb70a",
+      "size": 2417,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__rasengan_spell.js"
     },
     {
       "path": "global_packs/required_data/uncrafting_recipes/pack.mcmeta",
@@ -6055,57 +6090,22 @@
     {
       "path": "config/chunky/tasks/minecraft/overworld.properties",
       "filename": "overworld.properties",
-      "sha256": "eb6fa57f2143b126c7be6d9f2a20c907d3e6029e8237e0eb3f4b503ae38640d0",
-      "size": 128,
+      "sha256": "61950d6f8e9fc48bb0fe570544f19b65a1307e2aae7ae586059d0e98fb49ef59",
+      "size": 130,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__chunky__tasks__minecraft__overworld.properties"
     },
     {
       "path": "kubejs/server_scripts/rasengan_proc.js",
       "filename": "rasengan_proc.js",
-      "sha256": "44b685d84dbaa3fd6f6c7888966b985f4d6266b1f43b27dfb79bc77a77c40b6e",
-      "size": 5460,
+      "sha256": "38940c7b9b57772d84304d68ef1d78c8c6e6d92ea4d162e3a509a62a61f1a3b4",
+      "size": 8122,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__rasengan_proc.js"
-    },
-    {
-      "path": "kubejs/server_scripts/chidori_proc.js",
-      "filename": "chidori_proc.js",
-      "sha256": "c992684b38a4c3aefa89dc5767fe833f8fa930651e2d537398f5117cd53c0944",
-      "size": 5046,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__chidori_proc.js"
-    },
-    {
-      "path": "kubejs/server_scripts/tsukiyomi_proc.js",
-      "filename": "tsukiyomi_proc.js",
-      "sha256": "0532cfd18544e133fd17486c8cbcbe15333b1287490f8f54ad3edf5ce2fbae49",
-      "size": 3667,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__tsukiyomi_proc.js"
-    },
-    {
-      "path": "kubejs/startup_scripts/tsukiyomi_spell.js",
-      "filename": "tsukiyomi_spell.js",
-      "sha256": "7e62713281b2026cf214e96fcd9ceaaee9aa1df7b48838129376c2caa01b1f81",
-      "size": 4545,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__tsukiyomi_spell.js"
-    },
-    {
-      "path": "kubejs/startup_scripts/amaterasu_spell.js",
-      "filename": "amaterasu_spell.js",
-      "sha256": "5b603559f586f8ea2f0057f7ac699bb3c45e56879baebc16cb404a1fdf4a5f02",
-      "size": 3356,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__amaterasu_spell.js"
-    },
-    {
-      "path": "kubejs/startup_scripts/rasengan_spell.js",
-      "filename": "rasengan_spell.js",
-      "sha256": "c9a5e420823ee3bead728ed0e51b4f342a28f9ec0c2d1e20cf660a7050afb70a",
-      "size": 2417,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__rasengan_spell.js"
     },
     {
       "path": "kubejs/startup_scripts/chidori_spell.js",
       "filename": "chidori_spell.js",
-      "sha256": "d776a18ccad2217020a8404473c18d3a5d474a218535dfd40ef95819d0eae8ae",
-      "size": 2897,
+      "sha256": "e6d20d9cb08e7377d249cd429757bfbe9db5ac546782b17230ecd3189609703c",
+      "size": 2909,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__startup_scripts__chidori_spell.js"
     }
   ]
