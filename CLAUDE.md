@@ -1046,11 +1046,29 @@ https://raw.githubusercontent.com/anubissxd/minecraft-servers/<40-karakter-commi
 
 **Nasıl uygulanır:** manifest.json değiştiğinde sıra şudur — (1) manifest'i commit+push et, (2) `git rev-parse HEAD` ile SHA'yı al, (3) `index.json`'daki ilgili `manifest_url`/`patchnotes_url`'ü o SHA ile güncelle, (4) index.json'u commit+push et, (5) jsDelivr purge çağır — artık yalnızca AnuDownloader 2.16.1 ve öncesini kullananlar için; **2.16.2'den beri uygulama `index.json`'u GitHub contents API'sinden okur** (`api.github.com/repos/anubissxd/minecraft-servers/contents/distribution/index.json?ref=main`, `Accept: application/vnd.github.raw`) — cache yok, push anında görünür. jsDelivr purge "finished" dese de 10-30 dk eski içerik verdi; raw.githubusercontent ~5 dk cache'ler ve query string'i yok sayar, o yüzden ikisi de index için kullanılmaz. (6) **Discord duyurusu** — her paket yayınının son adımı: `ssh root@31.58.91.7 python3 /root/scripts/notify_pack.py "<Paket Adı>" <sürüm> < distribution/<paket>/patchnotes.md`. Bu script Discord'daki **Update** kanalının webhook'unu kullanır (gönderen adı "Minecraft", avatarı webhook'a kalıcı işlendi); yama notlarını @everyone ile basar. Webhook URL'si yalnızca VDS'teki scriptte durur, repoya girmez. **Her türlü güncelleme duyurusu (paket, AnuDownloader sürümü, sunucu değişikliği) bu kanala gider; `servers` kanalının webhook'u yalnızca oyuncu-durum mesajı içindir, duyuru için kullanılmaz.** `index.json`'un kendisi jsDelivr'dan servis edilir ve orada purge güvenilir çalışıyor. `banner_url` nadiren değiştiği için `main` üzerinde kalabilir.
 
-## Paket İçeriği = Kullanıcının Modrinth Client'ı
+## Paket İçeriği = VDS (tek kaynak)
 
-MVSH ve Medieval Fantasy paketleri için kaynak referans, kullanıcının kendi bilgisayarındaki Modrinth App profil klasörüdür (`%APPDATA%\ModrinthApp\profiles\<Pack Adı>\`). Bu klasördeki **tüm mods/, resourcepacks/, datapacks/ dosyaları** pakete birebir dahil edilmelidir — sadece server'da kullanılan mod alt kümesi değil, tamamı. `Build-Manifest.ps1` bu klasörü `-PackRoot` olarak alıp tam mirror üretir.
+VDS hem sunucunun hem client paketinin **tek kaynağıdır**. Mod ekleme/güncelleme/kaldırma sadece VDS'te yapılır, paket `tools/anudownloader/Build-Manifest-VDS.ps1` ile oradan üretilir. Kullanıcının local Modrinth profiline (`%APPDATA%\ModrinthApp\profiles\...`) **dokunulmaz**: kullanıcı onu AnuDownloader'ı test etmek için kullanıyor, oraya elle dosya koymak testi bozar. Eski `Build-Manifest.ps1` (local profilden üretim) Medieval Fantasy için kullanılmaz.
 
-- **config/ klasörü pakete dahil edilmez.** Bu dosyalar modun kendisi tarafından oyun ilk açıldığında otomatik üretilir, mod güncellenmediği sürece hiç değişmez — pakete koymanın hiçbir faydası yok, sadece boyut şişirir.
-- Client-only modlar (shader loader, minimap, crosshair, tooltip vb.) da pakete dahildir. Claude bunları "bu client-only, dışarıda bırakayım" diyerek elemeye çalışmamalı — kullanıcı zaten hangi modun pakette olacağına client'ında bulundurarak karar vermiştir.
-- Yeni bir mod pakete eklenirken dosyanın gerçekten çalışan bir mod jar'ı olduğu doğrulanmalı (örn. `-sources.jar` uzantılı dosyalar genelde derlenmiş kod içermez — Modrinth bazen yanlış dosya varyantını indirebilir). Şüpheli bir dosya bulunursa kullanıcıya bildirilmeli, sessizce dahil/hariç edilmemeli.
-- Server'daki `mods/` klasörü ile client pack manifest'i birebir aynı olmak zorunda değildir — server sadece server-side gereken modları çalıştırır, client pack daha geniş olabilir.
+VDS'teki klasör → oyuncudaki klasör (`<sunucu>` = `/root/servers/medieval-fantasy`):
+
+- `<sunucu>/mods/` → `mods/` — sunucunun çalıştırdığı modlar (hem client hem server'da gereken)
+- `<sunucu>/client-extra/mods/` → `mods/` — client-only modlar (shader loader, minimap, animasyon, connected textures vb.); sunucu bunları yüklemez
+- `<sunucu>/client-extra/resourcepacks/` ve `client-extra/shaderpacks/` → `resourcepacks/`, `shaderpacks/`
+- `<sunucu>/config/`, `kubejs/`, `global_packs/required_data/` → aynı adla. Config yalnızca oyuncuda yoksa yazılır.
+- `<sunucu>/server-only-mods.txt` → pakete girmeyen sunucu modları (Chunky, spark, AI Improvements...)
+
+Kurallar:
+
+- **Mod güncellerken yeni jar eskisinin bulunduğu klasöre konur ve eski jar aynı anda kaldırılır.** Client-only bir modun yenisi `client-extra/mods/`'a gider, sunucunun `mods/`'una değil. Aksi halde sunucuda aynı modun iki sürümü birden kalır.
+- Kaldırılan jar'lar silinir. Geri dönüş gerekebilecek kaldırılmış modlar (ör. yerine başka mod gelenler) `<sunucu>/mods-disabled/`'da tutulabilir.
+- **Oyuncudan da silinmesi gereken dosyalar:** AnuDownloader kendiliğinden sadece `mods/` içindeki fazla jar'ları siler; resourcepack, shaderpack vb. dokunmaz. Bu tür bir dosya paketten çıkarıldığında (veya bir resourcepack/shader'ın eski sürümü yenisiyle değiştirildiğinde) oyuncudaki yolu `distribution/<paket>/remove.txt`'e eklenir. Build script bunu manifest'in `remove` alanına yazar, AnuDownloader 2.16.11+ güncellemede siler (Modrinth DB kaydıyla birlikte).
+- Ana release (`medieval-fantasy-pack`) GitHub'ın 1000 asset sınırında dolu; build `-Tag medieval-fantasy-pack-overflow` ile çalıştırılır. Değişmeyen dosyalar eski URL'lerini korur.
+- Yayından önce: manifest'teki tüm URL'ler test edilir (302 dönmeli), eski sürüm/çift jar kalmadığı ve server-only modların sızmadığı kontrol edilir.
+- Yeni bir mod eklenirken dosyanın gerçekten çalışan bir mod jar'ı olduğu doğrulanmalı (örn. `-sources.jar` genelde derlenmiş kod içermez). Modrinth'in bağımlılık metadata'sı yanlış olabilir (başka loader'a ait veya alakasız proje); gerçek bağımlılıklar jar içindeki `META-INF/mods.toml`'dan kontrol edilir. Şüpheli bir dosya kullanıcıya bildirilir, sessizce dahil/hariç edilmez.
+
+## Mod Önerme
+
+- Kullanıcı mod önerisi istediğinde Claude sadece önerir; kullanıcı "kur/ekle" demeden kurmaz.
+- Öneriler toplu liste halinde verilir. Her öneri önceden kontrol edilir: Forge + 1.20.1 sürümü var mı, pakette zaten var mı (VDS'teki gerçek mod listesine bakılarak).
+- Forge'da olmayan mod önerilmez. Önerilip "kur/ekle" denmeyen modlar ve açıkça reddedilen modlar bir daha önerilmez.
