@@ -87,7 +87,7 @@ if ($ServerOnlyMods.Count -gt 0) { Write-Host "Sunucu-only mod: $($ServerOnlyMod
 # Runtime scratch the server writes but players must never receive. spark's
 # tmp/ in particular holds profiler dumps, some of them zero bytes - and the
 # GitHub asset API rejects an empty file outright, which aborts the whole build.
-$ExcludedPrefixes = @("config/spark/tmp/", "kubejs/config/", "kubejs/README.txt")
+$ExcludedPrefixes = @("config/spark/tmp/", "config/chunky/tasks/", "kubejs/config/", "kubejs/README.txt")
 # Config backups a mod rewrites on its own; shipping them just confuses players.
 $ExcludedSuffixes = @(".bak", ".tmp", ".log")
 
