@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.3.1",
-  "generated": "2026-09-25 22:22:27",
+  "version": "1.3.2",
+  "generated": "2026-09-25 23:15:53",
   "source": "vds:/root/servers/medieval-fantasy",
   "remove": [
     "resourcepacks/BrewinAndChewin-Excalibur_Support_1.20.1_v1.1.zip",
@@ -332,6 +332,13 @@
       "sha256": "ce2196035200ff1f07ce209d17aae98c0670db601128a3b970edcd69095edd6a",
       "size": 2569623,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__valhelsia_structures-forge-1.20.1-1.1.2.jar"
+    },
+    {
+      "path": "mods/AdvancementPlaques-1.20.1-forge-1.6.9.jar",
+      "filename": "AdvancementPlaques-1.20.1-forge-1.6.9.jar",
+      "sha256": "537f84f1153369d61878965846a8ead7c5eae3a6ad917b04c02521ad76182ad2",
+      "size": 208850,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__AdvancementPlaques-1.20.1-forge-1.6.9.jar"
     },
     {
       "path": "mods/immersive_armors-1.7.2+1.20.1-forge.jar",
@@ -787,6 +794,13 @@
       "sha256": "2f7d8dae6bde58bd04a6dd65b9d08f8b8d3576488eadcd908d197cb219504eff",
       "size": 3622128,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__friendsandfoes-forge-mc1.20.1-3.0.9.jar"
+    },
+    {
+      "path": "mods/QuestPlaques-1.20.1-1.0.2.jar",
+      "filename": "QuestPlaques-1.20.1-1.0.2.jar",
+      "sha256": "a4934c9bf11e3617cce7549c8c377219488edc6f3b440ed9a9856b9a01cd6ebc",
+      "size": 44989,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__QuestPlaques-1.20.1-1.0.2.jar"
     },
     {
       "path": "mods/ftb-teams-forge-2001.3.2.jar",
@@ -5115,13 +5129,6 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__embeddium-0.3.31+mc1.20.1.jar"
     },
     {
-      "path": "mods/AdvancementPlaques-1.20.1-forge-1.6.9.jar",
-      "filename": "AdvancementPlaques-1.20.1-forge-1.6.9.jar",
-      "sha256": "537f84f1153369d61878965846a8ead7c5eae3a6ad917b04c02521ad76182ad2",
-      "size": 208850,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__AdvancementPlaques-1.20.1-forge-1.6.9.jar"
-    },
-    {
       "path": "mods/LegendaryTooltips-1.20.1-forge-1.4.5.jar",
       "filename": "LegendaryTooltips-1.20.1-forge-1.4.5.jar",
       "sha256": "15521ab414b92f60e75bdd49724eb65bb6aa8b3d6f72c157cc261011d58d625e",
@@ -5218,13 +5225,6 @@
       "sha256": "b0ecdf3a0619208441062ceeebce79256223ac4e341844a09a6859170d671920",
       "size": 402345,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar"
-    },
-    {
-      "path": "mods/QuestPlaques-1.20.1-1.0.2.jar",
-      "filename": "QuestPlaques-1.20.1-1.0.2.jar",
-      "sha256": "a4934c9bf11e3617cce7549c8c377219488edc6f3b440ed9a9856b9a01cd6ebc",
-      "size": 44989,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__QuestPlaques-1.20.1-1.0.2.jar"
     },
     {
       "path": "mods/oculus-mc1.20.1-1.8.0.jar",
@@ -5995,6 +5995,20 @@
       "sha256": "7edec59968166f0091b9a490043a198cd84c251b6fc9b88feb8989913c70ee0d",
       "size": 2261,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
+    },
+    {
+      "path": "mods/enhancedai-3.3.7.5.jar",
+      "filename": "enhancedai-3.3.7.5.jar",
+      "sha256": "d0299bf27bdb5f4fa6af1e8fb33b21277f1ba5613a811dd96aecb9f03e941069",
+      "size": 1387972,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__enhancedai-3.3.7.5.jar"
+    },
+    {
+      "path": "config/questplaques-common.toml",
+      "filename": "questplaques-common.toml",
+      "sha256": "da7c7659e4c2953d3c9ba2eb12b7829fdb56f1fb6bdb10fe850926306b3c424a",
+      "size": 1245,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__questplaques-common.toml"
     }
   ]
 }
