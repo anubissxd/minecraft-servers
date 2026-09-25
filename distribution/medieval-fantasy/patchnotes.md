@@ -1,4 +1,4 @@
-# Medieval Fantasy - 1.3.0
+# Medieval Fantasy - 1.3.1
 
 - **Yeni dünya:** Sunucu sıfırdan, temiz bir dünyayla açılıyor. Dünya önceden üretildi; keşif sırasındaki takılmalar büyük ölçüde gitti.
 - **Performans:** Canary, Noisium, Saturn, Memory Leak Fix, FastSuite / FastWorkbench / FastFurnace, Smooth Boot, Async Locator, Structure Layout Optimizer, Alternate Current; oyuncu tarafında BadOptimizations, Cull Leaves ve Starlight eklendi.
